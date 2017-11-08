@@ -77,11 +77,9 @@ class StoreCoreData: NSObject, StoreProtocol{
     }
     
     func saveOrRollBack() {
-        <#code#>
     }
     
     func saveWithCompletionBlock(block: CompletionBlock) {
-        <#code#>
     }
     
     func saveOrRollBackWithCompletionBlock(block: CompletionBlock) {
