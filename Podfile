@@ -4,6 +4,7 @@ use_frameworks!
 
 def pods
 	pod 'Alamofire'
+	pod 'AlamofireImage'
     	pod 'CocoaLumberjack/Swift'
 end
 

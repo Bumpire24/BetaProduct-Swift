@@ -1,17 +1,21 @@
 PODS:
   - Alamofire (4.5.1)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
   - CocoaLumberjack/Default (3.3.0)
   - CocoaLumberjack/Swift (3.3.0):
     - CocoaLumberjack/Default
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireImage
   - CocoaLumberjack/Swift
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   CocoaLumberjack: 3c8c74683302f9012bb168e1c4b7ae3c0b558431
 
-PODFILE CHECKSUM: ac8fdae40e06d09205cb03e1266dff6b3f44572d
+PODFILE CHECKSUM: e8362848c1c6c500498567e7f748ff1fe1c7ebaa
 
 COCOAPODS: 1.3.1
