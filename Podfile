@@ -6,6 +6,7 @@ def pods
 	pod 'Alamofire'
 	pod 'AlamofireImage'
     	pod 'CocoaLumberjack/Swift'
+	pod 'AlamofireNetworkActivityIndicator'
 end
 
 target 'BetaProduct-Swift' do

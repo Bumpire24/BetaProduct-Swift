@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		ADF875F2643D594BE02494FE /* Pods_BetaProduct_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D44D2C545B87B8BA9865E6 /* Pods_BetaProduct_Swift.framework */; };
 		CE7472F81FB28CCC0015C0B3 /* Error+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */; };
+		CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
+		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
+		CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
 		CEE8ABB41FB181110052DC3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB31FB181110052DC3A /* AppDelegate.swift */; };
 		CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
 		CEE8ABB91FB181110052DC3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABB71FB181110052DC3A /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		6F923D5DB2DE28B607DE274C /* Pods-BetaProduct-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		93CE34FC3179EA3FAAFAA596 /* Pods-BetaProduct-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Utility.swift"; sourceTree = "<group>"; };
+		CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClient.swift; sourceTree = "<group>"; };
+		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
+		CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
 		CEE8ABB01FB181110052DC3A /* BetaProduct-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE8ABB31FB181110052DC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE8ABB51FB181110052DC3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 		CE7472F31FB288310015C0B3 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
+				CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */,
+				CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 		CE7472F41FB288560015C0B3 /* SyncEngine */ = {
 			isa = PBXGroup;
 			children = (
+				CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */,
 			);
 			path = SyncEngine;
 			sourceTree = "<group>";
@@ -552,12 +561,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,7 +616,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */,
 				CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */,
+				CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */,
 				CEE8AC071FB1A48C0052DC3A /* HomeModuleProtocol.swift in Sources */,
 				CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */,
 				CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */,
@@ -614,6 +627,7 @@
 				CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */,
 				CEE8ABF21FB1851A0052DC3A /* DatabaseTypes.swift in Sources */,
 				CEE8ABB41FB181110052DC3A /* AppDelegate.swift in Sources */,
+				CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */,
 				CEE8ABBC1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld in Sources */,
 				CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */,
 				CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */,
