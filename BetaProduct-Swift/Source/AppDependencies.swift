@@ -8,12 +8,14 @@
 
 import Foundation
 import UIKit
+import AlamofireNetworkActivityIndicator
 
 class AppDependencies: NSObject {
     var mainWireFrame : HomeWireframe?
     
     override init() {
         super.init()
+        configureLibraries()
         configureDependencies()
     }
     
@@ -29,5 +31,9 @@ class AppDependencies: NSObject {
         let homeWireframe = HomeWireframe()
         homeWireframe.rootWireFrame = root
         mainWireFrame = homeWireframe
+    }
+    
+    func configureLibraries() {
+        NetworkActivityIndicatorManager.shared.isEnabled = true
     }
 }
