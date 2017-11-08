@@ -9,6 +9,15 @@
 import Foundation
 
 protocol StoreProtocol {
-    func fetchEntries(withEntityName entityName : String, withCompletionBlock completionBlock : @escaping CompletionBlockWithResults) -> Void
-    func fetchEntries(withEntityName entityName : String, withPredicate predicate : NSPredicate?, withSortDescriptors sortDescriptors : [NSSortDescriptor]?, withCompletionBlock completionBlock : @escaping CompletionBlockWithResults) -> Void
+    func fetchEntries(withEntityName entityName : String, withCompletionBlock block : @escaping CompletionBlockWithResults)
+    func fetchEntries(withEntityName entityName : String,
+                        withPredicate predicate : NSPredicate?,
+            withSortDescriptors sortDescriptors : [NSSortDescriptor]?,
+            withCompletionBlock block : @escaping CompletionBlockWithResults)
+    func newProduct() -> Product
+    func deleteProduct(product : Product)
+    func save()
+    func saveOrRollBack()
+    func saveWithCompletionBlock(block : CompletionBlock)
+    func saveOrRollBackWithCompletionBlock(block : CompletionBlock)
 }

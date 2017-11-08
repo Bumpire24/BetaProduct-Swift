@@ -65,4 +65,29 @@ class StoreCoreData: NSObject, StoreProtocol{
             
         }
     }
+    
+    func newProduct() -> Product {
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Product", in: managedObjectContext)
+        let product = NSManagedObject.init(entity: entityDescription!, insertInto: managedObjectContext) as! Product
+        return product
+    }
+    
+    func deleteProduct(product: Product) {
+        managedObjectContext.delete(product)
+    }
+    
+    func saveOrRollBack() {
+    }
+    
+    func saveWithCompletionBlock(block: CompletionBlock) {
+    }
+    
+    func saveOrRollBackWithCompletionBlock(block: CompletionBlock) {
+        do {
+            try managedObjectContext.save()
+            block(true, nil)
+        } catch _ {
+            
+        }
+    }
 }

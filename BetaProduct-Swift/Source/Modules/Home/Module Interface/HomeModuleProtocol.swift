@@ -8,7 +8,8 @@
 
 import Foundation
 
-protocol HomeModuleInterface{
+protocol HomeModuleProtocol{
     func updateView()
     func hideTabBar()
+    func showTabBar()
 }
