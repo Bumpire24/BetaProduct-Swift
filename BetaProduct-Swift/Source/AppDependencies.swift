@@ -20,7 +20,6 @@ class AppDependencies: NSObject {
     }
     
     func installRootViewController(InWindow window : UIWindow) {
-        // TEST
         mainWireFrame?.presentHomeViewInterfaceFromWindow(Window: window)
     }
     
