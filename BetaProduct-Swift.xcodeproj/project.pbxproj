@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		ADF875F2643D594BE02494FE /* Pods_BetaProduct_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D44D2C545B87B8BA9865E6 /* Pods_BetaProduct_Swift.framework */; };
+		CE4D3FDF1FB3E79600BCBB32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D3FDE1FB3E79600BCBB32 /* LoginView.swift */; };
+		CE4D3FE11FB3ED2000BCBB32 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */; };
+		CE697BCB1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */; };
+		CE697BCD1FB40136001F02E9 /* LoginOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697BCC1FB40136001F02E9 /* LoginOptionsPresenter.swift */; };
 		CE7472F81FB28CCC0015C0B3 /* Error+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */; };
 		CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
 		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
@@ -58,6 +62,10 @@
 		48D44D2C545B87B8BA9865E6 /* Pods_BetaProduct_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetaProduct_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F923D5DB2DE28B607DE274C /* Pods-BetaProduct-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		93CE34FC3179EA3FAAFAA596 /* Pods-BetaProduct-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		CE4D3FDE1FB3E79600BCBB32 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
+		CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
+		CE697BCC1FB40136001F02E9 /* LoginOptionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsPresenter.swift; sourceTree = "<group>"; };
 		CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Utility.swift"; sourceTree = "<group>"; };
 		CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClient.swift; sourceTree = "<group>"; };
 		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
@@ -134,6 +142,55 @@
 				48D44D2C545B87B8BA9865E6 /* Pods_BetaProduct_Swift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE4D3FD91FB3E6CC00BCBB32 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D3FDA1FB3E6DE00BCBB32 /* User Interface */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CE4D3FDA1FB3E6DE00BCBB32 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D3FDD1FB3E70000BCBB32 /* Presenter */,
+				CE4D3FDC1FB3E6F800BCBB32 /* View */,
+				CE4D3FDB1FB3E6EA00BCBB32 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		CE4D3FDB1FB3E6EA00BCBB32 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		CE4D3FDC1FB3E6F800BCBB32 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D3FDE1FB3E79600BCBB32 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE4D3FDD1FB3E70000BCBB32 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE697BC91FB3FDD4001F02E9 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */,
+			);
+			path = "Module Interface";
 			sourceTree = "<group>";
 		};
 		CE7472F31FB288310015C0B3 /* WebService */ = {
@@ -279,6 +336,7 @@
 		CEE8ABEA1FB184360052DC3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CE4D3FD91FB3E6CC00BCBB32 /* Login */,
 				CEEE9A191FB2FD0D008A5134 /* LoginOptions */,
 				CEE8AC0A1FB1A4FD0052DC3A /* Base */,
 				CEE8ABFF1FB1A43C0052DC3A /* Home */,
@@ -427,6 +485,7 @@
 		CEEE9A191FB2FD0D008A5134 /* LoginOptions */ = {
 			isa = PBXGroup;
 			children = (
+				CE697BC91FB3FDD4001F02E9 /* Module Interface */,
 				CEEE9A1A1FB2FD0D008A5134 /* User Interface */,
 			);
 			path = LoginOptions;
@@ -445,6 +504,7 @@
 		CEEE9A1B1FB2FD0D008A5134 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				CE697BCC1FB40136001F02E9 /* LoginOptionsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -664,10 +724,14 @@
 			files = (
 				CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */,
 				CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */,
+				CE4D3FE11FB3ED2000BCBB32 /* LoginWireframe.swift in Sources */,
 				CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */,
 				CEE8AC071FB1A48C0052DC3A /* HomeModuleProtocol.swift in Sources */,
+				CE697BCD1FB40136001F02E9 /* LoginOptionsPresenter.swift in Sources */,
+				CE4D3FDF1FB3E79600BCBB32 /* LoginView.swift in Sources */,
 				CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */,
 				CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */,
+				CE697BCB1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift in Sources */,
 				CEE8AC0D1FB1A51E0052DC3A /* BaseWireframe.swift in Sources */,
 				CE7472F81FB28CCC0015C0B3 /* Error+Utility.swift in Sources */,
 				CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */,
