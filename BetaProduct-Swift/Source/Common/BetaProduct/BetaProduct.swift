@@ -17,7 +17,11 @@ enum BetaProductError : Int {
 struct BetaProductStyle {
     static var iDoohPink = UIColor(red:1.00, green:0.40, blue:0.82, alpha:1.0)
     static var iDoohPurple = UIColor(red:0.25, green:0.31, blue:0.49, alpha:1.0)
-    static var iDoohHelveticaButtonLabel = UIFont(name: "Helvetica", size: 20)
+    static var iDoohClearColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.0)
+    static var iDoohLinkColor = UIColor(red:0.00, green:0.52, blue:0.98, alpha:1.0)
+    static var iDoohButtonLabelFont = UIFont(name: "Helvetica", size: 20)
+    static var iDoohButtonLinkFont = UIFont(name: "Helvetica-Bold", size: 20)
+    static var iDoohTextfieldFont = UIFont(name: "Helvetica", size: 17)
 }
 
 class BetaProduct: NSObject {

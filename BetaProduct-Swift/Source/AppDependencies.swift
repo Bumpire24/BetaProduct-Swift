@@ -12,7 +12,8 @@ import AlamofireNetworkActivityIndicator
 import CocoaLumberjack
 
 class AppDependencies: NSObject {
-    var mainWireFrame : HomeWireframe?
+    //var mainWireFrame : HomeWireframe?
+    var mainWireFrame : LoginOptionsWireframe?
     
     override init() {
         super.init()
@@ -28,10 +29,20 @@ class AppDependencies: NSObject {
         // Root Level Classes
         let root = RootWireframe()
         
-        // Home Module Classes
-        let homeWireframe = HomeWireframe()
-        homeWireframe.rootWireFrame = root
-        mainWireFrame = homeWireframe
+//        // Home Module Classes
+//        let homeWireframe = HomeWireframe()
+//        homeWireframe.rootWireFrame = root
+//        mainWireFrame = homeWireframe
+        
+        //Login Options Module Classes
+        let loginOptionsPresenter = LoginOptionsPresenter()
+        let loginOptionsWireframe = LoginOptionsWireframe()
+        let loginWireframe = LoginWireframe()
+        loginOptionsWireframe.rootWireFrame = root
+        loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
+        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
+        loginOptionsWireframe.loginWireframe = loginWireframe
+        mainWireFrame = loginOptionsWireframe
     }
     
     func configureLibraries() {

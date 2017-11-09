@@ -14,6 +14,7 @@ class LoginOptionsView: UIViewController {
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var iDoohImageView: UIImageView!
     @IBOutlet weak var dbsImageView: UIImageView!
+    var eventHandler : LoginOptionsModuleInterface?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,8 @@ class LoginOptionsView: UIViewController {
         self.loginOptionsView.backgroundColor = BetaProductStyle.iDoohPurple
         self.loginButton.backgroundColor = BetaProductStyle.iDoohPink
         self.createAccountButton.backgroundColor = BetaProductStyle.iDoohPink
-        self.loginButton.titleLabel?.font = BetaProductStyle.iDoohHelveticaButtonLabel
-        self.createAccountButton.titleLabel?.font = BetaProductStyle.iDoohHelveticaButtonLabel
+        self.loginButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
+        self.createAccountButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
     }
     
     func populateControls() {
@@ -41,4 +42,9 @@ class LoginOptionsView: UIViewController {
         self.loginButton.setTitle("Login", for: .normal)
         self.createAccountButton.setTitle("Create account", for: .normal)
     }
+    
+    @IBAction func proceedToLogin(_ sender: Any) {
+        eventHandler?.login()
+    }
+    
 }
