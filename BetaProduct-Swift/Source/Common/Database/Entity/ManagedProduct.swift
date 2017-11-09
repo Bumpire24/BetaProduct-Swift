@@ -6,7 +6,7 @@
 //  Copyright © 2017 User. All rights reserved.
 //
 
-class Product: BaseEntity {
+class ManagedProduct: BaseEntity {
     @NSManaged var name :               String
     @NSManaged var weblink :            String
     @NSManaged var productDescription : String

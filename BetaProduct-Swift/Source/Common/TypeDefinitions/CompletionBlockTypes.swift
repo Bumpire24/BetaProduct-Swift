@@ -10,3 +10,4 @@ import Foundation
 
 typealias CompletionBlock = (_ isSuccesful: Bool, _ error: NSError?) -> Void
 typealias CompletionBlockWithResults = (_ isSuccesful: Bool, _ error: NSError?, _ results : [Any]?) -> Void
+typealias CompletionBlockWithResult<T> = (_ isSuccesful : Bool, _ error: NSError?, _ result :T) -> Void

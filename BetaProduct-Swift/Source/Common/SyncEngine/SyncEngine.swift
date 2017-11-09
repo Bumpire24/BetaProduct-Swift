@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CocoaLumberjack
 
 class SyncEngine: NSObject {
     let storeCD : StoreCoreData = StoreCoreData()
@@ -17,22 +18,23 @@ class SyncEngine: NSObject {
             if success {
                 let downloadGroup = DispatchGroup()
                 for data in results! {
-                    let product : Product = self.storeCD.newProduct()
+                    let product : ManagedProduct = self.storeCD.newProduct()
                     let dataDict : [String : Any] = data as! [String : Any]
-                    product.productId = dataDict["id"] as! Int16
-                    product.name = dataDict["title"] as! String
-                    product.productDescription = dataDict["thumbnailUrl"] as! String
-                    product.priceDescription = dataDict["thumbnailUrl"] as! String
-                    product.imageUrl = dataDict["url"] as! String
-                    product.imageThumbUrl = dataDict["thumbnailUrl"] as! String
+                    let wsConverter = WebServiceConverter.init(dataDict)
+                    product.productId = wsConverter.int16WithKey("id")
+                    product.name = wsConverter.stringWithKey("body")
+                    product.productDescription = wsConverter.stringWithKey("thumbnailUrl")
+                    product.priceDescription = wsConverter.stringWithKey("thumbnailUrl")
+                    product.imageUrl = wsConverter.stringWithKey("url")
+                    product.imageThumbUrl = wsConverter.stringWithKey("thumbnailUrl")
                     product.status = Int16(Status.Active.rawValue)
                     product.syncStatus = Int16(SyncStatus.Synced.rawValue)
                     product.createdAt = Date()
                     product.modifiedAt = Date()
                     downloadGroup.enter()
-                    self.storeCD.saveWithCompletionBlock(block: { (success, error) in
+                    self.storeCD.saveWithCompletionBlock(block: { success, error in
                         if (!success) {
-                            
+                            DDLogError("Error  description : \(error?.localizedDescription ?? "Unknown Description") reason : \(error?.localizedFailureReason ?? "Unknown Reason") suggestion : \(error?.localizedRecoverySuggestion ?? "Unknown Suggestion")")
                         }
                         downloadGroup.leave()
                     })
@@ -41,7 +43,8 @@ class SyncEngine: NSObject {
                     block(true, nil)
                 })
             } else {
-               block(false, error)
+                DDLogError("Error  description : \(error?.localizedDescription ?? "Unknown Description") reason : \(error?.localizedFailureReason ?? "Unknown Reason") suggestion : \(error?.localizedRecoverySuggestion ?? "Unknown Suggestion")")
+                block(false, error)
             }
         }
     }

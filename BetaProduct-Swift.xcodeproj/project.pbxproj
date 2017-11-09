@@ -23,7 +23,7 @@
 		CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */; };
 		CEE8ABF21FB1851A0052DC3A /* DatabaseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */; };
 		CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF31FB187610052DC3A /* CompletionBlockTypes.swift */; };
-		CEE8ABF61FB18AA20052DC3A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* Product.swift */; };
+		CEE8ABF61FB18AA20052DC3A /* ManagedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */; };
 		CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF71FB18C0D0052DC3A /* StoreProtocol.swift */; };
 		CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF91FB18C880052DC3A /* StoreCoreData.swift */; };
 		CEE8ABFE1FB1A2F50052DC3A /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */; };
@@ -33,6 +33,10 @@
 		CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */; };
 		CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */; };
 		CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */; };
+		CEF83FB31FB3EBFF00FF19B4 /* WebServiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */; };
+		CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB41FB4166800FF19B4 /* Product.swift */; };
+		CEF83FB81FB4172000FF19B4 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */; };
+		CEF83FBD1FB41BBE00FF19B4 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +81,7 @@
 		CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTypes.swift; sourceTree = "<group>"; };
 		CEE8ABF31FB187610052DC3A /* CompletionBlockTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionBlockTypes.swift; sourceTree = "<group>"; };
-		CEE8ABF51FB18AA20052DC3A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedProduct.swift; sourceTree = "<group>"; };
 		CEE8ABF71FB18C0D0052DC3A /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
 		CEE8ABF91FB18C880052DC3A /* StoreCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCoreData.swift; sourceTree = "<group>"; };
 		CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -87,6 +91,10 @@
 		CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProduct.swift; sourceTree = "<group>"; };
+		CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConverter.swift; sourceTree = "<group>"; };
+		CEF83FB41FB4166800FF19B4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
+		CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,7 @@
 			children = (
 				CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */,
 				CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */,
+				CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -268,6 +277,8 @@
 		CEE8ABE91FB184310052DC3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEF83FB61FB4168000FF19B4 /* Base */,
+				CEF83FB41FB4166800FF19B4 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,7 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE8ABED1FB184620052DC3A /* Base */,
-				CEE8ABF51FB18AA20052DC3A /* Product.swift */,
+				CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -333,6 +344,7 @@
 		CEE8ABFC1FB1A2400052DC3A /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				CEF83FB91FB41B2F00FF19B4 /* Application Logic */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -417,6 +429,38 @@
 				CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */,
 			);
 			path = BetaProduct;
+			sourceTree = "<group>";
+		};
+		CEF83FB61FB4168000FF19B4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CEF83FB91FB41B2F00FF19B4 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				CEF83FBE1FB4629800FF19B4 /* Interactor */,
+				CEF83FBA1FB41B7300FF19B4 /* Manager */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		CEF83FBA1FB41B7300FF19B4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		CEF83FBE1FB4629800FF19B4 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -620,6 +664,8 @@
 				CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */,
 				CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */,
 				CEE8AC071FB1A48C0052DC3A /* HomeModuleProtocol.swift in Sources */,
+				CEF83FB31FB3EBFF00FF19B4 /* WebServiceConverter.swift in Sources */,
+				CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */,
 				CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */,
 				CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */,
 				CEE8AC0D1FB1A51E0052DC3A /* BaseWireframe.swift in Sources */,
@@ -633,9 +679,11 @@
 				CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */,
 				CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */,
 				CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */,
+				CEF83FBD1FB41BBE00FF19B4 /* ProductManager.swift in Sources */,
+				CEF83FB81FB4172000FF19B4 /* ModelProtocol.swift in Sources */,
 				CEE8AC091FB1A4E20052DC3A /* HomeView.swift in Sources */,
 				CEE8ABFE1FB1A2F50052DC3A /* AppDependencies.swift in Sources */,
-				CEE8ABF61FB18AA20052DC3A /* Product.swift in Sources */,
+				CEE8ABF61FB18AA20052DC3A /* ManagedProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
