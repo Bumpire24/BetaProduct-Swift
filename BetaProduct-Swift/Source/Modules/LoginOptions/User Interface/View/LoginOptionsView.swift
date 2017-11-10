@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginOptionsView: UIViewController {
+class LoginOptionsView: BaseView {
     @IBOutlet var loginOptionsView: UIView!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var createAccountButton: UIButton!
@@ -29,9 +29,10 @@ class LoginOptionsView: UIViewController {
     }
     
     func setupTheme() {
-        self.loginOptionsView.backgroundColor = BetaProductStyle.iDoohPurple
-        self.loginButton.backgroundColor = BetaProductStyle.iDoohPink
-        self.createAccountButton.backgroundColor = BetaProductStyle.iDoohPink
+        self.loginButton.backgroundColor = BetaProductStyle.iDoohClearColor
+        self.loginButton.subscribeToBlurringBackground()
+        self.createAccountButton.backgroundColor = BetaProductStyle.iDoohClearColor
+        self.createAccountButton.subscribeToBlurringBackground()
         self.loginButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
         self.createAccountButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
     }
@@ -46,5 +47,4 @@ class LoginOptionsView: UIViewController {
     @IBAction func proceedToLogin(_ sender: Any) {
         eventHandler?.login()
     }
-    
 }

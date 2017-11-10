@@ -19,8 +19,8 @@ struct BetaProductStyle {
     static var iDoohPurple = UIColor(red:0.25, green:0.31, blue:0.49, alpha:1.0)
     static var iDoohClearColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.0)
     static var iDoohLinkColor = UIColor(red:0.00, green:0.52, blue:0.98, alpha:1.0)
-    static var iDoohButtonLabelFont = UIFont(name: "Helvetica", size: 20)
-    static var iDoohButtonLinkFont = UIFont(name: "Helvetica-Bold", size: 20)
+    static var iDoohButtonLabelFont = UIFont(name: "GOGOIA-Deco", size: 35)
+    static var iDoohButtonLinkFont = UIFont(name: "GOGOIA-Deco", size: 35)
     static var iDoohTextfieldFont = UIFont(name: "Helvetica", size: 17)
 }
 

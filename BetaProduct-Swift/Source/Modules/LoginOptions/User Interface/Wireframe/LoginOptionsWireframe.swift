@@ -15,8 +15,10 @@ class LoginOptionsWireframe: BaseWireframe {
     var loginOptionsPresenter : LoginOptionsPresenter?
     var rootWireFrame : RootWireframe?
     var loginWireframe : LoginWireframe?
+    var window: UIWindow?
     
     func presentLoginOptionsViewInterfaceFromWindow(Window window : UIWindow) {
+        self.window = window
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: loginOptionsViewIdentifier) as! LoginOptionsView
         viewcontroller.eventHandler = loginOptionsPresenter
         loginOptionsView = viewcontroller
@@ -24,11 +26,7 @@ class LoginOptionsWireframe: BaseWireframe {
         rootWireFrame?.showRootViewController(rootViewController: viewcontroller, inWindow: window)
     }
     
-    func presentLoginViewFromViewController(_ viewController: UIViewController) {
-        loginWireframe?.presentLoginViewFromViewController(viewController)
-    }
-    
     func presentLoginView() {
-        loginWireframe?.presentLoginViewFromViewController(loginOptionsView!)
+        loginWireframe?.presentLoginViewFromViewController(loginOptionsView!, Window: self.window!)
     }
 }

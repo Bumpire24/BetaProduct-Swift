@@ -56,5 +56,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>GOGOIA-Regular.otf</string>
+		<string>GOGOIA-Deco.otf</string>
+	</array>
 </dict>
 </plist>
