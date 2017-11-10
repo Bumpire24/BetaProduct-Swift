@@ -12,8 +12,8 @@ import AlamofireNetworkActivityIndicator
 import CocoaLumberjack
 
 class AppDependencies: NSObject {
-    var mainWireFrame : HomeWireframe?
-//    var mainWireFrame : LoginOptionsWireframe?
+//    var mainWireFrame : HomeWireframe?
+    var mainWireFrame : LoginOptionsWireframe?
     
     override init() {
         super.init()
@@ -22,7 +22,8 @@ class AppDependencies: NSObject {
     }
     
     func installRootViewController(InWindow window : UIWindow) {
-        mainWireFrame?.presentHomeViewInterfaceFromWindow(Window: window)
+//        mainWireFrame?.presentHomeViewInterfaceFromWindow(Window: window)
+        mainWireFrame?.presentLoginOptionsViewInterfaceFromWindow(Window: window)
     }
     
     func configureDependencies() {
@@ -30,19 +31,19 @@ class AppDependencies: NSObject {
         let root = RootWireframe()
         
         // Home Module Classes
-        let homeWireframe = HomeWireframe()
-        homeWireframe.rootWireFrame = root
-        mainWireFrame = homeWireframe
+//        let homeWireframe = HomeWireframe()
+//        homeWireframe.rootWireFrame = root
+//        mainWireFrame = homeWireframe
         
         //Login Options Module Classes
-//        let loginOptionsPresenter = LoginOptionsPresenter()
-//        let loginOptionsWireframe = LoginOptionsWireframe()
-//        let loginWireframe = LoginWireframe()
-//        loginOptionsWireframe.rootWireFrame = root
-//        loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
-//        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
-//        loginOptionsWireframe.loginWireframe = loginWireframe
-//        mainWireFrame = loginOptionsWireframe
+        let loginOptionsPresenter = LoginOptionsPresenter()
+        let loginOptionsWireframe = LoginOptionsWireframe()
+        let loginWireframe = LoginWireframe()
+        loginOptionsWireframe.rootWireFrame = root
+        loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
+        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
+        loginOptionsWireframe.loginWireframe = loginWireframe
+        mainWireFrame = loginOptionsWireframe
     }
     
     func configureLibraries() {

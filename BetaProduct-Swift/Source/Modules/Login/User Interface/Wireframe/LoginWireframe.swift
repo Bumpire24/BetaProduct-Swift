@@ -20,15 +20,13 @@ class LoginWireframe: BaseWireframe {
         rootWireFrame?.showRootViewController(rootViewController: viewcontroller, inWindow: window)
     }
     
-    func presentLoginViewFromViewController(_ viewController: UIViewController) {
+    func presentLoginViewFromViewController(_ viewController: UIViewController, Window window : UIWindow) {
         let newViewController = loginViewController()
-        rootWireFrame?.showRootViewController(rootViewController: newViewController, inWindow: UIApplication.shared.keyWindow!)
-        //viewController.present(newViewController, animated: true, completion: nil)
+        viewController.navigationController?.pushViewController(newViewController, animated: true)
     }
     
     func loginViewController() -> LoginView {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: loginViewIdentifier) as! LoginView
         return viewcontroller
     }
-
 }
