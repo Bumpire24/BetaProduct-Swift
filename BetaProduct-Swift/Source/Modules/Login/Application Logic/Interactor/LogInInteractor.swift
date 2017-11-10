@@ -13,12 +13,14 @@ class LogInInteractor: NSObject, LogInInteractorInput {
     var manager : LogInManager?
     var output : LogInInteractorOutput?
     
-    func validateLogIn(_ loginDisplay: Any) {
-        manager?.validateUser(User.init(), block: { x in
+    func validateLogIn(_ loginDisplay: UserDisplayItem) {
+        let user = User.init(loginDisplay.username!, pass: loginDisplay.password!)
+        manager?.validateUser(user, block: { x in
             if x.isSuccess {
                 output?.loginSuccessful(true)
+            } else {
+                output?.loginSuccessful(false)
             }
-            output?.loginSuccessful(false)
         })
     }
 }

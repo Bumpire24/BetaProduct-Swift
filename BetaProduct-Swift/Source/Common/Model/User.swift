@@ -9,8 +9,8 @@
 import Foundation
 
 struct User : ModelProtocol {
-    let username:           String
-    let password:           String
+    var username:           String
+    var password:           String
     let status:             Int16
     let syncStatus:         Int16
     let createdAt:          Date
@@ -22,6 +22,18 @@ struct User : ModelProtocol {
     init() {
         username = ""
         password = ""
+        status = Int16(Status.Active.rawValue)
+        syncStatus = Int16(SyncStatus.Created.rawValue)
+        createdAt = Date()
+        modifiedAt = Date()
+        col1 = ""
+        col2 = ""
+        col3 = ""
+    }
+    
+    init(_ user : String, pass : String) {
+        username = user
+        password = pass
         status = Int16(Status.Active.rawValue)
         syncStatus = Int16(SyncStatus.Created.rawValue)
         createdAt = Date()

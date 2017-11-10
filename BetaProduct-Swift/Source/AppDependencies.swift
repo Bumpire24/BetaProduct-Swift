@@ -36,18 +36,25 @@ class AppDependencies: NSObject {
 //        mainWireFrame = homeWireframe
         
         //Login Options Module Classes
-//        let loginOptionsPresenter = LoginOptionsPresenter()
-//        let loginOptionsWireframe = LoginOptionsWireframe()
-//        let loginWireframe = LoginWireframe()
-//        loginOptionsWireframe.rootWireFrame = root
-//        loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
-//        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
-//        loginOptionsWireframe.loginWireframe = loginWireframe
-//        mainWireFrame = loginOptionsWireframe
+        let loginOptionsPresenter = LoginOptionsPresenter()
+        let loginOptionsWireframe = LoginOptionsWireframe()
+        let loginWireframe = LoginWireframe()
+        loginOptionsWireframe.rootWireFrame = root
+        loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
+        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
+        loginOptionsWireframe.loginWireframe = loginWireframe
+        mainWireFrame = loginOptionsWireframe
         
-        // Product List Module Classes
-//        let productListInteractor = ProductListInteractor()
-//        let productListPresenter = ProductListPresenter()
+        //Login Module Classes
+        let loginManager = LogInManager()
+        let loginInteractor = LogInInteractor()
+        let loginPresenter = LogInPresenter()
+        
+        loginInteractor.manager = loginManager
+        loginInteractor.output = loginPresenter
+        
+        loginPresenter.interactor = loginInteractor
+        loginWireframe.presenter = loginPresenter
     }
     
     func configureLibraries() {

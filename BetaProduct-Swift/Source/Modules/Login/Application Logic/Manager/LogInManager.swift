@@ -14,6 +14,8 @@ class LogInManager: NSObject {
     func validateUser(_ user : User, block : CompletionBlock<Bool>) {
         if user.username == validUser.username, user.password == validUser.password {
             block(Response.success(true))
+        } else {
+            block(Response.failure(BPError.init()))
         }
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LogInInteractorInput {
-    func validateLogIn(_ loginDisplay: Any)
+    func validateLogIn(_ loginDisplay: UserDisplayItem)
 }
 
 protocol LogInInteractorOutput {

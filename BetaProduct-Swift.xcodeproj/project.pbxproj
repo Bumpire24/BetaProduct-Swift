@@ -8,14 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		ADF875F2643D594BE02494FE /* Pods_BetaProduct_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D44D2C545B87B8BA9865E6 /* Pods_BetaProduct_Swift.framework */; };
+		CE4B34201FB57ABB00CB5905 /* GOGOIA-Deco.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341E1FB57AB900CB5905 /* GOGOIA-Deco.otf */; };
+		CE4B34211FB57ABB00CB5905 /* GOGOIA-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */; };
 		CE5570601FB568ED00A14F7A /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55705F1FB568ED00A14F7A /* ProductListInteractorIO.swift */; };
 		CE5570621FB56A7B00A14F7A /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570611FB56A7B00A14F7A /* ProductListInteractor.swift */; };
-		CE5570661FB56D5A00A14F7A /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570651FB56D5A00A14F7A /* ProductListPresenter.swift */; };
 		CE5570691FB57C1800A14F7A /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
 		CE55706E1FB596EE00A14F7A /* LogInInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706D1FB596EE00A14F7A /* LogInInteractorIO.swift */; };
 		CE5570701FB5977100A14F7A /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706F1FB5977100A14F7A /* LogInInteractor.swift */; };
 		CE5570721FB597BF00A14F7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570711FB597BF00A14F7A /* User.swift */; };
 		CE5570741FB597F600A14F7A /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570731FB597F600A14F7A /* LogInManager.swift */; };
+		CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DEC11FB56C120028A59B /* BaseView.swift */; };
+		CE6B5EBA1FB5A0B300356EC9 /* LogInModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */; };
+		CE6B5EBC1FB5A0DB00356EC9 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */; };
+		CE6B5EBF1FB5A18100356EC9 /* LogInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBE1FB5A18100356EC9 /* LogInViewProtocol.swift */; };
+		CE6B5EC11FB5A26100356EC9 /* UserDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EC01FB5A26100356EC9 /* UserDisplayItem.swift */; };
 		CE7472F81FB28CCC0015C0B3 /* Error+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */; };
 		CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
 		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
@@ -86,7 +92,12 @@
 		CE55706F1FB5977100A14F7A /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
 		CE5570711FB597BF00A14F7A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE5570731FB597F600A14F7A /* LogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInManager.swift; sourceTree = "<group>"; };
+		CE61DEC11FB56C120028A59B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
+		CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModuleProtocol.swift; sourceTree = "<group>"; };
+		CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
+		CE6B5EBE1FB5A18100356EC9 /* LogInViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewProtocol.swift; sourceTree = "<group>"; };
+		CE6B5EC01FB5A26100356EC9 /* UserDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisplayItem.swift; sourceTree = "<group>"; };
 		CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Utility.swift"; sourceTree = "<group>"; };
 		CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClient.swift; sourceTree = "<group>"; };
 		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
@@ -174,20 +185,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE5570631FB56D3200A14F7A /* User Interface */ = {
+		CE4B341D1FB57A8D00CB5905 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CE5570641FB56D3A00A14F7A /* Presenter */,
+				CE4B341E1FB57AB900CB5905 /* GOGOIA-Deco.otf */,
+				CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */,
 			);
-			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		CE5570641FB56D3A00A14F7A /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CE5570651FB56D5A00A14F7A /* ProductListPresenter.swift */,
-			);
-			path = Presenter;
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		CE5570671FB57BF700A14F7A /* Error Handling */ = {
@@ -222,6 +226,23 @@
 				CE55706F1FB5977100A14F7A /* LogInInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CE6B5EB71FB5A08500356EC9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */,
+				CE6B5EC01FB5A26100356EC9 /* UserDisplayItem.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CE6B5EB81FB5A09500356EC9 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */,
+			);
+			path = "Module Interface";
 			sourceTree = "<group>";
 		};
 		CE7472F31FB288310015C0B3 /* WebService */ = {
@@ -264,6 +285,7 @@
 			children = (
 				CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */,
 				CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */,
+				CE5570651FB56D5A00A14F7A /* ProductListPresenter.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -322,6 +344,7 @@
 		CEC203921FB46C160022C7C2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				CE6B5EB81FB5A09500356EC9 /* Module Interface */,
 				CE55706A1FB596B300A14F7A /* Application Logic */,
 				CEC203931FB46C160022C7C2 /* User Interface */,
 			);
@@ -331,6 +354,7 @@
 		CEC203931FB46C160022C7C2 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				CE6B5EB71FB5A08500356EC9 /* Presenter */,
 				CEC203941FB46C160022C7C2 /* Wireframe */,
 				CEC203961FB46C160022C7C2 /* View */,
 			);
@@ -349,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				CEC203971FB46C160022C7C2 /* LoginView.swift */,
+				CE6B5EBE1FB5A18100356EC9 /* LogInViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -530,7 +555,6 @@
 		CEE8ABFC1FB1A2400052DC3A /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
-				CE5570631FB56D3200A14F7A /* User Interface */,
 				CEF83FB91FB41B2F00FF19B4 /* Application Logic */,
 			);
 			path = ProductList;
@@ -873,21 +897,24 @@
 				CEE8ABF21FB1851A0052DC3A /* DatabaseTypes.swift in Sources */,
 				CEE8ABB41FB181110052DC3A /* AppDelegate.swift in Sources */,
 				CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */,
+				CE6B5EBF1FB5A18100356EC9 /* LogInViewProtocol.swift in Sources */,
 				CEE8ABBC1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld in Sources */,
 				CEC2039D1FB46C160022C7C2 /* LoginView.swift in Sources */,
+				CE6B5EC11FB5A26100356EC9 /* UserDisplayItem.swift in Sources */,
 				CE5570691FB57C1800A14F7A /* BetaProductError.swift in Sources */,
 				CE5570721FB597BF00A14F7A /* User.swift in Sources */,
 				CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */,
 				CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */,
 				CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */,
+				CE6B5EBA1FB5A0B300356EC9 /* LogInModuleProtocol.swift in Sources */,
 				CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */,
 				CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */,
 				CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */,
 				CEF83FBD1FB41BBE00FF19B4 /* ProductManager.swift in Sources */,
 				CEF83FB81FB4172000FF19B4 /* ModelProtocol.swift in Sources */,
 				CE5570601FB568ED00A14F7A /* ProductListInteractorIO.swift in Sources */,
-				CE5570661FB56D5A00A14F7A /* ProductListPresenter.swift in Sources */,
 				CEE8AC091FB1A4E20052DC3A /* HomeView.swift in Sources */,
+				CE6B5EBC1FB5A0DB00356EC9 /* LogInPresenter.swift in Sources */,
 				CEE8ABFE1FB1A2F50052DC3A /* AppDependencies.swift in Sources */,
 				CEE8ABF61FB18AA20052DC3A /* ManagedProduct.swift in Sources */,
 				CEC2039A1FB46C160022C7C2 /* LoginOptionsWireframe.swift in Sources */,

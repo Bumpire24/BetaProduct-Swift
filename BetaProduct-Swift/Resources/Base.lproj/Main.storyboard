@@ -51,7 +51,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zab-Cs-wO1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1414" y="116"/>
+            <point key="canvasLocation" x="1414" y="109"/>
         </scene>
         <!--Login Options View-->
         <scene sceneID="vKf-ji-Och">
@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHR-bU-cgx">
-                                <rect key="frame" x="18.5" y="509.5" width="338" height="59"/>
+                                <rect key="frame" x="18.5" y="509" width="338" height="59"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal">
@@ -73,7 +73,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cy-BN-AOO">
-                                <rect key="frame" x="18.5" y="588.5" width="338" height="58.5"/>
+                                <rect key="frame" x="18.5" y="588" width="338" height="59"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal">
@@ -138,13 +138,65 @@
                     <view key="view" contentMode="scaleToFill" id="6HR-6h-JGZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PFS-w1-acE" userLabel="Enter Fullname">
+                                <rect key="frame" x="18.5" y="220" width="338" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0OA-ct-Kad" userLabel="Enter Mobile Number">
+                                <rect key="frame" x="18.5" y="275" width="338" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-U9-fwv" userLabel="Enter Email">
+                                <rect key="frame" x="18.5" y="330" width="338" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9gw-ll-2aw" userLabel="Enter Password">
+                                <rect key="frame" x="18.5" y="385" width="338" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dP-ho-PyT" userLabel="Create Account Button">
+                                <rect key="frame" x="21" y="613.5" width="338" height="33"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0OA-ct-Kad" firstAttribute="width" secondItem="PFS-w1-acE" secondAttribute="width" id="115-js-x8F"/>
+                            <constraint firstItem="b0E-U9-fwv" firstAttribute="height" secondItem="PFS-w1-acE" secondAttribute="height" id="1f0-iJ-8eY"/>
+                            <constraint firstItem="PFS-w1-acE" firstAttribute="centerX" secondItem="FpY-dT-jaM" secondAttribute="centerX" id="1wP-A9-dA5"/>
+                            <constraint firstItem="9gw-ll-2aw" firstAttribute="height" secondItem="PFS-w1-acE" secondAttribute="height" id="65r-jg-cWR"/>
+                            <constraint firstItem="9gw-ll-2aw" firstAttribute="top" secondItem="b0E-U9-fwv" secondAttribute="bottom" constant="25" id="9Ra-c8-UUe"/>
+                            <constraint firstItem="PFS-w1-acE" firstAttribute="top" secondItem="FpY-dT-jaM" secondAttribute="top" constant="200" id="9yf-K3-2El"/>
+                            <constraint firstItem="9gw-ll-2aw" firstAttribute="width" secondItem="PFS-w1-acE" secondAttribute="width" id="CDL-qu-Khi"/>
+                            <constraint firstItem="b0E-U9-fwv" firstAttribute="top" secondItem="0OA-ct-Kad" secondAttribute="bottom" constant="25" id="XMk-8N-6yd"/>
+                            <constraint firstItem="0OA-ct-Kad" firstAttribute="centerX" secondItem="FpY-dT-jaM" secondAttribute="centerX" id="evt-LD-JNO"/>
+                            <constraint firstItem="FpY-dT-jaM" firstAttribute="bottom" secondItem="1dP-ho-PyT" secondAttribute="bottom" constant="20" id="fC3-J9-7V2"/>
+                            <constraint firstItem="b0E-U9-fwv" firstAttribute="width" secondItem="PFS-w1-acE" secondAttribute="width" id="fzn-np-3Yk"/>
+                            <constraint firstItem="0OA-ct-Kad" firstAttribute="top" secondItem="PFS-w1-acE" secondAttribute="bottom" constant="25" id="kbh-aC-HeI"/>
+                            <constraint firstItem="PFS-w1-acE" firstAttribute="width" secondItem="6HR-6h-JGZ" secondAttribute="width" multiplier="1:1.1111" id="laU-xu-mEF"/>
+                            <constraint firstItem="9gw-ll-2aw" firstAttribute="centerX" secondItem="FpY-dT-jaM" secondAttribute="centerX" id="nRE-kB-ALr"/>
+                            <constraint firstItem="b0E-U9-fwv" firstAttribute="centerX" secondItem="FpY-dT-jaM" secondAttribute="centerX" id="o4r-GW-Kil"/>
+                            <constraint firstItem="0OA-ct-Kad" firstAttribute="height" secondItem="PFS-w1-acE" secondAttribute="height" id="yAz-nY-pWU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FpY-dT-jaM"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDJ-FK-Mrg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="769" y="1500"/>
+            <point key="canvasLocation" x="1413.5999999999999" y="1491.9040479760122"/>
         </scene>
         <!--Login View-->
         <scene sceneID="qBN-O3-sb3">
@@ -195,9 +247,12 @@
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="Cww-ig-X2j" eventType="touchUpInside" id="fPt-ct-WTj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MU-cI-uWq" userLabel="Forgot Password Button">
-                                <rect key="frame" x="18.5" y="588.5" width="338" height="58.5"/>
+                                <rect key="frame" x="18.5" y="588" width="338" height="59"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Forgot Password?">
