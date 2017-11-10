@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		ADF875F2643D594BE02494FE /* Pods_BetaProduct_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D44D2C545B87B8BA9865E6 /* Pods_BetaProduct_Swift.framework */; };
-		CE4D3FDF1FB3E79600BCBB32 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D3FDE1FB3E79600BCBB32 /* LoginView.swift */; };
-		CE4D3FE11FB3ED2000BCBB32 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */; };
-		CE697BCB1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */; };
-		CE697BCD1FB40136001F02E9 /* LoginOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE697BCC1FB40136001F02E9 /* LoginOptionsPresenter.swift */; };
 		CE7472F81FB28CCC0015C0B3 /* Error+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */; };
 		CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
 		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
 		CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
+		CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */; };
+		CEC203991FB46C160022C7C2 /* LoginOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */; };
+		CEC2039A1FB46C160022C7C2 /* LoginOptionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038F1FB46C160022C7C2 /* LoginOptionsWireframe.swift */; };
+		CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */; };
+		CEC2039C1FB46C160022C7C2 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203951FB46C160022C7C2 /* LoginWireframe.swift */; };
+		CEC2039D1FB46C160022C7C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203971FB46C160022C7C2 /* LoginView.swift */; };
 		CEE8ABB41FB181110052DC3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB31FB181110052DC3A /* AppDelegate.swift */; };
 		CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
 		CEE8ABB91FB181110052DC3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABB71FB181110052DC3A /* Main.storyboard */; };
@@ -27,7 +29,7 @@
 		CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */; };
 		CEE8ABF21FB1851A0052DC3A /* DatabaseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */; };
 		CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF31FB187610052DC3A /* CompletionBlockTypes.swift */; };
-		CEE8ABF61FB18AA20052DC3A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* Product.swift */; };
+		CEE8ABF61FB18AA20052DC3A /* ManagedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */; };
 		CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF71FB18C0D0052DC3A /* StoreProtocol.swift */; };
 		CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF91FB18C880052DC3A /* StoreCoreData.swift */; };
 		CEE8ABFE1FB1A2F50052DC3A /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */; };
@@ -37,8 +39,10 @@
 		CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */; };
 		CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */; };
 		CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */; };
-		CEEE9A201FB2FD0D008A5134 /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE9A1D1FB2FD0D008A5134 /* LoginOptionsView.swift */; };
-		CEEE9A211FB2FD0D008A5134 /* LoginOptionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEE9A1F1FB2FD0D008A5134 /* LoginOptionsWireframe.swift */; };
+		CEF83FB31FB3EBFF00FF19B4 /* WebServiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */; };
+		CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB41FB4166800FF19B4 /* Product.swift */; };
+		CEF83FB81FB4172000FF19B4 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */; };
+		CEF83FBD1FB41BBE00FF19B4 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,14 +66,18 @@
 		48D44D2C545B87B8BA9865E6 /* Pods_BetaProduct_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetaProduct_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F923D5DB2DE28B607DE274C /* Pods-BetaProduct-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		93CE34FC3179EA3FAAFAA596 /* Pods-BetaProduct-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		CE4D3FDE1FB3E79600BCBB32 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
 		CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
-		CE697BCC1FB40136001F02E9 /* LoginOptionsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsPresenter.swift; sourceTree = "<group>"; };
 		CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Utility.swift"; sourceTree = "<group>"; };
 		CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClient.swift; sourceTree = "<group>"; };
 		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
 		CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
+		CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsPresenter.swift; sourceTree = "<group>"; };
+		CEC2038F1FB46C160022C7C2 /* LoginOptionsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsWireframe.swift; sourceTree = "<group>"; };
+		CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
+		CEC203951FB46C160022C7C2 /* LoginWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
+		CEC203971FB46C160022C7C2 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CEE8ABB01FB181110052DC3A /* BetaProduct-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE8ABB31FB181110052DC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE8ABB51FB181110052DC3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +95,7 @@
 		CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTypes.swift; sourceTree = "<group>"; };
 		CEE8ABF31FB187610052DC3A /* CompletionBlockTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionBlockTypes.swift; sourceTree = "<group>"; };
-		CEE8ABF51FB18AA20052DC3A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedProduct.swift; sourceTree = "<group>"; };
 		CEE8ABF71FB18C0D0052DC3A /* StoreProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProtocol.swift; sourceTree = "<group>"; };
 		CEE8ABF91FB18C880052DC3A /* StoreCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCoreData.swift; sourceTree = "<group>"; };
 		CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
@@ -97,8 +105,10 @@
 		CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProduct.swift; sourceTree = "<group>"; };
-		CEEE9A1D1FB2FD0D008A5134 /* LoginOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
-		CEEE9A1F1FB2FD0D008A5134 /* LoginOptionsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsWireframe.swift; sourceTree = "<group>"; };
+		CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConverter.swift; sourceTree = "<group>"; };
+		CEF83FB41FB4166800FF19B4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
+		CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,60 +154,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE4D3FD91FB3E6CC00BCBB32 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CE4D3FDA1FB3E6DE00BCBB32 /* User Interface */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		CE4D3FDA1FB3E6DE00BCBB32 /* User Interface */ = {
-			isa = PBXGroup;
-			children = (
-				CE4D3FDD1FB3E70000BCBB32 /* Presenter */,
-				CE4D3FDC1FB3E6F800BCBB32 /* View */,
-				CE4D3FDB1FB3E6EA00BCBB32 /* Wireframe */,
-			);
-			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		CE4D3FDB1FB3E6EA00BCBB32 /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-				CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */,
-			);
-			path = Wireframe;
-			sourceTree = "<group>";
-		};
-		CE4D3FDC1FB3E6F800BCBB32 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CE4D3FDE1FB3E79600BCBB32 /* LoginView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CE4D3FDD1FB3E70000BCBB32 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		CE697BC91FB3FDD4001F02E9 /* Module Interface */ = {
-			isa = PBXGroup;
-			children = (
-				CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */,
-			);
-			path = "Module Interface";
-			sourceTree = "<group>";
-		};
 		CE7472F31FB288310015C0B3 /* WebService */ = {
 			isa = PBXGroup;
 			children = (
 				CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */,
 				CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */,
+				CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */,
 			);
 			path = WebService;
 			sourceTree = "<group>";
@@ -226,6 +188,99 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CEC203871FB46B5B0022C7C2 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */,
+				CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		CEC203881FB46C160022C7C2 /* LoginOptions */ = {
+			isa = PBXGroup;
+			children = (
+				CEC203891FB46C160022C7C2 /* Module Interface */,
+				CEC2038B1FB46C160022C7C2 /* User Interface */,
+			);
+			path = LoginOptions;
+			sourceTree = "<group>";
+		};
+		CEC203891FB46C160022C7C2 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		CEC2038B1FB46C160022C7C2 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CEC2038C1FB46C160022C7C2 /* Presenter */,
+				CEC2038E1FB46C160022C7C2 /* Wireframe */,
+				CEC203901FB46C160022C7C2 /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		CEC2038C1FB46C160022C7C2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CEC2038E1FB46C160022C7C2 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				CEC2038F1FB46C160022C7C2 /* LoginOptionsWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		CEC203901FB46C160022C7C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEC203921FB46C160022C7C2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CEC203931FB46C160022C7C2 /* User Interface */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CEC203931FB46C160022C7C2 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CEC203941FB46C160022C7C2 /* Wireframe */,
+				CEC203961FB46C160022C7C2 /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		CEC203941FB46C160022C7C2 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				CEC203951FB46C160022C7C2 /* LoginWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		CEC203961FB46C160022C7C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEC203971FB46C160022C7C2 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CEE8ABA71FB181110052DC3A = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +290,7 @@
 				CEE8ABB11FB181110052DC3A /* Products */,
 				1737823440E72A51755F4E09 /* Pods */,
 				9FA4CF38A924B88B54EE5910 /* Frameworks */,
+				CEC203871FB46B5B0022C7C2 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -329,6 +385,8 @@
 		CEE8ABE91FB184310052DC3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEF83FB61FB4168000FF19B4 /* Base */,
+				CEF83FB41FB4166800FF19B4 /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,8 +394,8 @@
 		CEE8ABEA1FB184360052DC3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				CE4D3FD91FB3E6CC00BCBB32 /* Login */,
-				CEEE9A191FB2FD0D008A5134 /* LoginOptions */,
+				CEC203921FB46C160022C7C2 /* Login */,
+				CEC203881FB46C160022C7C2 /* LoginOptions */,
 				CEE8AC0A1FB1A4FD0052DC3A /* Base */,
 				CEE8ABFF1FB1A43C0052DC3A /* Home */,
 				CEE8ABFC1FB1A2400052DC3A /* ProductList */,
@@ -357,7 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE8ABED1FB184620052DC3A /* Base */,
-				CEE8ABF51FB18AA20052DC3A /* Product.swift */,
+				CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -396,6 +454,7 @@
 		CEE8ABFC1FB1A2400052DC3A /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
+				CEF83FB91FB41B2F00FF19B4 /* Application Logic */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -482,47 +541,36 @@
 			path = BetaProduct;
 			sourceTree = "<group>";
 		};
-		CEEE9A191FB2FD0D008A5134 /* LoginOptions */ = {
+		CEF83FB61FB4168000FF19B4 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				CE697BC91FB3FDD4001F02E9 /* Module Interface */,
-				CEEE9A1A1FB2FD0D008A5134 /* User Interface */,
+				CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */,
 			);
-			path = LoginOptions;
+			path = Base;
 			sourceTree = "<group>";
 		};
-		CEEE9A1A1FB2FD0D008A5134 /* User Interface */ = {
+		CEF83FB91FB41B2F00FF19B4 /* Application Logic */ = {
 			isa = PBXGroup;
 			children = (
-				CEEE9A1B1FB2FD0D008A5134 /* Presenter */,
-				CEEE9A1C1FB2FD0D008A5134 /* View */,
-				CEEE9A1E1FB2FD0D008A5134 /* Wireframe */,
+				CEF83FBE1FB4629800FF19B4 /* Interactor */,
+				CEF83FBA1FB41B7300FF19B4 /* Manager */,
 			);
-			path = "User Interface";
+			path = "Application Logic";
 			sourceTree = "<group>";
 		};
-		CEEE9A1B1FB2FD0D008A5134 /* Presenter */ = {
+		CEF83FBA1FB41B7300FF19B4 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				CE697BCC1FB40136001F02E9 /* LoginOptionsPresenter.swift */,
+				CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */,
 			);
-			path = Presenter;
+			path = Manager;
 			sourceTree = "<group>";
 		};
-		CEEE9A1C1FB2FD0D008A5134 /* View */ = {
+		CEF83FBE1FB4629800FF19B4 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				CEEE9A1D1FB2FD0D008A5134 /* LoginOptionsView.swift */,
 			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CEEE9A1E1FB2FD0D008A5134 /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-				CEEE9A1F1FB2FD0D008A5134 /* LoginOptionsWireframe.swift */,
-			);
-			path = Wireframe;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -724,30 +772,34 @@
 			files = (
 				CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */,
 				CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */,
-				CE4D3FE11FB3ED2000BCBB32 /* LoginWireframe.swift in Sources */,
 				CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */,
+				CEC2039C1FB46C160022C7C2 /* LoginWireframe.swift in Sources */,
 				CEE8AC071FB1A48C0052DC3A /* HomeModuleProtocol.swift in Sources */,
-				CE697BCD1FB40136001F02E9 /* LoginOptionsPresenter.swift in Sources */,
-				CE4D3FDF1FB3E79600BCBB32 /* LoginView.swift in Sources */,
+				CEF83FB31FB3EBFF00FF19B4 /* WebServiceConverter.swift in Sources */,
+				CEC203991FB46C160022C7C2 /* LoginOptionsPresenter.swift in Sources */,
+				CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */,
 				CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */,
 				CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */,
-				CE697BCB1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift in Sources */,
+				CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */,
 				CEE8AC0D1FB1A51E0052DC3A /* BaseWireframe.swift in Sources */,
 				CE7472F81FB28CCC0015C0B3 /* Error+Utility.swift in Sources */,
 				CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */,
 				CEE8ABF21FB1851A0052DC3A /* DatabaseTypes.swift in Sources */,
-				CEEE9A201FB2FD0D008A5134 /* LoginOptionsView.swift in Sources */,
 				CEE8ABB41FB181110052DC3A /* AppDelegate.swift in Sources */,
 				CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */,
 				CEE8ABBC1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld in Sources */,
+				CEC2039D1FB46C160022C7C2 /* LoginView.swift in Sources */,
+				CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */,
 				CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */,
 				CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */,
 				CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */,
 				CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */,
+				CEF83FBD1FB41BBE00FF19B4 /* ProductManager.swift in Sources */,
+				CEF83FB81FB4172000FF19B4 /* ModelProtocol.swift in Sources */,
 				CEE8AC091FB1A4E20052DC3A /* HomeView.swift in Sources */,
-				CEEE9A211FB2FD0D008A5134 /* LoginOptionsWireframe.swift in Sources */,
 				CEE8ABFE1FB1A2F50052DC3A /* AppDependencies.swift in Sources */,
-				CEE8ABF61FB18AA20052DC3A /* Product.swift in Sources */,
+				CEE8ABF61FB18AA20052DC3A /* ManagedProduct.swift in Sources */,
+				CEC2039A1FB46C160022C7C2 /* LoginOptionsWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

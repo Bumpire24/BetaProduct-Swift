@@ -14,8 +14,8 @@ protocol StoreProtocol {
                         withPredicate predicate : NSPredicate?,
             withSortDescriptors sortDescriptors : [NSSortDescriptor]?,
             withCompletionBlock block : @escaping CompletionBlockWithResults)
-    func newProduct() -> Product
-    func deleteProduct(product : Product)
+    func newProduct() -> ManagedProduct
+    func deleteProduct(product : ManagedProduct)
     func save()
     func saveOrRollBack()
     func saveWithCompletionBlock(block : CompletionBlock)

@@ -27,9 +27,9 @@ class StoreCoreData: NSObject, StoreProtocol{
         
         let storeURL = applicationDocumentsDirectory.appendingPathComponent(BetaProduct.kBetaProductDatabaseName)
         
-        try! persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: "", at: storeURL, options: options)
+        try! persistentStoreCoordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: options)
         
-        managedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.mainQueueConcurrencyType)
+        managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         managedObjectContext.persistentStoreCoordinator = persistentStoreCoordinator
         managedObjectContext.undoManager = nil
         
@@ -69,16 +69,18 @@ class StoreCoreData: NSObject, StoreProtocol{
         }
     }
     
-    func newProduct() -> Product {
+    func newProduct() -> ManagedProduct {
 //        let entityDescription : NSEntityDescription = NSEntityDescription.entity(forEntityName: "Product", in: managedObjectContext)!
 //        let product : Product = NSManagedObject.init(entity: entityDescription, insertInto: managedObjectContext) as! Product
 //        return product
 //
-        let newEntry = NSEntityDescription.insertNewObject(forEntityName: "Product", into: managedObjectContext) as! Product
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Product", in: managedObjectContext)
+        let newEntry = NSManagedObject.init(entity: entityDescription!, insertInto: managedObjectContext) as! ManagedProduct
+//        let newEntry = NSEntityDescription.insertNewObject(forEntityName: "Product", into: managedObjectContext) as! Product
         return newEntry
     }
     
-    func deleteProduct(product: Product) {
+    func deleteProduct(product: ManagedProduct) {
         managedObjectContext.delete(product)
     }
     
