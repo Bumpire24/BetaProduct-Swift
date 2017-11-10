@@ -247,6 +247,9 @@
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login:" destination="Cww-ig-X2j" eventType="touchUpInside" id="fPt-ct-WTj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MU-cI-uWq" userLabel="Forgot Password Button">
                                 <rect key="frame" x="18.5" y="588" width="338" height="59"/>

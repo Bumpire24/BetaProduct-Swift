@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginView: BaseView {
+class LoginView: BaseView, LoginViewProtocol {
     @IBOutlet var loginView: UIView!
     @IBOutlet weak var iDoohImageView: UIImageView!
     @IBOutlet weak var dbsImageView: UIImageView!
@@ -16,6 +16,7 @@ class LoginView: BaseView {
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    var eventHandler : LogInPresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,5 +59,15 @@ class LoginView: BaseView {
     
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
+    }
+    
+    // MARK: LoginViewProtocol
+    func displayMessage(_ message: String) {
+        print(message)
+    }
+    
+    @IBAction func login(_ sender: Any) {
+        let user = UserDisplayItem.init(username: emailField.text, password: passwordField.text)
+        eventHandler?.validateUser(user)
     }
 }

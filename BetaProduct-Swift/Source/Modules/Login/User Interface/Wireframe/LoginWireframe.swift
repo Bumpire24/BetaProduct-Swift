@@ -13,15 +13,18 @@ let loginViewIdentifier = "LoginView"
 class LoginWireframe: BaseWireframe {
     var loginView : LoginView?
     var rootWireFrame : RootWireframe?
+    var presenter : LogInPresenter?
     
     func presentLoginViewInterfaceFromWindow(Window window : UIWindow) {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: loginViewIdentifier) as! LoginView
-        loginView = viewcontroller
         rootWireFrame?.showRootViewController(rootViewController: viewcontroller, inWindow: window)
     }
     
     func presentLoginViewFromViewController(_ viewController: UIViewController, Window window : UIWindow) {
         let newViewController = loginViewController()
+        loginView = newViewController
+        loginView?.eventHandler = presenter
+        presenter?.view = newViewController
         viewController.navigationController?.pushViewController(newViewController, animated: true)
     }
     

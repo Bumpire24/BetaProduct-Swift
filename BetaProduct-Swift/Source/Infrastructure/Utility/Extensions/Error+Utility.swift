@@ -9,12 +9,12 @@
 import Foundation
 
 extension NSError {
-    convenience init(domain : String, code : Int, description : String, reason : String, suggestion : String) {
-        let userInfo = [
-            NSLocalizedDescriptionKey : description,
-            NSLocalizedFailureReasonErrorKey : reason,
-            NSLocalizedRecoverySuggestionErrorKey : suggestion
-        ]
-        self.init(domain: domain, code: code, userInfo: userInfo)
-    }
+//    convenience init(domain : String, code : Int, description : String, reason : String, suggestion : String) {
+//        let userInfo = [
+//            NSLocalizedDescriptionKey : description,
+//            NSLocalizedFailureReasonErrorKey : reason,
+//            NSLocalizedRecoverySuggestionErrorKey : suggestion
+//        ]
+//        self.init(domain: domain, code: code, userInfo: userInfo)
+//    }
 }

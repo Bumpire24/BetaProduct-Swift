@@ -8,29 +8,68 @@
 
 import Foundation
 
+struct Results<T> {
+    let isSuccess : Bool
+    var error : NSError?
+    var results : Array<T>
+}
+
 class ProductManager: NSObject {
     private var retrievedConvertedProducts : [Product]?
     var store : StoreCoreData?
     
-    func getProducts(_ block : @escaping CompletionBlockWithResults) {
-        let entityName = "Product"
-        let predicate = NSPredicate.init(format: "status != %d", SyncStatus.Deleted.rawValue)
-        store?.fetchEntries(withEntityName: entityName, withPredicate: predicate, withSortDescriptors: nil, withCompletionBlock: { success, error, results in
-            if success {
-                if results!.count > 0 {
-                    block(success, nil, self.productsFromManagedProducts(results as! [ManagedProduct]))
-                } else {
-                    block(false, NSError.init(domain: BetaProduct.kBetaProductErrorDomain,
-                                              code: BetaProductError.Database.rawValue,
-                                              description: "Found No Records",
-                                              reason: "No Records found for entity \(entityName)",
-                        suggestion: "debug function func \(#function)"),nil)
-                }
-            } else {
-                block(success, error, results)
-            }
-        })
-    }
+//    func sample(_ block : ((Results<Product>) -> Void)) {
+//        let entityName = "Product"
+//        let predicate = NSPredicate.init(format: "status != %d", SyncStatus.Deleted.rawValue)
+//        store?.fetchEntries(withEntityName: entityName, withPredicate: predicate, withSortDescriptors: nil, withCompletionBlock: { success, error, results in
+//            if success {
+//                if results!.count > 0 {
+//                    let x = Response<Any>.success(BPError.init(domain: "", code: .Database, description: "", reason: "", suggestion: ""))
+//                } else {
+//                    let x = Response<Any>.failure(BPError.init(domain: "", code: .Database, description: "", reason: "", suggestion: ""))
+//                }
+//            } else {
+//                let x = Response<Any>.failure(BPError.init(domain: "", code: .Database, description: "", reason: "", suggestion: ""))
+//                x.error?.innerNSError = error
+//            }
+//        })
+//    }
+    
+//    func sample(_ block : CompletionBlock1<[Product]>) {
+//        let entityName = "Product"
+//        let predicate = NSPredicate.init(format: "status != %d", SyncStatus.Deleted.rawValue)
+//        store?.fetchEntries(withEntityName: entityName, withPredicate: predicate, withSortDescriptors: nil, withCompletionBlock: { success, error, results in
+//            if success {
+//                if results!.count > 0 {
+//
+//                } else {
+//
+//                }
+//            } else {
+//
+//            }
+//        })
+//    }
+    
+//    func getProducts(_ block : @escaping CompletionBlockWithResults) {
+//        let entityName = "Product"
+//        let predicate = NSPredicate.init(format: "status != %d", SyncStatus.Deleted.rawValue)
+//        store?.fetchEntries(withEntityName: entityName, withPredicate: predicate, withSortDescriptors: nil, withCompletionBlock: { success, error, results in
+//            if success {
+//                if results!.count > 0 {
+//                    block(success, nil, self.productsFromManagedProducts(results as! [ManagedProduct]))
+//                } else {
+//                    block(false, NSError.init(domain: BetaProduct.kBetaProductErrorDomain,
+//                                              code: BetaProductError.Database.rawValue,
+//                                              description: "Found No Records",
+//                                              reason: "No Records found for entity \(entityName)",
+//                        suggestion: "debug function func \(#function)"),nil)
+//                }
+//            } else {
+//                block(success, error, results)
+//            }
+//        })
+//    }
     
     func getPersistedProductById(_ index : Int) -> Product?{
         if let results = retrievedConvertedProducts {

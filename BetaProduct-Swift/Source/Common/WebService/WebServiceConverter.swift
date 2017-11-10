@@ -18,8 +18,8 @@ class WebServiceConverter {
     }
     
     private func logErrorKeyNotFound(_ key : String) {
-        let error : NSError = NSError.init(domain: BetaProduct.kBetaProductErrorDomain,
-                                           code: BetaProductError.WebService.rawValue,
+        let error : BPError = BPError.init(domain: BetaProduct.kBetaProductErrorDomain,
+                                           code: .WebService,
                                            description: "Unable to convert data dictionary",
                                            reason: "\(key) does not exist in dictionary",
                                            suggestion: "debug function \(#function)")
@@ -27,8 +27,8 @@ class WebServiceConverter {
     }
     
     private func logErrorKeyIsNotTheExpectedType<T>(_ key : String, value : T) {
-        let error : NSError = NSError.init(domain: BetaProduct.kBetaProductErrorDomain,
-                                           code: BetaProductError.WebService.rawValue,
+        let error : BPError = BPError.init(domain: BetaProduct.kBetaProductErrorDomain,
+                                           code: .WebService,
                                            description: "Unable to convert data dictionary",
                                            reason: "\(key) does not follow correct Type \(String(describing: type(of: value)))",
                                            suggestion: "debug function \(#function)")

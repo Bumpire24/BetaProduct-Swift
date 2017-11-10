@@ -10,30 +10,51 @@ import UIKit
 import Alamofire
 
 class StoreWebClient: StoreWebClientProtocol {
-    func GET(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlockWithResults) {
-        Alamofire.request(URL.init(string: url)!, method: HTTPMethod.get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {response in
+    // MARK: StoreWebClientProtocol
+    /// Protocol implementation. see `StoreWebClientProtocol.swift`
+    func GET(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
+        Alamofire.request(URL.init(string: url)!, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON {response in
             switch response.result {
-            case .success (let value):
-                block(true, nil, value as? [Any])
+            case .success(let value):
+//                block(true, nil, value as? [Any])
+//                let x =
+                block(Response<[Any]>.success(value as! [Any]))
+                
+                let x = Response<[Any]>.failure(BPError())
+                
             case .failure (let error):
-                block(false, NSError.init(domain: BetaProduct.kBetaProductErrorDomain,
-                                          code: BetaProductError.WebService.rawValue,
-                                          description: BetaProduct.kBetaProductGenericErrorDescription,
-                                          reason: error.localizedDescription,
-                                          suggestion: "Debug function \(#function)"), nil)
+//                block(false, NSError.init(domain: BetaProduct.kBetaProductErrorDomain,
+//                                          code: BetaProductError.WebService.rawValue,
+//                                          description: BetaProduct.kBetaProductGenericErrorDescription,
+//                                          reason: error.localizedDescription,
+//                                          suggestion: "Debug function \(#function)"), nil)
+                let caughtError = Response<[Any]>.failure(BPError.init(domain: BetaProduct.kBetaProductErrorDomain,
+                                                                       code: .WebService,
+                                                                       description: BetaProduct.kBetaProductGenericErrorDescription,
+                                                                       reason: error.localizedDescription,
+                                                                       suggestion: "Debug function \(#function)"))
+//                let caughtError = Response<[Any]>.failure(BPError.init(domain: "", code: BPE, description: error.localizedDescription, reason: "", suggestion: ""))
+                caughtError.error?.innerError = error
+                block(caughtError)
             }
         }
     }
     
-    func PUT(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlockWithResults) {
+    // TODO: PUT
+    /// Protocol implementation. see `StoreWebClientProtocol.swift`
+    func PUT(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
         
     }
     
-    func POST(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlockWithResults) {
+    // TODO: POST
+    /// Protocol implementation. see `StoreWebClientProtocol.swift`
+    func POST(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
         
     }
     
-    func DELETE(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlockWithResults) {
+    // TODO: DELETE
+    /// Protocol implementation. see `StoreWebClientProtocol.swift`
+    func DELETE(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
         
     }
 }
