@@ -9,8 +9,39 @@
 import Foundation
 
 protocol StoreWebClientProtocol {
-    func GET(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlockWithResults)
-    func PUT(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlockWithResults)
-    func POST(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlockWithResults)
-    func DELETE(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlockWithResults)
+    /**
+     function for url request with HTTP Method GET
+     - Paramaters:
+     - url: url target.
+     - parameters: parameters for url request combined with the url target
+     - block: callback closure. see `CompletionBlockTypes.swift`
+     */
+    func GET(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlock<[Any]>)
+    
+    /**
+     function for url request with HTTP Method PUT
+     - Paramaters:
+     - url: url target.
+     - parameters: parameters for url request combined with the url target
+     - block: callback closure. see `CompletionBlockTypes.swift`
+     */
+    func PUT(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlock<[Any]>)
+    
+    /**
+     function for url request with HTTP Method POST
+     - Paramaters:
+     - url: url target.
+     - parameters: parameters for url request combined with the url target
+     - block: callback closure. see `CompletionBlockTypes.swift`
+     */
+    func POST(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlock<[Any]>)
+    
+    /**
+     function for url request with HTTP Method DELETE
+     - Paramaters:
+     - url: url target.
+     - parameters: parameters for url request combined with the url target
+     - block: callback closure. see `CompletionBlockTypes.swift`
+     */
+    func DELETE(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlock<[Any]>)
 }

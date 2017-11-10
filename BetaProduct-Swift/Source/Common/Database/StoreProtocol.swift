@@ -9,15 +9,56 @@
 import Foundation
 
 protocol StoreProtocol {
-    func fetchEntries(withEntityName entityName : String, withCompletionBlock block : @escaping CompletionBlockWithResults)
+    /**
+     Get Records from Data Source
+     - Parameters:
+         - entityName: Table Name.
+         - block: Callback Closure. see `CompletionBlockTypes.swift`
+     */
+    func fetchEntries(withEntityName entityName : String, withCompletionBlock block : @escaping CompletionBlock<[Any]>)
+    
+    /**
+     Get Records from Data Source
+     - Parameters:
+         - entityName: Table Name.
+         - predicate: SQL Query.
+         - sortDescriptors: Record Sorting.
+         - block: Callback Closure. see CompletionBlockTypes.swift
+     */
     func fetchEntries(withEntityName entityName : String,
                         withPredicate predicate : NSPredicate?,
             withSortDescriptors sortDescriptors : [NSSortDescriptor]?,
-            withCompletionBlock block : @escaping CompletionBlockWithResults)
+            withCompletionBlock block : @escaping CompletionBlock<[Any]>)
+    
+    
+    /// Insert to Table Product
     func newProduct() -> ManagedProduct
+    
+    /**
+     Delete Record from Table Product
+     - Parameters:
+        - product: record type ManagedProduct. see `ManagedProduct.swift`
+     */
     func deleteProduct(product : ManagedProduct)
+    
+    
+    /// Save transactions from stack.
     func save()
+    
+    /// Save transactions from stack. If it fails do a rollback.
     func saveOrRollBack()
-    func saveWithCompletionBlock(block : CompletionBlock)
-    func saveOrRollBackWithCompletionBlock(block : CompletionBlock)
+    
+    /**
+     Save transactions from stack.
+     - Parameters:
+        - block: Callback Closure. see CompletionBlockTypes.swift
+     */
+    func saveWithCompletionBlock(block : CompletionBlock<Bool>)
+    
+    /**
+     Save transactions from stack. If it fails do a rollback.
+     - Parameters:
+        - block: Callback Closure. see CompletionBlockTypes.swift
+     */
+    func saveOrRollBackWithCompletionBlock(block : CompletionBlock<Bool>)
 }

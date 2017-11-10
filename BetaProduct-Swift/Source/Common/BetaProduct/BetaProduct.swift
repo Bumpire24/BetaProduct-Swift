@@ -6,13 +6,8 @@
 //  Copyright © 2017 User. All rights reserved.
 //
 
+import Foundation
 import UIKit
-
-enum BetaProductError : Int {
-    case Database = 1,
-    WebService,
-    Business
-}
 
 struct BetaProductStyle {
     static var iDoohPink = UIColor(red:1.00, green:0.40, blue:0.82, alpha:1.0)

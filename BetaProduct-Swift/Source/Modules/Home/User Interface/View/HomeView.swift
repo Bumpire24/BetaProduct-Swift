@@ -12,10 +12,10 @@ class HomeView: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let sync : SyncEngine = SyncEngine()
-        sync.startInitialSync { (success, error) in
-            print("BOOL : \(success) ERROR : \(error)")
-        }
+//        let sync : SyncEngine = SyncEngine()
+//        sync.startInitialSync { (success, error) in
+//            print("BOOL : \(success) ERROR : \(error)")
+//        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -43,6 +43,10 @@ class AppDependencies: NSObject {
 //        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
 //        loginOptionsWireframe.loginWireframe = loginWireframe
 //        mainWireFrame = loginOptionsWireframe
+        
+        // Product List Module Classes
+//        let productListInteractor = ProductListInteractor()
+//        let productListPresenter = ProductListPresenter()
     }
     
     func configureLibraries() {

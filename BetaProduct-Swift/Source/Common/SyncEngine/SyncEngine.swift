@@ -10,42 +10,53 @@ import Foundation
 import CocoaLumberjack
 
 class SyncEngine: NSObject {
+    /// variable For StoreCoreData
     let storeCD : StoreCoreData = StoreCoreData()
+    /// variable For StoreWebClient
     let storeWC : StoreWebClient = StoreWebClient()
     
-    func startInitialSync(_ block : @escaping CompletionBlock){
-        storeWC.GET(BetaProduct.kBetaProductWSGetProductList, parameters: nil) { success, error, results in
-            if success {
-                let downloadGroup = DispatchGroup()
-                for data in results! {
-                    let product : ManagedProduct = self.storeCD.newProduct()
-                    let dataDict : [String : Any] = data as! [String : Any]
-                    let wsConverter = WebServiceConverter.init(dataDict)
-                    product.productId = wsConverter.int16WithKey("id")
-                    product.name = wsConverter.stringWithKey("body")
-                    product.productDescription = wsConverter.stringWithKey("thumbnailUrl")
-                    product.priceDescription = wsConverter.stringWithKey("thumbnailUrl")
-                    product.imageUrl = wsConverter.stringWithKey("url")
-                    product.imageThumbUrl = wsConverter.stringWithKey("thumbnailUrl")
-                    product.status = Int16(Status.Active.rawValue)
-                    product.syncStatus = Int16(SyncStatus.Synced.rawValue)
-                    product.createdAt = Date()
-                    product.modifiedAt = Date()
-                    downloadGroup.enter()
-                    self.storeCD.saveWithCompletionBlock(block: { success, error in
-                        if (!success) {
-                            DDLogError("Error  description : \(error?.localizedDescription ?? "Unknown Description") reason : \(error?.localizedFailureReason ?? "Unknown Reason") suggestion : \(error?.localizedRecoverySuggestion ?? "Unknown Suggestion")")
-                        }
-                        downloadGroup.leave()
-                    })
-                }
-                downloadGroup.notify(queue: .main, execute: {
-                    block(true, nil)
-                })
-            } else {
-                DDLogError("Error  description : \(error?.localizedDescription ?? "Unknown Description") reason : \(error?.localizedFailureReason ?? "Unknown Reason") suggestion : \(error?.localizedRecoverySuggestion ?? "Unknown Suggestion")")
-                block(false, error)
-            }
+    /**
+     Performs initial synchronization of webservice db and local db
+    - Parameters:
+        - block: Callback closure. see `CompletionBlockTypes.swift`
+     */
+    func startInitialSync(_ block : @escaping CompletionBlock<[Any]>){
+//        storeWC.GET(BetaProduct.kBetaProductWSGetProductList, parameters: nil) { success, error, results in
+//            if success {
+//                let downloadGroup = DispatchGroup()
+//                for data in results! {
+//                    let product : ManagedProduct = self.storeCD.newProduct()
+//                    let dataDict : [String : Any] = data as! [String : Any]
+//                    let wsConverter = WebServiceConverter.init(dataDict)
+//                    product.productId = wsConverter.int16WithKey("id")
+//                    product.name = wsConverter.stringWithKey("body")
+//                    product.productDescription = wsConverter.stringWithKey("thumbnailUrl")
+//                    product.priceDescription = wsConverter.stringWithKey("thumbnailUrl")
+//                    product.imageUrl = wsConverter.stringWithKey("url")
+//                    product.imageThumbUrl = wsConverter.stringWithKey("thumbnailUrl")
+//                    product.status = Int16(Status.Active.rawValue)
+//                    product.syncStatus = Int16(SyncStatus.Synced.rawValue)
+//                    product.createdAt = Date()
+//                    product.modifiedAt = Date()
+//                    downloadGroup.enter()
+//                    self.storeCD.saveWithCompletionBlock(block: { success, error in
+//                        if (!success) {
+//                            DDLogError("Error  description : \(error?.localizedDescription ?? "Unknown Description") reason : \(error?.localizedFailureReason ?? "Unknown Reason") suggestion : \(error?.localizedRecoverySuggestion ?? "Unknown Suggestion")")
+//                        }
+//                        downloadGroup.leave()
+//                    })
+//                }
+//                downloadGroup.notify(queue: .main, execute: {
+//                    block(true, nil)
+//                })
+//            } else {
+//                DDLogError("Error  description : \(error?.localizedDescription ?? "Unknown Description") reason : \(error?.localizedFailureReason ?? "Unknown Reason") suggestion : \(error?.localizedRecoverySuggestion ?? "Unknown Suggestion")")
+//                block(false, error)
+//            }
+//        }
+        
+        storeWC.GET("", parameters: nil) { result in
+            
         }
     }
 }
