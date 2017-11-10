@@ -20,6 +20,7 @@
 		CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
 		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
 		CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
+		CEB652D21FB57EEC00467D4E /* Button+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB652D11FB57EEC00467D4E /* Button+Theme.swift */; };
 		CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */; };
 		CEC203991FB46C160022C7C2 /* LoginOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */; };
 		CEC2039A1FB46C160022C7C2 /* LoginOptionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038F1FB46C160022C7C2 /* LoginOptionsWireframe.swift */; };
@@ -74,6 +75,8 @@
 		48D44D2C545B87B8BA9865E6 /* Pods_BetaProduct_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BetaProduct_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F923D5DB2DE28B607DE274C /* Pods-BetaProduct-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		93CE34FC3179EA3FAAFAA596 /* Pods-BetaProduct-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift/Pods-BetaProduct-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		CE4B341E1FB57AB900CB5905 /* GOGOIA-Deco.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GOGOIA-Deco.otf"; sourceTree = "<group>"; };
+		CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GOGOIA-Regular.otf"; sourceTree = "<group>"; };
 		CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
 		CE55705F1FB568ED00A14F7A /* ProductListInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractorIO.swift; sourceTree = "<group>"; };
 		CE5570611FB56A7B00A14F7A /* ProductListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListInteractor.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 		CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClient.swift; sourceTree = "<group>"; };
 		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
 		CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		CEB652D11FB57EEC00467D4E /* Button+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Theme.swift"; sourceTree = "<group>"; };
 		CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
 		CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsPresenter.swift; sourceTree = "<group>"; };
 		CEC2038F1FB46C160022C7C2 /* LoginOptionsWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsWireframe.swift; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				CE7472F71FB28CCC0015C0B3 /* Error+Utility.swift */,
+				CEB652D11FB57EEC00467D4E /* Button+Theme.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 		CEE8ABE41FB1817D0052DC3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE4B341D1FB57A8D00CB5905 /* Fonts */,
 				CEE8ABB71FB181110052DC3A /* Main.storyboard */,
 				CEE8ABBD1FB181110052DC3A /* Assets.xcassets */,
 				CEE8ABBF1FB181110052DC3A /* LaunchScreen.storyboard */,
@@ -476,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */,
+				CE61DEC11FB56C120028A59B /* BaseView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -755,6 +762,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4B34201FB57ABB00CB5905 /* GOGOIA-Deco.otf in Resources */,
+				CE4B34211FB57ABB00CB5905 /* GOGOIA-Regular.otf in Resources */,
 				CEE8ABC11FB181110052DC3A /* LaunchScreen.storyboard in Resources */,
 				CEE8ABBE1FB181110052DC3A /* Assets.xcassets in Resources */,
 				CEE8ABB91FB181110052DC3A /* Main.storyboard in Resources */,
@@ -849,6 +858,7 @@
 				CEE8AC071FB1A48C0052DC3A /* HomeModuleProtocol.swift in Sources */,
 				CEF83FB31FB3EBFF00FF19B4 /* WebServiceConverter.swift in Sources */,
 				CEC203991FB46C160022C7C2 /* LoginOptionsPresenter.swift in Sources */,
+				CEB652D21FB57EEC00467D4E /* Button+Theme.swift in Sources */,
 				CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */,
 				CE5570701FB5977100A14F7A /* LogInInteractor.swift in Sources */,
 				CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */,
@@ -868,6 +878,7 @@
 				CE5570691FB57C1800A14F7A /* BetaProductError.swift in Sources */,
 				CE5570721FB597BF00A14F7A /* User.swift in Sources */,
 				CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */,
+				CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */,
 				CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */,
 				CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */,
 				CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */,
