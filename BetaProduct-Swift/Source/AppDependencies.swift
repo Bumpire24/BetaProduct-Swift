@@ -59,7 +59,9 @@ class AppDependencies: NSObject {
         loginPresenter.interactor = loginInteractor
         loginWireframe.presenter = loginPresenter
         
-        print(UserDefaults.standard)
+        //Create Account Classes
+        let createAccountPresenter = CreateAccountPresenter()
+        createAccountWireframe.presenter = createAccountPresenter
     }
     
     func configureLibraries() {
