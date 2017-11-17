@@ -54,9 +54,9 @@ class SyncEngine: NSObject {
 //                block(false, error)
 //            }
 //        }
-        
-        storeWC.GET("", parameters: nil) { result in
-            
-        }
+//
+//        storeWC.GET("", parameters: nil) { result in
+//
+//        }
     }
 }

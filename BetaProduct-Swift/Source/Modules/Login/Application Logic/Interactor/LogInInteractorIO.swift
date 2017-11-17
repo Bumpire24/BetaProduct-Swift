@@ -13,5 +13,5 @@ protocol LogInInteractorInput {
 }
 
 protocol LogInInteractorOutput {
-    func loginSuccessful(_ wasSuccessful : Bool)
+    func loginSuccessful(_ wasSuccessful : Bool, message : String)
 }

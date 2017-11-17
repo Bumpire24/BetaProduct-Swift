@@ -9,8 +9,8 @@
 import Foundation
 
 enum Response<T> {
-    case success(T)
-    case failure(BPError)
+    case success(T?)
+    case failure(BPError?)
     
     var isSuccess : Bool {
         switch self {
