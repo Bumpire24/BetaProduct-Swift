@@ -61,4 +61,8 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
         let userCredentials = UserCredentialsItem.init(fullName: fullNameField.text, mobileNumber: mobileNumberField.text, email: emailField.text, password: passwordField.text)
         eventHandler?.validateUserCredentials(userCredentials)
     }
+    
+    func displayMessage(_ message: String) {
+        print(message)
+    }
 }

@@ -13,6 +13,13 @@ import Foundation
  */
 
 struct Product : ModelProtocol {
+    var status: Int16
+    var syncStatus: Int16
+    var createdAt: Date
+    var modifiedAt: Date
+    var col1: String
+    var col2: String
+    var col3: String
     let name:               String
     let weblink:            String
     let productDescription: String
@@ -22,11 +29,4 @@ struct Product : ModelProtocol {
     let imageThumbUrl:      String
     let imageCompanyUrl:    String
     let productId:          Int16
-    let status:             Int16
-    let syncStatus:         Int16
-    let createdAt:          Date
-    let modifiedAt:         Date
-    let col1:               String
-    let col2:               String
-    let col3:               String
 }

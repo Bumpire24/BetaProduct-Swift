@@ -13,11 +13,10 @@ class CreateAccountPresenter: NSObject, CreateAccountModuleProtocol, CreateAccou
     var interactor : CreateAccountInteractorInput?
     
     func validateUserCredentials(_ user: UserCredentialsItem) {
-        
-    }
-    
-    func createAccountSuccessful(_ wasSuccessful: Bool) {
-        
+        interactor?.validateAccountCredentials(user)
     }
 
+    func createAccountSuccessful(_ wasSuccessful: Bool, message: String) {
+        view?.displayMessage(message)
+    }
 }

@@ -13,5 +13,6 @@ protocol CreateAccountInteractorInput {
 }
 
 protocol CreateAccountInteractorOutput {
-    func createAccountSuccessful(_ wasSuccessful : Bool)
+    func createAccountSuccessful(_ wasSuccessful : Bool, message : String)
 }
+

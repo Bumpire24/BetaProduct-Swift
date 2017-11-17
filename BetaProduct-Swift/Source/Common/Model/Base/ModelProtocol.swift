@@ -9,11 +9,11 @@
 import Foundation
 
 protocol ModelProtocol {
-    var status : Int16 { get }
-    var syncStatus : Int16 { get }
-    var createdAt : Date { get }
-    var modifiedAt : Date { get }
-    var col1 : String { get }
-    var col2 : String { get }
-    var col3 : String { get }
+    var status : Int16 { get set }
+    var syncStatus : Int16 { get set }
+    var createdAt : Date { get set }
+    var modifiedAt : Date { get set }
+    var col1 : String { get set }
+    var col2 : String { get set }
+    var col3 : String { get set }
 }
