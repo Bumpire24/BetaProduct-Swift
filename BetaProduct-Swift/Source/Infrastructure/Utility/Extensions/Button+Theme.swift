@@ -12,6 +12,26 @@ import UIKit
 let blurViewTag = 1314
 
 extension UIButton {
+    func applyPrimaryButtonTheme() {
+        self.backgroundColor = BetaProductStyle.iDoohPink
+        self.layer.cornerRadius = 3.0
+        self.layer.borderColor = BetaProductStyle.iDoohPurple.cgColor
+        self.layer.shadowColor = BetaProductStyle.iDoohShadowColor.cgColor
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 1.0
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+    }
+    
+    func applySecondaryButtonTheme() {
+        self.backgroundColor = BetaProductStyle.iDoohPurple
+        self.layer.cornerRadius = 3.0
+        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.shadowColor = BetaProductStyle.iDoohShadowColor.cgColor
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 1.0
+        self.layer.shadowOffset = CGSize(width: 0, height: 3)
+    }
+    
     func subscribeToBlurringBackground() {
         self.addTarget(self, action: #selector(onButtonRelease), for: .touchUpInside)
         self.addTarget(self, action: #selector(onButtonPressDown), for: .touchDown)

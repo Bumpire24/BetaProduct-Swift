@@ -11,6 +11,7 @@ import UIKit
 class LoginOptionsPresenter: NSObject, LoginOptionsModuleInterface {
     var window: UIWindow?
     var loginOptionsWireframe : LoginOptionsWireframe?
+    var createAccountWireframe : CreateAccountWireframe?
     var view : LoginOptionsView?
     
     func login() {
@@ -18,8 +19,6 @@ class LoginOptionsPresenter: NSObject, LoginOptionsModuleInterface {
     }
     
     func createAccount() {
-        
+      loginOptionsWireframe?.presentCreateAccountView()
     }
-    
-
 }
