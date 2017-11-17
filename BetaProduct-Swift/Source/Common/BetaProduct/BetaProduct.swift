@@ -19,10 +19,17 @@ struct BetaProductStyle {
     static var iDoohTextfieldFont = UIFont(name: "Helvetica", size: 17)
 }
 
-class BetaProduct: NSObject {
+struct BetaProduct {
     static let kBetaProductErrorDomain : String = "BetaProductErrorDomain"
     static let kBetaProductGenericErrorDescription : String = "Something went wrong"
     static let kBetaProductDatabaseName : String = "Something.sqlite"
-    static let kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/"
+    static var kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/"
     static let kBetaProductWSGetProductList : String = kBetaProductWebserviceURL + "photos"
+//    #if DEV
+//    static var kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/"
+//    #elseif QA
+//    static var kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/QA"
+//    #elseif PROD
+//    static var kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/PROD"
+//    #endif
 }

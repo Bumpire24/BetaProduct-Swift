@@ -16,11 +16,7 @@ class LogInPresenter: NSObject, LogInModuleProtocol, LogInInteractorOutput {
         interactor?.validateLogIn(user)
     }
     
-    func loginSuccessful(_ wasSuccessful: Bool) {
-        if (wasSuccessful) {
-            view?.displayMessage("GOOD")
-        } else {
-            view?.displayMessage("BAD")
-        }
+    func loginSuccessful(_ wasSuccessful: Bool, message: String) {
+        view?.displayMessage(message)
     }
 }

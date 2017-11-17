@@ -55,6 +55,8 @@ class AppDependencies: NSObject {
         
         loginPresenter.interactor = loginInteractor
         loginWireframe.presenter = loginPresenter
+        
+        print(UserDefaults.standard)
     }
     
     func configureLibraries() {
@@ -73,13 +75,13 @@ class AppDependencies: NSObject {
         DDLogWarn("Warn")
         DDLogError("Error")
         
-//        #ifdef DEV
-//        DDLogInfo(@"Development Environment");
-//        #elif QA
-//        DDLogInfo(@"QA Environment");
-//        #elif PROD
-//        DDLogInfo(@"QA Environment");
-//        #endif
+        #if DEV
+            DDLogInfo("Development Environment")
+        #elseif QA
+            DDLogInfo("QA Environment")
+        #elseif PROD
+            DDLogInfo("Production Environment")
+        #endif
         
         NetworkActivityIndicatorManager.shared.isEnabled = true
         NetworkActivityIndicatorManager.shared.startDelay = 0

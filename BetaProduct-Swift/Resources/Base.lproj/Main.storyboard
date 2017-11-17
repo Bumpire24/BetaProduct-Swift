@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BetaProduct_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
         <!--Home View-->
         <scene sceneID="tdF-qz-0V6">
             <objects>
-                <tabBarController storyboardIdentifier="HomeView" id="p3Z-iZ-525" customClass="HomeView" customModule="BetaProduct_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeView" id="p3Z-iZ-525" customClass="HomeView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OB0-L5-vaQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -56,7 +56,7 @@
         <!--Login Options View-->
         <scene sceneID="vKf-ji-Och">
             <objects>
-                <viewController storyboardIdentifier="LoginOptionsView" id="oAU-X3-i8M" customClass="LoginOptionsView" customModule="BetaProduct_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginOptionsView" id="oAU-X3-i8M" customClass="LoginOptionsView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3DU-dR-pzq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,7 +201,7 @@
         <!--Login View-->
         <scene sceneID="qBN-O3-sb3">
             <objects>
-                <viewController storyboardIdentifier="LoginView" id="Cww-ig-X2j" customClass="LoginView" customModule="BetaProduct_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" id="Cww-ig-X2j" customClass="LoginView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IGt-FF-uCG" userLabel="Login View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
