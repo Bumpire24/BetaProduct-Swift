@@ -39,10 +39,13 @@ class AppDependencies: NSObject {
         let loginOptionsPresenter = LoginOptionsPresenter()
         let loginOptionsWireframe = LoginOptionsWireframe()
         let loginWireframe = LoginWireframe()
+        let createAccountWireframe = CreateAccountWireframe()
         loginOptionsWireframe.rootWireFrame = root
         loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
+        loginOptionsPresenter.createAccountWireframe = createAccountWireframe
         loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
         loginOptionsWireframe.loginWireframe = loginWireframe
+        loginOptionsWireframe.createAccountWireframe = createAccountWireframe
         mainWireFrame = loginOptionsWireframe
         
         //Login Module Classes
@@ -55,6 +58,10 @@ class AppDependencies: NSObject {
         
         loginPresenter.interactor = loginInteractor
         loginWireframe.presenter = loginPresenter
+        
+        //Create Account Classes
+        let createAccountPresenter = CreateAccountPresenter()
+        createAccountWireframe.presenter = createAccountPresenter
     }
     
     func configureLibraries() {

@@ -15,6 +15,8 @@ class LoginOptionsWireframe: BaseWireframe {
     var loginOptionsPresenter : LoginOptionsPresenter?
     var rootWireFrame : RootWireframe?
     var loginWireframe : LoginWireframe?
+    var createAccountView : CreateAccountView?
+    var createAccountWireframe : CreateAccountWireframe?
     var window: UIWindow?
     
     func presentLoginOptionsViewInterfaceFromWindow(Window window : UIWindow) {
@@ -28,5 +30,9 @@ class LoginOptionsWireframe: BaseWireframe {
     
     func presentLoginView() {
         loginWireframe?.presentLoginViewFromViewController(loginOptionsView!, Window: self.window!)
+    }
+    
+    func presentCreateAccountView() {
+        createAccountWireframe?.presentCreateAccountViewFromViewController(loginOptionsView!)
     }
 }
