@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginView: BaseView, LoginViewProtocol {
+class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
     @IBOutlet var loginView: UIView!
     @IBOutlet weak var iDoohImageView: UIImageView!
     @IBOutlet weak var dbsImageView: UIImageView!
@@ -32,7 +32,7 @@ class LoginView: BaseView, LoginViewProtocol {
     }
     
     func setupTheme() {
-        self.loginButton.backgroundColor = BetaProductStyle.iDoohPink
+        self.loginButton.applyPrimaryButtonTheme()
         self.forgotPasswordButton.backgroundColor = BetaProductStyle.iDoohClearColor
         self.forgotPasswordButton.setTitleColor(BetaProductStyle.iDoohLinkColor, for: .normal)
         self.loginButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont

@@ -29,10 +29,10 @@ class LoginOptionsView: BaseView {
     }
     
     func setupTheme() {
-        self.loginButton.backgroundColor = BetaProductStyle.iDoohClearColor
         self.loginButton.subscribeToBlurringBackground()
-        self.createAccountButton.backgroundColor = BetaProductStyle.iDoohClearColor
+        self.loginButton.applyPrimaryButtonTheme()
         self.createAccountButton.subscribeToBlurringBackground()
+        self.createAccountButton.applySecondaryButtonTheme()
         self.loginButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
         self.createAccountButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
     }
@@ -42,6 +42,10 @@ class LoginOptionsView: BaseView {
         self.dbsImageView.image = UIImage(named: "dbsPaylah")
         self.loginButton.setTitle("Login", for: .normal)
         self.createAccountButton.setTitle("Create account", for: .normal)
+    }
+    
+    @IBAction func proceedToCreateAccount(_ sender: Any) {
+        eventHandler?.createAccount()
     }
     
     @IBAction func proceedToLogin(_ sender: Any) {

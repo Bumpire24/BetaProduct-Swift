@@ -12,11 +12,12 @@ import UIKit
 struct BetaProductStyle {
     static var iDoohPink = UIColor(red:1.00, green:0.40, blue:0.82, alpha:1.0)
     static var iDoohPurple = UIColor(red:0.25, green:0.31, blue:0.49, alpha:1.0)
+    static var iDoohShadowColor = UIColor(red:0.39, green:0.0, blue:0.0, alpha:1.0)
     static var iDoohClearColor = UIColor(red:0.00, green:0.00, blue:0.00, alpha:0.0)
     static var iDoohLinkColor = UIColor(red:0.00, green:0.52, blue:0.98, alpha:1.0)
-    static var iDoohButtonLabelFont = UIFont(name: "GOGOIA-Deco", size: 35)
-    static var iDoohButtonLinkFont = UIFont(name: "GOGOIA-Deco", size: 35)
-    static var iDoohTextfieldFont = UIFont(name: "Helvetica", size: 17)
+    static var iDoohButtonLabelFont = UIFont(name: "Blogger-Sans-Medium-Italic", size: 50)
+    static var iDoohButtonLinkFont = UIFont(name: "Blogger-Sans-Medium-Italic", size: 50)
+    static var iDoohTextfieldFont = UIFont(name: "System", size: 14)
 }
 
 struct BetaProduct {
