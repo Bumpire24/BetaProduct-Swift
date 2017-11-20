@@ -31,11 +31,6 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
     
     func setupTheme() {
         self.createAccountButton.applyPrimaryButtonTheme()
-        self.createAccountButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
-        self.fullNameField.font = BetaProductStyle.iDoohTextfieldFont
-        self.mobileNumberField.font = BetaProductStyle.iDoohTextfieldFont
-        self.emailField.font = BetaProductStyle.iDoohTextfieldFont
-        self.passwordField.font = BetaProductStyle.iDoohTextfieldFont
     }
     
     func populateControls() {
@@ -63,6 +58,8 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
     }
     
     func displayMessage(_ message: String) {
+        let baseMessageView = BaseMessageView()
+        baseMessageView.displayMessage(withTitle: "Create Account", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self)
         print(message)
     }
 }
