@@ -9,14 +9,13 @@
 import UIKit
 
 class LogInManager: NSObject {
-    let validUsers = [["username" : "user", "password" : "pass"],
-                      ["username" : "sample", "password" : "sample"]]
+    let validUsers = [["email" : "user", "password" : "pass"],
+                      ["email" : "asd@gmail.com", "password" : "asd"]]
     
-    func retrieveUser(withUserName username : String, andWithPassword password : String, withCompletionBlock block : CompletionBlock<User?>) {
+    func retrieveUser(withEmail email : String, andWithPassword password : String, withCompletionBlock block : CompletionBlock<User?>) {
         var userFound : User? = nil
         _ = validUsers.contains(where: { dict in
-            if dict["username"] == username && dict["password"] == password {
-                userFound = User.init(dict["username"]!, pass: dict["password"]!)
+            if dict["email"] == email && dict["password"] == password {userFound = User.init(emailAddress: dict["email"]!, password: dict["password"]!)
                 return true
             } else {
                 return false

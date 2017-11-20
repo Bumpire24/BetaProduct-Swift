@@ -60,7 +60,15 @@ class AppDependencies: NSObject {
         loginWireframe.presenter = loginPresenter
         
         //Create Account Classes
+        let createAccountManager = CreateAccountManager()
+        let createAccountInteractor = CreateAccountInteractor()
         let createAccountPresenter = CreateAccountPresenter()
+        
+        createAccountInteractor.createAccountManager = createAccountManager
+        createAccountInteractor.loginManager = loginManager
+        createAccountInteractor.output = createAccountPresenter
+        
+        createAccountPresenter.interactor = createAccountInteractor
         createAccountWireframe.presenter = createAccountPresenter
     }
     

@@ -9,37 +9,26 @@
 import Foundation
 
 struct User : ModelProtocol {
-    var username:           String
-    var password:           String
-    let status:             Int16
-    let syncStatus:         Int16
-    let createdAt:          Date
-    let modifiedAt:         Date
-    let col1:               String
-    let col2:               String
-    let col3:               String
+    var status: Int16 = Int16(Status.Active.rawValue)
+    var syncStatus: Int16 = Int16(SyncStatus.Created.rawValue)
+    var createdAt: Date = Date()
+    var modifiedAt: Date = Date()
+    var col1: String = ""
+    var col2: String = ""
+    var col3: String = ""
+    var email: String = ""
+    var password: String = ""
+    var fullname: String = ""
+    var mobile: String = ""
     
-    init() {
-        username = ""
-        password = ""
-        status = Int16(Status.Active.rawValue)
-        syncStatus = Int16(SyncStatus.Created.rawValue)
-        createdAt = Date()
-        modifiedAt = Date()
-        col1 = ""
-        col2 = ""
-        col3 = ""
+    init(emailAddress email: String, password pass: String) {
+        self.email = email
+        self.password = pass
     }
     
-    init(_ user : String, pass : String) {
-        username = user
-        password = pass
-        status = Int16(Status.Active.rawValue)
-        syncStatus = Int16(SyncStatus.Created.rawValue)
-        createdAt = Date()
-        modifiedAt = Date()
-        col1 = ""
-        col2 = ""
-        col3 = ""
+    init(emailAddress email: String, password pass: String, fullName name: String, mobileNumber mobile: String) {
+        self.init(emailAddress: email, password: pass)
+        self.fullname = name
+        self.mobile = mobile
     }
 }

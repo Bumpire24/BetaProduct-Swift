@@ -13,30 +13,29 @@ class LogInInteractor: NSObject, LogInInteractorInput {
     var manager : LogInManager?
     var output : LogInInteractorOutput?
     
-    //validateLogIn
+    // validateLogIn
+    // retrieve user using given input
     // check username nil, username has char
     // check password nil, password has char
     // check record exists
-    // retrieve user using given input
-    
-    func validateLogIn(_ loginDisplay: UserDisplayItem) {
+    func validateUserLogin(userDisplayItem user: UserDisplayItem) {
         // Check if inputs are complete
-        guard let username = loginDisplay.username, username.count > 0 else {
-            output?.loginSuccessful(false, message: "Username incorrect!")
+        guard let username = user.username, username.count > 0 else {
+            output?.userLoginValidationComplete(wasSuccessful: false, withMessage: "Username incorrect!")
             return
         }
         
-        guard let password = loginDisplay.password, password.count > 0 else {
-            output?.loginSuccessful(false, message: "Password incorrect!")
+        guard let password = user.password, password.count > 0 else {
+            output?.userLoginValidationComplete(wasSuccessful: false, withMessage: "Password incorrect!")
             return
         }
         
-        manager?.retrieveUser(withUserName: loginDisplay.username!, andWithPassword: loginDisplay.password!, withCompletionBlock: { response in
+        manager?.retrieveUser(withEmail: user.username!, andWithPassword: user.password!, withCompletionBlock: { response in
             switch response {
             case .success(_):
-                output?.loginSuccessful(true, message: "Log In success!")
+                output?.userLoginValidationComplete(wasSuccessful: true, withMessage: "Log In success!")
             case .failure(let error):
-                output?.loginSuccessful(false, message: (error?.localizedFailureReason)!)
+                output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
             }
         })
     }

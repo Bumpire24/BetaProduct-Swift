@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CreateAccountViewProtocol {
-    
+    func displayMessage(_ message : String)
 }

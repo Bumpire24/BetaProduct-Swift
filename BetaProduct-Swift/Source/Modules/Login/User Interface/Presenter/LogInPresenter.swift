@@ -13,10 +13,10 @@ class LogInPresenter: NSObject, LogInModuleProtocol, LogInInteractorOutput {
     var interactor : LogInInteractorInput?
     
     func validateUser(_ user: UserDisplayItem) {
-        interactor?.validateLogIn(user)
+        interactor?.validateUserLogin(userDisplayItem: user)
     }
     
-    func loginSuccessful(_ wasSuccessful: Bool, message: String) {
+    func userLoginValidationComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
         view?.displayMessage(message)
     }
 }

@@ -9,9 +9,9 @@
 import Foundation
 
 protocol LogInInteractorInput {
-    func validateLogIn(_ loginDisplay: UserDisplayItem)
+    func validateUserLogin(userDisplayItem user: UserDisplayItem)
 }
 
 protocol LogInInteractorOutput {
-    func loginSuccessful(_ wasSuccessful : Bool, message : String)
+    func userLoginValidationComplete(wasSuccessful isSuccess: Bool, withMessage message: String)
 }

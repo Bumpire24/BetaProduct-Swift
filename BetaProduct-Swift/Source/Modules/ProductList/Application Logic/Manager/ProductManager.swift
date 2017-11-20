@@ -80,27 +80,27 @@ class ProductManager: NSObject {
         return nil
     }
     
-    private func productsFromManagedProducts(_ entries : [ManagedProduct]) -> [Product] {
-        var items : [Product] = []
-        for managedProduct in entries {
-            let product = Product(name : managedProduct.name,
-                                  weblink : managedProduct.weblink,
-                                  productDescription : managedProduct.productDescription,
-                                  price : managedProduct.price,
-                                  priceDescription : managedProduct.priceDescription,
-                                  imageUrl : managedProduct.imageUrl,
-                                  imageThumbUrl : managedProduct.imageThumbUrl,
-                                  imageCompanyUrl : managedProduct.imageCompanyUrl,
-                                  productId : managedProduct.productId,
-                                  status : managedProduct.status,
-                                  syncStatus : managedProduct.syncStatus,
-                                  createdAt : managedProduct.createdAt,
-                                  modifiedAt : managedProduct.modifiedAt,
-                                  col1 : managedProduct.col1,
-                                  col2 : managedProduct.col2,
-                                  col3 : managedProduct.col3)
-            items.append(product)
-        }
-        return items
-    }
+//    private func productsFromManagedProducts(_ entries : [ManagedProduct]) -> [Product] {
+//        var items : [Product] = []
+//        for managedProduct in entries {
+//            let product = Product(name : managedProduct.name,
+//                                  weblink : managedProduct.weblink,
+//                                  productDescription : managedProduct.productDescription,
+//                                  price : managedProduct.price,
+//                                  priceDescription : managedProduct.priceDescription,
+//                                  imageUrl : managedProduct.imageUrl,
+//                                  imageThumbUrl : managedProduct.imageThumbUrl,
+//                                  imageCompanyUrl : managedProduct.imageCompanyUrl,
+//                                  productId : managedProduct.productId,
+//                                  status : managedProduct.status,
+//                                  syncStatus : managedProduct.syncStatus,
+//                                  createdAt : managedProduct.createdAt,
+//                                  modifiedAt : managedProduct.modifiedAt,
+//                                  col1 : managedProduct.col1,
+//                                  col2 : managedProduct.col2,
+//                                  col3 : managedProduct.col3)
+//            items.append(product)
+//        }
+//        return items
+//    }
 }
