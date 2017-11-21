@@ -9,7 +9,6 @@
 import UIKit
 
 class BaseMessageView: BaseView {
-    
     let baseMessageViewIdentifier = "BaseMessageView"
 
     @IBOutlet weak var messageView: UIView!
@@ -19,7 +18,7 @@ class BaseMessageView: BaseView {
     @IBOutlet weak var messageContent: UILabel!
     @IBOutlet weak var negativeButton: UIButton!
     @IBOutlet weak var affirmativeButton: UIButton!
-    weak var currentViewController : UIViewController?
+    weak var currentView : UIViewController?
     
     var messageTitleText : String {
         get {
@@ -57,13 +56,12 @@ class BaseMessageView: BaseView {
         }
     }
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        applyTheme()
     }
 
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
@@ -76,18 +74,24 @@ class BaseMessageView: BaseView {
                                                               "message": messageContent!,
                                                               "negativeButtonLabel": negativeButtonCaption!,
                                                               "affirmativeButtonLabel": affirmativeButtonCaption!]
-        self.currentViewController = currentViewController
-        let viewcontroller = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: baseMessageViewIdentifier) as! BaseMessageView
-        self.currentViewController?.navigationController?.present(viewcontroller, animated: true, completion: nil)
-        populateMessageBox(messageView: viewcontroller, messageProperties: messageProperties)
+        let messageViewController = currentViewController.storyboard?.instantiateViewController(withIdentifier: baseMessageViewIdentifier) as! BaseMessageView
+        currentView = currentViewController
+        currentView?.addChildViewController(messageViewController)
+        currentView?.view.addSubview(messageViewController.view)
+        populateMessageBox(messageView: messageViewController, messageProperties: messageProperties)
     }
     
     @IBAction func affirmationAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        discardMessageView()
     }
     
     @IBAction func negationAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        discardMessageView()
+    }
+    
+    func discardMessageView() {
+        self.removeFromParentViewController()
+        self.view.removeFromSuperview()
     }
     
     func populateMessageBox(messageView: BaseMessageView, messageProperties: Dictionary<String, String>) {
@@ -96,4 +100,21 @@ class BaseMessageView: BaseView {
         messageView.negativeButtonText = messageProperties["negativeButtonLabel"]!
         messageView.affirmativeButtonText = messageProperties["affirmativeButtonLabel"]!
     }
+    
+    func applyTheme() {
+        applyMessageViewTheme()
+        affirmativeButton.applyPrimaryButtonTheme()
+        negativeButton.applyTertiaryButtonTheme()
+    }
+    
+    func applyMessageViewTheme() {
+        messageView.layer.cornerRadius = 15.0
+        titleAndMessageView.layer.cornerRadius = 15.0
+        messageView.layer.borderColor = BetaProductStyle.iDoohPurple.cgColor
+        messageView.layer.shadowColor = BetaProductStyle.iDoohShadowColor.cgColor
+        messageView.layer.shadowOpacity = 1.0
+        messageView.layer.shadowRadius = 3.0
+        messageView.layer.shadowOffset = CGSize(width: 0, height: 3)
+    }
+
 }

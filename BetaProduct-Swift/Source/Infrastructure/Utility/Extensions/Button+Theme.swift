@@ -13,23 +13,30 @@ let blurViewTag = 1314
 
 extension UIButton {
     func applyPrimaryButtonTheme() {
+        applyCommonTheme()
         self.backgroundColor = BetaProductStyle.iDoohPink
-        self.layer.cornerRadius = 3.0
         self.layer.borderColor = BetaProductStyle.iDoohPurple.cgColor
-        self.layer.shadowColor = BetaProductStyle.iDoohShadowColor.cgColor
-        self.layer.shadowOpacity = 1.0
-        self.layer.shadowRadius = 1.0
-        self.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
     
     func applySecondaryButtonTheme() {
+        applyCommonTheme()
         self.backgroundColor = BetaProductStyle.iDoohPurple
-        self.layer.cornerRadius = 3.0
         self.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func applyTertiaryButtonTheme() {
+        applyCommonTheme()
+        self.backgroundColor = BetaProductStyle.iDoohLightGrey
+        self.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func applyCommonTheme() {
+        self.layer.cornerRadius = 10.0
         self.layer.shadowColor = BetaProductStyle.iDoohShadowColor.cgColor
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 1.0
         self.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
     }
     
     func subscribeToBlurringBackground() {
@@ -48,6 +55,7 @@ extension UIButton {
     func setupBlurBackgroundEffect() {
         let blur = UIVisualEffectView(effect: UIBlurEffect(style: .light))
         blur.frame = self.bounds
+        blur.layer.cornerRadius = 10.0
         blur.isUserInteractionEnabled = false
         blur.tag = blurViewTag
         self.insertSubview(blur, at: 0)

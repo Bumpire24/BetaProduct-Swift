@@ -13,7 +13,8 @@ class BaseView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        applyGradientBackground()
+        //applyGradientBackground()
+        applyImageWatermark()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,5 +31,12 @@ class BaseView: UIViewController {
         gradientLayer.colors = [BetaProductStyle.iDoohPink.cgColor, BetaProductStyle.iDoohPurple.cgColor]
         gradientView.layer.addSublayer(gradientLayer)
         self.view.insertSubview(gradientView, at: 0)
+    }
+    
+    func applyImageWatermark() {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "launchImage.png")
+        backgroundImage.contentMode = .scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
     }
 }
