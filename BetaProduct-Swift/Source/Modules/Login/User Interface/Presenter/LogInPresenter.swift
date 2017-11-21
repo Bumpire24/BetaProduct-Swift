@@ -11,6 +11,7 @@ import UIKit
 class LogInPresenter: NSObject, LogInModuleProtocol, LogInInteractorOutput {
     var view : LoginViewProtocol?
     var interactor : LogInInteractorInput?
+    var loginWireframe : LoginWireframe?
     
     func validateUser(_ user: UserDisplayItem) {
         interactor?.validateUserLogin(userDisplayItem: user)
@@ -18,5 +19,9 @@ class LogInPresenter: NSObject, LogInModuleProtocol, LogInInteractorOutput {
     
     func userLoginValidationComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
         view?.displayMessage(message)
+    }
+    
+    func proceedToHomeView() {
+        loginWireframe?.presentHomeView()
     }
 }
