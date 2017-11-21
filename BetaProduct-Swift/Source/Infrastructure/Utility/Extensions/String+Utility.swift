@@ -16,7 +16,7 @@ extension String {
     }
     
     func isValidPhone() -> Bool {
-        let phoneRegEx = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phoneRegEx = "^(\\+|\\d)[0-9]{7,16}$"
         let phoneTest = NSPredicate.init(format: "SELF MATCHES %@", phoneRegEx)
         return phoneTest.evaluate(with: self)
     }

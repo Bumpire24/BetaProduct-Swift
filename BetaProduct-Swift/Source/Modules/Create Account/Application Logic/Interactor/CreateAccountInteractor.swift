@@ -43,15 +43,16 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
         let user = User.init(emailAddress: loginDisplay.email!, password: loginDisplay.password!, fullName: loginDisplay.fullName!, mobileNumber: loginDisplay.mobileNumber!)
         
         loginManager?.retrieveUser(withEmail: user.email, andWithPassword: user.password, withCompletionBlock: { response in
-            if response.isSuccess {
-                output?.createAccountSuccessful(false, message: "Account already exists!")
-            } else {
-                createAccountManager?.createAccount(withUser: user, withCompletionBlock: { response in
+            switch response {
+            case .success(_):
+                self.output?.createAccountSuccessful(false, message: "Account already exists!")
+            case .failure(_):
+                self.createAccountManager?.createAccount(withUser: user, withCompletionBlock: { response in
                     switch response {
                     case .success(_):
-                        output?.createAccountSuccessful(true, message: "Account creation Successful!")
+                        self.output?.createAccountSuccessful(true, message: "Account creation Successful!")
                     case .failure(let error):
-                        output?.createAccountSuccessful(false, message: (error?.localizedFailureReason)!)
+                        self.output?.createAccountSuccessful(false, message: (error?.localizedFailureReason)!)
                     }
                 })
             }

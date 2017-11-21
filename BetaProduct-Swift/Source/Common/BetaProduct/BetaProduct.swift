@@ -21,17 +21,31 @@ struct BetaProductStyle {
     static var iDoohTextfieldFont = UIFont(name: "System", size: 5)
 }
 
+/// Struct for Constants and Configs of Project Beta
 struct BetaProduct {
-    static let kBetaProductErrorDomain : String = "BetaProductErrorDomain"
-    static let kBetaProductGenericErrorDescription : String = "Something went wrong"
-    static let kBetaProductDatabaseName : String = "Something.sqlite"
-    static var kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/"
-    static let kBetaProductWSGetProductList : String = kBetaProductWebserviceURL + "photos"
-//    #if DEV
-//    static var kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/"
-//    #elseif QA
-//    static var kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/QA"
-//    #elseif PROD
-//    static var kBetaProductWebserviceURL : String = "http://jsonplaceholder.typicode.com/PROD"
-//    #endif
+    /// const for custom Error Domain
+    static let kBPErrorDomain : String = "BetaProductErrorDomain"
+    
+    /// const for custom Generic Error Description
+    static let kBPGenericError : String = "Something went wrong"
+    
+    /// const for Database Name
+    static let kBPDBname : String = "bp.sqlite"
+    
+    /// const for main Webservice call. Retrieves from a plist file
+    static var kBPWS : String {
+        get {
+            if let configFile = Bundle.main.infoDictionary, let url = configFile["BP_CONFIG_WS_URL"] {
+                return url as! String
+            } else {
+                return "http://jsonplaceholder.typicode.com/"
+            }
+        }
+    }
+    
+    /// const for Webservice call : Get Products.
+    static let kBPWSGetProduct : String = kBPWS + "photos"
+    
+    /// const for Webservice call : Make User.
+    static let kBPWSPostUser : String = kBPWS + "posts"
 }

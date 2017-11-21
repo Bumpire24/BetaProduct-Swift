@@ -9,27 +9,26 @@
 import UIKit
 
 class LogInManager: NSObject {
-    let validUsers = [["email" : "user", "password" : "pass"],
-                      ["email" : "asd@gmail.com", "password" : "asd"]]
+    var store : StoreProtocol?
+    var storeWS : StoreWebClientProtocol?
     
-    func retrieveUser(withEmail email : String, andWithPassword password : String, withCompletionBlock block : CompletionBlock<User?>) {
-        var userFound : User? = nil
-        _ = validUsers.contains(where: { dict in
-            if dict["email"] == email && dict["password"] == password {userFound = User.init(emailAddress: dict["email"]!, password: dict["password"]!)
-                return true
-            } else {
-                return false
+    func retrieveUser(withEmail email : String, andWithPassword password : String, withCompletionBlock block : @escaping CompletionBlock<User>) {
+        let predicate = NSPredicate.init(format: "status != %d AND email == %@ AND password == %@", Status.Deleted.rawValue, email, password)
+        store?.fetchEntries(withEntityName: "User", withPredicate: predicate, withSortDescriptors: nil, withCompletionBlock: { response in
+            switch response{
+            case .success(let result):
+                block(Response.success(result?.first as? User))
+                break
+            case .failure(let caughtError):
+                let error = BPError.init(domain: BetaProduct.kBPErrorDomain,
+                                         code: .Business,
+                                         description: "No Record Found!",
+                                         reason: (caughtError?.localizedDescription)!,
+                                         suggestion: (caughtError?.localizedRecoverySuggestion)!)
+                error.innerBPError = caughtError
+                block(Response.failure(error))
+                break
             }
         })
-        
-        if userFound != nil {
-            block(Response.success(userFound))
-        } else {
-            block(Response.failure(BPError.init(domain: BetaProduct.kBetaProductErrorDomain,
-                                                code: .Business,
-                                                description: "No Record Found!",
-                                                reason: "No Record Found!",
-                                                suggestion: "Try Again")))
-        }
     }
 }

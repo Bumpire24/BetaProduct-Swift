@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B48" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ManagedProduct" representedClassName=".ManagedProduct" syncable="YES">
+    <entity name="Product" representedClassName=".ManagedProduct" syncable="YES">
         <attribute name="col1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="col2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="col3" optional="YES" attributeType="String" syncable="YES"/>
@@ -18,7 +18,21 @@
         <attribute name="syncStatus" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="weblink" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="User" representedClassName=".ManagedUser" syncable="YES">
+        <attribute name="col1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="col2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="col3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fullname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mobile" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifiedAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="syncStatus" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="ManagedProduct" positionX="-63" positionY="-18" width="128" height="285"/>
+        <element name="Product" positionX="-117" positionY="18" width="128" height="285"/>
+        <element name="User" positionX="-180" positionY="153" width="128" height="210"/>
     </elements>
 </model>

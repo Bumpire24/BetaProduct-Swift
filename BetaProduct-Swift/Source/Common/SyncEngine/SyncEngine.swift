@@ -59,4 +59,28 @@ class SyncEngine: NSObject {
 //
 //        }
     }
+    
+    func syncCreatedAccount(_ block : @escaping CompletionBlock<Bool>) {
+        print("Calling WS : \(BetaProduct.kBPWSPostUser)")
+        let predicate = NSPredicate.init(format: "syncStatus == %d", SyncStatus.Created.rawValue)
+        storeCD.fetchEntries(withEntityName: "User",
+                             withPredicate: predicate,
+                             withSortDescriptors: nil) { response in
+                                switch response {
+                                case .success(let value):
+                                    let user = value?.first as! ManagedUser
+                                    let params = ["email": user.email, "password": user.password, "fullname": user.fullname, "mobile": user.mobile]
+                                    self.storeWC.POST(BetaProduct.kBPWSPostUser, parameters: params, block: { response in
+                                        switch response {
+                                        case .success(_):
+                                            block(.success(true))
+                                        case .failure(_):
+                                            block(.failure(nil))
+                                        }
+                                    })
+                                case .failure(let error):
+                                    block(.failure(error))
+                                }
+        }
+    }
 }

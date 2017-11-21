@@ -60,6 +60,5 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
     func displayMessage(_ message: String) {
         let baseMessageView = BaseMessageView()
         baseMessageView.displayMessage(withTitle: "Create Account", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self)
-        print(message)
     }
 }
