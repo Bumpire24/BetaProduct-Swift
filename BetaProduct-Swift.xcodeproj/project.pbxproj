@@ -138,6 +138,7 @@
 		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
 		CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
 		CE7C25491FC2B9E30036E39B /* BetaProductTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */; };
+		CEA6A61A1FC4199D0025E2D3 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A6191FC4199D0025E2D3 /* QRView.swift */; };
 		CEA730BA1FBD3BC300ABAA60 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA730B91FBD3BC300ABAA60 /* Utility.swift */; };
 		CEA730C21FBD808200ABAA60 /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706F1FB5977100A14F7A /* LogInInteractor.swift */; };
 		CEA730C31FBD808600ABAA60 /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570731FB597F600A14F7A /* LogInManager.swift */; };
@@ -341,6 +342,7 @@
 		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
 		CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
 		CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProductTheme.swift; sourceTree = "<group>"; };
+		CEA6A6191FC4199D0025E2D3 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		CEA730B91FBD3BC300ABAA60 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		CEB652D11FB57EEC00467D4E /* Button+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Theme.swift"; sourceTree = "<group>"; };
 		CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
@@ -995,6 +997,7 @@
 			isa = PBXGroup;
 			children = (
 				CEE8AC081FB1A4E20052DC3A /* HomeView.swift */,
+				CEA6A6191FC4199D0025E2D3 /* QRView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1525,6 +1528,7 @@
 				CE6B5EBF1FB5A18100356EC9 /* LogInViewProtocol.swift in Sources */,
 				CEE8ABBC1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld in Sources */,
 				CEC2039D1FB46C160022C7C2 /* LoginView.swift in Sources */,
+				CEA6A61A1FC4199D0025E2D3 /* QRView.swift in Sources */,
 				CE07A48B1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift in Sources */,
 				CE6B5EC11FB5A26100356EC9 /* UserDisplayItem.swift in Sources */,
 				CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */,

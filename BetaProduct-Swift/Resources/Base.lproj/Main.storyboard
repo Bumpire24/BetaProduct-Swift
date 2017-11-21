@@ -30,7 +30,7 @@
         <scene sceneID="5pO-1G-DtA">
             <objects>
                 <navigationController id="ZOk-Q5-RWI" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YVH-Fj-z1g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="backArrow" id="YVH-Fj-z1g">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -112,7 +112,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhd-J1-KwZ" userLabel="Negative Button">
-                                        <rect key="frame" x="100.5" y="155" width="100" height="30"/>
+                                        <rect key="frame" x="100.5" y="155" width="99.5" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="OiS-dq-MsR"/>
@@ -125,7 +125,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn7-M4-D4F" userLabel="Affirmative Button">
-                                        <rect key="frame" x="220.5" y="155" width="99.5" height="30"/>
+                                        <rect key="frame" x="220" y="155" width="100" height="30"/>
                                         <color key="backgroundColor" red="0.96648496390000005" green="0.38324481249999998" blue="0.83540332319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="rIG-Kp-Rjw"/>
@@ -175,6 +175,59 @@
             </objects>
             <point key="canvasLocation" x="2127.1999999999998" y="115.59220389805098"/>
         </scene>
+        <!--View-->
+        <scene sceneID="iMe-ox-OY7">
+            <objects>
+                <viewController storyboardIdentifier="QRView" id="xsx-Pm-MxV" customClass="QRView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5pK-tc-rjh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xS-W2-qs6" userLabel="QR Scanner Box">
+                                <rect key="frame" x="72.5" y="47" width="230" height="230"/>
+                                <color key="backgroundColor" red="0.1916944683" green="0.75968152280000001" blue="0.70773297550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="7n1-b8-WEH"/>
+                                    <constraint firstAttribute="width" constant="230" id="EwP-R7-zl6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.1916944683" green="0.75968152280000001" blue="0.70773297550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold your device over QR Code so that it is clearly visible within the green box" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cp-75-2b9" userLabel="QR Scanner Instructions">
+                                <rect key="frame" x="72.5" y="335" width="230" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="u0L-Dh-dxT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8cp-75-2b9" firstAttribute="trailing" secondItem="8xS-W2-qs6" secondAttribute="trailing" id="F86-15-oDm"/>
+                            <constraint firstItem="8cp-75-2b9" firstAttribute="top" secondItem="8xS-W2-qs6" secondAttribute="bottom" constant="58" id="H6O-9V-p3Y"/>
+                            <constraint firstItem="8cp-75-2b9" firstAttribute="leading" secondItem="8xS-W2-qs6" secondAttribute="leading" id="Wco-Mi-Slo"/>
+                            <constraint firstItem="8xS-W2-qs6" firstAttribute="centerX" secondItem="aJZ-RH-1v9" secondAttribute="centerX" id="XFU-8B-tF6"/>
+                            <constraint firstItem="aJZ-RH-1v9" firstAttribute="bottom" secondItem="8cp-75-2b9" secondAttribute="bottom" constant="257" id="g73-bV-Jvs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aJZ-RH-1v9"/>
+                    </view>
+                    <connections>
+                        <outlet property="QRScannerInstructions" destination="8cp-75-2b9" id="BSh-1X-uJR"/>
+                        <outlet property="QRScannerView" destination="8xS-W2-qs6" id="Aik-ya-1qw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBr-EN-uhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2840.8000000000002" y="115.59220389805098"/>
+        </scene>
         <!--Login Options View-->
         <scene sceneID="vKf-ji-Och">
             <objects>
@@ -184,7 +237,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHR-bU-cgx">
-                                <rect key="frame" x="18.5" y="509.5" width="338" height="59"/>
+                                <rect key="frame" x="18.5" y="509" width="338" height="59"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal">
@@ -195,7 +248,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cy-BN-AOO" userLabel="Create Account Button">
-                                <rect key="frame" x="18.5" y="588.5" width="338" height="58.5"/>
+                                <rect key="frame" x="18.5" y="588" width="338" height="59"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal">
@@ -390,7 +443,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MU-cI-uWq" userLabel="Forgot Password Button">
-                                <rect key="frame" x="18.5" y="588.5" width="338" height="58.5"/>
+                                <rect key="frame" x="18.5" y="588" width="338" height="59"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Forgot Password?">
@@ -435,4 +488,7 @@
             <point key="canvasLocation" x="1413.5999999999999" y="821.73913043478262"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backArrow" width="21" height="21"/>
+    </resources>
 </document>

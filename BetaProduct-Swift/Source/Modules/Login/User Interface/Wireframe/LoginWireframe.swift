@@ -14,6 +14,7 @@ class LoginWireframe: BaseWireframe {
     var loginView : LoginView?
     var rootWireFrame : RootWireframe?
     var presenter : LogInPresenter?
+    var homeWireFrame : HomeWireframe?
     
     func presentLoginViewInterfaceFromWindow(Window window : UIWindow) {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: loginViewIdentifier) as! LoginView
@@ -26,6 +27,10 @@ class LoginWireframe: BaseWireframe {
         loginView?.eventHandler = presenter
         presenter?.view = newViewController
         viewController.navigationController?.pushViewController(newViewController, animated: true)
+    }
+    
+    func presentHomeView() {
+        homeWireFrame?.presentHomeViewFromViewController(loginView!)
     }
     
     func loginViewController() -> LoginView {

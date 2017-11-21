@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 let homeViewIdentifier = "HomeView"
+let qrViewIdentifier = "QRView"
 
 class HomeWireframe: BaseWireframe {
     var homeView : HomeView?
@@ -22,8 +23,20 @@ class HomeWireframe: BaseWireframe {
         rootWireFrame?.showRootViewController(rootViewController: viewcontroller, inWindow: window)
     }
     
+    func presentHomeViewFromViewController(_ viewController: UIViewController) {
+        let newViewController = homeViewController()
+        homeView = newViewController
+        assembleViewControllersForHomeView()
+        viewController.navigationController?.pushViewController(newViewController, animated: true)
+    }
+    
+    func homeViewController() -> HomeView {
+        let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: homeViewIdentifier) as! HomeView
+        return viewcontroller
+    }
+    
     func assembleViewControllersForHomeView() {
-        let qrView = UIViewController.init()
+        let qrView = createQRView()
         let productListView = UIViewController.init()
         let shopCartView = UIViewController.init()
         let settingsView = UIViewController.init()
@@ -40,5 +53,10 @@ class HomeWireframe: BaseWireframe {
         productListView.tabBarItem = UITabBarItem.init(title: "Products", image: UIImage.init(imageLiteralResourceName: "products"), tag: 1)
         shopCartView.tabBarItem = UITabBarItem.init(title: "Shop Cart", image: UIImage.init(imageLiteralResourceName: "shopcart"), tag: 1)
         settingsView.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(imageLiteralResourceName: "settings"), tag: 1)
+    }
+    
+    func createQRView() -> QRView {
+        let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: qrViewIdentifier) as! QRView
+        return viewcontroller
     }
 }

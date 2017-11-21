@@ -37,10 +37,11 @@ class AppDependencies: NSObject {
 //        mainWireFrame = homeWireframe
         
         //Login Options Module Classes
-        let loginOptionsPresenter = LoginOptionsPresenter()
         let loginOptionsWireframe = LoginOptionsWireframe()
         let loginWireframe = LoginWireframe()
         let createAccountWireframe = CreateAccountWireframe()
+        let homeWireframe = HomeWireframe()
+        let loginOptionsPresenter = LoginOptionsPresenter()
         loginOptionsWireframe.rootWireFrame = root
         loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
         loginOptionsPresenter.createAccountWireframe = createAccountWireframe
@@ -60,7 +61,9 @@ class AppDependencies: NSObject {
         loginInteractor.output = loginPresenter
         
         loginPresenter.interactor = loginInteractor
+        loginPresenter.loginWireframe = loginWireframe
         loginWireframe.presenter = loginPresenter
+        loginWireframe.homeWireFrame = homeWireframe
         
         //Create Account Classes
         let createAccountManager = CreateAccountManager()
