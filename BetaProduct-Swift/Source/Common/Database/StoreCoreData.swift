@@ -45,38 +45,54 @@ class StoreCoreData: NSObject, StoreProtocol{
     // MARK: StoreProtocol
     
     /// Protocol implementation. see `StoreProtocol.swift`
-    func fetchEntries(withEntityName entityName : String, withCompletionBlock completionBlock : @escaping CompletionBlock<[Any]>) -> Void {
-        fetchEntries(withEntityName: entityName, withCompletionBlock: completionBlock);
+    func fetchEntries(withEntityName entityName : String, withCompletionBlock block : @escaping CompletionBlock<[Any]>) {
+        fetchEntries(withEntityName: entityName, withCompletionBlock: block);
     }
     
     /// Protocol implementation. see `StoreProtocol.swift`
-    func fetchEntries(withEntityName entityName : String, withPredicate predicate : NSPredicate?, withSortDescriptors sortDescriptors : [NSSortDescriptor]?, withCompletionBlock completionBlock : @escaping CompletionBlock<[Any]>) -> Void {
+    func fetchEntries(withEntityName entityName : String,
+                      withPredicate predicate : NSPredicate?,
+                      withSortDescriptors sortDescriptors : [NSSortDescriptor]?,
+                      withCompletionBlock block : @escaping CompletionBlock<[Any]>) {
         let fetchRequest : NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init()
         let entity = NSEntityDescription.entity(forEntityName: entityName, in: managedObjectContext)
         fetchRequest.entity = entity
         fetchRequest.predicate = predicate
         fetchRequest.sortDescriptors = sortDescriptors
         
-//        managedObjectContext.perform {
-//            let queryResults = try? self.managedObjectContext.fetch(fetchRequest)
-//            if let results = queryResults {
-//                if results.count == 0 {
-//                    completionBlock(false, NSError.init(domain: BetaProduct.kBetaProductErrorDomain,
-//                                                        code: BetaProductError.Database.rawValue,
-//                                                        description: BetaProduct.kBetaProductGenericErrorDescription,
-//                                                        reason: "Found Empty Records for entity \(entityName)",
-//                                                        suggestion: "Debug function \(#function)"), nil)
-//                } else {
-//                    completionBlock(true, nil, results)
-//                }
-//            } else {
-//                completionBlock(false, NSError.init(domain: BetaProduct.kBetaProductErrorDomain,
-//                                                    code: BetaProductError.Database.rawValue,
-//                                                    description: BetaProduct.kBetaProductGenericErrorDescription,
-//                                                    reason: "Encountered an error in Core Data during when fetching",
-//                                                    suggestion: "Debug function \(#function)"), nil)
-//            }
-//        }
+        managedObjectContext.perform {
+            
+            do {
+                let queryResults = try self.managedObjectContext.fetch(fetchRequest)
+                
+            } catch let caughtError {
+                let error = BPError.init(domain: BetaProduct.kBetaProductErrorDomain,
+                                         code: .Database,
+                                         description: BetaProduct.kBetaProductGenericErrorDescription,
+                                         reason: "Encountered an error in Core Data during fetch",
+                                         suggestion: "Debug function \(#function)")
+//                error.in
+//                block(Response.failure()
+            }
+            let queryResults = try? self.managedObjectContext.fetch(fetchRequest)
+            if let results = queryResults {
+                if results.count == 0 {
+                    block(Response.failure(BPError.init(domain: BetaProduct.kBetaProductErrorDomain,
+                                                        code: .Database,
+                                                        description: BetaProduct.kBetaProductGenericErrorDescription,
+                                                        reason: "Found Empty Records for entity \(entityName)",
+                                                        suggestion: "Debug function \(#function)")))
+                } else {
+                    block(Response.success(results))
+                }
+            } else {
+                block(Response.failure(BPError.init(domain: BetaProduct.kBetaProductErrorDomain,
+                                                    code: .Database,
+                                                    description: BetaProduct.kBetaProductGenericErrorDescription,
+                                                    reason: "Encountered an error in Core Data during fetch",
+                                                    suggestion: "Debug function \(#function)")))
+            }
+        }
     }
     
     /// Protocol implementation. see `StoreProtocol.swift`

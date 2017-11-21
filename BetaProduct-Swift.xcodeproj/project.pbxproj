@@ -124,11 +124,11 @@
 		CE4B34211FB57ABB00CB5905 /* GOGOIA-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */; };
 		CE5570601FB568ED00A14F7A /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55705F1FB568ED00A14F7A /* ProductListInteractorIO.swift */; };
 		CE5570621FB56A7B00A14F7A /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570611FB56A7B00A14F7A /* ProductListInteractor.swift */; };
-		CE5570691FB57C1800A14F7A /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
 		CE55706E1FB596EE00A14F7A /* LogInInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706D1FB596EE00A14F7A /* LogInInteractorIO.swift */; };
 		CE5570701FB5977100A14F7A /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706F1FB5977100A14F7A /* LogInInteractor.swift */; };
 		CE5570721FB597BF00A14F7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570711FB597BF00A14F7A /* User.swift */; };
 		CE5570741FB597F600A14F7A /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570731FB597F600A14F7A /* LogInManager.swift */; };
+		CE5A5E601FC3B1EE0075B8AD /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
 		CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DEC11FB56C120028A59B /* BaseView.swift */; };
 		CE6B5EBA1FB5A0B300356EC9 /* LogInModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */; };
 		CE6B5EBC1FB5A0DB00356EC9 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */; };
@@ -327,6 +327,7 @@
 		CE55706F1FB5977100A14F7A /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
 		CE5570711FB597BF00A14F7A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE5570731FB597F600A14F7A /* LogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInManager.swift; sourceTree = "<group>"; };
+		CE5A5E611FC3B29A0075B8AD /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CE61DEC11FB56C120028A59B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
 		CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModuleProtocol.swift; sourceTree = "<group>"; };
@@ -845,6 +846,7 @@
 			children = (
 				CE5570671FB57BF700A14F7A /* Error Handling */,
 				CE7472F51FB28BC60015C0B3 /* Utility */,
+				CE5A5E611FC3B29A0075B8AD /* Test.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -1508,13 +1510,13 @@
 				CE07A48B1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift in Sources */,
 				CE6B5EC11FB5A26100356EC9 /* UserDisplayItem.swift in Sources */,
 				CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */,
-				CE5570691FB57C1800A14F7A /* BetaProductError.swift in Sources */,
 				CE5570721FB597BF00A14F7A /* User.swift in Sources */,
 				CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */,
 				CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */,
 				CE07A4951FBD3771009185F3 /* UserCredentialsItem.swift in Sources */,
 				CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */,
 				CE6B5EBA1FB5A0B300356EC9 /* LogInModuleProtocol.swift in Sources */,
+				CE5A5E601FC3B1EE0075B8AD /* BetaProductError.swift in Sources */,
 				CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */,
 				CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */,
 				CE07A49B1FBD3948009185F3 /* CreateAccountPresenter.swift in Sources */,
