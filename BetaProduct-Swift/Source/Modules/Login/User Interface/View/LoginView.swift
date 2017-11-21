@@ -35,10 +35,8 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
         self.loginButton.applyPrimaryButtonTheme()
         self.forgotPasswordButton.backgroundColor = BetaProductStyle.iDoohClearColor
         self.forgotPasswordButton.setTitleColor(BetaProductStyle.iDoohLinkColor, for: .normal)
-        self.loginButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
-        self.forgotPasswordButton.titleLabel?.font = BetaProductStyle.iDoohButtonLinkFont
-        self.emailField.font = BetaProductStyle.iDoohTextfieldFont
-        self.passwordField.font = BetaProductStyle.iDoohTextfieldFont
+        self.emailField.layer.cornerRadius = 5.0
+        self.passwordField.layer.cornerRadius = 5.0
     }
 
     func populateControls() {
