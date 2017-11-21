@@ -33,9 +33,9 @@ enum BetaProductTheme: Int {
     var barStyle: UIBarStyle {
         switch self {
         case .ThreeDimensional:
-            return .default
-        case .NonDimensional:
             return .black
+        case .NonDimensional:
+            return .default
         }
     }
     
@@ -62,8 +62,11 @@ enum BetaProductTheme: Int {
         
         UITabBar.appearance().barStyle = barStyle
         
-        UITextField.appearance().font = BetaProductStyle.iDoohTextfieldFont
-        UITextField.appearance().layer.cornerRadius = 0.0
+        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).layer.cornerRadius = 50.0
+        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).font = BetaProductStyle.iDoohTextfieldFont
+        
+        UILabel.appearance(whenContainedInInstancesOf: [UIViewController.self]).textColor = UIColor.white
+        UILabel.appearance(whenContainedInInstancesOf: [UIViewController.self]).font = BetaProductStyle.iDoohTextfieldFont
         
         //UITabBar.appearance().backgroundImage = tabBarBackgroundImage
         
