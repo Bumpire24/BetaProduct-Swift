@@ -110,8 +110,8 @@ class BaseMessageView: BaseView {
     func applyMessageViewTheme() {
         messageView.layer.cornerRadius = 15.0
         titleAndMessageView.layer.cornerRadius = 15.0
-        messageView.layer.borderColor = BetaProductStyle.iDoohPurple.cgColor
-        messageView.layer.shadowColor = BetaProductStyle.iDoohShadowColor.cgColor
+        messageView.layer.borderColor = BetaProductStyle.Colors.iDoohPurple.cgColor
+        messageView.layer.shadowColor = BetaProductStyle.Colors.iDoohShadowColor.cgColor
         messageView.layer.shadowOpacity = 1.0
         messageView.layer.shadowRadius = 3.0
         messageView.layer.shadowOffset = CGSize(width: 0, height: 3)

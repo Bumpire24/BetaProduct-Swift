@@ -33,8 +33,8 @@ class LoginOptionsView: BaseView {
         self.loginButton.applyPrimaryButtonTheme()
         self.createAccountButton.subscribeToBlurringBackground()
         self.createAccountButton.applySecondaryButtonTheme()
-        self.loginButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
-        self.createAccountButton.titleLabel?.font = BetaProductStyle.iDoohButtonLabelFont
+        self.loginButton.titleLabel?.font = BetaProductStyle.Fonts.iDoohButtonLabelFont
+        self.createAccountButton.titleLabel?.font = BetaProductStyle.Fonts.iDoohButtonLabelFont
     }
     
     func populateControls() {

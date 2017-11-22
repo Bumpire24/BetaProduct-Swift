@@ -9,5 +9,5 @@
 import Foundation
 
 protocol LoginViewProtocol {
-    func displayMessage(_ message : String)
+    func displayMessage(_ message : String, isSuccessful : Bool)
 }
