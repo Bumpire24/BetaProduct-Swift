@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class LogInInteractor: NSObject, LogInInteractorInput {
+    var session : Session?
+    var webService : StoreWebClientProtocol?
     var manager : LogInManager?
     var output : LogInInteractorOutput?
     
@@ -26,16 +28,16 @@ class LogInInteractor: NSObject, LogInInteractorInput {
         }
         
         guard let password = user.password, password.count > 0 else {
-            output?.userLoginValidationComplete(wasSuccessful: false, withMessage: "Password incorrect!")
+            output?.userLoginValidationComplete(wasSuccessful: false, withMessage: "Password incorrectx!")
             return
         }
         
         manager?.retrieveUser(withEmail: user.username!, andWithPassword: user.password!, withCompletionBlock: { response in
             switch response {
             case .success(_):
-                output?.userLoginValidationComplete(wasSuccessful: true, withMessage: "Log In success!")
+                self.output?.userLoginValidationComplete(wasSuccessful: true, withMessage: "Log In success!")
             case .failure(let error):
-                output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
+                self.output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
             }
         })
     }

@@ -8,17 +8,17 @@
 
 import Foundation
 
-enum BPErrorCode : Int {
+public enum BPErrorCode : Int {
     case Database = 1000,
     WebService,
     Business
 }
 
-class BPError: NSError {
-    var errorCode : BPErrorCode?
-    var innerError : Error?
-    var innerNSError : NSError?
-    var innerBPError : BPError?
+public class BPError: NSError {
+    public var errorCode : BPErrorCode?
+    public var innerError : Error?
+    public var innerNSError : NSError?
+    public var innerBPError : BPError?
     
     convenience init(domain : String, code : BPErrorCode, description : String, reason : String, suggestion : String) {
         let userInfo = [

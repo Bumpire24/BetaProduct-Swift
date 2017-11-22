@@ -124,11 +124,11 @@
 		CE4B34211FB57ABB00CB5905 /* GOGOIA-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */; };
 		CE5570601FB568ED00A14F7A /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55705F1FB568ED00A14F7A /* ProductListInteractorIO.swift */; };
 		CE5570621FB56A7B00A14F7A /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570611FB56A7B00A14F7A /* ProductListInteractor.swift */; };
-		CE5570691FB57C1800A14F7A /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
 		CE55706E1FB596EE00A14F7A /* LogInInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706D1FB596EE00A14F7A /* LogInInteractorIO.swift */; };
 		CE5570701FB5977100A14F7A /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706F1FB5977100A14F7A /* LogInInteractor.swift */; };
 		CE5570721FB597BF00A14F7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570711FB597BF00A14F7A /* User.swift */; };
 		CE5570741FB597F600A14F7A /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570731FB597F600A14F7A /* LogInManager.swift */; };
+		CE5A5E601FC3B1EE0075B8AD /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
 		CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DEC11FB56C120028A59B /* BaseView.swift */; };
 		CE6B5EBA1FB5A0B300356EC9 /* LogInModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */; };
 		CE6B5EBC1FB5A0DB00356EC9 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */; };
@@ -243,6 +243,7 @@
 		CED666A91FBEA80200B2245D /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */; };
 		CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */; };
 		CED666AD1FBECD5700B2245D /* CreateAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AC1FBECD5700B2245D /* CreateAccountManager.swift */; };
+		CEDCD4CA1FC3ED2800103B60 /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
 		CEE8ABB41FB181110052DC3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB31FB181110052DC3A /* AppDelegate.swift */; };
 		CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
 		CEE8ABB91FB181110052DC3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABB71FB181110052DC3A /* Main.storyboard */; };
@@ -264,6 +265,7 @@
 		CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */; };
 		CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */; };
 		CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */; };
+		CEF71F401FC42FA2000CBEAA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF71F3F1FC42FA2000CBEAA /* Session.swift */; };
 		CEF83FB31FB3EBFF00FF19B4 /* WebServiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */; };
 		CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB41FB4166800FF19B4 /* Product.swift */; };
 		CEF83FB81FB4172000FF19B4 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */; };
@@ -329,6 +331,7 @@
 		CE55706F1FB5977100A14F7A /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
 		CE5570711FB597BF00A14F7A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE5570731FB597F600A14F7A /* LogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInManager.swift; sourceTree = "<group>"; };
+		CE5A5E611FC3B29A0075B8AD /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CE61DEC11FB56C120028A59B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
 		CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModuleProtocol.swift; sourceTree = "<group>"; };
@@ -355,6 +358,7 @@
 		CED666821FBE88D100B2245D /* Pods_BetaProduct_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BetaProduct_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountInteractor.swift; sourceTree = "<group>"; };
 		CED666AC1FBECD5700B2245D /* CreateAccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateAccountManager.swift; path = "BetaProduct-Swift/Source/Modules/Create Account/Application Logic/Interactor/CreateAccountManager.swift"; sourceTree = SOURCE_ROOT; };
+		CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedUser.swift; sourceTree = "<group>"; };
 		CEE8ABB01FB181110052DC3A /* BetaProduct-Swift DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE8ABB31FB181110052DC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE8ABB51FB181110052DC3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 		CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProduct.swift; sourceTree = "<group>"; };
+		CEF71F3F1FC42FA2000CBEAA /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConverter.swift; sourceTree = "<group>"; };
 		CEF83FB41FB4166800FF19B4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocol.swift; sourceTree = "<group>"; };
@@ -849,6 +854,7 @@
 			children = (
 				CE5570671FB57BF700A14F7A /* Error Handling */,
 				CE7472F51FB28BC60015C0B3 /* Utility */,
+				CE5A5E611FC3B29A0075B8AD /* Test.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -892,6 +898,7 @@
 			children = (
 				CEE8ABED1FB184620052DC3A /* Base */,
 				CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */,
+				CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -916,6 +923,7 @@
 		CEE8ABFB1FB1A1F20052DC3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CEF71F411FC42FB0000CBEAA /* Session */,
 				CE7472F41FB288560015C0B3 /* SyncEngine */,
 				CE7472F31FB288310015C0B3 /* WebService */,
 				CEE8AC121FB1BC8A0052DC3A /* BetaProduct */,
@@ -1017,6 +1025,14 @@
 				CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */,
 			);
 			path = BetaProduct;
+			sourceTree = "<group>";
+		};
+		CEF71F411FC42FB0000CBEAA /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				CEF71F3F1FC42FA2000CBEAA /* Session.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		CEF83FB61FB4168000FF19B4 /* Base */ = {
@@ -1516,13 +1532,14 @@
 				CE07A48B1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift in Sources */,
 				CE6B5EC11FB5A26100356EC9 /* UserDisplayItem.swift in Sources */,
 				CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */,
-				CE5570691FB57C1800A14F7A /* BetaProductError.swift in Sources */,
+				CEF71F401FC42FA2000CBEAA /* Session.swift in Sources */,
 				CE5570721FB597BF00A14F7A /* User.swift in Sources */,
 				CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */,
 				CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */,
 				CE07A4951FBD3771009185F3 /* UserCredentialsItem.swift in Sources */,
 				CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */,
 				CE6B5EBA1FB5A0B300356EC9 /* LogInModuleProtocol.swift in Sources */,
+				CE5A5E601FC3B1EE0075B8AD /* BetaProductError.swift in Sources */,
 				CEE8ABF81FB18C0D0052DC3A /* StoreProtocol.swift in Sources */,
 				CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */,
 				CE07A49B1FBD3948009185F3 /* CreateAccountPresenter.swift in Sources */,
@@ -1531,6 +1548,7 @@
 				CEF83FBD1FB41BBE00FF19B4 /* ProductManager.swift in Sources */,
 				CEA730BA1FBD3BC300ABAA60 /* Utility.swift in Sources */,
 				CEF83FB81FB4172000FF19B4 /* ModelProtocol.swift in Sources */,
+				CEDCD4CA1FC3ED2800103B60 /* ManagedUser.swift in Sources */,
 				CE5570601FB568ED00A14F7A /* ProductListInteractorIO.swift in Sources */,
 				CE07A48D1FBD2B69009185F3 /* CreateAccountView.swift in Sources */,
 				CEE8AC091FB1A4E20052DC3A /* HomeView.swift in Sources */,

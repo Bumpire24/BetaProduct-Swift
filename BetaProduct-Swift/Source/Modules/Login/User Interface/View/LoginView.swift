@@ -63,8 +63,6 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
     func displayMessage(_ message: String) {
         let baseMessageView = BaseMessageView()
         baseMessageView.displayMessage(withTitle: "Login", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self)
-        print(message)
-        eventHandler?.proceedToHomeView()
     }
     
     @IBAction func login(_ sender: Any) {

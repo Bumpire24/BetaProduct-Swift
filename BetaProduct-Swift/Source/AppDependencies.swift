@@ -29,6 +29,7 @@ class AppDependencies: NSObject {
     func configureDependencies() {
         // Root Level Classes
         let root = RootWireframe()
+        let store = StoreCoreData()
         
         // Home Module Classes
 //        let homeWireframe = HomeWireframe()
@@ -54,6 +55,8 @@ class AppDependencies: NSObject {
         let loginInteractor = LogInInteractor()
         let loginPresenter = LogInPresenter()
         
+        loginManager.store = store
+        
         loginInteractor.manager = loginManager
         loginInteractor.output = loginPresenter
         
@@ -66,6 +69,8 @@ class AppDependencies: NSObject {
         let createAccountManager = CreateAccountManager()
         let createAccountInteractor = CreateAccountInteractor()
         let createAccountPresenter = CreateAccountPresenter()
+        
+        createAccountManager.store = store
         
         createAccountInteractor.createAccountManager = createAccountManager
         createAccountInteractor.loginManager = loginManager

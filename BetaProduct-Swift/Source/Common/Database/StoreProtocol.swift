@@ -34,6 +34,9 @@ protocol StoreProtocol {
     /// Insert to Table Product
     func newProduct() -> ManagedProduct
     
+    /// Insert to Table User
+    func newUser() -> ManagedUser
+    
     /**
      Delete Record from Table Product
      - Parameters:
