@@ -14,7 +14,7 @@ class BaseView: UIViewController {
         super.viewDidLoad()
 
         //applyGradientBackground()
-        applyImageWatermark()
+        applyBlurredWatermark()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,15 +28,34 @@ class BaseView: UIViewController {
         
         gradientLayer = CAGradientLayer()
         gradientLayer.frame = self.view.bounds
-        gradientLayer.colors = [BetaProductStyle.iDoohPink.cgColor, BetaProductStyle.iDoohPurple.cgColor]
+        gradientLayer.colors = [BetaProductStyle.Colors.iDoohPink.cgColor, BetaProductStyle.Colors.iDoohPurple.cgColor]
         gradientView.layer.addSublayer(gradientLayer)
         self.view.insertSubview(gradientView, at: 0)
     }
     
-    func applyImageWatermark() {
+    func applyImageWatermark() -> UIImageView {
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "launchImage.png")
         backgroundImage.contentMode = .scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
+        //self.view.insertSubview(backgroundImage, at: 0)
+        
+        return backgroundImage
+    }
+    
+    func applyBlurredWatermark() {
+        let coverImageView = applyImageWatermark()
+        let effect = UIBlurEffect(style: .extraLight)
+        let overlayView = UIVisualEffectView(effect: effect)
+        overlayView.frame = self.view.bounds
+        overlayView.center = self.view.center
+        overlayView.translatesAutoresizingMaskIntoConstraints = false
+        //self.view.insertSubview(overlayView, aboveSubview: coverImageView)
+        //self.view.insertSubview(overlayView, at: 0)
+        let vibrancyEffect = UIVibrancyEffect.init(blurEffect: effect)
+        let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
+        vibrancyView.translatesAutoresizingMaskIntoConstraints = false
+        vibrancyView.contentView.addSubview(coverImageView)
+        //self.view.insertSubview(overlayView, aboveSubview: coverImageView)
+        self.view.insertSubview(overlayView, at: 0)
     }
 }

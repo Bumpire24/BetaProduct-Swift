@@ -24,9 +24,9 @@ enum BetaProductTheme: Int {
     var mainColor: UIColor {
         switch self {
         case .ThreeDimensional:
-            return BetaProductStyle.iDoohPink
+            return BetaProductStyle.Colors.iDoohPink
         case .NonDimensional:
-            return BetaProductStyle.iDoohPurple
+            return BetaProductStyle.Colors.iDoohPurple
         }
     }
     
@@ -42,9 +42,9 @@ enum BetaProductTheme: Int {
     var backgroundColor: UIColor {
         switch self {
         case .ThreeDimensional:
-            return BetaProductStyle.iDoohPink
+            return BetaProductStyle.Colors.iDoohPink
         case .NonDimensional:
-            return BetaProductStyle.iDoohPurple
+            return BetaProductStyle.Colors.iDoohPurple
         }
     }
     
@@ -58,15 +58,24 @@ enum BetaProductTheme: Int {
         //UINavigationBar.appearance().setBackgroundImage(navigationBackgroundImage, for: .default)
         
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
+//        UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
         
         UITabBar.appearance().barStyle = barStyle
         
-        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).layer.cornerRadius = 50.0
-        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).font = BetaProductStyle.iDoohTextfieldFont
+        //UILabel Styles
         
+        
+        //TextField Styles
+        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).backgroundColor = UIColor.clear
+        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).font = BetaProductStyle.Fonts.iDoohTextfieldFont
+        
+        //UITextField.appearance().layer.cornerRadius = 50.0
+        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).layer.cornerRadius = 15.0
+        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).layer.borderWidth = 2.0
+        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).layer.borderColor = UIColor.red.cgColor
+        
+        //Label Styles
         UILabel.appearance(whenContainedInInstancesOf: [UIViewController.self]).textColor = UIColor.white
-        UILabel.appearance(whenContainedInInstancesOf: [UIViewController.self]).font = BetaProductStyle.iDoohTextfieldFont
         
         //UITabBar.appearance().backgroundImage = tabBarBackgroundImage
         
@@ -103,6 +112,32 @@ enum BetaProductTheme: Int {
 //        UISwitch.appearance().thumbTintColor = mainColor
 //
 //        UITableViewCell.appearance().backgroundColor = backgroundColor
-        UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = UIColor.white
+//        UILabel.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).textColor = UIColor.white
+    }
+}
+
+class BetaProductHeaderLabel: UILabel {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        changeFontName()
+    }
+    
+    func changeFontName()
+    {
+        self.font = BetaProductStyle.Fonts.iDoohHeaderLabelFont
+    }
+}
+
+class BetaProductInstructionLabel: UILabel {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        changeFontName()
+    }
+    
+    func changeFontName()
+    {
+        self.font = BetaProductStyle.Fonts.iDoohInstructionLabelFont
     }
 }
