@@ -7,9 +7,8 @@
 //
 
 import Foundation
-import UIKit
 
-struct UserCredentialsItem {
+struct UserCredentialsItem : BaseDisplayItem {
     let fullName     : String?
     let mobileNumber : String?
     let email        : String?

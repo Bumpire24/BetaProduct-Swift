@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Store Protocol. Being used by the app across all modules as the database abstract
 protocol StoreProtocol {
     /**
      Get Records from Data Source

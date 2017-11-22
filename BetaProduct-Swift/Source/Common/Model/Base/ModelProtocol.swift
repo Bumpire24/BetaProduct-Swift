@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ModelProtocol {
+protocol ModelProtocol : PropertyLooperProtocol{
     var status : Int16 { get set }
     var syncStatus : Int16 { get set }
     var createdAt : Date { get set }

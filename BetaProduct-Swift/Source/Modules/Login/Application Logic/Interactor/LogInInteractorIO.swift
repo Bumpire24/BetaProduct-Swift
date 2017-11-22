@@ -9,6 +9,11 @@
 import Foundation
 
 protocol LogInInteractorInput {
+    /**
+     Validates User Login with a given input. Will respond via Login Ouput delegate.
+     - Parameters:
+        - user: given input. Display Model
+     */
     func validateUserLogin(userDisplayItem user: UserDisplayItem)
 }
 

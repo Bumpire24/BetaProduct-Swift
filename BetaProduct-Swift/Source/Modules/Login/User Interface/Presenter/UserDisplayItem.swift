@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-struct UserDisplayItem {
-    let username : String?
+/// User view model for module `Login`
+struct UserDisplayItem : BaseDisplayItem {
+    /// variable for email
+    let email : String?
+    /// variable for password
     let password : String?
 }

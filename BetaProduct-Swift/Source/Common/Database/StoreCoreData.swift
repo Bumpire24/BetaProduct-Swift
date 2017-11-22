@@ -79,6 +79,7 @@ class StoreCoreData: NSObject, StoreProtocol{
                                          reason: caughtError.localizedDescription,
                                          suggestion: "Debug function \(#function)")
                 error.innerError = caughtError
+                print("Error : \(#function), \(error.localizedDescription)")
                 block(Response.failure(error))
             }
         }
@@ -129,6 +130,7 @@ class StoreCoreData: NSObject, StoreProtocol{
         } catch let caughtError {
             let error = BPError.init(domain: BetaProduct.kBPErrorDomain, code: .Database, description: BetaProduct.kBPGenericError, reason: caughtError.localizedDescription, suggestion: "Debug function \(#function)")
             error.innerError = caughtError
+            print("Error : \(#function), \(error.localizedDescription)")
             block(.failure(error))
         }
     }
@@ -142,6 +144,7 @@ class StoreCoreData: NSObject, StoreProtocol{
             managedObjectContext.rollback()
             let error = BPError.init(domain: BetaProduct.kBPErrorDomain, code: .Database, description: BetaProduct.kBPGenericError, reason: caughtError.localizedDescription, suggestion: "Debug function \(#function)")
             error.innerError = caughtError
+            print("Error : \(#function), \(error.localizedDescription)")
             block(.failure(error))
         }
     }

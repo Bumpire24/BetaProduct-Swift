@@ -140,12 +140,6 @@
 		CE7C25491FC2B9E30036E39B /* BetaProductTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */; };
 		CEA6A61A1FC4199D0025E2D3 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A6191FC4199D0025E2D3 /* QRView.swift */; };
 		CEA730BA1FBD3BC300ABAA60 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA730B91FBD3BC300ABAA60 /* Utility.swift */; };
-		CEA730C21FBD808200ABAA60 /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706F1FB5977100A14F7A /* LogInInteractor.swift */; };
-		CEA730C31FBD808600ABAA60 /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570731FB597F600A14F7A /* LogInManager.swift */; };
-		CEA730C41FBD808800ABAA60 /* LogInInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706D1FB596EE00A14F7A /* LogInInteractorIO.swift */; };
-		CEA730C51FBD82B100ABAA60 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */; };
-		CEA730C61FBD831F00ABAA60 /* UserDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EC01FB5A26100356EC9 /* UserDisplayItem.swift */; };
-		CEA730C71FBD832500ABAA60 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570711FB597BF00A14F7A /* User.swift */; };
 		CEB652D21FB57EEC00467D4E /* Button+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB652D11FB57EEC00467D4E /* Button+Theme.swift */; };
 		CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */; };
 		CEC203991FB46C160022C7C2 /* LoginOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */; };
@@ -153,94 +147,7 @@
 		CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */; };
 		CEC2039C1FB46C160022C7C2 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203951FB46C160022C7C2 /* LoginWireframe.swift */; };
 		CEC2039D1FB46C160022C7C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203971FB46C160022C7C2 /* LoginView.swift */; };
-		CECF7B7D1FBD861800B779AE /* LogInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBE1FB5A18100356EC9 /* LogInViewProtocol.swift */; };
-		CECF7B7E1FBD861C00B779AE /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203951FB46C160022C7C2 /* LoginWireframe.swift */; };
-		CECF7B7F1FBD861E00B779AE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203971FB46C160022C7C2 /* LoginView.swift */; };
-		CECF7B801FBD862A00B779AE /* LogInModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */; };
-		CECF7B811FBD868E00B779AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB31FB181110052DC3A /* AppDelegate.swift */; };
-		CECF7B821FBD868E00B779AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
-		CECF7B831FBD868E00B779AE /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
-		CECF7B841FBD868E00B779AE /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
-		CECF7B851FBD868E00B779AE /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
-		CECF7B861FBD868E00B779AE /* WebServiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */; };
-		CECF7B871FBD868E00B779AE /* BetaProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */; };
-		CECF7B881FBD868E00B779AE /* DatabaseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */; };
-		CECF7B891FBD868E00B779AE /* CompletionBlockTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF31FB187610052DC3A /* CompletionBlockTypes.swift */; };
-		CECF7B8A1FBD868E00B779AE /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */; };
-		CECF7B8B1FBD868E00B779AE /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DEC11FB56C120028A59B /* BaseView.swift */; };
-		CECF7B8C1FBD868E00B779AE /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */; };
-		CECF7B8D1FBD868E00B779AE /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB41FB4166800FF19B4 /* Product.swift */; };
-		CECF7B8E1FBD868E00B779AE /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */; };
-		CECF7B8F1FBD868E00B779AE /* ManagedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */; };
-		CECF7B901FBD868E00B779AE /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF71FB18C0D0052DC3A /* StoreProtocol.swift */; };
-		CECF7B911FBD868E00B779AE /* StoreCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF91FB18C880052DC3A /* StoreCoreData.swift */; };
-		CECF7B921FBD868E00B779AE /* LoginOptionsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */; };
-		CECF7B931FBD868E00B779AE /* LoginOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */; };
-		CECF7B941FBD868E00B779AE /* LoginOptionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038F1FB46C160022C7C2 /* LoginOptionsWireframe.swift */; };
-		CECF7B951FBD868E00B779AE /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */; };
-		CECF7B961FBD868E00B779AE /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0C1FB1A51E0052DC3A /* BaseWireframe.swift */; };
-		CECF7B971FBD868E00B779AE /* HomeModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC061FB1A48C0052DC3A /* HomeModuleProtocol.swift */; };
-		CECF7B981FBD868E00B779AE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC081FB1A4E20052DC3A /* HomeView.swift */; };
-		CECF7B991FBD868E00B779AE /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */; };
-		CECF7B9A1FBD868E00B779AE /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55705F1FB568ED00A14F7A /* ProductListInteractorIO.swift */; };
-		CECF7B9B1FBD868E00B779AE /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570611FB56A7B00A14F7A /* ProductListInteractor.swift */; };
-		CECF7B9C1FBD868E00B779AE /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */; };
-		CECF7B9D1FBD868E00B779AE /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
-		CECF7B9F1FBD868E00B779AE /* Button+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB652D11FB57EEC00467D4E /* Button+Theme.swift */; };
-		CECF7BA01FBD868E00B779AE /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA730B91FBD3BC300ABAA60 /* Utility.swift */; };
-		CECF7BA11FBD868E00B779AE /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */; };
 		CED47D901FBE894B00285F70 /* BaseMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED47D8F1FBE894B00285F70 /* BaseMessageView.swift */; };
-		CED666701FBE886200B2245D /* LogInModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */; };
-		CED666711FBE886200B2245D /* LogInInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706D1FB596EE00A14F7A /* LogInInteractorIO.swift */; };
-		CED666721FBE886200B2245D /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706F1FB5977100A14F7A /* LogInInteractor.swift */; };
-		CED666731FBE886200B2245D /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570731FB597F600A14F7A /* LogInManager.swift */; };
-		CED666741FBE886200B2245D /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */; };
-		CED666751FBE886200B2245D /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203951FB46C160022C7C2 /* LoginWireframe.swift */; };
-		CED666761FBE886200B2245D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203971FB46C160022C7C2 /* LoginView.swift */; };
-		CED666771FBE886200B2245D /* LogInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBE1FB5A18100356EC9 /* LogInViewProtocol.swift */; };
-		CED666781FBE886200B2245D /* LoginOptionsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */; };
-		CED666791FBE886200B2245D /* LoginOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */; };
-		CED6667A1FBE886200B2245D /* LoginOptionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038F1FB46C160022C7C2 /* LoginOptionsWireframe.swift */; };
-		CED6667B1FBE886200B2245D /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */; };
-		CED6667C1FBE886200B2245D /* LoginInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6666E1FBE86C800B2245D /* LoginInteractorTest.swift */; };
-		CED666831FBEA80200B2245D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB31FB181110052DC3A /* AppDelegate.swift */; };
-		CED666841FBEA80200B2245D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
-		CED666851FBEA80200B2245D /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
-		CED666861FBEA80200B2245D /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
-		CED666871FBEA80200B2245D /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
-		CED666881FBEA80200B2245D /* WebServiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */; };
-		CED666891FBEA80200B2245D /* BetaProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */; };
-		CED6668A1FBEA80200B2245D /* DatabaseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */; };
-		CED6668B1FBEA80200B2245D /* CompletionBlockTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF31FB187610052DC3A /* CompletionBlockTypes.swift */; };
-		CED6668C1FBEA80200B2245D /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */; };
-		CED6668D1FBEA80200B2245D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DEC11FB56C120028A59B /* BaseView.swift */; };
-		CED6668E1FBEA80200B2245D /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48E1FBD3262009185F3 /* BaseViewProtocol.swift */; };
-		CED6668F1FBEA80200B2245D /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */; };
-		CED666901FBEA80200B2245D /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB41FB4166800FF19B4 /* Product.swift */; };
-		CED666911FBEA80200B2245D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570711FB597BF00A14F7A /* User.swift */; };
-		CED666921FBEA80200B2245D /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */; };
-		CED666931FBEA80200B2245D /* ManagedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */; };
-		CED666941FBEA80200B2245D /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF71FB18C0D0052DC3A /* StoreProtocol.swift */; };
-		CED666951FBEA80200B2245D /* StoreCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF91FB18C880052DC3A /* StoreCoreData.swift */; };
-		CED666961FBEA80200B2245D /* CreateAccountModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A4921FBD36BE009185F3 /* CreateAccountModuleProtocol.swift */; };
-		CED666971FBEA80200B2245D /* CreateAccountInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A4981FBD3877009185F3 /* CreateAccountInteractorIO.swift */; };
-		CED666981FBEA80200B2245D /* UserCredentialsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A4941FBD3771009185F3 /* UserCredentialsItem.swift */; };
-		CED666991FBEA80200B2245D /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A49A1FBD3948009185F3 /* CreateAccountPresenter.swift */; };
-		CED6669A1FBEA80200B2245D /* CreateAccountWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A49C1FBD3CB2009185F3 /* CreateAccountWireframe.swift */; };
-		CED6669B1FBEA80200B2245D /* CreateAccountViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48A1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift */; };
-		CED6669C1FBEA80200B2245D /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48C1FBD2B69009185F3 /* CreateAccountView.swift */; };
-		CED6669D1FBEA80200B2245D /* UserDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EC01FB5A26100356EC9 /* UserDisplayItem.swift */; };
-		CED6669E1FBEA80200B2245D /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0C1FB1A51E0052DC3A /* BaseWireframe.swift */; };
-		CED6669F1FBEA80200B2245D /* HomeModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC061FB1A48C0052DC3A /* HomeModuleProtocol.swift */; };
-		CED666A01FBEA80200B2245D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC081FB1A4E20052DC3A /* HomeView.swift */; };
-		CED666A11FBEA80200B2245D /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */; };
-		CED666A21FBEA80200B2245D /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55705F1FB568ED00A14F7A /* ProductListInteractorIO.swift */; };
-		CED666A31FBEA80200B2245D /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570611FB56A7B00A14F7A /* ProductListInteractor.swift */; };
-		CED666A41FBEA80200B2245D /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */; };
-		CED666A51FBEA80200B2245D /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
-		CED666A71FBEA80200B2245D /* Button+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB652D11FB57EEC00467D4E /* Button+Theme.swift */; };
-		CED666A81FBEA80200B2245D /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA730B91FBD3BC300ABAA60 /* Utility.swift */; };
-		CED666A91FBEA80200B2245D /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */; };
 		CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */; };
 		CED666AD1FBECD5700B2245D /* CreateAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AC1FBECD5700B2245D /* CreateAccountManager.swift */; };
 		CEDCD4CA1FC3ED2800103B60 /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
@@ -250,7 +157,6 @@
 		CEE8ABBC1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
 		CEE8ABBE1FB181110052DC3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBD1FB181110052DC3A /* Assets.xcassets */; };
 		CEE8ABC11FB181110052DC3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBF1FB181110052DC3A /* LaunchScreen.storyboard */; };
-		CEE8ABCC1FB181110052DC3A /* BetaProduct_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABCB1FB181110052DC3A /* BetaProduct_SwiftTests.swift */; };
 		CEE8ABD71FB181110052DC3A /* BetaProduct_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABD61FB181110052DC3A /* BetaProduct_SwiftUITests.swift */; };
 		CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */; };
 		CEE8ABF21FB1851A0052DC3A /* DatabaseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */; };
@@ -265,6 +171,71 @@
 		CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */; };
 		CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */; };
 		CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */; };
+		CEEB96541FC57B920016F141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB31FB181110052DC3A /* AppDelegate.swift */; };
+		CEEB96551FC57B920016F141 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */; };
+		CEEB96561FC57B920016F141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
+		CEEB96571FC57B920016F141 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0C1FB1A51E0052DC3A /* BaseWireframe.swift */; };
+		CEEB96581FC57B920016F141 /* BaseDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320E41FC52C0E004CA907 /* BaseDisplayItem.swift */; };
+		CEEB96591FC57B920016F141 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF71F3F1FC42FA2000CBEAA /* Session.swift */; };
+		CEEB965A1FC57B920016F141 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
+		CEEB965B1FC57B920016F141 /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
+		CEEB965C1FC57B920016F141 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
+		CEEB965D1FC57B920016F141 /* WebServiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */; };
+		CEEB965E1FC57B920016F141 /* BetaProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */; };
+		CEEB965F1FC57B920016F141 /* BetaProductTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */; };
+		CEEB96601FC57B920016F141 /* DatabaseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */; };
+		CEEB96611FC57B920016F141 /* CompletionBlockTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF31FB187610052DC3A /* CompletionBlockTypes.swift */; };
+		CEEB96621FC57B920016F141 /* RootWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */; };
+		CEEB96631FC57B920016F141 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DEC11FB56C120028A59B /* BaseView.swift */; };
+		CEEB96641FC57B920016F141 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48E1FBD3262009185F3 /* BaseViewProtocol.swift */; };
+		CEEB96651FC57B920016F141 /* BaseMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED47D8F1FBE894B00285F70 /* BaseMessageView.swift */; };
+		CEEB96661FC57B920016F141 /* ModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB71FB4172000FF19B4 /* ModelProtocol.swift */; };
+		CEEB96671FC57B920016F141 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB41FB4166800FF19B4 /* Product.swift */; };
+		CEEB96681FC57B920016F141 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570711FB597BF00A14F7A /* User.swift */; };
+		CEEB96691FC57B920016F141 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */; };
+		CEEB966A1FC57B920016F141 /* ManagedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */; };
+		CEEB966B1FC57B920016F141 /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
+		CEEB966C1FC57B920016F141 /* StoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF71FB18C0D0052DC3A /* StoreProtocol.swift */; };
+		CEEB966D1FC57B920016F141 /* StoreCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF91FB18C880052DC3A /* StoreCoreData.swift */; };
+		CEEB966E1FC57B920016F141 /* CreateAccountModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A4921FBD36BE009185F3 /* CreateAccountModuleProtocol.swift */; };
+		CEEB966F1FC57B920016F141 /* CreateAccountInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A4981FBD3877009185F3 /* CreateAccountInteractorIO.swift */; };
+		CEEB96701FC57B920016F141 /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */; };
+		CEEB96711FC57B920016F141 /* CreateAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AC1FBECD5700B2245D /* CreateAccountManager.swift */; };
+		CEEB96721FC57B920016F141 /* UserCredentialsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A4941FBD3771009185F3 /* UserCredentialsItem.swift */; };
+		CEEB96731FC57B920016F141 /* CreateAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A49A1FBD3948009185F3 /* CreateAccountPresenter.swift */; };
+		CEEB96741FC57B920016F141 /* CreateAccountWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A49C1FBD3CB2009185F3 /* CreateAccountWireframe.swift */; };
+		CEEB96751FC57B920016F141 /* CreateAccountViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48A1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift */; };
+		CEEB96761FC57B920016F141 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48C1FBD2B69009185F3 /* CreateAccountView.swift */; };
+		CEEB96771FC57B920016F141 /* LogInModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */; };
+		CEEB96781FC57B920016F141 /* LogInInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706D1FB596EE00A14F7A /* LogInInteractorIO.swift */; };
+		CEEB96791FC57B920016F141 /* LogInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55706F1FB5977100A14F7A /* LogInInteractor.swift */; };
+		CEEB967A1FC57B920016F141 /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570731FB597F600A14F7A /* LogInManager.swift */; };
+		CEEB967B1FC57B920016F141 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */; };
+		CEEB967C1FC57B920016F141 /* UserDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EC01FB5A26100356EC9 /* UserDisplayItem.swift */; };
+		CEEB967D1FC57B920016F141 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203951FB46C160022C7C2 /* LoginWireframe.swift */; };
+		CEEB967E1FC57B920016F141 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203971FB46C160022C7C2 /* LoginView.swift */; };
+		CEEB967F1FC57B920016F141 /* LogInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBE1FB5A18100356EC9 /* LogInViewProtocol.swift */; };
+		CEEB96801FC57B920016F141 /* LoginOptionsModuleInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038A1FB46C160022C7C2 /* LoginOptionsModuleInterface.swift */; };
+		CEEB96811FC57B920016F141 /* LoginOptionsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038D1FB46C160022C7C2 /* LoginOptionsPresenter.swift */; };
+		CEEB96821FC57B920016F141 /* LoginOptionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC2038F1FB46C160022C7C2 /* LoginOptionsWireframe.swift */; };
+		CEEB96831FC57B920016F141 /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */; };
+		CEEB96841FC57B920016F141 /* HomeModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC061FB1A48C0052DC3A /* HomeModuleProtocol.swift */; };
+		CEEB96851FC57B920016F141 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC081FB1A4E20052DC3A /* HomeView.swift */; };
+		CEEB96861FC57B920016F141 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A6191FC4199D0025E2D3 /* QRView.swift */; };
+		CEEB96871FC57B920016F141 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */; };
+		CEEB96881FC57B920016F141 /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55705F1FB568ED00A14F7A /* ProductListInteractorIO.swift */; };
+		CEEB96891FC57B920016F141 /* ProductListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570611FB56A7B00A14F7A /* ProductListInteractor.swift */; };
+		CEEB968A1FC57B920016F141 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FBC1FB41BBE00FF19B4 /* ProductManager.swift */; };
+		CEEB968B1FC57B920016F141 /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
+		CEEB968C1FC57B920016F141 /* PropertyLooperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320DF1FC52826004CA907 /* PropertyLooperProtocol.swift */; };
+		CEEB968D1FC57B920016F141 /* String+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE08CB9C1FBEF2DA00B8C58A /* String+Utility.swift */; };
+		CEEB968E1FC57B920016F141 /* Button+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB652D11FB57EEC00467D4E /* Button+Theme.swift */; };
+		CEEB968F1FC57B920016F141 /* PropertLooper+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320E11FC528AA004CA907 /* PropertLooper+Default.swift */; };
+		CEEB96901FC57B920016F141 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA730B91FBD3BC300ABAA60 /* Utility.swift */; };
+		CEEB96911FC57B920016F141 /* LoginInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6666E1FBE86C800B2245D /* LoginInteractorTest.swift */; };
+		CEF320E01FC52826004CA907 /* PropertyLooperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320DF1FC52826004CA907 /* PropertyLooperProtocol.swift */; };
+		CEF320E21FC528AA004CA907 /* PropertLooper+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320E11FC528AA004CA907 /* PropertLooper+Default.swift */; };
+		CEF320E51FC52C0E004CA907 /* BaseDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320E41FC52C0E004CA907 /* BaseDisplayItem.swift */; };
 		CEF71F401FC42FA2000CBEAA /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF71F3F1FC42FA2000CBEAA /* Session.swift */; };
 		CEF83FB31FB3EBFF00FF19B4 /* WebServiceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */; };
 		CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF83FB41FB4166800FF19B4 /* Product.swift */; };
@@ -331,7 +302,6 @@
 		CE55706F1FB5977100A14F7A /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
 		CE5570711FB597BF00A14F7A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE5570731FB597F600A14F7A /* LogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInManager.swift; sourceTree = "<group>"; };
-		CE5A5E611FC3B29A0075B8AD /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		CE61DEC11FB56C120028A59B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
 		CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModuleProtocol.swift; sourceTree = "<group>"; };
@@ -386,6 +356,9 @@
 		CEE8AC0E1FB1A59B0052DC3A /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 		CEE8AC101FB1A6EE0052DC3A /* RootWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootWireframe.swift; sourceTree = "<group>"; };
 		CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProduct.swift; sourceTree = "<group>"; };
+		CEF320DF1FC52826004CA907 /* PropertyLooperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLooperProtocol.swift; sourceTree = "<group>"; };
+		CEF320E11FC528AA004CA907 /* PropertLooper+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropertLooper+Default.swift"; sourceTree = "<group>"; };
+		CEF320E41FC52C0E004CA907 /* BaseDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDisplayItem.swift; sourceTree = "<group>"; };
 		CEF71F3F1FC42FA2000CBEAA /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		CEF83FB21FB3EBFF00FF19B4 /* WebServiceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConverter.swift; sourceTree = "<group>"; };
 		CEF83FB41FB4166800FF19B4 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -629,6 +602,7 @@
 		CE7472F51FB28BC60015C0B3 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				CEF320DE1FC52801004CA907 /* Protocols */,
 				CE7472F61FB28BCD0015C0B3 /* Extensions */,
 				CEA730B91FBD3BC300ABAA60 /* Utility.swift */,
 			);
@@ -640,6 +614,7 @@
 			children = (
 				CE08CB9C1FBEF2DA00B8C58A /* String+Utility.swift */,
 				CEB652D11FB57EEC00467D4E /* Button+Theme.swift */,
+				CEF320E11FC528AA004CA907 /* PropertLooper+Default.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -829,11 +804,11 @@
 			isa = PBXGroup;
 			children = (
 				CEE8ABB31FB181110052DC3A /* AppDelegate.swift */,
+				CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */,
 				CEE8ABB51FB181110052DC3A /* ViewController.swift */,
 				CEE8ABFB1FB1A1F20052DC3A /* Common */,
 				CEE8ABEA1FB184360052DC3A /* Modules */,
 				CEE8ABE81FB184290052DC3A /* Infrastructure */,
-				CEE8ABFD1FB1A2F50052DC3A /* AppDependencies.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -854,7 +829,6 @@
 			children = (
 				CE5570671FB57BF700A14F7A /* Error Handling */,
 				CE7472F51FB28BC60015C0B3 /* Utility */,
-				CE5A5E611FC3B29A0075B8AD /* Test.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -875,7 +849,6 @@
 				CE07A4851FBD2A5D009185F3 /* Create Account */,
 				CEC203921FB46C160022C7C2 /* Login */,
 				CEC203881FB46C160022C7C2 /* LoginOptions */,
-				CEE8AC0A1FB1A4FD0052DC3A /* Base */,
 				CEE8ABFF1FB1A43C0052DC3A /* Home */,
 				CEE8ABFC1FB1A2400052DC3A /* ProductList */,
 			);
@@ -923,6 +896,8 @@
 		CEE8ABFB1FB1A1F20052DC3A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CEE8AC0B1FB1A5010052DC3A /* Wireframe */,
+				CEF320E31FC52BCE004CA907 /* Presenter */,
 				CEF71F411FC42FB0000CBEAA /* Session */,
 				CE7472F41FB288560015C0B3 /* SyncEngine */,
 				CE7472F31FB288310015C0B3 /* WebService */,
@@ -1002,14 +977,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		CEE8AC0A1FB1A4FD0052DC3A /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				CEE8AC0B1FB1A5010052DC3A /* Wireframe */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		CEE8AC0B1FB1A5010052DC3A /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
@@ -1025,6 +992,22 @@
 				CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */,
 			);
 			path = BetaProduct;
+			sourceTree = "<group>";
+		};
+		CEF320DE1FC52801004CA907 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CEF320DF1FC52826004CA907 /* PropertyLooperProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CEF320E31FC52BCE004CA907 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CEF320E41FC52C0E004CA907 /* BaseDisplayItem.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		CEF71F411FC42FB0000CBEAA /* Session */ = {
@@ -1509,12 +1492,14 @@
 				CE07A4931FBD36BE009185F3 /* CreateAccountModuleProtocol.swift in Sources */,
 				CEF83FB31FB3EBFF00FF19B4 /* WebServiceConverter.swift in Sources */,
 				CEC203991FB46C160022C7C2 /* LoginOptionsPresenter.swift in Sources */,
+				CEF320E21FC528AA004CA907 /* PropertLooper+Default.swift in Sources */,
 				CEB652D21FB57EEC00467D4E /* Button+Theme.swift in Sources */,
 				CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */,
 				CE5570701FB5977100A14F7A /* LogInInteractor.swift in Sources */,
 				CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */,
 				CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */,
 				CE5570741FB597F600A14F7A /* LogInManager.swift in Sources */,
+				CEF320E51FC52C0E004CA907 /* BaseDisplayItem.swift in Sources */,
 				CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */,
 				CEE8AC0D1FB1A51E0052DC3A /* BaseWireframe.swift in Sources */,
 				CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */,
@@ -1531,6 +1516,7 @@
 				CEA6A61A1FC4199D0025E2D3 /* QRView.swift in Sources */,
 				CE07A48B1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift in Sources */,
 				CE6B5EC11FB5A26100356EC9 /* UserDisplayItem.swift in Sources */,
+				CEF320E01FC52826004CA907 /* PropertyLooperProtocol.swift in Sources */,
 				CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */,
 				CEF71F401FC42FA2000CBEAA /* Session.swift in Sources */,
 				CE5570721FB597BF00A14F7A /* User.swift in Sources */,
@@ -1566,100 +1552,68 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED666831FBEA80200B2245D /* AppDelegate.swift in Sources */,
-				CED666841FBEA80200B2245D /* ViewController.swift in Sources */,
-				CED666851FBEA80200B2245D /* SyncEngine.swift in Sources */,
-				CED666861FBEA80200B2245D /* StoreWebClient.swift in Sources */,
-				CED666871FBEA80200B2245D /* StoreWebClientProtocol.swift in Sources */,
-				CED666881FBEA80200B2245D /* WebServiceConverter.swift in Sources */,
-				CED666891FBEA80200B2245D /* BetaProduct.swift in Sources */,
-				CED6668A1FBEA80200B2245D /* DatabaseTypes.swift in Sources */,
-				CED6668B1FBEA80200B2245D /* CompletionBlockTypes.swift in Sources */,
-				CED6668C1FBEA80200B2245D /* RootWireframe.swift in Sources */,
-				CED6668D1FBEA80200B2245D /* BaseView.swift in Sources */,
-				CED6668E1FBEA80200B2245D /* BaseViewProtocol.swift in Sources */,
-				CED6668F1FBEA80200B2245D /* ModelProtocol.swift in Sources */,
-				CED666901FBEA80200B2245D /* Product.swift in Sources */,
-				CED666911FBEA80200B2245D /* User.swift in Sources */,
-				CED666921FBEA80200B2245D /* BaseEntity.swift in Sources */,
-				CED666931FBEA80200B2245D /* ManagedProduct.swift in Sources */,
-				CED666941FBEA80200B2245D /* StoreProtocol.swift in Sources */,
-				CED666951FBEA80200B2245D /* StoreCoreData.swift in Sources */,
-				CED666961FBEA80200B2245D /* CreateAccountModuleProtocol.swift in Sources */,
-				CED666971FBEA80200B2245D /* CreateAccountInteractorIO.swift in Sources */,
-				CED666981FBEA80200B2245D /* UserCredentialsItem.swift in Sources */,
-				CED666991FBEA80200B2245D /* CreateAccountPresenter.swift in Sources */,
-				CED6669A1FBEA80200B2245D /* CreateAccountWireframe.swift in Sources */,
-				CED6669B1FBEA80200B2245D /* CreateAccountViewProtocol.swift in Sources */,
-				CED6669C1FBEA80200B2245D /* CreateAccountView.swift in Sources */,
-				CED6669D1FBEA80200B2245D /* UserDisplayItem.swift in Sources */,
-				CED6669E1FBEA80200B2245D /* BaseWireframe.swift in Sources */,
-				CED6669F1FBEA80200B2245D /* HomeModuleProtocol.swift in Sources */,
-				CED666A01FBEA80200B2245D /* HomeView.swift in Sources */,
-				CED666A11FBEA80200B2245D /* HomeWireframe.swift in Sources */,
-				CED666A21FBEA80200B2245D /* ProductListInteractorIO.swift in Sources */,
-				CED666A31FBEA80200B2245D /* ProductListInteractor.swift in Sources */,
-				CED666A41FBEA80200B2245D /* ProductManager.swift in Sources */,
-				CED666A51FBEA80200B2245D /* BetaProductError.swift in Sources */,
-				CED666A71FBEA80200B2245D /* Button+Theme.swift in Sources */,
-				CED666A81FBEA80200B2245D /* Utility.swift in Sources */,
-				CED666A91FBEA80200B2245D /* AppDependencies.swift in Sources */,
-				CED666701FBE886200B2245D /* LogInModuleProtocol.swift in Sources */,
-				CED666711FBE886200B2245D /* LogInInteractorIO.swift in Sources */,
-				CED666721FBE886200B2245D /* LogInInteractor.swift in Sources */,
-				CED666731FBE886200B2245D /* LogInManager.swift in Sources */,
-				CED666741FBE886200B2245D /* LogInPresenter.swift in Sources */,
-				CED666751FBE886200B2245D /* LoginWireframe.swift in Sources */,
-				CED666761FBE886200B2245D /* LoginView.swift in Sources */,
-				CED666771FBE886200B2245D /* LogInViewProtocol.swift in Sources */,
-				CED666781FBE886200B2245D /* LoginOptionsModuleInterface.swift in Sources */,
-				CED666791FBE886200B2245D /* LoginOptionsPresenter.swift in Sources */,
-				CED6667A1FBE886200B2245D /* LoginOptionsWireframe.swift in Sources */,
-				CED6667B1FBE886200B2245D /* LoginOptionsView.swift in Sources */,
-				CED6667C1FBE886200B2245D /* LoginInteractorTest.swift in Sources */,
-				CECF7B811FBD868E00B779AE /* AppDelegate.swift in Sources */,
-				CECF7B821FBD868E00B779AE /* ViewController.swift in Sources */,
-				CECF7B831FBD868E00B779AE /* SyncEngine.swift in Sources */,
-				CECF7B841FBD868E00B779AE /* StoreWebClient.swift in Sources */,
-				CECF7B851FBD868E00B779AE /* StoreWebClientProtocol.swift in Sources */,
-				CECF7B861FBD868E00B779AE /* WebServiceConverter.swift in Sources */,
-				CECF7B871FBD868E00B779AE /* BetaProduct.swift in Sources */,
-				CECF7B881FBD868E00B779AE /* DatabaseTypes.swift in Sources */,
-				CECF7B891FBD868E00B779AE /* CompletionBlockTypes.swift in Sources */,
-				CECF7B8A1FBD868E00B779AE /* RootWireframe.swift in Sources */,
-				CECF7B8B1FBD868E00B779AE /* BaseView.swift in Sources */,
-				CECF7B8C1FBD868E00B779AE /* ModelProtocol.swift in Sources */,
-				CECF7B8D1FBD868E00B779AE /* Product.swift in Sources */,
-				CECF7B8E1FBD868E00B779AE /* BaseEntity.swift in Sources */,
-				CECF7B8F1FBD868E00B779AE /* ManagedProduct.swift in Sources */,
-				CECF7B901FBD868E00B779AE /* StoreProtocol.swift in Sources */,
-				CECF7B911FBD868E00B779AE /* StoreCoreData.swift in Sources */,
-				CECF7B921FBD868E00B779AE /* LoginOptionsModuleInterface.swift in Sources */,
-				CECF7B931FBD868E00B779AE /* LoginOptionsPresenter.swift in Sources */,
-				CECF7B941FBD868E00B779AE /* LoginOptionsWireframe.swift in Sources */,
-				CECF7B951FBD868E00B779AE /* LoginOptionsView.swift in Sources */,
-				CECF7B961FBD868E00B779AE /* BaseWireframe.swift in Sources */,
-				CECF7B971FBD868E00B779AE /* HomeModuleProtocol.swift in Sources */,
-				CECF7B981FBD868E00B779AE /* HomeView.swift in Sources */,
-				CECF7B991FBD868E00B779AE /* HomeWireframe.swift in Sources */,
-				CECF7B9A1FBD868E00B779AE /* ProductListInteractorIO.swift in Sources */,
-				CECF7B9B1FBD868E00B779AE /* ProductListInteractor.swift in Sources */,
-				CECF7B9C1FBD868E00B779AE /* ProductManager.swift in Sources */,
-				CECF7B9D1FBD868E00B779AE /* BetaProductError.swift in Sources */,
-				CECF7B9F1FBD868E00B779AE /* Button+Theme.swift in Sources */,
-				CECF7BA01FBD868E00B779AE /* Utility.swift in Sources */,
-				CECF7BA11FBD868E00B779AE /* AppDependencies.swift in Sources */,
-				CECF7B7D1FBD861800B779AE /* LogInViewProtocol.swift in Sources */,
-				CEA730C21FBD808200ABAA60 /* LogInInteractor.swift in Sources */,
-				CEE8ABCC1FB181110052DC3A /* BetaProduct_SwiftTests.swift in Sources */,
-				CEA730C51FBD82B100ABAA60 /* LogInPresenter.swift in Sources */,
-				CEA730C41FBD808800ABAA60 /* LogInInteractorIO.swift in Sources */,
-				CECF7B7E1FBD861C00B779AE /* LoginWireframe.swift in Sources */,
-				CEA730C61FBD831F00ABAA60 /* UserDisplayItem.swift in Sources */,
-				CECF7B801FBD862A00B779AE /* LogInModuleProtocol.swift in Sources */,
-				CEA730C31FBD808600ABAA60 /* LogInManager.swift in Sources */,
-				CECF7B7F1FBD861E00B779AE /* LoginView.swift in Sources */,
-				CEA730C71FBD832500ABAA60 /* User.swift in Sources */,
+				CEEB96541FC57B920016F141 /* AppDelegate.swift in Sources */,
+				CEEB96551FC57B920016F141 /* AppDependencies.swift in Sources */,
+				CEEB96561FC57B920016F141 /* ViewController.swift in Sources */,
+				CEEB96571FC57B920016F141 /* BaseWireframe.swift in Sources */,
+				CEEB96581FC57B920016F141 /* BaseDisplayItem.swift in Sources */,
+				CEEB96591FC57B920016F141 /* Session.swift in Sources */,
+				CEEB965A1FC57B920016F141 /* SyncEngine.swift in Sources */,
+				CEEB965B1FC57B920016F141 /* StoreWebClient.swift in Sources */,
+				CEEB965C1FC57B920016F141 /* StoreWebClientProtocol.swift in Sources */,
+				CEEB965D1FC57B920016F141 /* WebServiceConverter.swift in Sources */,
+				CEEB965E1FC57B920016F141 /* BetaProduct.swift in Sources */,
+				CEEB965F1FC57B920016F141 /* BetaProductTheme.swift in Sources */,
+				CEEB96601FC57B920016F141 /* DatabaseTypes.swift in Sources */,
+				CEEB96611FC57B920016F141 /* CompletionBlockTypes.swift in Sources */,
+				CEEB96621FC57B920016F141 /* RootWireframe.swift in Sources */,
+				CEEB96631FC57B920016F141 /* BaseView.swift in Sources */,
+				CEEB96641FC57B920016F141 /* BaseViewProtocol.swift in Sources */,
+				CEEB96651FC57B920016F141 /* BaseMessageView.swift in Sources */,
+				CEEB96661FC57B920016F141 /* ModelProtocol.swift in Sources */,
+				CEEB96671FC57B920016F141 /* Product.swift in Sources */,
+				CEEB96681FC57B920016F141 /* User.swift in Sources */,
+				CEEB96691FC57B920016F141 /* BaseEntity.swift in Sources */,
+				CEEB966A1FC57B920016F141 /* ManagedProduct.swift in Sources */,
+				CEEB966B1FC57B920016F141 /* ManagedUser.swift in Sources */,
+				CEEB966C1FC57B920016F141 /* StoreProtocol.swift in Sources */,
+				CEEB966D1FC57B920016F141 /* StoreCoreData.swift in Sources */,
+				CEEB966E1FC57B920016F141 /* CreateAccountModuleProtocol.swift in Sources */,
+				CEEB966F1FC57B920016F141 /* CreateAccountInteractorIO.swift in Sources */,
+				CEEB96701FC57B920016F141 /* CreateAccountInteractor.swift in Sources */,
+				CEEB96711FC57B920016F141 /* CreateAccountManager.swift in Sources */,
+				CEEB96721FC57B920016F141 /* UserCredentialsItem.swift in Sources */,
+				CEEB96731FC57B920016F141 /* CreateAccountPresenter.swift in Sources */,
+				CEEB96741FC57B920016F141 /* CreateAccountWireframe.swift in Sources */,
+				CEEB96751FC57B920016F141 /* CreateAccountViewProtocol.swift in Sources */,
+				CEEB96761FC57B920016F141 /* CreateAccountView.swift in Sources */,
+				CEEB96771FC57B920016F141 /* LogInModuleProtocol.swift in Sources */,
+				CEEB96781FC57B920016F141 /* LogInInteractorIO.swift in Sources */,
+				CEEB96791FC57B920016F141 /* LogInInteractor.swift in Sources */,
+				CEEB967A1FC57B920016F141 /* LogInManager.swift in Sources */,
+				CEEB967B1FC57B920016F141 /* LogInPresenter.swift in Sources */,
+				CEEB967C1FC57B920016F141 /* UserDisplayItem.swift in Sources */,
+				CEEB967D1FC57B920016F141 /* LoginWireframe.swift in Sources */,
+				CEEB967E1FC57B920016F141 /* LoginView.swift in Sources */,
+				CEEB967F1FC57B920016F141 /* LogInViewProtocol.swift in Sources */,
+				CEEB96801FC57B920016F141 /* LoginOptionsModuleInterface.swift in Sources */,
+				CEEB96811FC57B920016F141 /* LoginOptionsPresenter.swift in Sources */,
+				CEEB96821FC57B920016F141 /* LoginOptionsWireframe.swift in Sources */,
+				CEEB96831FC57B920016F141 /* LoginOptionsView.swift in Sources */,
+				CEEB96841FC57B920016F141 /* HomeModuleProtocol.swift in Sources */,
+				CEEB96851FC57B920016F141 /* HomeView.swift in Sources */,
+				CEEB96861FC57B920016F141 /* QRView.swift in Sources */,
+				CEEB96871FC57B920016F141 /* HomeWireframe.swift in Sources */,
+				CEEB96881FC57B920016F141 /* ProductListInteractorIO.swift in Sources */,
+				CEEB96891FC57B920016F141 /* ProductListInteractor.swift in Sources */,
+				CEEB968A1FC57B920016F141 /* ProductManager.swift in Sources */,
+				CEEB968B1FC57B920016F141 /* BetaProductError.swift in Sources */,
+				CEEB968C1FC57B920016F141 /* PropertyLooperProtocol.swift in Sources */,
+				CEEB968D1FC57B920016F141 /* String+Utility.swift in Sources */,
+				CEEB968E1FC57B920016F141 /* Button+Theme.swift in Sources */,
+				CEEB968F1FC57B920016F141 /* PropertLooper+Default.swift in Sources */,
+				CEEB96901FC57B920016F141 /* Utility.swift in Sources */,
+				CEEB96911FC57B920016F141 /* LoginInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1908,9 +1862,14 @@
 				);
 				INFOPLIST_FILE = "BetaProduct-Swift/Support Files/Info-DEV.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sample",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEV\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.outsourced.BetaProduct-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1929,9 +1888,14 @@
 				);
 				INFOPLIST_FILE = "BetaProduct-Swift/Support Files/Info-DEV.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sample",
+				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEV\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.outsourced.BetaProduct-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -8,16 +8,25 @@
 
 import UIKit
 
+/// manager class for module `Login`
 class LogInManager: NSObject {
+    /// variable for store
     var store : StoreProtocol?
-    var storeWS : StoreWebClientProtocol?
     
+    /**
+     retrieves User with given inputs
+     - Parameters:
+        - email: email input
+        - password: password input
+        - block: completion closure. Follows Response class
+     */
     func retrieveUser(withEmail email : String, andWithPassword password : String, withCompletionBlock block : @escaping CompletionBlock<User>) {
         let predicate = NSPredicate.init(format: "status != %d AND email == %@ AND password == %@", Status.Deleted.rawValue, email, password)
         store?.fetchEntries(withEntityName: "User", withPredicate: predicate, withSortDescriptors: nil, withCompletionBlock: { response in
             switch response{
             case .success(let result):
-                block(Response.success(result?.first as? User))
+                let user = result?.first as! ManagedUser
+                block(Response.success(User.init(emailAddress: user.email, password: user.password, fullName: user.fullname, mobileNumber: user.mobile)))
                 break
             case .failure(let caughtError):
                 let error = BPError.init(domain: BetaProduct.kBPErrorDomain,
