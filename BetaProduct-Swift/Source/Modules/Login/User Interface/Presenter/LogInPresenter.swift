@@ -18,7 +18,7 @@ class LogInPresenter: NSObject, LogInModuleProtocol, LogInInteractorOutput {
     }
     
     func userLoginValidationComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
-        view?.displayMessage(message)
+        view?.displayMessage(message, isSuccessful: isSuccess)
     }
     
     func proceedToHomeView() {
