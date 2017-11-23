@@ -1,5 +1,5 @@
 //
-//  BetaProduct_SwiftUITests.swift
+//  LoginView_Test.swift
 //  BetaProduct-SwiftUITests
 //
 //  Created by User on 11/23/17.
@@ -7,9 +7,10 @@
 //
 
 import XCTest
+@testable import LoginView
 
-class BetaProduct_SwiftUITests: XCTestCase {
-        
+class LoginViewTests: XCTestCase {
+    
     override func setUp() {
         super.setUp()
         
@@ -19,7 +20,7 @@ class BetaProduct_SwiftUITests: XCTestCase {
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
+        
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
@@ -31,6 +32,10 @@ class BetaProduct_SwiftUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testNoUserNameAndPassword() {
+        
     }
     
 }

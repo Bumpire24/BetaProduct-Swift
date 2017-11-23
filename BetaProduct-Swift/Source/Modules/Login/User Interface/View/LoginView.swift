@@ -12,10 +12,13 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
     @IBOutlet var loginView: UIView!
     @IBOutlet weak var loginHeaderLabel: BetaProductHeaderLabel!
     @IBOutlet weak var loginInstructionsLabel: BetaProductInstructionLabel!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var forgotPasswordButton: UIButton!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: BetaProductPrimaryButton!
+    @IBOutlet weak var createAccountButton: BetaProductLinkButton!
+    @IBOutlet weak var separatorButton: BetaProductLinkButton!
+    @IBOutlet weak var forgotPasswordButton: BetaProductLinkButton!
+    @IBOutlet weak var emailField: BetaProductEntryField!
+    @IBOutlet weak var passwordField: BetaProductEntryField!
+    @IBOutlet weak var visualEffectView: UIVisualEffectView!
     var eventHandler : LogInPresenter?
 
     override func viewDidLoad() {
@@ -56,28 +59,23 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
         let user = UserDisplayItem.init(email: emailField.text, password: passwordField.text)
         eventHandler?.validateUser(user)
     }
+    
+    @IBAction func createAccount(_ sender: Any) {
+        eventHandler?.createAccount()
+    }
 }
 
 extension LoginView {
     func setupTheme() {
         BetaProductTheme.current.apply()
-        self.loginButton.applyPrimaryButtonTheme()
-        self.forgotPasswordButton.backgroundColor = BetaProductStyle.iDoohClearBackground
-        self.forgotPasswordButton.setTitleColor(BetaProductStyle.iDoohLinkColor, for: .normal)
-        //        self.emailField.layer.cornerRadius = 5.0
-        //        emailField.layer.cornerRadius = 15.0
-        //        emailField.layer.borderWidth = 2.0
-        //        emailField.layer.borderColor = UIColor.red.cgColor
-        //        self.passwordField.layer.cornerRadius = 5.0
     }
     
     func populateControls() {
-        //        self.iDoohImageView.image = UIImage(named: "iDooh")
-        //        self.dbsImageView.image = UIImage(named: "dbsPaylah")
         self.loginButton.setTitle("Login", for: .normal)
         self.forgotPasswordButton.setTitle("Forgot password?", for: .normal)
-        self.emailField.placeholder = "Enter email"
-        self.passwordField.placeholder = "Enter password"
+        self.createAccountButton.setTitle("Create account", for: .normal)
+        self.emailField.placeholder = "email"
+        self.passwordField.placeholder = "password"
         self.emailField.text = ""
         self.passwordField.text = ""
     }

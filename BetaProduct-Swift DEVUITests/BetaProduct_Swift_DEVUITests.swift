@@ -1,6 +1,6 @@
 //
-//  BetaProduct_SwiftUITests.swift
-//  BetaProduct-SwiftUITests
+//  BetaProduct_Swift_DEVUITests.swift
+//  BetaProduct-Swift DEVUITests
 //
 //  Created by User on 11/23/17.
 //  Copyright © 2017 User. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class BetaProduct_SwiftUITests: XCTestCase {
+class BetaProduct_Swift_DEVUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -30,7 +30,18 @@ class BetaProduct_SwiftUITests: XCTestCase {
     
     func testExample() {
         // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        app.buttons["Create account"].tap()
+        app.navigationBars["BetaProduct_Swift_DEV.CreateAccountView"].buttons["Back"].tap()
+        
+        let loginButton = app.buttons["Login"]
+        loginButton.tap()
+        loginButton.tap()
+        app.buttons["OK"].tap()
+        app.navigationBars["BetaProduct_Swift_DEV.LoginView"].buttons["Back"].tap()
+        
+        
     }
     
 }
