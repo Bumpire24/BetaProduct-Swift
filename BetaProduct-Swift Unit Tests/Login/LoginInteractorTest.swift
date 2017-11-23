@@ -9,7 +9,7 @@
 import XCTest
 @testable import BetaProduct_Swift_DEV
 
-/// test class for module `login`
+/// test interactor class for module `login`
 class LoginInteractorTest: XCTestCase, LogInInteractorOutput {
     /// variable for result. shared variable for class and delegate
     var result : (isSuccess : Bool, message : String) = (isSuccess : false, message : "")
@@ -106,11 +106,19 @@ class LoginInteractorTest: XCTestCase, LogInInteractorOutput {
             }
         }
         
+        class MockSession : Session {
+            override func setUserSessionByUser(_ user: User) {
+                self.user = UserSession()
+                self.user?.email = "asd@gmail.com"
+                self.user?.password = "asd"
+            }
+        }
+        
         self.expectation = expectation(description: "testLoginSuccessful")
         let item = UserDisplayItem.init(email: "asd@gmail.com", password: "asd")
         interactor?.managerLogin = MockManagerLogin()
         interactor?.webService = MockWebservice()
-        interactor?.session = Session.sharedSession
+        interactor?.session = MockSession()
         interactor?.validateUserLogin(userDisplayItem: item)
         self.waitForExpectations(timeout: 0.5) { _ in
         }
@@ -126,7 +134,7 @@ class LoginInteractorTest: XCTestCase, LogInInteractorOutput {
             }
             if expectation?.description == "testLoginSuccessful" {
                 XCTAssert(self.result == (true, "Log in success!"), "testLoginSuccessful Failed")
-                XCTAssertNotNil(Session.sharedSession.user, "testLoginSuccessful Failed")
+                XCTAssertNotNil(interactor?.session?.user, "testLoginSuccessful Failed")
             }
             expectation?.fulfill()
         }

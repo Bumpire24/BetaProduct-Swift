@@ -5,7 +5,7 @@ use_frameworks!
 def pods
 	pod 'Alamofire'
 	pod 'AlamofireImage'
-    pod 'CocoaLumberjack/Swift'
+    	pod 'CocoaLumberjack/Swift'
 	pod 'AlamofireNetworkActivityIndicator'
 end
 
@@ -13,7 +13,18 @@ target 'BetaProduct-Swift DEV' do
 	pods
 end
 
-target 'BetaProduct-SwiftTests' do
+target 'BetaProduct-Swift DEV (Integration Tests)' do
+	pods
+end
+
+target 'BetaProduct-Swift Unit Tests' do
     pods
 end
 
+target 'BetaProduct-Swift Integration Tests' do
+    pods
+end
+
+target 'BetaProduct-Swift UI Tests' do
+    pods
+end

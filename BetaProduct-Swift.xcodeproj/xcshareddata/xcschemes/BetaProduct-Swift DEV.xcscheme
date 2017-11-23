@@ -34,8 +34,18 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEE8ABC61FB181110052DC3A"
-               BuildableName = "BetaProduct-SwiftTests.xctest"
-               BlueprintName = "BetaProduct-SwiftTests"
+               BuildableName = "BetaProduct-Swift Unit Tests.xctest"
+               BlueprintName = "BetaProduct-Swift Unit Tests"
+               ReferencedContainer = "container:BetaProduct-Swift.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CEE8ABD11FB181110052DC3A"
+               BuildableName = "BetaProduct-Swift UI Tests.xctest"
+               BlueprintName = "BetaProduct-Swift UI Tests"
                ReferencedContainer = "container:BetaProduct-Swift.xcodeproj">
             </BuildableReference>
          </TestableReference>
