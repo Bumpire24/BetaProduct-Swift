@@ -24,9 +24,9 @@ enum BetaProductTheme: Int {
     var mainColor: UIColor {
         switch self {
         case .ThreeDimensional:
-            return BetaProductStyle.Colors.iDoohPink
+            return BetaProductStyle.iDoohPinkMainColor
         case .NonDimensional:
-            return BetaProductStyle.Colors.iDoohPurple
+            return BetaProductStyle.iDoohPurpleMainColor
         }
     }
     
@@ -42,9 +42,9 @@ enum BetaProductTheme: Int {
     var backgroundColor: UIColor {
         switch self {
         case .ThreeDimensional:
-            return BetaProductStyle.Colors.iDoohPink
+            return BetaProductStyle.iDoohPinkMainColor
         case .NonDimensional:
-            return BetaProductStyle.Colors.iDoohPurple
+            return BetaProductStyle.iDoohPurpleMainColor
         }
     }
     
@@ -62,20 +62,12 @@ enum BetaProductTheme: Int {
         
         UITabBar.appearance().barStyle = barStyle
         
-        //UILabel Styles
-        
-        
         //TextField Styles
         UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).backgroundColor = UIColor.clear
         UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).font = BetaProductStyle.Fonts.iDoohTextfieldFont
         
-        //UITextField.appearance().layer.cornerRadius = 50.0
-        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).layer.cornerRadius = 15.0
-        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).layer.borderWidth = 2.0
-        UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).layer.borderColor = UIColor.red.cgColor
-        
         //Label Styles
-        UILabel.appearance(whenContainedInInstancesOf: [UIViewController.self]).textColor = UIColor.white
+        UILabel.appearance(whenContainedInInstancesOf: [UIViewController.self]).textColor = BetaProductStyle.iDoohLabelFontColor
         
         //UITabBar.appearance().backgroundImage = tabBarBackgroundImage
         
@@ -126,6 +118,7 @@ class BetaProductHeaderLabel: UILabel {
     func changeFontName()
     {
         self.font = BetaProductStyle.Fonts.iDoohHeaderLabelFont
+        self.textColor = BetaProductStyle.iDoohLabelFontColor
     }
 }
 
@@ -139,5 +132,101 @@ class BetaProductInstructionLabel: UILabel {
     func changeFontName()
     {
         self.font = BetaProductStyle.Fonts.iDoohInstructionLabelFont
+        self.textColor = BetaProductStyle.iDoohLabelFontColor
+    }
+}
+
+class BetaProductEntryField : UITextField {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        applyUITheme()
+    }
+    
+    func applyUITheme() {
+        specifyFont()
+        specifyBounds()
+        
+    }
+    
+    func specifyFont() {
+        self.font = BetaProductStyle.Fonts.iDoohTextfieldFont
+        self.textColor = BetaProductStyle.iDoohTextFieldFontColor
+    }
+    
+    func specifyBounds() {
+        self.layer.cornerRadius = 25.0
+        self.layer.borderWidth = 1.0
+        self.layer.borderColor = BetaProductStyle.iDoohTextFieldBorderColor.cgColor
+    }
+}
+
+class BetaProductButton : UIButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyFont()
+        specifyBounds()
+    }
+    
+    func specifyFont() {
+        self.titleLabel?.font = BetaProductStyle.Fonts.iDoohButtonLabelFont
+        self.titleLabel?.textColor = BetaProductStyle.iDoohButtonFontColor
+    }
+    
+    func specifyBounds() {
+        self.layer.cornerRadius = self.frame.height / 2.0
+        self.layer.borderWidth = 1.0
+    }
+}
+
+class BetaProductPrimaryButton : BetaProductButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyFillColor()
+    }
+    
+    func specifyFillColor() {
+        self.backgroundColor = BetaProductStyle.iDoohPrimaryButtonBackgroundColor
+        self.layer.borderColor = BetaProductStyle.iDoohPrimaryButtonBorderColor.cgColor
+    }
+}
+
+class BetaProductSecondaryButton : BetaProductButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyFillColor()
+    }
+    
+    func specifyFillColor() {
+        self.backgroundColor = BetaProductStyle.iDoohSecondaryButtonBackgroundColor
+        self.layer.borderColor = BetaProductStyle.iDoohSecondaryButtonBorderColor.cgColor
+    }
+}
+
+class BetaProductTertiaryButton : BetaProductButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyFillColor()
+    }
+    
+    func specifyFillColor() {
+        self.backgroundColor = BetaProductStyle.iDoohTertiaryButtonBackgroundColor
+        self.layer.borderColor = BetaProductStyle.iDoohTertiaryButtonBorderColor.cgColor
+    }
+}
+
+class BetaProductLinkButton : UIButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyFont()
+        specifyFillColor()
+    }
+    
+    func specifyFont() {
+        self.titleLabel?.font = BetaProductStyle.Fonts.iDoohButtonLabelFont
+        self.titleLabel?.textColor = BetaProductStyle.iDoohLinkButtonFontColor
+    }
+    
+    func specifyFillColor() {
+        self.backgroundColor = BetaProductStyle.iDoohClearBackground
     }
 }

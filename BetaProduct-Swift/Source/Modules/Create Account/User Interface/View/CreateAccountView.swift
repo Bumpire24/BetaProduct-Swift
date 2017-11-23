@@ -14,6 +14,9 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var createAccountButton: UIButton!
+    @IBOutlet weak var createAccountHeader: BetaProductHeaderLabel!
+    @IBOutlet weak var createAccountInstructions: BetaProductInstructionLabel!
+    
     var eventHandler : CreateAccountPresenter?
     
     override func viewDidLoad() {
@@ -30,14 +33,14 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
     }
     
     func setupTheme() {
-        self.createAccountButton.applyPrimaryButtonTheme()
+        //self.createAccountButton.applyPrimaryButtonTheme()
     }
     
     func populateControls() {
-        self.fullNameField.placeholder = "Enter full name"
-        self.mobileNumberField.placeholder = "Enter mobile number"
-        self.emailField.placeholder = "Enter email"
-        self.passwordField.placeholder = "Enter password"
+        self.fullNameField.placeholder = "full name"
+        self.mobileNumberField.placeholder = "mobile number"
+        self.emailField.placeholder = "email"
+        self.passwordField.placeholder = "password"
         self.createAccountButton.setTitle("Create Account", for: .normal)
         self.emailField.text = ""
         self.passwordField.text = ""

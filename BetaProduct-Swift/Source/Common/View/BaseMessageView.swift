@@ -103,15 +103,15 @@ class BaseMessageView: BaseView {
     
     func applyTheme() {
         applyMessageViewTheme()
-        affirmativeButton.applyPrimaryButtonTheme()
-        negativeButton.applyTertiaryButtonTheme()
+        //affirmativeButton.applyPrimaryButtonTheme()
+        //negativeButton.applyTertiaryButtonTheme()
     }
     
     func applyMessageViewTheme() {
         messageView.layer.cornerRadius = 15.0
         titleAndMessageView.layer.cornerRadius = 15.0
-        messageView.layer.borderColor = BetaProductStyle.Colors.iDoohPurple.cgColor
-        messageView.layer.shadowColor = BetaProductStyle.Colors.iDoohShadowColor.cgColor
+        messageView.layer.borderColor = BetaProductStyle.iDoohMessageViewBorderColor.cgColor
+        messageView.layer.shadowColor = BetaProductStyle.iDoohMessageViewShadowColor.cgColor
         messageView.layer.shadowOpacity = 1.0
         messageView.layer.shadowRadius = 3.0
         messageView.layer.shadowOffset = CGSize(width: 0, height: 3)
