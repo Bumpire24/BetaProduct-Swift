@@ -12,6 +12,7 @@ class LogInPresenter: NSObject, LogInModuleProtocol, LogInInteractorOutput {
     var view : LoginViewProtocol?
     var interactor : LogInInteractorInput?
     var loginWireframe : LoginWireframe?
+    var createAccountWireframe : CreateAccountWireframe?
     
     func validateUser(_ user: UserDisplayItem) {
         interactor?.validateUserLogin(userDisplayItem: user)
@@ -23,5 +24,9 @@ class LogInPresenter: NSObject, LogInModuleProtocol, LogInInteractorOutput {
     
     func proceedToHomeView() {
         loginWireframe?.presentHomeView()
+    }
+    
+    func createAccount() {
+        loginWireframe?.presentCreateAccount()
     }
 }

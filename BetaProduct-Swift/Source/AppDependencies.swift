@@ -13,7 +13,8 @@ import CocoaLumberjack
 
 class AppDependencies: NSObject {
 //    var mainWireFrame : HomeWireframe?
-    var mainWireFrame : LoginOptionsWireframe?
+//    var mainWireFrame : LoginOptionsWireframe?
+    var mainWireFrame : LoginWireframe?
     
     override init() {
         super.init()
@@ -23,7 +24,8 @@ class AppDependencies: NSObject {
     
     func installRootViewController(InWindow window : UIWindow) {
 //        mainWireFrame?.presentHomeViewInterfaceFromWindow(Window: window)
-        mainWireFrame?.presentLoginOptionsViewInterfaceFromWindow(Window: window)
+//        mainWireFrame?.presentLoginOptionsViewInterfaceFromWindow(Window: window)
+        mainWireFrame?.presentLoginViewInterfaceFromWindow(Window: window)
     }
     
     func configureDependencies() {
@@ -39,34 +41,41 @@ class AppDependencies: NSObject {
 //        mainWireFrame = homeWireframe
         
         //Login Options Module Classes
-        let loginOptionsWireframe = LoginOptionsWireframe()
+//        let loginOptionsWireframe = LoginOptionsWireframe()
+        
         let loginWireframe = LoginWireframe()
         let createAccountWireframe = CreateAccountWireframe()
         let homeWireframe = HomeWireframe()
-        let loginOptionsPresenter = LoginOptionsPresenter()
-        loginOptionsWireframe.rootWireFrame = root
-        loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
-        loginOptionsPresenter.createAccountWireframe = createAccountWireframe
-        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
-        loginOptionsWireframe.loginWireframe = loginWireframe
-        loginOptionsWireframe.createAccountWireframe = createAccountWireframe
-        mainWireFrame = loginOptionsWireframe
         
         //Login Module Classes
-        let loginManager = LogInManager()
-        let loginInteractor = LogInInteractor()
         let loginPresenter = LogInPresenter()
+        loginWireframe.rootWireFrame = root
+        loginPresenter.loginWireframe = loginWireframe
+        loginPresenter.createAccountWireframe = createAccountWireframe
+        loginWireframe.loginPresenter = loginPresenter
+        loginWireframe.createAccountWireframe = createAccountWireframe
+        mainWireFrame = loginWireframe
         
+//        let loginOptionsPresenter = LoginOptionsPresenter()
+//        loginOptionsWireframe.rootWireFrame = root
+//        loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
+//        loginOptionsPresenter.createAccountWireframe = createAccountWireframe
+//        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
+//        loginOptionsWireframe.loginWireframe = loginWireframe
+//        loginOptionsWireframe.createAccountWireframe = createAccountWireframe
+//        mainWireFrame = loginOptionsWireframe
+        
+        //
+        let loginManager = LogInManager()
         loginManager.store = store
         
+        let loginInteractor = LogInInteractor()
         loginInteractor.managerLogin = loginManager
         loginInteractor.webService = webservice
         loginInteractor.output = loginPresenter
         loginInteractor.session = session
         
         loginPresenter.interactor = loginInteractor
-        loginPresenter.loginWireframe = loginWireframe
-        loginWireframe.presenter = loginPresenter
         loginWireframe.homeWireFrame = homeWireframe
         
         //Create Account Classes

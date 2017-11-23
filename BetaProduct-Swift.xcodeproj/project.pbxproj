@@ -199,6 +199,7 @@
 		CE433D371FBD1AF600E530C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBF1FB181110052DC3A /* LaunchScreen.storyboard */; };
 		CE433D381FBD1AF600E530C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBD1FB181110052DC3A /* Assets.xcassets */; };
 		CE433D391FBD1AF600E530C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABB71FB181110052DC3A /* Main.storyboard */; };
+		CE4556191FC65EAA00822094 /* BetaProduct_Swift_DEVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4556181FC65EAA00822094 /* BetaProduct_Swift_DEVUITests.swift */; };
 		CE4B34201FB57ABB00CB5905 /* GOGOIA-Deco.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341E1FB57AB900CB5905 /* GOGOIA-Deco.otf */; };
 		CE4B34211FB57ABB00CB5905 /* GOGOIA-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */; };
 		CE5570601FB568ED00A14F7A /* ProductListInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55705F1FB568ED00A14F7A /* ProductListInteractorIO.swift */; };
@@ -236,7 +237,6 @@
 		CEE8ABBC1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
 		CEE8ABBE1FB181110052DC3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBD1FB181110052DC3A /* Assets.xcassets */; };
 		CEE8ABC11FB181110052DC3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBF1FB181110052DC3A /* LaunchScreen.storyboard */; };
-		CEE8ABD71FB181110052DC3A /* BetaProduct_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABD61FB181110052DC3A /* BetaProduct_SwiftUITests.swift */; };
 		CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABEE1FB184870052DC3A /* BaseEntity.swift */; };
 		CEE8ABF21FB1851A0052DC3A /* DatabaseTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF11FB1851A0052DC3A /* DatabaseTypes.swift */; };
 		CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF31FB187610052DC3A /* CompletionBlockTypes.swift */; };
@@ -391,14 +391,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CEE8ABC81FB181110052DC3A /* PBXContainerItemProxy */ = {
+		CE45561B1FC65EAA00822094 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEE8ABA81FB181110052DC3A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = CEE8ABAF1FB181110052DC3A;
-			remoteInfo = "BetaProduct-Swift";
+			remoteInfo = "BetaProduct-Swift DEV";
 		};
-		CEE8ABD31FB181110052DC3A /* PBXContainerItemProxy */ = {
+		CEE8ABC81FB181110052DC3A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CEE8ABA81FB181110052DC3A /* Project object */;
 			proxyType = 1;
@@ -456,6 +456,9 @@
 		CE433D031FBD1AF300E530C0 /* Info-QA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-QA.plist"; path = "/Users/user/Desktop/Workspace/Migs/Xcode Projects/Beta Product Swift/BetaProduct-Swift/BetaProduct-Swift/Support Files/Info-QA.plist"; sourceTree = "<absolute>"; };
 		CE433D3F1FBD1AF600E530C0 /* BetaProduct-Swift PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift PROD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE433D401FBD1AF700E530C0 /* Info-PROD.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-PROD.plist"; path = "/Users/user/Desktop/Workspace/Migs/Xcode Projects/Beta Product Swift/BetaProduct-Swift/BetaProduct-Swift/Support Files/Info-PROD.plist"; sourceTree = "<absolute>"; };
+		CE4556161FC65EAA00822094 /* BetaProduct-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BetaProduct-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4556181FC65EAA00822094 /* BetaProduct_Swift_DEVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProduct_Swift_DEVUITests.swift; sourceTree = "<group>"; };
+		CE45561A1FC65EAA00822094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE4B341E1FB57AB900CB5905 /* GOGOIA-Deco.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GOGOIA-Deco.otf"; sourceTree = "<group>"; };
 		CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GOGOIA-Regular.otf"; sourceTree = "<group>"; };
 		CE4D3FE01FB3ED2000BCBB32 /* LoginWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
@@ -565,7 +568,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEE8ABAD1FB181110052DC3A /* Frameworks */ = {
+		CE4556131FC65EAA00822094 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -575,7 +578,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEE8ABC41FB181110052DC3A /* Frameworks */ = {
+		CEE8ABAD1FB181110052DC3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -583,7 +586,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEE8ABCF1FB181110052DC3A /* Frameworks */ = {
+		CEE8ABC41FB181110052DC3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1347,6 +1350,24 @@
 			productReference = CE433D3F1FBD1AF600E530C0 /* BetaProduct-Swift PROD.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CE4556151FC65EAA00822094 /* BetaProduct-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE45561D1FC65EAA00822094 /* Build configuration list for PBXNativeTarget "BetaProduct-SwiftUITests" */;
+			buildPhases = (
+				CE4556121FC65EAA00822094 /* Sources */,
+				CE4556131FC65EAA00822094 /* Frameworks */,
+				CE4556141FC65EAA00822094 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE45561C1FC65EAA00822094 /* PBXTargetDependency */,
+			);
+			name = "BetaProduct-SwiftUITests";
+			productName = "BetaProduct-Swift DEVUITests";
+			productReference = CE4556161FC65EAA00822094 /* BetaProduct-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		CEE8ABAF1FB181110052DC3A /* BetaProduct-Swift DEV */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEE8ABDB1FB181110052DC3A /* Build configuration list for PBXNativeTarget "BetaProduct-Swift DEV" */;
@@ -1432,16 +1453,16 @@
 					CE433D041FBD1AF600E530C0 = {
 						ProvisioningStyle = Automatic;
 					};
+					CE4556151FC65EAA00822094 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CEE8ABAF1FB181110052DC3A;
+					};
 					CEE8ABAF1FB181110052DC3A = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
 					CEE8ABC61FB181110052DC3A = {
-						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
-						TestTargetID = CEE8ABAF1FB181110052DC3A;
-					};
-					CEE8ABD11FB181110052DC3A = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CEE8ABAF1FB181110052DC3A;
@@ -1524,6 +1545,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE4556141FC65EAA00822094 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEE8ABAE1FB181110052DC3A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1549,13 +1577,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3B62081FC6B61F00B24933 /* Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEE8ABD01FB181110052DC3A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2088,6 +2109,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE4556121FC65EAA00822094 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4556191FC65EAA00822094 /* BetaProduct_Swift_DEVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEE8ABAC1FB181110052DC3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2239,15 +2268,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CE45561C1FC65EAA00822094 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEE8ABAF1FB181110052DC3A /* BetaProduct-Swift DEV */;
+			targetProxy = CE45561B1FC65EAA00822094 /* PBXContainerItemProxy */;
+		};
 		CEE8ABC91FB181110052DC3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CEE8ABAF1FB181110052DC3A /* BetaProduct-Swift DEV */;
 			targetProxy = CEE8ABC81FB181110052DC3A /* PBXContainerItemProxy */;
-		};
-		CEE8ABD41FB181110052DC3A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CEE8ABAF1FB181110052DC3A /* BetaProduct-Swift DEV */;
-			targetProxy = CEE8ABD31FB181110052DC3A /* PBXContainerItemProxy */;
 		};
 		CEED02BC1FC6B9F9002C7A5A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2439,6 +2468,34 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE45561E1FC65EAA00822094 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BetaProduct-Swift DEVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.betaproduct.BetaProduct-Swift-DEVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "BetaProduct-Swift DEV";
+			};
+			name = Debug;
+		};
+		CE45561F1FC65EAA00822094 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BetaProduct-Swift DEVUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.betaproduct.BetaProduct-Swift-DEVUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "BetaProduct-Swift DEV";
 			};
 			name = Release;
 		};
@@ -2704,6 +2761,15 @@
 			buildConfigurations = (
 				CE433D3D1FBD1AF600E530C0 /* Debug */,
 				CE433D3E1FBD1AF600E530C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE45561D1FC65EAA00822094 /* Build configuration list for PBXNativeTarget "BetaProduct-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE45561E1FC65EAA00822094 /* Debug */,
+				CE45561F1FC65EAA00822094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
