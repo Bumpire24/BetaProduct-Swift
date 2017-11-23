@@ -30,6 +30,8 @@ class AppDependencies: NSObject {
         // Root Level Classes
         let root = RootWireframe()
         let store = StoreCoreData()
+        let webservice = StoreWebClient()
+        let session = Session.sharedSession
         
         // Home Module Classes
 //        let homeWireframe = HomeWireframe()
@@ -57,8 +59,10 @@ class AppDependencies: NSObject {
         
         loginManager.store = store
         
-        loginInteractor.manager = loginManager
+        loginInteractor.managerLogin = loginManager
+        loginInteractor.webService = webservice
         loginInteractor.output = loginPresenter
+        loginInteractor.session = session
         
         loginPresenter.interactor = loginInteractor
         loginPresenter.loginWireframe = loginWireframe
@@ -74,6 +78,7 @@ class AppDependencies: NSObject {
         
         createAccountInteractor.createAccountManager = createAccountManager
         createAccountInteractor.loginManager = loginManager
+        loginInteractor.managerCreate = createAccountManager
         createAccountInteractor.output = createAccountPresenter
         
         createAccountPresenter.interactor = createAccountInteractor

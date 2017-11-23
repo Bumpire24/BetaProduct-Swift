@@ -6,9 +6,15 @@
 //  Copyright © 2017 User. All rights reserved.
 //
 
+
+/// Core Data class Model for User
 class ManagedUser: BaseEntity {
+    /// variable for email
     @NSManaged var email: String
+    /// variable for password
     @NSManaged var password: String
+    /// variable for mobile/phone
     @NSManaged var mobile: String
+    /// variable for Full Name
     @NSManaged var fullname: String
 }

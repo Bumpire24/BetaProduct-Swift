@@ -53,7 +53,7 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
     }
     
     @IBAction func login(_ sender: Any) {
-        let user = UserDisplayItem.init(username: emailField.text, password: passwordField.text)
+        let user = UserDisplayItem.init(email: emailField.text, password: passwordField.text)
         eventHandler?.validateUser(user)
     }
 }

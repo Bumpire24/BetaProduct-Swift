@@ -8,10 +8,17 @@
 
 import Foundation
 
+/// manager class for module `CreateAccount`
 class CreateAccountManager : NSObject {
+    /// variable for store
     var store: StoreProtocol?
-    private let syncEngine = SyncEngine()
     
+    /**
+     creates Account with the given User Model
+     - Parameters:
+        - user: user input
+        - block: completion closure. Follows Response class
+     */
     func createAccount(withUser user : User, withCompletionBlock block : @escaping CompletionBlock<Bool>) {
         let newUser = store?.newUser()
         newUser?.email = user.email
@@ -22,14 +29,7 @@ class CreateAccountManager : NSObject {
         store?.saveWithCompletionBlock(block: { response in
             switch response {
             case .success(_):
-                syncEngine.syncCreatedAccount({ response in
-                    switch response {
-                    case .success(_):
-                        block(.success(true))
-                    case .failure(let error):
-                        block(.failure(error))
-                    }
-                })
+                block(.success(true))
             case .failure(let error):
                 block(.failure(error))
             }

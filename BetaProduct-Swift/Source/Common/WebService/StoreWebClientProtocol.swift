@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Store Web Clent Protocol. Abstract interface for Webservice used by the app
 protocol StoreWebClientProtocol {
     /**
      function for url request with HTTP Method GET
