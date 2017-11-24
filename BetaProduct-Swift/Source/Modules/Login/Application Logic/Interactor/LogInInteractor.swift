@@ -58,15 +58,16 @@ class LogInInteractor: NSObject, LogInInteractorInput {
     /// implements protocol. see 'LogInInteractorIO.swift'
     func validateUserLogin(userDisplayItem user: UserDisplayItem) {
         // validate inputs
-        guard let username = user.email, isUsernameValid(username: username.trimmingCharacters(in: .whitespacesAndNewlines)) else {
+        guard let username = user.email?.trimmingCharacters(in: .whitespacesAndNewlines), isUsernameValid(username: username) else {
             output?.userLoginValidationComplete(wasSuccessful: false, withMessage: "Username incorrect!")
             return
         }
         
-        guard let password = user.password, isPasswordValid(password: password.trimmingCharacters(in: .whitespacesAndNewlines)) else {
+        guard let password = user.password?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: password) else {
             output?.userLoginValidationComplete(wasSuccessful: false, withMessage: "Password incorrect!")
             return
         }
+        
         // call WS and authenticate account
         webService?.POST(BetaProduct.kBPWSPostUser, parameters: user.allProperties(), block: { response in
             switch response {

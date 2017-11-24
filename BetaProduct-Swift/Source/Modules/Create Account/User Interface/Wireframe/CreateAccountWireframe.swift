@@ -14,6 +14,7 @@ class CreateAccountWireframe: BaseWireframe {
     var createAccountView : CreateAccountView?
     var rootWireFrame : RootWireframe?
     var presenter : CreateAccountPresenter?
+    var loginWireFrame : LoginWireframe?
     
     func presentCreateAccountViewInterfaceFromWindow(Window window : UIWindow) {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: createAccountViewIdentifier) as! CreateAccountView
@@ -28,7 +29,11 @@ class CreateAccountWireframe: BaseWireframe {
         viewController.navigationController?.pushViewController(newViewController, animated: true)
     }
     
-    func createAccountViewController() -> CreateAccountView {
+    func presentLoginView() {
+        createAccountView?.navigationController?.popViewController(animated: true)
+    }
+    
+    private func createAccountViewController() -> CreateAccountView {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: createAccountViewIdentifier) as! CreateAccountView
         return viewcontroller
     }

@@ -104,7 +104,6 @@ class StoreCoreData: NSObject, StoreProtocol{
         managedObjectContext.delete(product)
     }
     
-    
     /// Protocol implementation. see `StoreProtocol.swift`
     func save() {
         do {

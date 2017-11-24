@@ -9,5 +9,5 @@
 import Foundation
 
 protocol CreateAccountViewProtocol {
-    func displayMessage(_ message : String)
+    func displayMessage(_ message : String, wasAccountCreationSuccesful wasSuccessful: Bool)
 }

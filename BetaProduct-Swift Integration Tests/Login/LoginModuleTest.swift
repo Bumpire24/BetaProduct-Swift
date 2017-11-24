@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import BetaProduct_Swift_DEV__Integration_Tests_
+@testable import BetaProduct_Swift_DEV_Integration_Tests
 
 /// Integration Test class for module `Login`
 class LoginModuleTest: XCTestCase, LogInInteractorOutput {
@@ -31,6 +31,8 @@ class LoginModuleTest: XCTestCase, LogInInteractorOutput {
     var presenter : LogInPresenter?
     /// variable for expectation
     var expectation : XCTestExpectation? = nil
+    /// variable for results
+    var result : (isSuccess : Bool, message : String) = (isSuccess : false, message : "")
     
     override func setUp() {
         super.setUp()
@@ -54,7 +56,7 @@ class LoginModuleTest: XCTestCase, LogInInteractorOutput {
         presenter?.loginWireframe = wireframe
         presenter?.view = view
         
-        wireframe?.presenter = presenter
+        wireframe?.loginPresenter = presenter
         view?.eventHandler = presenter
     }
     
@@ -65,20 +67,31 @@ class LoginModuleTest: XCTestCase, LogInInteractorOutput {
         presenter = nil
         wireframe = nil
         view = nil
+        result = (isSuccess : false, message : "")
         super.tearDown()
     }
     
-    func testExample() {
-        self.expectation = expectation(description: "testPerformanceExample")
+    func testSuccessLogin() {
+        self.expectation = expectation(description: "testSuccessLogin")
         let item = UserDisplayItem(email: "sample@gmail.com", password: "sample")
         view?.eventHandler?.validateUser(item)
         self.waitForExpectations(timeout: 10) { _ in
         }
     }
     
+    func testFailedLogin() {
+        // TODO: since webservice always returns true... will do this once rest has improved
+    }
+    
     /// LogInInteractorOutput protocol implementation
     func userLoginValidationComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
+        result.isSuccess = isSuccess
+        result.message = message
         if expectation != nil {
+            if expectation?.description == "testSuccessLogin" {
+                XCTAssert(result == (true, "Log in success!"), "testSuccessLogin failed")
+                XCTAssertNotNil(Session.sharedSession.user)
+            }
             expectation?.fulfill()
         }
     }

@@ -32,7 +32,7 @@ class LoginWireframe: BaseWireframe {
         rootWireFrame?.showRootViewController(rootViewController: viewcontroller, inWindow: window)
     }
     
-    func presentLoginViewFromViewController(_ viewController: UIViewController, Window window : UIWindow) {
+    func presentLoginViewFromViewController(_ viewController: UIViewController) {
         let newViewController = loginViewController()
         loginView = newViewController
         loginView?.eventHandler = loginPresenter

@@ -29,7 +29,7 @@ class LoginOptionsWireframe: BaseWireframe {
     }
     
     func presentLoginView() {
-        loginWireframe?.presentLoginViewFromViewController(loginOptionsView!, Window: self.window!)
+        loginWireframe?.presentLoginViewFromViewController(loginOptionsView!)
     }
     
     func presentCreateAccountView() {
