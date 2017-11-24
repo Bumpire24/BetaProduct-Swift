@@ -24,12 +24,27 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-BetaProduct-Swift DEV (Integration Tests).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-BetaProduct-Swift DEV.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-BetaProduct-SwiftTests.xcscheme</key>
+		<key>Pods-BetaProduct-Swift Integration Tests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BetaProduct-Swift UI Tests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BetaProduct-Swift Unit Tests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

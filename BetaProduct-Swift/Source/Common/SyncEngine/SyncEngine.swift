@@ -61,7 +61,6 @@ class SyncEngine: NSObject {
     }
     
     func syncCreatedAccount(_ block : @escaping CompletionBlock<Bool>) {
-        print("Calling WS : \(BetaProduct.kBPWSPostUser)")
         let predicate = NSPredicate.init(format: "syncStatus == %d", SyncStatus.Created.rawValue)
         storeCD.fetchEntries(withEntityName: "User",
                              withPredicate: predicate,
