@@ -67,6 +67,20 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-9h-Ln0" userLabel="Title and Message View">
                                         <rect key="frame" x="0.0" y="0.0" width="340" height="135"/>
                                         <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkMarkAssocBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-lE-6is">
+                                                <rect key="frame" x="-0.5" y="0.0" width="340" height="135"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkMarkBackground" translatesAutoresizingMaskIntoConstraints="NO" id="BWe-ma-S8L">
+                                                <rect key="frame" x="268" y="0.0" width="72" height="135"/>
+                                            </imageView>
+                                            <visualEffectView opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjn-dP-qUa">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="135"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="YuW-j9-G24">
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="135"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </view>
+                                                <blurEffect style="light"/>
+                                            </visualEffectView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXF-7g-awk">
                                                 <rect key="frame" x="8" y="8" width="324" height="36"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,7 +92,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3h-ic-Wbo" userLabel="Separator">
-                                                <rect key="frame" x="0.0" y="52" width="340" height="1"/>
+                                                <rect key="frame" x="8" y="52" width="150" height="1"/>
                                                 <color key="backgroundColor" red="0.59181375129852887" green="0.59181375129852887" blue="0.59181375129852887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="yJj-t9-CMQ"/>
@@ -96,22 +110,33 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.27621150020000002" green="0.29660221930000003" blue="0.50277477500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="Oq2-lE-6is" firstAttribute="top" secondItem="7Xe-9h-Ln0" secondAttribute="top" id="6U4-m4-crj"/>
                                             <constraint firstAttribute="bottom" secondItem="dfn-sU-7RP" secondAttribute="bottom" constant="10" id="9VW-aK-lUe"/>
                                             <constraint firstItem="XXF-7g-awk" firstAttribute="top" secondItem="7Xe-9h-Ln0" secondAttribute="top" constant="8" id="Anz-io-OdL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Vjn-dP-qUa" secondAttribute="bottom" id="DNn-xb-tAE"/>
                                             <constraint firstItem="dfn-sU-7RP" firstAttribute="leading" secondItem="7Xe-9h-Ln0" secondAttribute="leading" constant="8" id="E4t-G4-hcw"/>
+                                            <constraint firstItem="E3h-ic-Wbo" firstAttribute="width" secondItem="7Xe-9h-Ln0" secondAttribute="width" multiplier="1:2.26667" id="GiY-lA-KGh"/>
                                             <constraint firstAttribute="trailing" secondItem="dfn-sU-7RP" secondAttribute="trailing" constant="8" id="Hha-Qn-Dw2"/>
                                             <constraint firstItem="dfn-sU-7RP" firstAttribute="leading" secondItem="XXF-7g-awk" secondAttribute="leading" id="JWX-Ej-tb8"/>
+                                            <constraint firstItem="Oq2-lE-6is" firstAttribute="leading" secondItem="7Xe-9h-Ln0" secondAttribute="leading" id="MO3-M1-yXd"/>
                                             <constraint firstItem="XXF-7g-awk" firstAttribute="leading" secondItem="7Xe-9h-Ln0" secondAttribute="leading" constant="8" id="Xzk-SC-9WJ"/>
                                             <constraint firstAttribute="trailing" secondItem="XXF-7g-awk" secondAttribute="trailing" constant="8" id="Zel-U6-0fy"/>
-                                            <constraint firstItem="E3h-ic-Wbo" firstAttribute="centerX" secondItem="7Xe-9h-Ln0" secondAttribute="centerX" id="a3e-c1-Ffu"/>
                                             <constraint firstItem="E3h-ic-Wbo" firstAttribute="top" secondItem="XXF-7g-awk" secondAttribute="bottom" constant="8" id="bFr-Ik-5dp"/>
-                                            <constraint firstItem="E3h-ic-Wbo" firstAttribute="width" secondItem="7Xe-9h-Ln0" secondAttribute="width" id="ddW-WU-GJU"/>
+                                            <constraint firstItem="BWe-ma-S8L" firstAttribute="top" secondItem="7Xe-9h-Ln0" secondAttribute="top" id="bO7-P2-I6K"/>
+                                            <constraint firstAttribute="trailing" secondItem="BWe-ma-S8L" secondAttribute="trailing" id="eGg-GN-Ren"/>
+                                            <constraint firstAttribute="trailing" secondItem="Vjn-dP-qUa" secondAttribute="trailing" id="esT-ik-LNK"/>
                                             <constraint firstItem="dfn-sU-7RP" firstAttribute="top" secondItem="E3h-ic-Wbo" secondAttribute="bottom" constant="10" id="gZa-KE-zfB"/>
+                                            <constraint firstAttribute="bottom" secondItem="Oq2-lE-6is" secondAttribute="bottom" id="h6C-5n-2yY"/>
+                                            <constraint firstAttribute="trailing" secondItem="Oq2-lE-6is" secondAttribute="trailing" id="kJZ-PV-gZp"/>
+                                            <constraint firstItem="Vjn-dP-qUa" firstAttribute="top" secondItem="7Xe-9h-Ln0" secondAttribute="top" id="kwU-AV-VvN"/>
+                                            <constraint firstAttribute="bottom" secondItem="BWe-ma-S8L" secondAttribute="bottom" id="pEC-OS-PWL"/>
+                                            <constraint firstItem="Vjn-dP-qUa" firstAttribute="leading" secondItem="7Xe-9h-Ln0" secondAttribute="leading" id="vMc-oI-FsX"/>
+                                            <constraint firstItem="E3h-ic-Wbo" firstAttribute="leading" secondItem="XXF-7g-awk" secondAttribute="leading" id="yJY-x4-eXn"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhd-J1-KwZ" userLabel="Negative Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhd-J1-KwZ" userLabel="Negative Button" customClass="BetaProductTertiaryButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                         <rect key="frame" x="100.5" y="155" width="99.5" height="30"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -124,7 +149,7 @@
                                             <action selector="negationAction:" destination="lQk-S6-x0g" eventType="touchUpInside" id="iDc-QJ-gwA"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn7-M4-D4F" userLabel="Affirmative Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zn7-M4-D4F" userLabel="Affirmative Button" customClass="BetaProductPrimaryButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                         <rect key="frame" x="220" y="155" width="100" height="30"/>
                                         <color key="backgroundColor" red="0.96648496390000005" green="0.38324481249999998" blue="0.83540332319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -164,6 +189,8 @@
                     <connections>
                         <outlet property="affirmativeButton" destination="Zn7-M4-D4F" id="NGI-YK-Fwb"/>
                         <outlet property="messageContent" destination="dfn-sU-7RP" id="wgt-Mk-bOm"/>
+                        <outlet property="messageStatusBackgroundImage" destination="Oq2-lE-6is" id="KMI-YT-cSx"/>
+                        <outlet property="messageStatusImage" destination="BWe-ma-S8L" id="9yk-5t-7zp"/>
                         <outlet property="messageTitle" destination="XXF-7g-awk" id="fpE-4l-zzG"/>
                         <outlet property="messageView" destination="GkW-I3-l0m" id="nwZ-dw-sC7"/>
                         <outlet property="negativeButton" destination="Nhd-J1-KwZ" id="8zJ-7d-f3H"/>
@@ -371,7 +398,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1dP-ho-PyT" userLabel="Create Account Button" customClass="BetaProductPrimaryButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                 <rect key="frame" x="18.5" y="570" width="338" height="59"/>
@@ -573,5 +600,7 @@
     </scenes>
     <resources>
         <image name="backArrow" width="21" height="21"/>
+        <image name="checkMarkAssocBackground" width="208" height="81"/>
+        <image name="checkMarkBackground" width="72" height="81"/>
     </resources>
 </document>

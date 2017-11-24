@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BaseMessageView: BaseView {
+class BaseMessageView: UIViewController {
     let baseMessageViewIdentifier = "BaseMessageView"
 
     @IBOutlet weak var messageView: UIView!
@@ -16,8 +16,11 @@ class BaseMessageView: BaseView {
     @IBOutlet weak var messageTitle: UILabel!
     @IBOutlet weak var separator: UIView!
     @IBOutlet weak var messageContent: UILabel!
-    @IBOutlet weak var negativeButton: UIButton!
-    @IBOutlet weak var affirmativeButton: UIButton!
+    @IBOutlet weak var negativeButton: BetaProductTertiaryButton!
+    @IBOutlet weak var affirmativeButton: BetaProductPrimaryButton!
+    @IBOutlet weak var messageStatusImage: UIImageView!
+    @IBOutlet weak var messageStatusBackgroundImage: UIImageView!
+    
     weak var currentView : UIViewController?
     
     var messageTitleText : String {
@@ -69,7 +72,7 @@ class BaseMessageView: BaseView {
     func displayMessage (withTitle : String? = "",
                          messageContent : String? = "",
                          negativeButtonCaption : String? = "",
-                         affirmativeButtonCaption : String? = "", currentViewController : UIViewController) {
+                         affirmativeButtonCaption : String? = "", currentViewController : UIViewController, messageStatus : Bool? = nil) {
         let messageProperties : Dictionary<String, String> = ["title": withTitle!,
                                                               "message": messageContent!,
                                                               "negativeButtonLabel": negativeButtonCaption!,
@@ -79,6 +82,14 @@ class BaseMessageView: BaseView {
         currentView?.addChildViewController(messageViewController)
         currentView?.view.addSubview(messageViewController.view)
         populateMessageBox(messageView: messageViewController, messageProperties: messageProperties)
+        
+        guard messageStatus != nil else {
+            return
+        }
+        
+        let messageStatusIcon = messageStatus! ? "checkMarkBackground" : "errorBackground"
+        let messageStatusBackground = messageStatus! ? "checkMarkAssocBackground" : "errorAssocBackground"
+        applyThemeBasedOnMessageStatus(messageView: messageViewController, messageStatusIcon: messageStatusIcon, messageStatusBackground: messageStatusBackground)
     }
     
     @IBAction func affirmationAction(_ sender: Any) {
@@ -103,18 +114,28 @@ class BaseMessageView: BaseView {
     
     func applyTheme() {
         applyMessageViewTheme()
-        //affirmativeButton.applyPrimaryButtonTheme()
-        //negativeButton.applyTertiaryButtonTheme()
+    }
+    
+    func applyThemeBasedOnMessageStatus(messageView: BaseMessageView, messageStatusIcon: String, messageStatusBackground: String) {
+        messageView.messageStatusImage.image = UIImage(named: messageStatusIcon)
+        messageView.messageStatusBackgroundImage.image = UIImage(named: messageStatusBackground)
     }
     
     func applyMessageViewTheme() {
         messageView.layer.cornerRadius = 15.0
         titleAndMessageView.layer.cornerRadius = 15.0
-        messageView.layer.borderColor = BetaProductStyle.iDoohMessageViewBorderColor.cgColor
-        messageView.layer.shadowColor = BetaProductStyle.iDoohMessageViewShadowColor.cgColor
-        messageView.layer.shadowOpacity = 1.0
-        messageView.layer.shadowRadius = 3.0
-        messageView.layer.shadowOffset = CGSize(width: 0, height: 3)
+//        messageView.layer.borderColor = BetaProductStyle.iDoohMessageViewBorderColor.cgColor
+//        messageView.layer.shadowColor = BetaProductStyle.iDoohMessageViewShadowColor.cgColor
+//        messageView.layer.shadowOpacity = 1.0
+//        messageView.layer.shadowRadius = 3.0
+//        messageView.layer.shadowOffset = CGSize(width: 0, height: 3)
+    }
+    
+    func applyImageWatermark() {
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "checkMarkBackground.png")
+        backgroundImage.contentMode = .scaleAspectFill
+        self.view.insertSubview(backgroundImage, belowSubview: titleAndMessageView)
     }
 
 }
