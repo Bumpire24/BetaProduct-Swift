@@ -8,6 +8,18 @@
 
 import Foundation
 
+/// module protocol for module `login`
 protocol LogInModuleProtocol {
+    /**
+     validates User login with the given inputs
+     - Parameters:
+     - user: input for a view model. see `UserDisplayItem.swift`
+     */
     func validateUser(_ user : UserDisplayItem)
+    
+    /// navigate to Home
+    func proceedToHomeView()
+    
+    /// navigate to Create Account
+    func proceedToCreateAccount()
 }

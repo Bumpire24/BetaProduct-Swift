@@ -15,22 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE3B61AC1FC6B36C00B24933"
-               BuildableName = "BetaProduct-Swift DEV (Integration Tests).app"
-               BlueprintName = "BetaProduct-Swift DEV (Integration Tests)"
-               ReferencedContainer = "container:BetaProduct-Swift.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE3B615D1FC6B23E00B24933"
-               BuildableName = "BetaProduct-Swift Integration Tests.xctest"
-               BlueprintName = "BetaProduct-Swift Integration Tests"
+               BuildableName = "BetaProduct-Swift DEV Integration Tests.app"
+               BlueprintName = "BetaProduct-Swift DEV Integration Tests"
                ReferencedContainer = "container:BetaProduct-Swift.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -58,8 +44,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE3B61AC1FC6B36C00B24933"
-            BuildableName = "BetaProduct-Swift DEV (Integration Tests).app"
-            BlueprintName = "BetaProduct-Swift DEV (Integration Tests)"
+            BuildableName = "BetaProduct-Swift DEV Integration Tests.app"
+            BlueprintName = "BetaProduct-Swift DEV Integration Tests"
             ReferencedContainer = "container:BetaProduct-Swift.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE3B61AC1FC6B36C00B24933"
-            BuildableName = "BetaProduct-Swift DEV (Integration Tests).app"
-            BlueprintName = "BetaProduct-Swift DEV (Integration Tests)"
+            BuildableName = "BetaProduct-Swift DEV Integration Tests.app"
+            BlueprintName = "BetaProduct-Swift DEV Integration Tests"
             ReferencedContainer = "container:BetaProduct-Swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -101,8 +87,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CE3B61AC1FC6B36C00B24933"
-            BuildableName = "BetaProduct-Swift DEV (Integration Tests).app"
-            BlueprintName = "BetaProduct-Swift DEV (Integration Tests)"
+            BuildableName = "BetaProduct-Swift DEV Integration Tests.app"
+            BlueprintName = "BetaProduct-Swift DEV Integration Tests"
             ReferencedContainer = "container:BetaProduct-Swift.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

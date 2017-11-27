@@ -61,7 +61,7 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
     }
     
     @IBAction func createAccount(_ sender: Any) {
-        eventHandler?.createAccount()
+        eventHandler?.proceedToCreateAccount()
     }
 }
 

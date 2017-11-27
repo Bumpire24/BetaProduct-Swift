@@ -29,84 +29,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BetaProduct-Swift/Source/Modules/Login/Application Logic/Interactor/LogInInteractor.swift"
-            timestampString = "533125313.213113"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "validateUserLogin(userDisplayItem:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BetaProduct_Swift_DEV__Integration_Tests_.Response&lt;BetaProduct_Swift_DEV__Integration_Tests_.User&gt;) -&gt; () in closure #1 (BetaProduct_Swift_DEV__Integration_Tests_.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV__Integration_Tests_.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV__Integration_Tests_.UserDisplayItem) -&gt; ()"
-                  moduleName = "BetaProduct-Swift DEV (Integration Tests)"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
-                  timestampString = "533125313.400734"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "4390">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BetaProduct_Swift_DEV__Integration_Tests_.Response&lt;Swift.Bool&gt;) -&gt; () in closure #1 (BetaProduct_Swift_DEV__Integration_Tests_.Response&lt;BetaProduct_Swift_DEV__Integration_Tests_.User&gt;) -&gt; () in closure #1 (BetaProduct_Swift_DEV__Integration_Tests_.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV__Integration_Tests_.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV__Integration_Tests_.UserDisplayItem) -&gt; ()"
-                  moduleName = "BetaProduct-Swift DEV (Integration Tests)"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
-                  timestampString = "533125313.4045"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "519">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BetaProduct_Swift_Integration_Tests.Response&lt;BetaProduct_Swift_Integration_Tests.User&gt;) -&gt; () in closure #1 (BetaProduct_Swift_Integration_Tests.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_Integration_Tests.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_Integration_Tests.UserDisplayItem) -&gt; ()"
-                  moduleName = "BetaProduct-Swift Integration Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
-                  timestampString = "533125314.809836"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "85"
-                  endingLineNumber = "85"
-                  offsetFromSymbolStart = "4390">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BetaProduct_Swift_Integration_Tests.Response&lt;Swift.Bool&gt;) -&gt; () in closure #1 (BetaProduct_Swift_Integration_Tests.Response&lt;BetaProduct_Swift_Integration_Tests.User&gt;) -&gt; () in closure #1 (BetaProduct_Swift_Integration_Tests.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_Integration_Tests.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_Integration_Tests.UserDisplayItem) -&gt; ()"
-                  moduleName = "BetaProduct-Swift Integration Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
-                  timestampString = "533125314.813265"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "519">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BetaProduct-Swift/Source/Modules/Create Account/Application Logic/Interactor/CreateAccountManager.swift"
             timestampString = "533125345.412306"
             startingColumnNumber = "9223372036854775807"
@@ -115,38 +37,38 @@
             endingLineNumber = "23"
             landmarkName = "createAccount(withUser:withCompletionBlock:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BetaProduct_Swift_DEV__Integration_Tests_.CreateAccountManager.createAccount(withUser: BetaProduct_Swift_DEV__Integration_Tests_.User, withCompletionBlock: (BetaProduct_Swift_DEV__Integration_Tests_.Response&lt;Swift.Bool&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "BetaProduct-Swift DEV (Integration Tests)"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Create%20Account/Application%20Logic/Interactor/CreateAccountManager.swift"
-                  timestampString = "533125345.421803"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "517">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BetaProduct_Swift_Integration_Tests.CreateAccountManager.createAccount(withUser: BetaProduct_Swift_Integration_Tests.User, withCompletionBlock: (BetaProduct_Swift_Integration_Tests.Response&lt;Swift.Bool&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "BetaProduct-Swift Integration Tests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Create%20Account/Application%20Logic/Interactor/CreateAccountManager.swift"
-                  timestampString = "533125345.425106"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "517">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift/Source/Modules/Create Account/User Interface/Wireframe/CreateAccountWireframe.swift"
+            timestampString = "533212203.574132"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "presentLoginView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift/Source/Modules/Create Account/User Interface/Presenter/CreateAccountPresenter.swift"
+            timestampString = "533212203.574221"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "proceedToLogin()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
