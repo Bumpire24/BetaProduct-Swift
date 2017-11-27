@@ -16,8 +16,8 @@ class BaseMessageView: UIViewController {
     @IBOutlet weak var messageTitle: UILabel!
     @IBOutlet weak var separator: UIView!
     @IBOutlet weak var messageContent: UILabel!
-    @IBOutlet weak var negativeButton: BetaProductTertiaryButton!
-    @IBOutlet weak var affirmativeButton: BetaProductPrimaryButton!
+    @IBOutlet weak var negativeButton: BetaProductDialogTertiaryButton!
+    @IBOutlet weak var affirmativeButton: BetaProductDialogPrimaryButton!
     @IBOutlet weak var messageStatusImage: UIImageView!
     @IBOutlet weak var messageStatusBackgroundImage: UIImageView!
     
