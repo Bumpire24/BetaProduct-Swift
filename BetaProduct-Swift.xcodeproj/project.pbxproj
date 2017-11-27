@@ -340,6 +340,22 @@
 		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
 		CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
 		CE7C25491FC2B9E30036E39B /* BetaProductTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */; };
+		CEA04A631FCBB15D00B82FA5 /* CreateAccountModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A621FCBB15D00B82FA5 /* CreateAccountModuleTest.swift */; };
+		CEA04A661FCBDB4700B82FA5 /* WebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A651FCBDB4700B82FA5 /* WebServiceTest.swift */; };
+		CEA04A721FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */; };
+		CEA04A731FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */; };
+		CEA04A741FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */; };
+		CEA04A751FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */; };
+		CEA04A761FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */; };
+		CEA04A771FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */; };
+		CEA04A781FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */; };
+		CEA04A7A1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */; };
+		CEA04A7B1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */; };
+		CEA04A7C1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */; };
+		CEA04A7D1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */; };
+		CEA04A7E1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */; };
+		CEA04A7F1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */; };
+		CEA04A801FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */; };
 		CEA6A61A1FC4199D0025E2D3 /* QRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A6191FC4199D0025E2D3 /* QRView.swift */; };
 		CEA730BA1FBD3BC300ABAA60 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA730B91FBD3BC300ABAA60 /* Utility.swift */; };
 		CEB652D21FB57EEC00467D4E /* Button+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB652D11FB57EEC00467D4E /* Button+Theme.swift */; };
@@ -349,6 +365,7 @@
 		CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */; };
 		CEC2039C1FB46C160022C7C2 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203951FB46C160022C7C2 /* LoginWireframe.swift */; };
 		CEC2039D1FB46C160022C7C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203971FB46C160022C7C2 /* LoginView.swift */; };
+		CECA7B921FCBA9ED00489C78 /* CreateAccountPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7B911FCBA9ED00489C78 /* CreateAccountPresenterTest.swift */; };
 		CED47D901FBE894B00285F70 /* BaseMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED47D8F1FBE894B00285F70 /* BaseMessageView.swift */; };
 		CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */; };
 		CEDCD4CA1FC3ED2800103B60 /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
@@ -435,7 +452,6 @@
 		CEED03001FC6DD68002C7A5A /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
 		CEED03011FC6DD69002C7A5A /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
 		CEED03021FC6DD8C002C7A5A /* ManagedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */; };
-		CEED03091FC6DF72002C7A5A /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
 		CEF320E01FC52826004CA907 /* PropertyLooperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320DF1FC52826004CA907 /* PropertyLooperProtocol.swift */; };
 		CEF320E21FC528AA004CA907 /* PropertLooper+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320E11FC528AA004CA907 /* PropertLooper+Default.swift */; };
 		CEF320E51FC52C0E004CA907 /* BaseDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320E41FC52C0E004CA907 /* BaseDisplayItem.swift */; };
@@ -533,6 +549,10 @@
 		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
 		CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
 		CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProductTheme.swift; sourceTree = "<group>"; };
+		CEA04A621FCBB15D00B82FA5 /* CreateAccountModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountModuleTest.swift; sourceTree = "<group>"; };
+		CEA04A651FCBDB4700B82FA5 /* WebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTest.swift; sourceTree = "<group>"; };
+		CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDisplayItem.swift; sourceTree = "<group>"; };
+		CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleProtocol.swift; sourceTree = "<group>"; };
 		CEA6A6191FC4199D0025E2D3 /* QRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRView.swift; sourceTree = "<group>"; };
 		CEA730B91FBD3BC300ABAA60 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		CEB652D11FB57EEC00467D4E /* Button+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Theme.swift"; sourceTree = "<group>"; };
@@ -542,6 +562,7 @@
 		CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
 		CEC203951FB46C160022C7C2 /* LoginWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
 		CEC203971FB46C160022C7C2 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CECA7B911FCBA9ED00489C78 /* CreateAccountPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenterTest.swift; sourceTree = "<group>"; };
 		CED47D8F1FBE894B00285F70 /* BaseMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessageView.swift; sourceTree = "<group>"; };
 		CED6666E1FBE86C800B2245D /* LoginInteractorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginInteractorTest.swift; sourceTree = "<group>"; };
 		CED6667E1FBE88BC00B2245D /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -688,6 +709,7 @@
 			isa = PBXGroup;
 			children = (
 				CE00E3BF1FC82386006C8ACE /* CreateAccountInteractorTest.swift */,
+				CECA7B911FCBA9ED00489C78 /* CreateAccountPresenterTest.swift */,
 			);
 			path = "Create Account";
 			sourceTree = "<group>";
@@ -767,6 +789,7 @@
 		CE3B62051FC6B61F00B24933 /* BetaProduct-Swift Integration Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CEA04A611FCBB13F00B82FA5 /* Create Account */,
 				CE3B62061FC6B61F00B24933 /* Login */,
 				CE3B62071FC6B61F00B24933 /* Info.plist */,
 			);
@@ -885,6 +908,95 @@
 				CEF320E11FC528AA004CA907 /* PropertLooper+Default.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEA04A611FCBB13F00B82FA5 /* Create Account */ = {
+			isa = PBXGroup;
+			children = (
+				CEA04A621FCBB15D00B82FA5 /* CreateAccountModuleTest.swift */,
+			);
+			path = "Create Account";
+			sourceTree = "<group>";
+		};
+		CEA04A641FCBDB2100B82FA5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEA04A651FCBDB4700B82FA5 /* WebServiceTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CEA04A671FCBEBC200B82FA5 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CEA04A6E1FCBEC5400B82FA5 /* Application Logic */,
+				CEA04A691FCBEC5400B82FA5 /* Module Interface */,
+				CEA04A6A1FCBEC5400B82FA5 /* User Interface */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CEA04A691FCBEC5400B82FA5 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CEA04A791FCBF2D600B82FA5 /* SettingsModuleProtocol.swift */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		CEA04A6A1FCBEC5400B82FA5 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CEA04A6B1FCBEC5400B82FA5 /* Presenter */,
+				CEA04A6C1FCBEC5400B82FA5 /* Wireframe */,
+				CEA04A6D1FCBEC5400B82FA5 /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		CEA04A6B1FCBEC5400B82FA5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CEA04A6C1FCBEC5400B82FA5 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		CEA04A6D1FCBEC5400B82FA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEA04A6E1FCBEC5400B82FA5 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				CEA04A6F1FCBEC5400B82FA5 /* Manager */,
+				CEA04A701FCBEC5400B82FA5 /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		CEA04A6F1FCBEC5400B82FA5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		CEA04A701FCBEC5400B82FA5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		CEC203871FB46B5B0022C7C2 /* Recovered References */ = {
@@ -1035,6 +1147,7 @@
 		CEE8ABCA1FB181110052DC3A /* BetaProduct-Swift Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CEA04A641FCBDB2100B82FA5 /* Services */,
 				CE00E3BC1FC8232C006C8ACE /* Create Account */,
 				CECF7BA21FBD97D000B779AE /* Login */,
 				CEE8ABCD1FB181110052DC3A /* Info.plist */,
@@ -1118,6 +1231,7 @@
 		CEE8ABEA1FB184360052DC3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CEA04A671FCBEBC200B82FA5 /* Settings */,
 				CE07A4851FBD2A5D009185F3 /* Create Account */,
 				CEC203921FB46C160022C7C2 /* Login */,
 				CEC203881FB46C160022C7C2 /* LoginOptions */,
@@ -1914,7 +2028,6 @@
 				CE3B61671FC6B23E00B24933 /* Session.swift in Sources */,
 				CE3B61681FC6B23E00B24933 /* SyncEngine.swift in Sources */,
 				CE3B61691FC6B23E00B24933 /* StoreWebClient.swift in Sources */,
-				CEED03091FC6DF72002C7A5A /* BetaProduct_Swift.xcdatamodeld in Sources */,
 				CE3B616A1FC6B23E00B24933 /* StoreWebClientProtocol.swift in Sources */,
 				CE3B616B1FC6B23E00B24933 /* WebServiceConverter.swift in Sources */,
 				CE3B616C1FC6B23E00B24933 /* BetaProduct.swift in Sources */,
@@ -1949,9 +2062,11 @@
 				CE3B618C1FC6B23E00B24933 /* LoginView.swift in Sources */,
 				CE3B618E1FC6B23E00B24933 /* LogInViewProtocol.swift in Sources */,
 				CE3B618F1FC6B23E00B24933 /* LoginOptionsModuleInterface.swift in Sources */,
+				CEA04A781FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
 				CE3B61901FC6B23E00B24933 /* LoginOptionsPresenter.swift in Sources */,
 				CE3B61911FC6B23E00B24933 /* LoginOptionsWireframe.swift in Sources */,
 				CEED03021FC6DD8C002C7A5A /* ManagedProduct.swift in Sources */,
+				CEA04A631FCBB15D00B82FA5 /* CreateAccountModuleTest.swift in Sources */,
 				CEF8197A1FC7B64600B12AFB /* LoginModuleTest.swift in Sources */,
 				CE3B61921FC6B23E00B24933 /* LoginOptionsView.swift in Sources */,
 				CE3B61931FC6B23E00B24933 /* HomeModuleProtocol.swift in Sources */,
@@ -1959,6 +2074,7 @@
 				CE3B61951FC6B23E00B24933 /* QRView.swift in Sources */,
 				CE3B61961FC6B23E00B24933 /* HomeWireframe.swift in Sources */,
 				CE3B61971FC6B23E00B24933 /* ProductListInteractorIO.swift in Sources */,
+				CEA04A801FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */,
 				CE3B61981FC6B23E00B24933 /* ProductListInteractor.swift in Sources */,
 				CEF8197E1FC7DD2200B12AFB /* StoreCoreData.swift in Sources */,
 				CEF819801FC7DED700B12AFB /* ManagedUser.swift in Sources */,
@@ -1976,6 +2092,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA04A7B1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */,
 				CEED02BD1FC6BD3F002C7A5A /* AppDelegate.swift in Sources */,
 				CEED02BE1FC6BD3F002C7A5A /* AppDependencies.swift in Sources */,
 				CEED02BF1FC6BD3F002C7A5A /* ViewController.swift in Sources */,
@@ -2035,6 +2152,7 @@
 				CEED02F51FC6BD3F002C7A5A /* PropertyLooperProtocol.swift in Sources */,
 				CEED02F61FC6BD3F002C7A5A /* String+Utility.swift in Sources */,
 				CEED02F71FC6BD3F002C7A5A /* Button+Theme.swift in Sources */,
+				CEA04A731FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
 				CEED02F81FC6BD3F002C7A5A /* PropertLooper+Default.swift in Sources */,
 				CEED02F91FC6BD3F002C7A5A /* Utility.swift in Sources */,
 				CEF819851FC7E63A00B12AFB /* CreateAccountManager.swift in Sources */,
@@ -2045,11 +2163,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA04A7C1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */,
 				CE433CCA1FBD1AF300E530C0 /* StoreWebClientProtocol.swift in Sources */,
 				CE433CCB1FBD1AF300E530C0 /* ViewController.swift in Sources */,
 				CE433CCC1FBD1AF300E530C0 /* SyncEngine.swift in Sources */,
 				CE433CCD1FBD1AF300E530C0 /* LoginWireframe.swift in Sources */,
 				CE433CCE1FBD1AF300E530C0 /* HomeModuleProtocol.swift in Sources */,
+				CEA04A741FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
 				CEF819861FC7E63B00B12AFB /* CreateAccountManager.swift in Sources */,
 				CE433CCF1FBD1AF300E530C0 /* WebServiceConverter.swift in Sources */,
 				CE433CD01FBD1AF300E530C0 /* LoginOptionsPresenter.swift in Sources */,
@@ -2096,11 +2216,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA04A7D1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */,
 				CE433D071FBD1AF600E530C0 /* StoreWebClientProtocol.swift in Sources */,
 				CE433D081FBD1AF600E530C0 /* ViewController.swift in Sources */,
 				CE433D091FBD1AF600E530C0 /* SyncEngine.swift in Sources */,
 				CE433D0A1FBD1AF600E530C0 /* LoginWireframe.swift in Sources */,
 				CE433D0B1FBD1AF600E530C0 /* HomeModuleProtocol.swift in Sources */,
+				CEA04A751FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
 				CEF819871FC7E63B00B12AFB /* CreateAccountManager.swift in Sources */,
 				CE433D0C1FBD1AF600E530C0 /* WebServiceConverter.swift in Sources */,
 				CE433D0D1FBD1AF600E530C0 /* LoginOptionsPresenter.swift in Sources */,
@@ -2147,6 +2269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA04A7A1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */,
 				CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */,
 				CE7C25491FC2B9E30036E39B /* BetaProductTheme.swift in Sources */,
 				CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */,
@@ -2206,6 +2329,7 @@
 				CEE8ABFE1FB1A2F50052DC3A /* AppDependencies.swift in Sources */,
 				CE07A49D1FBD3CB2009185F3 /* CreateAccountWireframe.swift in Sources */,
 				CEE8ABF61FB18AA20052DC3A /* ManagedProduct.swift in Sources */,
+				CEA04A721FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
 				CEC2039A1FB46C160022C7C2 /* LoginOptionsWireframe.swift in Sources */,
 				CED47D901FBE894B00285F70 /* BaseMessageView.swift in Sources */,
 				CEF819841FC7E4B800B12AFB /* CreateAccountManager.swift in Sources */,
@@ -2224,6 +2348,7 @@
 				CE00E3C41FC82A2E006C8ACE /* BaseWireframe.swift in Sources */,
 				CE00E3C51FC82A2E006C8ACE /* BaseDisplayItem.swift in Sources */,
 				CE00E3C61FC82A2E006C8ACE /* Session.swift in Sources */,
+				CEA04A661FCBDB4700B82FA5 /* WebServiceTest.swift in Sources */,
 				CE00E4411FC82BB5006C8ACE /* CreateAccountInteractorTest.swift in Sources */,
 				CE00E3C71FC82A2E006C8ACE /* SyncEngine.swift in Sources */,
 				CE00E3C81FC82A2E006C8ACE /* StoreWebClient.swift in Sources */,
@@ -2232,6 +2357,7 @@
 				CE00E3CB1FC82A2E006C8ACE /* BetaProduct.swift in Sources */,
 				CE00E3CC1FC82A2E006C8ACE /* BetaProductTheme.swift in Sources */,
 				CE00E3CD1FC82A2E006C8ACE /* DatabaseTypes.swift in Sources */,
+				CECA7B921FCBA9ED00489C78 /* CreateAccountPresenterTest.swift in Sources */,
 				CE00E3CE1FC82A2E006C8ACE /* CompletionBlockTypes.swift in Sources */,
 				CE00E3CF1FC82A2E006C8ACE /* RootWireframe.swift in Sources */,
 				CE00E3D01FC82A2E006C8ACE /* BaseView.swift in Sources */,
@@ -2274,9 +2400,11 @@
 				CE00E3F51FC82A2E006C8ACE /* ProductListInteractorIO.swift in Sources */,
 				CE00E3F61FC82A2E006C8ACE /* ProductListInteractor.swift in Sources */,
 				CE00E3F71FC82A2E006C8ACE /* ProductManager.swift in Sources */,
+				CEA04A7F1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */,
 				CE00E3F81FC82A2E006C8ACE /* BetaProductError.swift in Sources */,
 				CE00E3F91FC82A2E006C8ACE /* PropertyLooperProtocol.swift in Sources */,
 				CE00E3FA1FC82A2E006C8ACE /* String+Utility.swift in Sources */,
+				CEA04A771FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
 				CE00E3FB1FC82A2E006C8ACE /* Button+Theme.swift in Sources */,
 				CE00E3FC1FC82A2E006C8ACE /* PropertLooper+Default.swift in Sources */,
 				CE00E3FD1FC82A2E006C8ACE /* Utility.swift in Sources */,
@@ -2287,6 +2415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA04A7E1FCBF2D600B82FA5 /* SettingsModuleProtocol.swift in Sources */,
 				CE00E3FE1FC82A69006C8ACE /* AppDelegate.swift in Sources */,
 				CE00E3FF1FC82A69006C8ACE /* AppDependencies.swift in Sources */,
 				CE00E4001FC82A69006C8ACE /* ViewController.swift in Sources */,
@@ -2346,6 +2475,7 @@
 				CE00E4351FC82A69006C8ACE /* BetaProductError.swift in Sources */,
 				CE00E4361FC82A69006C8ACE /* PropertyLooperProtocol.swift in Sources */,
 				CE00E4371FC82A69006C8ACE /* String+Utility.swift in Sources */,
+				CEA04A761FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
 				CE00E4381FC82A69006C8ACE /* Button+Theme.swift in Sources */,
 				CE00E4391FC82A69006C8ACE /* PropertLooper+Default.swift in Sources */,
 				CE00E43A1FC82A69006C8ACE /* Utility.swift in Sources */,

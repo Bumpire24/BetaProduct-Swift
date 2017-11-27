@@ -10,8 +10,6 @@ import Foundation
 
 /// interactor class for module `Create Account`
 class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
-    /// variable for login data manager
-    var loginManager : LogInManager?
     /// variable for create account data manager
     var createAccountManager : CreateAccountManager?
     /// variable for output delegate

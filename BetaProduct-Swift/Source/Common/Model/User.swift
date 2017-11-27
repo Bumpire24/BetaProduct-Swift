@@ -32,6 +32,10 @@ struct User : ModelProtocol {
     var fullname: String = ""
     /// variable for mobile/phone
     var mobile: String = ""
+    /// variable for shipping address
+    var addressShipping : String?
+    /// variable for profile image url
+    var profileImageURL : String?
 }
 
 /// extension for model User

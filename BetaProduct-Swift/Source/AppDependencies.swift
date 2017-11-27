@@ -86,7 +86,6 @@ class AppDependencies: NSObject {
         createAccountManager.store = store
         
         createAccountInteractor.createAccountManager = createAccountManager
-        createAccountInteractor.loginManager = loginManager
         createAccountInteractor.webService = webservice
         createAccountInteractor.output = createAccountPresenter
         
