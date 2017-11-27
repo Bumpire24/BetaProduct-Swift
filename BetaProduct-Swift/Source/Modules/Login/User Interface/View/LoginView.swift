@@ -52,7 +52,7 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
             return
         }
         
-        //eventHandler?.proceedToHomeView()
+        eventHandler?.proceedToHomeView()
     }
     
     @IBAction func login(_ sender: Any) {

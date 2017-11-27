@@ -62,7 +62,12 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
     
     func displayMessage(_ message: String, wasAccountCreationSuccesful wasSuccessful: Bool) {
         let baseMessageView = BaseMessageView()
-        baseMessageView.displayMessage(withTitle: "Create Account", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self)
+        baseMessageView.displayMessage(withTitle: "Create Account",
+                                       messageContent: message,
+                                       negativeButtonCaption: "Cancel",
+                                       affirmativeButtonCaption: "OK",
+                                       currentViewController: self,
+                                       messageStatus: wasSuccessful)
         if wasSuccessful {
             eventHandler?.proceedToLogin()
         }

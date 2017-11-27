@@ -190,6 +190,21 @@ class BetaProductPrimaryButton : BetaProductButton {
     }
 }
 
+protocol BetaProductDialogButton {
+    func specifyButtonShadow()
+}
+
+class BetaProductDialogPrimaryButton : BetaProductPrimaryButton, BetaProductDialogButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyButtonShadow()
+    }
+    
+    func specifyButtonShadow() {
+        specifyDialogButtonShadow(buttonControl: self)
+    }
+}
+
 class BetaProductSecondaryButton : BetaProductButton {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -202,6 +217,17 @@ class BetaProductSecondaryButton : BetaProductButton {
     }
 }
 
+class BetaProductDialogSecondaryButton : BetaProductSecondaryButton, BetaProductDialogButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyButtonShadow()
+    }
+    
+    func specifyButtonShadow() {
+        specifyDialogButtonShadow(buttonControl: self)
+    }
+}
+
 class BetaProductTertiaryButton : BetaProductButton {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -211,6 +237,17 @@ class BetaProductTertiaryButton : BetaProductButton {
     func specifyFillColor() {
         self.backgroundColor = BetaProductStyle.iDoohTertiaryButtonBackgroundColor
         self.layer.borderColor = BetaProductStyle.iDoohTertiaryButtonBorderColor.cgColor
+    }
+}
+
+class BetaProductDialogTertiaryButton : BetaProductTertiaryButton, BetaProductDialogButton {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyButtonShadow()
+    }
+    
+    func specifyButtonShadow() {
+        specifyDialogButtonShadow(buttonControl: self)
     }
 }
 
@@ -229,4 +266,12 @@ class BetaProductLinkButton : UIButton {
     func specifyFillColor() {
         self.backgroundColor = BetaProductStyle.iDoohClearBackground
     }
+}
+
+fileprivate func specifyDialogButtonShadow(buttonControl: UIButton) {
+    buttonControl.layer.borderColor = BetaProductStyle.iDoohClearBackground.cgColor
+    buttonControl.layer.shadowColor = BetaProductStyle.iDoohMessageViewShadowColor.cgColor
+    buttonControl.layer.shadowOpacity = 1.0
+    buttonControl.layer.shadowRadius = 3.0
+    buttonControl.layer.shadowOffset = CGSize(width: 0, height: 3)
 }
