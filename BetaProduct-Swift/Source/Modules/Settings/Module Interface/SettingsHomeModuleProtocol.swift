@@ -9,7 +9,7 @@
 import Foundation
 
 /// module interface for module `Settings`
-protocol SettingsModuleProtocol {
+protocol SettingsHomeModuleProtocol {
     /// navigate to Profile Settings
     func proceedToProfileSettings()
     /// navigate to Password Settings

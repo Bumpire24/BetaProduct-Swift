@@ -23,6 +23,10 @@ class Session: NSObject {
         var fullName : String?
         /// variable for Mobile/Phone Number
         var mobile : String?
+        /// variable for Shipping Address
+        var addShipping: String?
+        /// variable for Profile Image
+        var imageURLProfile: String?
     }
     
     /// variable for usersession
@@ -40,10 +44,17 @@ class Session: NSObject {
         self.user?.password = user.password
         self.user?.fullName = user.fullname
         self.user?.mobile = user.mobile
+        self.user?.addShipping = user.addressShipping
+        self.user?.imageURLProfile = user.profileImageURL
     }
     
     /// gets User Model from UserSession
     func getUserSessionAsUser() -> User {
-        return User.init(emailAddress: user?.email ?? "", password: user?.password ?? "", fullName: user?.fullName ?? "", mobileNumber: user?.mobile ?? "")
+        return User.init(emailAddress: user?.email ?? "",
+                         password: user?.password ?? "",
+                         fullName: user?.fullName ?? "",
+                         mobileNumber: user?.mobile ?? "",
+                         addressShipping: user?.addShipping ?? "",
+                         imageURLProfile: user?.imageURLProfile ?? "")
     }
 }

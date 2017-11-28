@@ -8,12 +8,16 @@
 
 import Foundation
 
-/// Settings view model for module `Settings`
-struct SettingsDisplayItem : BaseDisplayItem {
-    /// variable for email
-    var email : String?
-    /// variable for password
-    var password : String?
+protocol SettingsDisplayItemProtocol: BaseDisplayItem {
+    
+}
+
+struct SettingsHomeDisplayItem : SettingsDisplayItemProtocol {
+    /// implements protocol SettingsDisplayItemProtocol
+    var profileImageURL: String?
+}
+
+struct SettingsProfileDisplayItem : SettingsDisplayItemProtocol {
     /// variable for name
     var name : String?
     /// variable for mobile
@@ -22,13 +26,24 @@ struct SettingsDisplayItem : BaseDisplayItem {
     var addressShipping : String?
     /// variable for profile image url
     var profileImageURL : String?
-    
-    init() {
-        email = ""
-        password = ""
-        name = ""
-        mobile = ""
-        addressShipping = ""
-        profileImageURL = ""
-    }
 }
+
+struct SettingsEmailDisplayItem : SettingsDisplayItemProtocol {
+    /// variable for old email address
+    var emailAddOld: String?
+    /// variable for new email address
+    var emailAddNew: String?
+    /// variable for confirm new email address
+    var emailAddNewConfirm: String?
+}
+
+struct SettingsPasswordDisplayItem : SettingsDisplayItemProtocol {
+    /// variable for old password
+    var passwordOld: String?
+    /// variable for new password
+    var passwordNew: String?
+    /// variable for confirm new password
+    var passwordNewConfirm: String?
+}
+
+

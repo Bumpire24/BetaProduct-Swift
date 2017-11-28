@@ -17,6 +17,19 @@ class HomeView: UITabBarController {
 //        sync.startInitialSync { (success, error) in
 //            print("BOOL : \(success) ERROR : \(error)")
 //        }
+        
+        // JUST A TEST
+        let manager = SettingsManager()
+        manager.store = StoreCoreData()
+        let interactor = SettingsInteractor()
+        interactor.manager = manager
+        interactor.webservice = StoreWebClient()
+        interactor.session = Session.sharedSession
+        let presenter = SettingsPresenterProfile()
+        presenter.interactor = interactor
+        interactor.outputProfile = presenter
+        
+        presenter.test()
     }
 
     override func didReceiveMemoryWarning() {

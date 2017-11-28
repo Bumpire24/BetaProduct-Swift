@@ -73,7 +73,7 @@ class LogInInteractor: NSObject, LogInInteractorInput {
             switch response {
             case .success(let value):
                 // check if account already exists in db
-                self.managerLogin?.retrieveUser(withEmail: username, andWithPassword: password, withCompletionBlock: { response in
+                self.managerLogin?.retrieveUser(withEmail: username, withCompletionBlock: { response in
                     if response.isSuccess {
                         // update account in db
                         // TODO: account updation

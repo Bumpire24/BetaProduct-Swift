@@ -13,7 +13,7 @@ target 'BetaProduct-Swift DEV' do
 	pods
 end
 
-target 'BetaProduct-Swift DEV (Integration Tests)' do
+target 'BetaProduct-Swift DEV Integration Tests' do
 	pods
 end
 

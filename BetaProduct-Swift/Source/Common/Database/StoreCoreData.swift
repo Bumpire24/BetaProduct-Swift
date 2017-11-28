@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import CocoaLumberjack
 
 class StoreCoreData: NSObject, StoreProtocol{
     /// variable for PersistentStoreCoordinator. Core Data Element.
@@ -79,7 +80,7 @@ class StoreCoreData: NSObject, StoreProtocol{
                                          reason: caughtError.localizedDescription,
                                          suggestion: "Debug function \(#function)")
                 error.innerError = caughtError
-                print("Error : \(#function), \(error.localizedDescription)")
+                DDLogError("Error  description : \(error.localizedDescription) reason : \(error.localizedFailureReason ?? "Unknown Reason") suggestion : \(error.localizedRecoverySuggestion ?? "Unknown Suggestion")")
                 block(Response.failure(error))
             }
         }
