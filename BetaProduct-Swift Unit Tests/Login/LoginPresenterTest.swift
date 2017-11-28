@@ -23,7 +23,7 @@ class LoginPresenterTest: XCTestCase, LoginViewProtocol {
     var result : (isSuccess : Bool, message : String) = (isSuccess : false, message : "")
     /// variable for expectation
     var expectation : XCTestExpectation? = nil
-    /// variable for interactor
+    /// variable for presenter
     var presenter : LogInPresenter?
     /// variable for view
     var view : LoginView?

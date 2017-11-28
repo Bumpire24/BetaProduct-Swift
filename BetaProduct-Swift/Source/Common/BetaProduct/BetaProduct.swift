@@ -71,9 +71,22 @@ struct BetaProduct {
         }
     }
     
+    /// const for Webservice call : Get Users.
+    static let kBPWSGetUser : String = kBPWS + "posts"
+    
     /// const for Webservice call : Get Products.
     static let kBPWSGetProduct : String = kBPWS + "photos"
     
     /// const for Webservice call : Make User.
     static let kBPWSPostUser : String = kBPWS + "posts"
+    
+    /// const for Webservice call : Update User.
+    static func kBPWSPutUserWithId(_ id : String) -> String {
+        return kBPWS + "posts/" + id
+    }
+    
+    /// const for Webservice call : Delete User.
+    static func kBPWSDeleteUserWithId(_ id : String) -> String {
+        return kBPWS + "posts/" + id
+    }
 }

@@ -17,4 +17,8 @@ class ManagedUser: BaseEntity {
     @NSManaged var mobile: String
     /// variable for Full Name
     @NSManaged var fullname: String
+    /// variable for mobile/phone
+    @NSManaged var profileImageURL: String
+    /// variable for Full Name
+    @NSManaged var addressShipping: String
 }

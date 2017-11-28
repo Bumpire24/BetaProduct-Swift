@@ -9,6 +9,7 @@
 import XCTest
 @testable import BetaProduct_Swift_DEV_Integration_Tests
 
+// Before you run the test. Change Package in model to allign with this package's(target) name. This is causing type issues. Tried doin access controls but to no avail. possible xcode bug
 /// Integration Test class for module `Login`
 class LoginModuleTest: XCTestCase, LogInInteractorOutput {
     /// variable for Store
@@ -71,6 +72,7 @@ class LoginModuleTest: XCTestCase, LogInInteractorOutput {
         super.tearDown()
     }
     
+    /// tests behavor if login was successful
     func testSuccessLogin() {
         self.expectation = expectation(description: "testSuccessLogin")
         let item = UserDisplayItem(email: "sample@gmail.com", password: "sample")
@@ -79,10 +81,12 @@ class LoginModuleTest: XCTestCase, LogInInteractorOutput {
         }
     }
     
+    /// tests behavor if login failed
     func testFailedLogin() {
         // TODO: since webservice always returns true... will do this once rest has improved
     }
     
+    // MARK: LogInInteractorOutput
     /// LogInInteractorOutput protocol implementation
     func userLoginValidationComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
         result.isSuccess = isSuccess
