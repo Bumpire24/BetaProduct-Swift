@@ -1,32 +1,21 @@
 //
-//  SettingsPresenterProfile.swift
+//  SettingsPresenterEmail.swift
 //  BetaProduct-Swift
 //
 //  Created by User on 11/28/17.
 //  Copyright © 2017 User. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 /// presenter class for module `Settings`
-class SettingsPresenterProfile: NSObject, SettingsUpdateModuleProtocol, SettingsProfileInteractorOutput {
+class SettingsPresenterEmail: NSObject, SettingsUpdateModuleProtocol, SettingsEmailInteractorOutput {
     /// variable for interactor
     var interactor: SettingsInteractorInput?
     /// variable for wireframe
     var wireframe: String?
     /// variable for view
     var view: String?
-    
-    // MARK: SettingsProfileInteractorOutput
-    /// implements protocol. see `SettingsInteractorIO.swift`
-    func gotDisplayItem<T>(_ item: T) where T : SettingsDisplayItemProtocol {
-        
-    }
-    
-    /// implements protocol. see `SettingsInteractorIO.swift`
-    func settingsUpdationComplete<T>(wasSuccessful isSuccess: Bool, withMessage message: String, withNewDisplayItem displayItem: T) where T : SettingsDisplayItemProtocol {
-        
-    }
     
     // MARK: SettingsUpdateModuleProtocol
     /// implements protocol. see `SettingsModuleProtocols.swift`
@@ -41,6 +30,12 @@ class SettingsPresenterProfile: NSObject, SettingsUpdateModuleProtocol, Settings
     
     /// implements protocol. see `SettingsModuleProtocols.swift`
     func updateView() {
-        self.interactor?.getDisplayItemForProfile()
+        
+    }
+    
+    // MARK: SettingsEmailInteractorOutput
+    /// implements protocol. see `SettingsInteractorIO.swift`
+    func settingsUpdationComplete<T>(wasSuccessful isSuccess: Bool, withMessage message: String, withNewDisplayItem displayItem: T) where T : SettingsDisplayItemProtocol {
+        
     }
 }

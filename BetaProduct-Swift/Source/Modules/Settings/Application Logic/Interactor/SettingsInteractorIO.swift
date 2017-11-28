@@ -10,15 +10,12 @@ import Foundation
 
 /// interactor input protocol for module `Settings`
 protocol SettingsInteractorInput {
-    func getDisplayItem<T: SettingsDisplayItemProtocol>(forItem item: T)
+    /// fetches view model for display
+    func getDisplayItemForProfile()
+    /// log out user
     func logOut()
+    /// validate and update entry with the given view model
     func validateAndUpdateSettings<T: SettingsDisplayItemProtocol>(usingDisplayitem item: T)
-}
-
-/// base interactor output protocol for module `Settings`.
-protocol SettingsInteractorOutputDisplays {
-    /// delegated function callback for different kinds of display model following SettingsDisplayItemProtocol
-    func gotDisplayItem<T: SettingsDisplayItemProtocol>(_ item: T)
 }
 
 /// base interactor output protocol for module `Settings`.
@@ -30,19 +27,21 @@ protocol SettingsInteractorOutputUpdation {
 }
 
 /// interactor output protocol for module `Settings`
-protocol SettingsHomeInteractorOuput: SettingsInteractorOutputDisplays {
+protocol SettingsHomeInteractorOuput {
     /// delegated function callback for when log out is finished
     func logOutReady()
 }
 
 /// interactor output protocol for module `Settings`
-protocol SettingsProfileInteractorOutput: SettingsInteractorOutputDisplays, SettingsInteractorOutputUpdation {
+protocol SettingsProfileInteractorOutput: SettingsInteractorOutputUpdation {
+    /// delegated function callback for different kinds of display model following SettingsDisplayItemProtocol
+    func gotDisplayItem(_ item: SettingsProfileDisplayItem)
 }
 
 /// interactor output protocol for module `Settings`
-protocol SettingsEmailInteractorOutput: SettingsInteractorOutputDisplays, SettingsInteractorOutputUpdation {
+protocol SettingsEmailInteractorOutput: SettingsInteractorOutputUpdation {
 }
 
 /// interactor output protocol for module `Settings`
-protocol SettingsPasswordInteractorOutput: SettingsInteractorOutputDisplays, SettingsInteractorOutputUpdation {
+protocol SettingsPasswordInteractorOutput: SettingsInteractorOutputUpdation {
 }

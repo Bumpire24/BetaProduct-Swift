@@ -19,3 +19,13 @@ protocol SettingsHomeModuleProtocol {
     /// log out user and navigate to login
     func logout()
 }
+
+/// module interface for module `Settings`
+protocol SettingsUpdateModuleProtocol {
+    /// save pending updates
+    func saveUpdates<T: SettingsDisplayItemProtocol>(withItem item: T)
+    /// cancel pending updates
+    func cancelUpdates()
+    /// fetches view model
+    func updateView()
+}

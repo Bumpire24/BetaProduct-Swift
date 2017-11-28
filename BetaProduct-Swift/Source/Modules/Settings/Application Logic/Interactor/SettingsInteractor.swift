@@ -37,25 +37,12 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
     
     // MARK: SettingsInteractorInput
     /// protocol implementation. see `SettingsInteractorIO.swift`
-    func getDisplayItem<T>(forItem item: T) where T : SettingsDisplayItemProtocol {
+    func getDisplayItemForProfile() {
         let user = session?.getUserSessionAsUser()
-        switch item {
-        case is SettingsHomeDisplayItem:
-            self.outputHome?.gotDisplayItem(SettingsHomeDisplayItem(profileImageURL: user?.profileImageURL))
-        case is SettingsProfileDisplayItem:
-            self.outputProfile?.gotDisplayItem(SettingsProfileDisplayItem(name: user?.fullname,
-                                                                          mobile: user?.mobile,
-                                                                          addressShipping: user?.addressShipping,
-                                                                          profileImageURL: user?.profileImageURL))
-        case is SettingsEmailDisplayItem:
-            self.outputEmail?.gotDisplayItem(SettingsEmailDisplayItem(emailAdd: user?.email, profileImageURL: user?.profileImageURL))
-        case is SettingsPasswordDisplayItem:
-            self.outputPassword?.gotDisplayItem(SettingsPasswordDisplayItem(passwordOld: "",
-                                                                            passwordNew: "",
-                                                                            passwordNewConfirm: "",
-                                                                            profileImageURL: user?.profileImageURL))
-        default: break
-        }
+        self.outputProfile?.gotDisplayItem(SettingsProfileDisplayItem(name: user?.fullname,
+                                                                      mobile: user?.mobile,
+                                                                      addressShipping: user?.addressShipping,
+                                                                      profileImageURL: user?.profileImageURL))
     }
     
     /// protocol implementation. see `SettingsInteractorIO.swift`
