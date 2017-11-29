@@ -9,6 +9,7 @@
 import UIKit
 
 class HomeView: UITabBarController {
+    var eventHandler : HomeModulePresenter?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class HomeView: UITabBarController {
     }
     
     @objc func redirectToSettings() {
-        
+        eventHandler?.showSettingsView()
     }
 
 }

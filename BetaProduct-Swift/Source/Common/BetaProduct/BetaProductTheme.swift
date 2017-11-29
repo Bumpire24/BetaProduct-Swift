@@ -136,6 +136,20 @@ class BetaProductInstructionLabel: UILabel {
     }
 }
 
+class BetaProductSettingsLabel: UILabel {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        changeFontName()
+    }
+    
+    func changeFontName()
+    {
+        self.font = BetaProductStyle.Fonts.iDoohSettingsLabelFont
+        self.textColor = BetaProductStyle.iDoohLabelFontColor
+    }
+}
+
 class BetaProductEntryField : UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()

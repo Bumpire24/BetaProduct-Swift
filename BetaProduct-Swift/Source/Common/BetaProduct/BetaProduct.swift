@@ -26,6 +26,7 @@ struct BetaProductStyle {
         static var iDoohTextfieldFont = UIFont(name: "BloggerSans-BoldItalic", size: 15)
         static var iDoohHeaderLabelFont = UIFont(name: "BloggerSans-Bold", size: 30)
         static var iDoohInstructionLabelFont = UIFont(name: "BloggerSans-LightItalic", size: 20)
+        static var iDoohSettingsLabelFont = UIFont(name: "BloggerSans-Light", size: 20)
     }
     
     static var iDoohLinkColor = BetaProductStyle.Colors.iDoohLinkBlue
