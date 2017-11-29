@@ -264,6 +264,14 @@
 		CE3B61FC1FC6B36C00B24933 /* Blogger-Sans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF421FBD22DA00512E07 /* Blogger-Sans-Medium.ttf */; };
 		CE3B61FD1FC6B36C00B24933 /* Blogger-Sans-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF431FBD22DA00512E07 /* Blogger-Sans-Bold-Italic.ttf */; };
 		CE3B62081FC6B61F00B24933 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE3B62071FC6B61F00B24933 /* Info.plist */; };
+		CE3F37C11FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
+		CE3F37C21FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
+		CE3F37C31FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
+		CE3F37C41FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
+		CE3F37C51FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
+		CE3F37C61FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
+		CE3F37C71FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
+		CE3F37CA1FCE9E98006AA8A3 /* SettingsInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C91FCE9E98006AA8A3 /* SettingsInteractorTest.swift */; };
 		CE433CCA1FBD1AF300E530C0 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
 		CE433CCB1FBD1AF300E530C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
 		CE433CCC1FBD1AF300E530C0 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
@@ -621,6 +629,8 @@
 		CE3B61AA1FC6B23E00B24933 /* BetaProduct-Swift Integration Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BetaProduct-Swift Integration Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3B62031FC6B36C00B24933 /* BetaProduct-Swift DEV Integration Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift DEV Integration Tests.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3B62071FC6B61F00B24933 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterUploadPhoto.swift; sourceTree = "<group>"; };
+		CE3F37C91FCE9E98006AA8A3 /* SettingsInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractorTest.swift; sourceTree = "<group>"; };
 		CE433D021FBD1AF300E530C0 /* BetaProduct-Swift QA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift QA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE433D031FBD1AF300E530C0 /* Info-QA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-QA.plist"; path = "/Users/user/Desktop/Workspace/Migs/Xcode Projects/Beta Product Swift/BetaProduct-Swift/BetaProduct-Swift/Support Files/Info-QA.plist"; sourceTree = "<absolute>"; };
 		CE433D3F1FBD1AF600E530C0 /* BetaProduct-Swift PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift PROD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -916,6 +926,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		CE3F37C81FCE9E01006AA8A3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CE3F37C91FCE9E98006AA8A3 /* SettingsInteractorTest.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		CE4B341D1FB57A8D00CB5905 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -1082,6 +1100,7 @@
 				CE70F4401FCD757000AD67A1 /* SettingsPresenterHome.swift */,
 				CE70F4421FCD758F00AD67A1 /* SettingsPresenterEmail.swift */,
 				CE70F44A1FCD75A200AD67A1 /* SettingsPresenterPassword.swift */,
+				CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1281,6 +1300,7 @@
 		CEE8ABCA1FB181110052DC3A /* BetaProduct-Swift Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				CE3F37C81FCE9E01006AA8A3 /* Settings */,
 				CEA04A641FCBDB2100B82FA5 /* Services */,
 				CE00E3BC1FC8232C006C8ACE /* Create Account */,
 				CECF7BA21FBD97D000B779AE /* Login */,
@@ -2195,6 +2215,7 @@
 				CE3B61841FC6B23E00B24933 /* CreateAccountView.swift in Sources */,
 				CE3B61851FC6B23E00B24933 /* LogInModuleProtocol.swift in Sources */,
 				CE3B61861FC6B23E00B24933 /* LogInInteractorIO.swift in Sources */,
+				CE3F37C71FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */,
 				CE3B61871FC6B23E00B24933 /* LogInInteractor.swift in Sources */,
 				CE3B61881FC6B23E00B24933 /* LogInManager.swift in Sources */,
 				CE3B61891FC6B23E00B24933 /* LogInPresenter.swift in Sources */,
@@ -2242,6 +2263,7 @@
 			files = (
 				CE70F4181FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
 				CE70F4441FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
+				CE3F37C21FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */,
 				CEED02BD1FC6BD3F002C7A5A /* AppDelegate.swift in Sources */,
 				CEED02BE1FC6BD3F002C7A5A /* AppDependencies.swift in Sources */,
 				CEED02BF1FC6BD3F002C7A5A /* ViewController.swift in Sources */,
@@ -2355,6 +2377,7 @@
 				CE433CE01FBD1AF300E530C0 /* LogInViewProtocol.swift in Sources */,
 				CE433CE11FBD1AF300E530C0 /* BetaProduct_Swift.xcdatamodeld in Sources */,
 				CE433CE21FBD1AF300E530C0 /* LoginView.swift in Sources */,
+				CE3F37C31FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */,
 				CE001E831FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CE433CE31FBD1AF300E530C0 /* UserDisplayItem.swift in Sources */,
 				CE433CE41FBD1AF300E530C0 /* BetaProductError.swift in Sources */,
@@ -2420,6 +2443,7 @@
 				CE433D1D1FBD1AF600E530C0 /* LogInViewProtocol.swift in Sources */,
 				CE433D1E1FBD1AF600E530C0 /* BetaProduct_Swift.xcdatamodeld in Sources */,
 				CE433D1F1FBD1AF600E530C0 /* LoginView.swift in Sources */,
+				CE3F37C41FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */,
 				CE001E841FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CE433D201FBD1AF600E530C0 /* UserDisplayItem.swift in Sources */,
 				CE433D211FBD1AF600E530C0 /* BetaProductError.swift in Sources */,
@@ -2455,6 +2479,7 @@
 			files = (
 				CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */,
 				CE7C25491FC2B9E30036E39B /* BetaProductTheme.swift in Sources */,
+				CE3F37C11FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */,
 				CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */,
 				CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */,
 				CE001E911FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
@@ -2540,6 +2565,7 @@
 				CE00E3C11FC82A2E006C8ACE /* AppDelegate.swift in Sources */,
 				CE00E3C21FC82A2E006C8ACE /* AppDependencies.swift in Sources */,
 				CE00E3C31FC82A2E006C8ACE /* ViewController.swift in Sources */,
+				CE3F37CA1FCE9E98006AA8A3 /* SettingsInteractorTest.swift in Sources */,
 				CE00E4401FC82BAD006C8ACE /* LoginInteractorTest.swift in Sources */,
 				CE00E3C41FC82A2E006C8ACE /* BaseWireframe.swift in Sources */,
 				CE00E3C51FC82A2E006C8ACE /* BaseDisplayItem.swift in Sources */,
@@ -2547,6 +2573,7 @@
 				CE00E3C61FC82A2E006C8ACE /* Session.swift in Sources */,
 				CEA04A661FCBDB4700B82FA5 /* WebServiceTest.swift in Sources */,
 				CE00E4411FC82BB5006C8ACE /* CreateAccountInteractorTest.swift in Sources */,
+				CE3F37C61FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */,
 				CE00E3C71FC82A2E006C8ACE /* SyncEngine.swift in Sources */,
 				CE00E3C81FC82A2E006C8ACE /* StoreWebClient.swift in Sources */,
 				CE00E3C91FC82A2E006C8ACE /* StoreWebClientProtocol.swift in Sources */,
@@ -2645,6 +2672,7 @@
 				CE00E40E1FC82A69006C8ACE /* BaseViewProtocol.swift in Sources */,
 				CE001EA51FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE00E40F1FC82A69006C8ACE /* BaseMessageView.swift in Sources */,
+				CE3F37C51FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */,
 				CE00E4101FC82A69006C8ACE /* ModelProtocol.swift in Sources */,
 				CE70F41B1FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
 				CE00E4111FC82A69006C8ACE /* Product.swift in Sources */,

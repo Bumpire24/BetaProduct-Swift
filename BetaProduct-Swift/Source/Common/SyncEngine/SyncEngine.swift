@@ -20,7 +20,7 @@ class SyncEngine: NSObject {
     - Parameters:
         - block: Callback closure. see `CompletionBlockTypes.swift`
      */
-    func startInitialSync(_ block : @escaping CompletionBlock<[Any]>){
+    func startInitialSync(_ block : @escaping CompletionBlock<[Any]>) {
 //        storeWC.GET(BetaProduct.kBetaProductWSGetProductList, parameters: nil) { success, error, results in
 //            if success {
 //                let downloadGroup = DispatchGroup()

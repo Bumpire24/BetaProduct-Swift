@@ -45,4 +45,13 @@ protocol StoreWebClientProtocol {
      - block: callback closure. see `CompletionBlockTypes.swift`
      */
     func DELETE(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlock<[Any]>)
+    
+    /**
+     function for uploading image file
+     - Parameters:
+     - data: image converted to Data
+     - url: target url
+     - block: completion closure for handling responses
+     */
+    func UploadImage(asData data: Data, toURL url: String, WithCompletionBlock block: @escaping CompletionBlock<[Any]>)
 }

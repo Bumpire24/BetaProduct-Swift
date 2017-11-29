@@ -80,6 +80,9 @@ struct BetaProduct {
     /// const for Webservice call : Make User.
     static let kBPWSPostUser : String = kBPWS + "posts"
     
+    /// const for Webservice call : Upload Image for User.
+    static let kBPWSPostUserImage : String = kBPWS + "posts"
+    
     /// const for Webservice call : Update User.
     static func kBPWSPutUserWithId(_ id : String) -> String {
         return kBPWS + "posts/" + id
