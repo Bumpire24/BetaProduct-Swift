@@ -16,8 +16,6 @@ class LogInPresenter: NSObject, LogInModuleProtocol, LogInInteractorOutput {
     var interactor : LogInInteractorInput?
     /// variable for wireframe login
     var loginWireframe : LoginWireframe?
-    /// variable for wireframe create account
-    var createAccountWireframe : CreateAccountWireframe?
     
     // MARK: LogInModuleProtocol
     /// implements protocol function. see `LogInModuleProtocol.swift`

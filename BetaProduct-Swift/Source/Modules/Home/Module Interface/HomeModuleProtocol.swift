@@ -12,4 +12,5 @@ protocol HomeModuleProtocol{
     func updateView()
     func hideTabBar()
     func showTabBar()
+    func showSettingsView()
 }

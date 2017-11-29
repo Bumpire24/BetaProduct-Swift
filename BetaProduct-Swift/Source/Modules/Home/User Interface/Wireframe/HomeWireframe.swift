@@ -15,10 +15,13 @@ let qrViewIdentifier = "QRView"
 class HomeWireframe: BaseWireframe {
     var homeView : HomeView?
     var rootWireFrame : RootWireframe?
+    var settingsWireFrame : SettingsWireframe?
+    var presenter : HomeModulePresenter?
     
     func presentHomeViewInterfaceFromWindow(Window window : UIWindow) {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: homeViewIdentifier) as! HomeView
         homeView = viewcontroller
+        viewcontroller.eventHandler = presenter
         assembleViewControllersForHomeView()
         rootWireFrame?.showRootViewController(rootViewController: viewcontroller, inWindow: window)
     }
@@ -26,6 +29,7 @@ class HomeWireframe: BaseWireframe {
     func presentHomeViewFromViewController(_ viewController: UIViewController) {
         let newViewController = homeViewController()
         homeView = newViewController
+        newViewController.eventHandler = presenter
         assembleViewControllersForHomeView()
         viewController.navigationController?.pushViewController(newViewController, animated: true)
     }
@@ -58,5 +62,9 @@ class HomeWireframe: BaseWireframe {
     func createQRView() -> QRView {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: qrViewIdentifier) as! QRView
         return viewcontroller
+    }
+    
+    func presentSettingsView() {
+        settingsWireFrame?.presentSettingsViewFromViewController(homeView!)
     }
 }
