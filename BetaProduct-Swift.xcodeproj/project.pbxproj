@@ -445,6 +445,13 @@
 		CECA7B921FCBA9ED00489C78 /* CreateAccountPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7B911FCBA9ED00489C78 /* CreateAccountPresenterTest.swift */; };
 		CED47D901FBE894B00285F70 /* BaseMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED47D8F1FBE894B00285F70 /* BaseMessageView.swift */; };
 		CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */; };
+		CED78F701FCE5CED00AE164D /* HomeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */; };
+		CED78F711FCE65BA00AE164D /* HomeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */; };
+		CED78F721FCE65BB00AE164D /* HomeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */; };
+		CED78F731FCE65BC00AE164D /* HomeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */; };
+		CED78F741FCE65BD00AE164D /* HomeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */; };
+		CED78F751FCE65BE00AE164D /* HomeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */; };
+		CED78F761FCE65BF00AE164D /* HomeModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */; };
 		CED8A1EE1FCD760100293AFF /* SettingsPresenterHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F4401FCD757000AD67A1 /* SettingsPresenterHome.swift */; };
 		CED8A1EF1FCD760200293AFF /* SettingsPresenterHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F4401FCD757000AD67A1 /* SettingsPresenterHome.swift */; };
 		CED8A1F01FCD760300293AFF /* SettingsPresenterHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F4401FCD757000AD67A1 /* SettingsPresenterHome.swift */; };
@@ -675,6 +682,7 @@
 		CED666811FBE88D100B2245D /* Pods_BetaProduct_Swift_DEV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BetaProduct_Swift_DEV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED666821FBE88D100B2245D /* Pods_BetaProduct_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BetaProduct_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountInteractor.swift; sourceTree = "<group>"; };
+		CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModulePresenter.swift; sourceTree = "<group>"; };
 		CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedUser.swift; sourceTree = "<group>"; };
 		CEE8ABB01FB181110052DC3A /* BetaProduct-Swift DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE8ABB31FB181110052DC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1240,6 +1248,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		CED78F6E1FCE5CB600AE164D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		CEE8ABA71FB181110052DC3A = {
 			isa = PBXGroup;
 			children = (
@@ -1453,7 +1469,7 @@
 			children = (
 				CEE8AC051FB1A46D0052DC3A /* View */,
 				CEE8AC041FB1A4660052DC3A /* Wireframe */,
-				CEE8AC031FB1A4600052DC3A /* Presenter */,
+				CED78F6E1FCE5CB600AE164D /* Presenter */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -1471,13 +1487,6 @@
 				CEE8AC061FB1A48C0052DC3A /* HomeModuleProtocol.swift */,
 			);
 			path = "Module Interface";
-			sourceTree = "<group>";
-		};
-		CEE8AC031FB1A4600052DC3A /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		CEE8AC041FB1A4660052DC3A /* Wireframe */ = {
@@ -2181,6 +2190,7 @@
 				CE3B61751FC6B23E00B24933 /* Product.swift in Sources */,
 				CE3B61761FC6B23E00B24933 /* User.swift in Sources */,
 				CE001E871FCCEB720051B11C /* SettingsView.swift in Sources */,
+				CED78F761FCE65BF00AE164D /* HomeModulePresenter.swift in Sources */,
 				CE3B61771FC6B23E00B24933 /* BaseEntity.swift in Sources */,
 				CEF8198A1FC7E63D00B12AFB /* CreateAccountManager.swift in Sources */,
 				CE70F41D1FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
@@ -2281,6 +2291,7 @@
 				CEED02D91FC6BD3F002C7A5A /* CreateAccountInteractor.swift in Sources */,
 				CEED02DB1FC6BD3F002C7A5A /* UserCredentialsItem.swift in Sources */,
 				CEED02DC1FC6BD3F002C7A5A /* CreateAccountPresenter.swift in Sources */,
+				CED78F711FCE65BA00AE164D /* HomeModulePresenter.swift in Sources */,
 				CEED02DD1FC6BD3F002C7A5A /* CreateAccountWireframe.swift in Sources */,
 				CEED02DE1FC6BD3F002C7A5A /* CreateAccountViewProtocol.swift in Sources */,
 				CEED02DF1FC6BD3F002C7A5A /* CreateAccountView.swift in Sources */,
@@ -2336,6 +2347,7 @@
 				CE433CD01FBD1AF300E530C0 /* LoginOptionsPresenter.swift in Sources */,
 				CE433CD11FBD1AF300E530C0 /* Button+Theme.swift in Sources */,
 				CE433CD21FBD1AF300E530C0 /* Product.swift in Sources */,
+				CED78F721FCE65BB00AE164D /* HomeModulePresenter.swift in Sources */,
 				CED8A1EF1FCD760200293AFF /* SettingsPresenterHome.swift in Sources */,
 				CE433CD31FBD1AF300E530C0 /* LogInInteractor.swift in Sources */,
 				CE70F44D1FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
@@ -2401,6 +2413,7 @@
 				CE433D0D1FBD1AF600E530C0 /* LoginOptionsPresenter.swift in Sources */,
 				CE433D0E1FBD1AF600E530C0 /* Button+Theme.swift in Sources */,
 				CE433D0F1FBD1AF600E530C0 /* Product.swift in Sources */,
+				CED78F731FCE65BC00AE164D /* HomeModulePresenter.swift in Sources */,
 				CED8A1F01FCD760300293AFF /* SettingsPresenterHome.swift in Sources */,
 				CE433D101FBD1AF600E530C0 /* LogInInteractor.swift in Sources */,
 				CE70F44E1FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
@@ -2474,6 +2487,7 @@
 				CE001EA11FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE001E811FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */,
+				CED78F701FCE5CED00AE164D /* HomeModulePresenter.swift in Sources */,
 				CEE8AC0D1FB1A51E0052DC3A /* BaseWireframe.swift in Sources */,
 				CE001E891FCCEB820051B11C /* SettingsWireframe.swift in Sources */,
 				CEE8AC111FB1A6EE0052DC3A /* RootWireframe.swift in Sources */,
@@ -2573,6 +2587,7 @@
 				CE00E3D61FC82A2E006C8ACE /* BaseEntity.swift in Sources */,
 				CE00E3D71FC82A2E006C8ACE /* ManagedProduct.swift in Sources */,
 				CE00E3D81FC82A2E006C8ACE /* ManagedUser.swift in Sources */,
+				CED78F751FCE65BE00AE164D /* HomeModulePresenter.swift in Sources */,
 				CE00E3D91FC82A2E006C8ACE /* StoreProtocol.swift in Sources */,
 				CE00E3DA1FC82A2E006C8ACE /* StoreCoreData.swift in Sources */,
 				CE00E3DB1FC82A2E006C8ACE /* CreateAccountModuleProtocol.swift in Sources */,
@@ -2663,6 +2678,7 @@
 				CE00E41A1FC82A69006C8ACE /* CreateAccountInteractorIO.swift in Sources */,
 				CE00E41B1FC82A69006C8ACE /* CreateAccountInteractor.swift in Sources */,
 				CE00E41C1FC82A69006C8ACE /* UserCredentialsItem.swift in Sources */,
+				CED78F741FCE65BD00AE164D /* HomeModulePresenter.swift in Sources */,
 				CE00E4421FC82BBB006C8ACE /* BetaProduct_SwiftUITests.swift in Sources */,
 				CE00E41D1FC82A69006C8ACE /* CreateAccountPresenter.swift in Sources */,
 				CE00E41E1FC82A69006C8ACE /* CreateAccountWireframe.swift in Sources */,
