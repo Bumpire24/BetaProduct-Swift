@@ -13,6 +13,10 @@ enum SyncStatus : Int {
     Created,
     Updated,
     Deleted
+    
+    func toInt16() -> Int16 {
+        return Int16(self.rawValue)
+    }
 }
 
 enum Status : Int {

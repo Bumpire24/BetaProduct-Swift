@@ -33,9 +33,9 @@ struct User : ModelProtocol {
     /// variable for mobile/phone
     var mobile: String = ""
     /// variable for shipping address
-    var addressShipping : String?
+    var addressShipping : String = ""
     /// variable for profile image url
-    var profileImageURL : String?
+    var profileImageURL : String = ""
 }
 
 /// extension for model User
@@ -59,10 +59,12 @@ extension User {
         - name: Full Name input
         - mobile: mobile/phone input
      */
-    init(emailAddress email: String, password pass: String, fullName name: String, mobileNumber mobile: String) {
+    init(emailAddress email: String, password pass: String, fullName name: String, mobileNumber mobile: String, addressShipping addShip: String, imageURLProfile: String) {
         self.init(emailAddress: email, password: pass)
         self.fullname = name
         self.mobile = mobile
+        self.addressShipping = addShip
+        self.profileImageURL = imageURLProfile
     }
     
     /**
@@ -76,5 +78,7 @@ extension User {
         self.password = wsConverter.stringWithKey("password")
         self.fullname = wsConverter.stringWithKey("fullname")
         self.mobile = wsConverter.stringWithKey("mobile")
+        self.addressShipping = wsConverter.stringWithKey("addressShipping")
+        self.profileImageURL = wsConverter.stringWithKey("profileImageURL")
     }
 }
