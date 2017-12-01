@@ -368,6 +368,8 @@
 		CE433D391FBD1AF600E530C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABB71FB181110052DC3A /* Main.storyboard */; };
 		CE4B34201FB57ABB00CB5905 /* GOGOIA-Deco.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341E1FB57AB900CB5905 /* GOGOIA-Deco.otf */; };
 		CE4B34211FB57ABB00CB5905 /* GOGOIA-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */; };
+		CE50D3711FD11C3F00181C5D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF71F3F1FC42FA2000CBEAA /* Session.swift */; };
+		CE50D3721FD11C4000181C5D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF71F3F1FC42FA2000CBEAA /* Session.swift */; };
 		CE529BF11FCCF11000E6C134 /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
 		CE529BF21FCCF11100E6C134 /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
 		CE529BF31FCCF11100E6C134 /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
@@ -2393,6 +2395,7 @@
 				CE001E831FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CE433CE31FBD1AF300E530C0 /* UserDisplayItem.swift in Sources */,
 				CE433CE41FBD1AF300E530C0 /* BetaProductError.swift in Sources */,
+				CE50D3711FD11C3F00181C5D /* Session.swift in Sources */,
 				CE433CE51FBD1AF300E530C0 /* User.swift in Sources */,
 				CED8A1F51FCD790300293AFF /* SettingsModuleProtocols.swift in Sources */,
 				CE433CE61FBD1AF300E530C0 /* LoginOptionsView.swift in Sources */,
@@ -2460,6 +2463,7 @@
 				CE001E841FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CE433D201FBD1AF600E530C0 /* UserDisplayItem.swift in Sources */,
 				CE433D211FBD1AF600E530C0 /* BetaProductError.swift in Sources */,
+				CE50D3721FD11C4000181C5D /* Session.swift in Sources */,
 				CE433D221FBD1AF600E530C0 /* User.swift in Sources */,
 				CED8A1F61FCD790300293AFF /* SettingsModuleProtocols.swift in Sources */,
 				CE433D231FBD1AF600E530C0 /* LoginOptionsView.swift in Sources */,

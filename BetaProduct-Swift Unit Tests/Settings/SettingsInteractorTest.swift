@@ -10,7 +10,7 @@ import XCTest
 @testable import BetaProduct_Swift_DEV
 
 /// test interactor class for module `Settings`
-class SettingsInteractorTest: XCTestCase, SettingsPhotoUploadInteractorOutput, SettingsHomeInteractorOuput, SettingsProfileInteractorOutput, SettingsEmailInteractorOutput, SettingsPasswordInteractorOutput {
+class SettingsInteractorTest: XCTestCase, SettingsHomeInteractorOuput, SettingsProfileInteractorOutput, SettingsEmailInteractorOutput, SettingsPasswordInteractorOutput {
     /// variable for result. shared variable for class and delegate
     var result : (isSuccess : Bool, message : String) = (isSuccess : false, message : "")
     /// variable for interactor
@@ -28,6 +28,7 @@ class SettingsInteractorTest: XCTestCase, SettingsPhotoUploadInteractorOutput, S
         
     }
     
+    // MARK: SettingsHomeInteractorOuput, SettingsProfileInteractorOutput, SettingsEmailInteractorOutput, SettingsPasswordInteractorOutput
     func logOutReady() {
         
     }
@@ -40,7 +41,7 @@ class SettingsInteractorTest: XCTestCase, SettingsPhotoUploadInteractorOutput, S
         
     }
     
-    func settingsUpdationComplete<T>(wasSuccessful isSuccess: Bool, withMessage message: String, withNewDisplayItem displayItem: T) where T : SettingsDisplayItemProtocol {
+    func settingsUpdationComplete<T>(wasSuccessful isSuccess: Bool, withMessage message: String, withNewDisplayItem displayItem: T?) where T : SettingsDisplayItemProtocol {
         
     }
 }

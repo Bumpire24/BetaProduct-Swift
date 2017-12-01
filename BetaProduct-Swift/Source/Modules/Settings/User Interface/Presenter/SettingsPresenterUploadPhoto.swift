@@ -9,7 +9,7 @@
 import UIKit
 
 /// presenter class for module `Settings`
-class SettingsPresenterUploadPhoto: NSObject, UIImagePickerControllerDelegate, SettingsPhotoUploadInteractorOutput, SettingsPhotoUploadModuleProtocol {
+class SettingsPresenterUploadPhoto: NSObject, UIImagePickerControllerDelegate, SettingsPhotoUploadModuleProtocol {
     /// variable for interactor
     var interactor: SettingsInteractorInput?
     /// variable for wireframe
@@ -23,14 +23,8 @@ class SettingsPresenterUploadPhoto: NSObject, UIImagePickerControllerDelegate, S
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        interactor?.validateAndUpdateSettings(usingImage: image)
-    }
-    
-    // MARK: SettingsPhotoUploadInteractorOutput
-    /// implements protocol. see SettingsInteractorIO.swift
-    func settingsUpdationComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
-        
+        // call wireframe to go back to profile and load image selected
+//        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
     }
     
     // MARK: SettingsPhotoUploadModuleProtocol
