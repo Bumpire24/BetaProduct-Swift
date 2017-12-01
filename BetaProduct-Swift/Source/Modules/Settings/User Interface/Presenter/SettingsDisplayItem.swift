@@ -27,13 +27,17 @@ struct SettingsProfileDisplayItem : SettingsDisplayItemProtocol, Equatable {
     }
 }
 
-struct SettingsEmailDisplayItem : SettingsDisplayItemProtocol {
+struct SettingsEmailDisplayItem : SettingsDisplayItemProtocol, Equatable {
     /// variable for old email address
     var emailAddOld: String?
     /// variable for new email address
     var emailAddNew: String?
     /// variable for confirm new email address
     var emailAddNewConfirm: String?
+    
+    static func ==(lhs: SettingsEmailDisplayItem, rhs: SettingsEmailDisplayItem) -> Bool {
+        return lhs.emailAddOld == rhs.emailAddOld && lhs.emailAddNew == rhs.emailAddNew && lhs.emailAddNewConfirm == rhs.emailAddNewConfirm
+    }
 }
 
 struct SettingsPasswordDisplayItem : SettingsDisplayItemProtocol {
@@ -43,6 +47,10 @@ struct SettingsPasswordDisplayItem : SettingsDisplayItemProtocol {
     var passwordNew: String?
     /// variable for confirm new password
     var passwordNewConfirm: String?
+    
+    static func ==(lhs: SettingsPasswordDisplayItem, rhs: SettingsPasswordDisplayItem) -> Bool {
+        return lhs.passwordOld == rhs.passwordOld && lhs.passwordNew == rhs.passwordNew && lhs.passwordNewConfirm == rhs.passwordNewConfirm
+    }
 }
 
 

@@ -101,7 +101,7 @@ class LoginInteractorTest: XCTestCase, LogInInteractorOutput {
         }
         
         class MockManagerLogin : LogInManager {
-            override func retrieveUser(withEmail email: String, andWithPassword password: String, withCompletionBlock block: @escaping (Response<User>) -> Void) {
+            override func retrieveUser(withEmail email : String, withCompletionBlock block : @escaping CompletionBlock<User>) {
                 block(.success(User.init(emailAddress: "asd@gmail.com", password: "asd")))
             }
         }

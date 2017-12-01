@@ -35,7 +35,7 @@ class SettingsPresenterEmail: NSObject, SettingsUpdateModuleProtocol, SettingsEm
     
     // MARK: SettingsEmailInteractorOutput
     /// implements protocol. see `SettingsInteractorIO.swift`
-    func settingsUpdationComplete<T>(wasSuccessful isSuccess: Bool, withMessage message: String, withNewDisplayItem displayItem: T) where T : SettingsDisplayItemProtocol {
+    func settingsUpdationComplete<T>(wasSuccessful isSuccess: Bool, withMessage message: String, withNewDisplayItem displayItem: T?) where T : SettingsDisplayItemProtocol {
         
     }
 }
