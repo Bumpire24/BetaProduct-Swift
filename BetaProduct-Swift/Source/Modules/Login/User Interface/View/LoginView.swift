@@ -19,7 +19,7 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
     @IBOutlet weak var emailField: BetaProductEntryField!
     @IBOutlet weak var passwordField: BetaProductEntryField!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
-    var eventHandler : LogInPresenter?
+    var eventHandler : LogInModuleProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()

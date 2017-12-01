@@ -17,7 +17,7 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
     @IBOutlet weak var createAccountHeader: BetaProductHeaderLabel!
     @IBOutlet weak var createAccountInstructions: BetaProductInstructionLabel!
     
-    var eventHandler : CreateAccountPresenter?
+    var eventHandler : CreateAccountModuleProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()

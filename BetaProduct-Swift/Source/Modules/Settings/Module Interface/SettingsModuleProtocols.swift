@@ -29,3 +29,11 @@ protocol SettingsUpdateModuleProtocol {
     /// fetches view model
     func updateView()
 }
+
+/// module interface for module `Settings`
+protocol SettingsPhotoUploadModuleProtocol{
+    /// opens Camera
+    func proceedToCamera()
+    /// opens Photo Library
+    func proceedToPhotoLibrary()
+}

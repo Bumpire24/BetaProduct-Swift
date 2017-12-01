@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// interactor input protocol for module `Settings`
 protocol SettingsInteractorInput {
@@ -16,6 +17,8 @@ protocol SettingsInteractorInput {
     func logOut()
     /// validate and update entry with the given view model
     func validateAndUpdateSettings<T: SettingsDisplayItemProtocol>(usingDisplayitem item: T)
+    /// validate and update entry with the given image data
+    func validateAndUpdateSettings(usingImage image: UIImage)
 }
 
 /// base interactor output protocol for module `Settings`.
@@ -44,4 +47,10 @@ protocol SettingsEmailInteractorOutput: SettingsInteractorOutputUpdation {
 
 /// interactor output protocol for module `Settings`
 protocol SettingsPasswordInteractorOutput: SettingsInteractorOutputUpdation {
+}
+
+/// interactor output protocol for module `Settings`
+protocol SettingsPhotoUploadInteractorOutput {
+    /// delegated function callback for settings updation
+    func settingsUpdationComplete(wasSuccessful isSuccess: Bool, withMessage message: String)
 }

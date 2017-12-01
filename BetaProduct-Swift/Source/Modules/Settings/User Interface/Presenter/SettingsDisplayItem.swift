@@ -6,18 +6,13 @@
 //  Copyright © 2017 User. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol SettingsDisplayItemProtocol: BaseDisplayItem {
     
 }
 
-struct SettingsHomeDisplayItem : SettingsDisplayItemProtocol {
-    /// implements protocol SettingsDisplayItemProtocol
-    var profileImageURL: String?
-}
-
-struct SettingsProfileDisplayItem : SettingsDisplayItemProtocol {
+struct SettingsProfileDisplayItem : SettingsDisplayItemProtocol, Equatable {
     /// variable for name
     var name : String?
     /// variable for mobile
@@ -25,7 +20,11 @@ struct SettingsProfileDisplayItem : SettingsDisplayItemProtocol {
     /// variable for shipping address
     var addressShipping : String?
     /// variable for profile image url
-    var profileImageURL : String?
+    var profileImage : (url: String?, image: UIImage?)
+    
+    static func ==(lhs: SettingsProfileDisplayItem, rhs: SettingsProfileDisplayItem) -> Bool {
+        return lhs.name == rhs.name && lhs.mobile == rhs.mobile && lhs.addressShipping == rhs.addressShipping && lhs.profileImage.url == rhs.profileImage.url && lhs.profileImage.image == rhs.profileImage.image
+    }
 }
 
 struct SettingsEmailDisplayItem : SettingsDisplayItemProtocol {
