@@ -102,61 +102,61 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
     }
     
     // calls Webservice and updates local data
-    private func callWSAndUpdateUser(updateDisplayItem item: SettingsProfileDisplayItem, processedPhotoUpload photoUploadWasGood: Bool?) {
-        var user = session?.getUserSessionAsUser()
-        user?.fullname = item.name!
-        user?.mobile = item.mobile!
-        user?.addressShipping = item.addressShipping!
-        
-        var photoGood = false
-        var message = ""
-        // Check if there was a photo upload
-        if let wasSuccessful = photoUploadWasGood {
-            photoGood = wasSuccessful || photoGood
-            if wasSuccessful {
-                message = "Photo Upload was successful!"
-            } else {
-                message = "Photo Upload failed"
-            }
-        }
-        
-        self.webservice?.PUT(BetaProduct.kBPWSPutUserWithId("1"), parameters: user!.allProperties(), block: { response in
-            switch response {
-            case .success(let value):
-                self.manager?.updateUser(user: user!, withCompletionBlock: { response in
-                    switch response {
-                    case .success(_):
-                        // FIXME: ADD SESSION IN PHOTO AS WELL! and UPDATE CORE!
-                        // Set new Session
-                        if let list = value, let targetUser = list.first, let converted = targetUser as? [String:Any] {
-                            let updatedUser = User.init(dictionary: converted)
-                            self.session?.setUserSessionByUser(updatedUser)
-                        } else {
-                            // failed to convert User
-                            DDLogError("Error  description : User conversion failure. reason : Failed to convert Dictionary to Session. suggestion : Debug function \(#function)")
-                        }
-                        self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || true,
-                                                                     withMessage: "Profile Update was successful! " + message,
-                                                                     withNewDisplayItem: item)
-                    case .failure(let error):
-                        self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || false,
-                                                                     withMessage: message + " " + (error?.localizedDescription)!,
-                                                                     withNewDisplayItem: item)
-                    }
-                })
-            case .failure(let error):
-                if photoUploadWasGood != nil {
-                    self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || false,
-                                                                 withMessage: message + " " + (error?.localizedDescription)!,
-                                                                 withNewDisplayItem: item)
-                } else {
-                    self.outputProfile?.settingsUpdationComplete(wasSuccessful: false,
-                                                                 withMessage: (error?.localizedDescription)!,
-                                                                 withNewDisplayItem: item)
-                }
-            }
-        })
-    }
+//    private func callWSAndUpdateUser(updateDisplayItem item: SettingsProfileDisplayItem, processedPhotoUpload photoUploadWasGood: Bool?) {
+//        var user = session?.getUserSessionAsUser()
+//        user?.fullname = item.name!
+//        user?.mobile = item.mobile!
+//        user?.addressShipping = item.addressShipping!
+//
+//        var photoGood = false
+//        var message = ""
+//        // Check if there was a photo upload
+//        if let wasSuccessful = photoUploadWasGood {
+//            photoGood = wasSuccessful || photoGood
+//            if wasSuccessful {
+//                message = "Photo Upload was successful!"
+//            } else {
+//                message = "Photo Upload failed"
+//            }
+//        }
+//
+//        self.webservice?.PUT(BetaProduct.kBPWSPutUserWithId("1"), parameters: user!.allProperties(), block: { response in
+//            switch response {
+//            case .success(let value):
+//                self.manager?.updateUser(user: user!, withCompletionBlock: { response in
+//                    switch response {
+//                    case .success(_):
+//                        // FIXME: ADD SESSION IN PHOTO AS WELL! and UPDATE CORE!
+//                        // Set new Session
+//                        if let list = value, let targetUser = list.first, let converted = targetUser as? [String:Any] {
+//                            let updatedUser = User.init(dictionary: converted)
+//                            self.session?.setUserSessionByUser(updatedUser)
+//                        } else {
+//                            // failed to convert User
+//                            DDLogError("Error  description : User conversion failure. reason : Failed to convert Dictionary to Session. suggestion : Debug function \(#function)")
+//                        }
+//                        self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || true,
+//                                                                     withMessage: "Profile Update was successful! " + message,
+//                                                                     withNewDisplayItem: item)
+//                    case .failure(let error):
+//                        self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || false,
+//                                                                     withMessage: message + " " + (error?.localizedDescription)!,
+//                                                                     withNewDisplayItem: item)
+//                    }
+//                })
+//            case .failure(let error):
+//                if photoUploadWasGood != nil {
+//                    self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || false,
+//                                                                 withMessage: message + " " + (error?.localizedDescription)!,
+//                                                                 withNewDisplayItem: item)
+//                } else {
+//                    self.outputProfile?.settingsUpdationComplete(wasSuccessful: false,
+//                                                                 withMessage: (error?.localizedDescription)!,
+//                                                                 withNewDisplayItem: item)
+//                }
+//            }
+//        })
+//    }
     
     /// creates a SettingsProfileDisplayItem from User Session
     private func makeSettingsProfileDisplayItemFromSession() ->  SettingsProfileDisplayItem{
@@ -255,29 +255,83 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
                 return
             }
             
+            // start transactions here
+            let downloadGroup = DispatchGroup()
             let processPhoto = item.profileImage.image != nil
             let processProfile = item.name != itemFromSession.name || item.addressShipping != itemFromSession.addressShipping || item.mobile != itemFromSession.mobile
+            var processPhotoResult: String?
+            var processProfileResult: [Any?]?
+            var processPhotoMessage = ""
+            var processProfileMessage = ""
+            var processPhotoGood = false
+            var processProfileGood = false
+            
+            var user = session?.getUserSessionAsUser()
+            user?.fullname = item.name!
+            user?.mobile = item.mobile!
+            user?.addressShipping = item.addressShipping!
             
             if processPhoto {
+                downloadGroup.enter()
                 webservice?.UploadImage(asData: UIImagePNGRepresentation(item.profileImage.image!)!, toURL: BetaProduct.kBPWSPostUserImage, WithCompletionBlock: { response in
-                    var photoProcessSuccess = false
-                    var itemProfile = item
-                    if response.isSuccess {
-                        photoProcessSuccess = true
+                    switch response {
+                    case .success(_):
                         // tempo image
-                        itemProfile.profileImage.url = "http://placehold.it/600/92c952"
+                        processPhotoResult = "http://placehold.it/600/92c952"
+                        processPhotoMessage = "Photo Upload successful!"
+                        processPhotoGood = true
+                    case .failure(let error):
+                        processPhotoMessage = (error?.localizedDescription)!
                     }
-                    if processProfile {
-                        self.callWSAndUpdateUser(updateDisplayItem: itemProfile, processedPhotoUpload: photoProcessSuccess)
-                    } else {
-                        self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoProcessSuccess, withMessage: photoProcessSuccess ? "Photo Upload was successful!" : "Photo Upload failed", withNewDisplayItem: itemProfile)
-                    }
+                    downloadGroup.leave()
                 })
-            } else {
-                if processProfile {
-                    self.callWSAndUpdateUser(updateDisplayItem: item, processedPhotoUpload: nil)
-                }
             }
+            
+            if processProfile {
+                downloadGroup.enter()
+                self.webservice?.PUT(BetaProduct.kBPWSPutUserWithId("1"), parameters: user!.allProperties(), block: { response in
+                    switch response {
+                    case .success(let value):
+                        processProfileResult = value
+                        processProfileMessage = "Profile Update successful!"
+                        processProfileGood = true
+                    case .failure(let error):
+                        processProfileMessage = (error?.localizedDescription)!
+                    }
+                    downloadGroup.leave()
+                })
+            }
+            
+            // finished all queues
+            downloadGroup.notify(queue: .main, execute:{
+                if processPhotoGood || processProfileGood {
+                    // if either transact is good conduct updation in core and sesison
+                    var itemUpdated = item
+                    if processPhotoGood {
+                        itemUpdated.profileImage.url = processPhotoResult
+                    }
+                    // call manager for saving
+                    self.manager?.updateUser(user: user!, withCompletionBlock: { response in
+                        switch response {
+                        case .success(_):
+                            self.outputProfile?.settingsUpdationComplete(wasSuccessful: true, withMessage: processProfileMessage + " " + processPhotoMessage, withNewDisplayItem: itemUpdated)
+                            // update session
+                            if let list = processProfileResult, let targetUser = list.first, let converted = targetUser as? [String:Any] {
+                                let updatedUser = User.init(dictionary: converted)
+                                self.session?.setUserSessionByUser(updatedUser)
+                            } else {
+                                // failed to convert User
+                                DDLogError("Error  description : User conversion failure. reason : Failed to convert Dictionary to Session. suggestion : Debug function \(#function)")
+                                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Profile Update Failed", withNewDisplayItem: item)
+                            }
+                        case .failure(_):
+                            self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Profile Update Failed", withNewDisplayItem: item)
+                        }
+                    })
+                } else {
+                    self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Profile Update Failed", withNewDisplayItem: item)
+                }
+            })
         }
     }
     

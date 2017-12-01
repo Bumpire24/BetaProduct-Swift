@@ -12,7 +12,7 @@ import XCTest
 /// test interactor class for module `Settings`
 class SettingsInteractorTest: XCTestCase, SettingsHomeInteractorOuput, SettingsProfileInteractorOutput, SettingsEmailInteractorOutput, SettingsPasswordInteractorOutput {
     /// variable for result. shared variable for class and delegate
-    var result : (isSuccess : Bool, message : String, displayItem : SettingsDisplayItemProtocol?) = (false, "", nil)
+    var result: (isSuccess : Bool, message : String, displayItem : SettingsProfileDisplayItem) = (false, "", SettingsProfileDisplayItem())
     /// variable for interactor
     var interactor : SettingsInteractor?
     /// variable for expectation
@@ -48,49 +48,49 @@ class SettingsInteractorTest: XCTestCase, SettingsHomeInteractorOuput, SettingsP
     func testNameIsNil() {
         let item = SettingsProfileDisplayItem.init(name: nil, mobile: "123456789", addressShipping: "address", profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Name Incorrect!" && result.displayItem == nil, "testNameIsNil failed")
+        XCTAssert(result.isSuccess == false && result.message == "Name Incorrect!", "testNameIsNil failed")
     }
     
     /// tests if input name is empty
     func testNameIsEmpty() {
         let item = SettingsProfileDisplayItem.init(name: "", mobile: "123456789", addressShipping: "address", profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Name Incorrect!" && result.displayItem == nil, "testNameIsEmpty failed")
+        XCTAssert(result.isSuccess == false && result.message == "Name Incorrect!", "testNameIsEmpty failed")
     }
     
     /// tests if input mobile is null
     func testMobileIsNil() {
         let item = SettingsProfileDisplayItem.init(name: "Sample", mobile: nil, addressShipping: "address", profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Mobile Incorrect!" && result.displayItem == nil, "testMobileIsNil failed")
+        XCTAssert(result.isSuccess == false && result.message == "Mobile Incorrect!", "testMobileIsNil failed")
     }
     
     /// tests if input mobile is empty
     func testMobileIsEmpty() {
         let item = SettingsProfileDisplayItem.init(name: "Sample", mobile: "", addressShipping: "address", profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Mobile Incorrect!" && result.displayItem == nil, "testMobileIsEmpty failed")
+        XCTAssert(result.isSuccess == false && result.message == "Mobile Incorrect!", "testMobileIsEmpty failed")
     }
     
     /// tests if mobile is a valid phone number
     func testMobileIsValid() {
         let item = SettingsProfileDisplayItem.init(name: "Sample", mobile: "sample", addressShipping: "address", profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Mobile Incorrect!" && result.displayItem == nil, "testMobileIsValid failed")
+        XCTAssert(result.isSuccess == false && result.message == "Mobile Incorrect!", "testMobileIsValid failed")
     }
     
     /// tests if input address is null
     func testAddIsNil() {
         let item = SettingsProfileDisplayItem.init(name: "Sample", mobile: "123456789", addressShipping: nil, profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Address Incorrect!" && result.displayItem == nil, "testAddIsNil failed")
+        XCTAssert(result.isSuccess == false && result.message == "Address Incorrect!", "testAddIsNil failed")
     }
     
     /// tests if input addess is empty
     func testAddIsEmpty() {
         let item = SettingsProfileDisplayItem.init(name: "Sample", mobile: "123456789", addressShipping: "", profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Address Incorrect!" && result.displayItem == nil, "testAddIsEmpty failed")
+        XCTAssert(result.isSuccess == false && result.message == "Address Incorrect!", "testAddIsEmpty failed")
     }
     
     /// tests if there was no change made in the item
@@ -109,11 +109,11 @@ class SettingsInteractorTest: XCTestCase, SettingsHomeInteractorOuput, SettingsP
         interactor?.session = MockSession()
         let item = SettingsProfileDisplayItem.init(name: "sample", mobile: "123456789", addressShipping: "sample", profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "No changes found for Profile!" && result.displayItem == nil, "testIfEntryhasnoChanges failed")
+        XCTAssert(result.isSuccess == false && result.message == "No changes found for Profile!", "testIfEntryhasnoChanges failed")
     }
     
     /// tests if photo upload and profile update fails in webservice
-    func testPhotoUploadFailAndProfileUpdateFail() {
+    func testProfileUpdateFailAndPhotoUploadFail() {
         class MockSession: Session {
             override init() {
                 super.init()
@@ -123,6 +123,24 @@ class SettingsInteractorTest: XCTestCase, SettingsHomeInteractorOuput, SettingsP
                 self.user?.mobile = "123456789"
                 self.user?.imageURLProfile = "url"
             }
+        }
+        
+        class MockWebservice : StoreWebClient {
+            override func PUT(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
+                block(.failure(BPError.init(domain: "", code: .WebService, description: "Update Failed!", reason: "Update Failed!", suggestion: "Update Failed!")))
+            }
+            
+            override func UploadImage(asData data: Data, toURL url: String, WithCompletionBlock block: @escaping (Response<[Any]>) -> Void) {
+                block(.failure(BPError.init(domain: "", code: .WebService, description: "Update Failed!", reason: "Update Failed!", suggestion: "Update Failed!")))
+            }
+        }
+        
+        let item = SettingsProfileDisplayItem.init(name: "samples", mobile: "123456789", addressShipping: "sample", profileImage: (url: "url", image: UIImage.init(named: "iDooh")))
+        expectation = expectation(description: "testProfileUpdateFailAndPhotoUploadFail")
+        interactor?.webservice = MockWebservice()
+        interactor?.session = MockSession()
+        interactor?.validateAndUpdateSettings(usingDisplayitem: item)
+        self.waitForExpectations(timeout: 0.5) { _ in
         }
     }
     
@@ -145,15 +163,16 @@ class SettingsInteractorTest: XCTestCase, SettingsHomeInteractorOuput, SettingsP
             }
         }
         
+        expectation = expectation(description: "testProfileUpdateFailAndNoPhotoUpload")
         interactor?.session = MockSession()
         interactor?.webservice = MockWebservice()
-        let item = SettingsProfileDisplayItem.init(name: "sample", mobile: "123456789", addressShipping: "samples", profileImage: (url: "url", image: nil))
+        let item = SettingsProfileDisplayItem.init(name: "samples", mobile: "123456789", addressShipping: "samples", profileImage: (url: "url", image: nil))
         interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Update Failed!" && result.displayItem == nil, "testProfileUpdateFailAndNoPhotoUpload failed")
+        self.waitForExpectations(timeout: 0.5) { _ in
+        }
     }
     
-    /// tests if profile update fails in webservice and photo upload also fails
-    func testProfileUpdateFailAndPhotoUploadFail() {
+    func testProfileUpdateFailAndPhotoUploadSuccess() {
         class MockSession: Session {
             override init() {
                 super.init()
@@ -171,15 +190,11 @@ class SettingsInteractorTest: XCTestCase, SettingsHomeInteractorOuput, SettingsP
             }
             
             override func UploadImage(asData data: Data, toURL url: String, WithCompletionBlock block: @escaping (Response<[Any]>) -> Void) {
-                block(.failure(BPError.init(domain: "", code: .WebService, description: "", reason: "", suggestion: "")))
+                block(.success(nil))
             }
         }
         
-        interactor?.session = MockSession()
-        interactor?.webservice = MockWebservice()
-        let item = SettingsProfileDisplayItem.init(name: "sample", mobile: "123456789", addressShipping: "sample", profileImage: (url: "url", image: UIImage.init(named: "iDooh")))
-        interactor?.validateAndUpdateSettings(usingDisplayitem: item)
-        XCTAssert(result.isSuccess == false && result.message == "Photo Upload failed Update Failed!" && result.displayItem == nil, "testProfileUpdateFailAndNoPhotoUpload failed")
+        //"http://placehold.it/600/92c952"
     }
     
     // MARK: SettingsHomeInteractorOuput, SettingsProfileInteractorOutput, SettingsEmailInteractorOutput, SettingsPasswordInteractorOutput
@@ -199,9 +214,19 @@ class SettingsInteractorTest: XCTestCase, SettingsHomeInteractorOuput, SettingsP
     }
     
     /// protocol implementation. see `SettingsInteractorIO.swift`
-    func settingsUpdationComplete<T>(wasSuccessful isSuccess: Bool, withMessage message: String, withNewDisplayItem displayItem: T?) where T : SettingsDisplayItemProtocol {
+    func settingsUpdationComplete(wasSuccessful isSuccess: Bool, withMessage message: String, withNewDisplayItem displayItem: SettingsProfileDisplayItem) {
         result.isSuccess = isSuccess
         result.message = message
         result.displayItem = displayItem
+        if expectation != nil {
+            if expectation?.description == "testProfileUpdateFailAndPhotoUploadFail" {
+                XCTAssert(result.isSuccess == false && result.message == "Profile Update Failed", "testPhotoUploadFailAndProfileUpdateFail failed")
+            }
+            
+            if expectation?.description == "testProfileUpdateFailAndNoPhotoUpload" {
+                XCTAssert(result.isSuccess == false && result.message == "Profile Update Failed", "testProfileUpdateFailAndNoPhotoUpload failed")
+            }
+            expectation?.fulfill()
+        }
     }
 }
