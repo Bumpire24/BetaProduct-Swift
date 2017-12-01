@@ -22,9 +22,7 @@ protocol SettingsInteractorInput {
 /// base interactor output protocol for module `Settings`.
 protocol SettingsInteractorOutputUpdation {
     /// delegated function callback for settings updation
-    func settingsUpdationComplete<T: SettingsDisplayItemProtocol>(wasSuccessful isSuccess: Bool,
-                                                                  withMessage message: String,
-                                                                  withNewDisplayItem displayItem: T?)
+    func settingsUpdationComplete(wasSuccessful isSuccess: Bool, withMessage message: String)
 }
 
 /// interactor output protocol for module `Settings`
@@ -34,9 +32,13 @@ protocol SettingsHomeInteractorOuput {
 }
 
 /// interactor output protocol for module `Settings`
-protocol SettingsProfileInteractorOutput: SettingsInteractorOutputUpdation {
+protocol SettingsProfileInteractorOutput {
     /// delegated function callback for different kinds of display model following SettingsDisplayItemProtocol
     func gotDisplayItem(_ item: SettingsProfileDisplayItem)
+    /// delegated function callback for settings updation
+    func settingsUpdationComplete(wasSuccessful isSuccess: Bool,
+                                  withMessage message: String,
+                                  withNewDisplayItem displayItem: SettingsProfileDisplayItem)
 }
 
 /// interactor output protocol for module `Settings`
