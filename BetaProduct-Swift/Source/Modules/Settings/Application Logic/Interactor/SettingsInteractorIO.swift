@@ -41,8 +41,10 @@ protocol SettingsProfileInteractorOutput: SettingsInteractorOutputUpdation {
 
 /// interactor output protocol for module `Settings`
 protocol SettingsEmailInteractorOutput: SettingsInteractorOutputUpdation {
+
 }
 
 /// interactor output protocol for module `Settings`
 protocol SettingsPasswordInteractorOutput: SettingsInteractorOutputUpdation {
+
 }

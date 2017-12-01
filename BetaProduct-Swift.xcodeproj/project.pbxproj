@@ -370,6 +370,8 @@
 		CE4B34211FB57ABB00CB5905 /* GOGOIA-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */; };
 		CE50D3711FD11C3F00181C5D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF71F3F1FC42FA2000CBEAA /* Session.swift */; };
 		CE50D3721FD11C4000181C5D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF71F3F1FC42FA2000CBEAA /* Session.swift */; };
+		CE50D3731FD13A2300181C5D /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */; };
+		CE50D3741FD13A2400181C5D /* CreateAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */; };
 		CE529BF11FCCF11000E6C134 /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
 		CE529BF21FCCF11100E6C134 /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
 		CE529BF31FCCF11100E6C134 /* BetaProduct_Swift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABBA1FB181110052DC3A /* BetaProduct_Swift.xcdatamodeld */; };
@@ -2408,6 +2410,7 @@
 				CE70F4291FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
 				CE433CEB1FBD1AF300E530C0 /* StoreCoreData.swift in Sources */,
 				CE70F4311FCD528F00AD67A1 /* SettingsPresenterProfile.swift in Sources */,
+				CE50D3731FD13A2300181C5D /* CreateAccountInteractor.swift in Sources */,
 				CE433CEC1FBD1AF300E530C0 /* BaseEntity.swift in Sources */,
 				CE433CED1FBD1AF300E530C0 /* ProductManager.swift in Sources */,
 				CE001E931FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
@@ -2476,6 +2479,7 @@
 				CE70F42A1FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
 				CE433D281FBD1AF600E530C0 /* StoreCoreData.swift in Sources */,
 				CE70F4321FCD528F00AD67A1 /* SettingsPresenterProfile.swift in Sources */,
+				CE50D3741FD13A2400181C5D /* CreateAccountInteractor.swift in Sources */,
 				CE433D291FBD1AF600E530C0 /* BaseEntity.swift in Sources */,
 				CE433D2A1FBD1AF600E530C0 /* ProductManager.swift in Sources */,
 				CE001E941FCD13680051B11C /* ProfileSettingsView.swift in Sources */,

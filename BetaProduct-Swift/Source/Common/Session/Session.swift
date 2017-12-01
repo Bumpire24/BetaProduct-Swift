@@ -14,7 +14,7 @@ class Session: NSObject {
     static let sharedSession = Session()
     
     /// struct declaration for UserSession. Will be the data object class for session User
-    private struct UserSession {
+    struct UserSession {
         /// variable for email
         var email : String?
         /// variable for password
@@ -30,7 +30,7 @@ class Session: NSObject {
     }
     
     /// variable for usersession
-    private var user : UserSession?
+    var user : UserSession?
     
     /// clears user Session
     func dismissCurrentUser() {

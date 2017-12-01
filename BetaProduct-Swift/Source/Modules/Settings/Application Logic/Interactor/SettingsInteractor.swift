@@ -97,9 +97,6 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
                         self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || true,
                                                                      withMessage: "Profile Update was successful! " + message,
                                                                      withNewDisplayItem: item as? SettingsProfileDisplayItem)
-                        self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || true,
-                                                                     withMessage: "Profile Update was successful! " + message,
-                                                                     withNewDisplayItem: item as? SettingsProfileDisplayItem)
                     case .failure(let error):
                         self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || false,
                                                                      withMessage: message + " " + (error?.localizedDescription)!,
@@ -107,9 +104,15 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
                     }
                 })
             case .failure(let error):
-                self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || false,
-                                                             withMessage: message + " " + (error?.localizedDescription)!,
-                                                             withNewDisplayItem: item as? SettingsProfileDisplayItem)
+                if photoUploadWasGood != nil {
+                    self.outputProfile?.settingsUpdationComplete(wasSuccessful: photoGood || false,
+                                                                 withMessage: message + " " + (error?.localizedDescription)!,
+                                                                 withNewDisplayItem: item as? SettingsProfileDisplayItem)
+                } else {
+                    self.outputProfile?.settingsUpdationComplete(wasSuccessful: false,
+                                                                 withMessage: (error?.localizedDescription)!,
+                                                                 withNewDisplayItem: nil as SettingsProfileDisplayItem?)
+                }
             }
         })
     }
@@ -192,7 +195,7 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
     private func validateAndUpdateProfile(_ item: SettingsProfileDisplayItem) {
         // check if items are not equal
         if item == makeSettingsProfileDisplayItemFromSession() {
-            self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "No changes found for Profile", withNewDisplayItem: nil as SettingsProfileDisplayItem?)
+            self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "No changes found for Profile!", withNewDisplayItem: nil as SettingsProfileDisplayItem?)
         } else {
             // check if values are nil, empty strings or valid
             guard let name = item.name?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: name) else {
