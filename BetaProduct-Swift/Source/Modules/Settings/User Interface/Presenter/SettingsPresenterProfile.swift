@@ -13,14 +13,16 @@ class SettingsPresenterProfile: NSObject, SettingsUpdateModuleProtocol, Settings
     /// variable for interactor
     var interactor: SettingsInteractorInput?
     /// variable for wireframe
-    var wireframe: String?
+    var profileSettingsWireframe : SettingsProfileWireframe?
     /// variable for view
-    var view: String?
+    var profileSettingsView: ProfileSettingsView?
     
     // MARK: SettingsProfileInteractorOutput
     /// implements protocol. see `SettingsInteractorIO.swift`
     func gotDisplayItem<T>(_ item: T) where T : SettingsDisplayItemProtocol {
-        
+        //Convert to SettingsDisplay
+        let settingsProfileDisplayItem = item as! SettingsProfileDisplayItem
+        profileSettingsView?.populateUserProfile(displayItems: settingsProfileDisplayItem)
     }
     
     /// implements protocol. see `SettingsInteractorIO.swift`

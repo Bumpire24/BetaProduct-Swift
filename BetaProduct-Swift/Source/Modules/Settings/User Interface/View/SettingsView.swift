@@ -27,6 +27,7 @@ class SettingsView: BaseView {
     @IBOutlet weak var logoutImage: UIImageView!
     @IBOutlet weak var logoutLabel: BetaProductSettingsLabel!
     @IBOutlet weak var logoutButton: UIButton!
+    var eventHandler : SettingsHomeModuleProtocol?
     
     
     override func viewDidLoad() {
@@ -37,5 +38,20 @@ class SettingsView: BaseView {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    // MARK: UIButton Actions
+    
+    @IBAction func displayUserProfile(_ sender: Any) {
+        eventHandler?.proceedToProfileSettings()
+    }
+    @IBAction func displayChangeEmailView(_ sender: Any) {
+        eventHandler?.proceedToEmailSettings()
+    }
+    @IBAction func displayChangePasswordView(_ sender: Any) {
+        eventHandler?.proceedToPaswordSettings()
+    }
+    
+    @IBAction func logOutUser(_ sender: Any) {
+        
+    }
 }

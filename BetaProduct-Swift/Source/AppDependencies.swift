@@ -47,6 +47,7 @@ class AppDependencies: NSObject {
         let createAccountWireframe = CreateAccountWireframe()
         let homeWireframe = HomeWireframe()
         let settingsWireframe = SettingsWireframe()
+        let settingsProfileWireframe = SettingsProfileWireframe()
         
         //Login Module Classes
         let loginPresenter = LogInPresenter()
@@ -101,6 +102,28 @@ class AppDependencies: NSObject {
         homeWireframe.settingsWireFrame = settingsWireframe
         homePresenter.homeWireframe = homeWireframe
         homeWireframe.presenter = homePresenter
+        
+        //Settings Classes
+        let settingsHomePresenter = SettingsPresenterHome()
+        settingsWireframe.profileSettingsWireframe = settingsProfileWireframe
+        settingsHomePresenter.wireframeSettings = settingsWireframe
+        settingsWireframe.settingsPresenter = settingsHomePresenter
+        
+        //Profile Settings Classes
+        let settingsManager = SettingsManager()
+        let settingsInteractor = SettingsInteractor()
+        let profileSettingsPresenter = SettingsPresenterProfile()
+        
+        settingsManager.store = store
+        settingsInteractor.manager = settingsManager
+        settingsInteractor.webservice = webservice
+        settingsInteractor.session = session
+        settingsInteractor.outputProfile = profileSettingsPresenter
+        
+        profileSettingsPresenter.interactor = settingsInteractor
+        profileSettingsPresenter.profileSettingsWireframe = settingsProfileWireframe
+        settingsProfileWireframe.presenter = profileSettingsPresenter
+        
     }
     
     func configureLibraries() {

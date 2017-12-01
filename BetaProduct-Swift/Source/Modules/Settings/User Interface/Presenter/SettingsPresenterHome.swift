@@ -14,13 +14,14 @@ class SettingsPresenterHome: NSObject, SettingsHomeModuleProtocol, SettingsHomeI
     var interactor: SettingsInteractorInput?
     /// variable for wireframe
     var wireframe: String?
+    var wireframeSettings : SettingsWireframe?
     /// variablw for view
     var view: String?
     
     // MARK: SettingsHomeModuleProtocol
     /// implements protocol. see `SettingsInteractorIO.swift`
     func proceedToProfileSettings() {
-        
+        wireframeSettings?.presentProfileSettings()
     }
     
     /// implements protocol. see `SettingsInteractorIO.swift`

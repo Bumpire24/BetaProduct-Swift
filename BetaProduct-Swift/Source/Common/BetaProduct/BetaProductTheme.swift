@@ -174,6 +174,17 @@ class BetaProductEntryField : UITextField {
     }
 }
 
+class BetaProductRoundedContainerField : BetaProductEntryField {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        super.applyUITheme()
+    }
+    
+    override func specifyBounds() {
+        self.layer.borderColor = BetaProductStyle.iDoohClearBackground.cgColor
+    }
+}
+
 class BetaProductButton : UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -201,6 +212,7 @@ class BetaProductPrimaryButton : BetaProductButton {
     func specifyFillColor() {
         self.backgroundColor = BetaProductStyle.iDoohPrimaryButtonBackgroundColor
         self.layer.borderColor = BetaProductStyle.iDoohPrimaryButtonBorderColor.cgColor
+        self.titleLabel?.textColor = BetaProductStyle.iDoohLabelFontColor
     }
 }
 
@@ -279,6 +291,20 @@ class BetaProductLinkButton : UIButton {
     
     func specifyFillColor() {
         self.backgroundColor = BetaProductStyle.iDoohClearBackground
+    }
+}
+
+class BetaProductRoundedContainerView : UIView {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyBorderProperty()
+    }
+    
+    func specifyBorderProperty() {
+        self.layer.borderColor = BetaProductStyle.iDoohTextFieldBorderColor.cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.backgroundColor = BetaProductStyle.iDoohClearBackground.cgColor
+        self.layer.cornerRadius = 25.0
     }
 }
 
