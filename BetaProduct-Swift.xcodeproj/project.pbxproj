@@ -272,6 +272,13 @@
 		CE3F37C61FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
 		CE3F37C71FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */; };
 		CE3F37CA1FCE9E98006AA8A3 /* SettingsInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C91FCE9E98006AA8A3 /* SettingsInteractorTest.swift */; };
+		CE42E8DE1FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
+		CE42E8DF1FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
+		CE42E8E01FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
+		CE42E8E11FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
+		CE42E8E21FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
+		CE42E8E31FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
+		CE42E8E41FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
 		CE433CCA1FBD1AF300E530C0 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
 		CE433CCB1FBD1AF300E530C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
 		CE433CCC1FBD1AF300E530C0 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
@@ -642,6 +649,7 @@
 		CE3B62071FC6B61F00B24933 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3F37C01FCE89D7006AA8A3 /* SettingsPresenterUploadPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenterUploadPhoto.swift; sourceTree = "<group>"; };
 		CE3F37C91FCE9E98006AA8A3 /* SettingsInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractorTest.swift; sourceTree = "<group>"; };
+		CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsProfileWireframe.swift; sourceTree = "<group>"; };
 		CE433D021FBD1AF300E530C0 /* BetaProduct-Swift QA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift QA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE433D031FBD1AF300E530C0 /* Info-QA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-QA.plist"; path = "/Users/user/Desktop/Workspace/Migs/Xcode Projects/Beta Product Swift/BetaProduct-Swift/BetaProduct-Swift/Support Files/Info-QA.plist"; sourceTree = "<absolute>"; };
 		CE433D3F1FBD1AF600E530C0 /* BetaProduct-Swift PROD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift PROD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1121,6 +1129,7 @@
 			isa = PBXGroup;
 			children = (
 				CE001E881FCCEB820051B11C /* SettingsWireframe.swift */,
+				CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -2194,6 +2203,7 @@
 				CE3B61661FC6B23E00B24933 /* BaseDisplayItem.swift in Sources */,
 				CE001E971FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
 				CE3B61671FC6B23E00B24933 /* Session.swift in Sources */,
+				CE42E8E41FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CE3B61681FC6B23E00B24933 /* SyncEngine.swift in Sources */,
 				CE3B61691FC6B23E00B24933 /* StoreWebClient.swift in Sources */,
 				CE3B616A1FC6B23E00B24933 /* StoreWebClientProtocol.swift in Sources */,
@@ -2290,6 +2300,7 @@
 				CEED02C41FC6BD3F002C7A5A /* StoreWebClient.swift in Sources */,
 				CEED02C51FC6BD3F002C7A5A /* StoreWebClientProtocol.swift in Sources */,
 				CEED02C61FC6BD3F002C7A5A /* WebServiceConverter.swift in Sources */,
+				CE42E8DF1FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CEED02C71FC6BD3F002C7A5A /* BetaProduct.swift in Sources */,
 				CEED02C81FC6BD3F002C7A5A /* BetaProductTheme.swift in Sources */,
 				CEED02C91FC6BD3F002C7A5A /* DatabaseTypes.swift in Sources */,
@@ -2405,6 +2416,7 @@
 				CE433CE71FBD1AF300E530C0 /* BaseView.swift in Sources */,
 				CE433CE81FBD1AF300E530C0 /* BetaProduct.swift in Sources */,
 				CE001EA31FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
+				CE42E8E01FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CE433CE91FBD1AF300E530C0 /* LogInModuleProtocol.swift in Sources */,
 				CE433CEA1FBD1AF300E530C0 /* StoreProtocol.swift in Sources */,
 				CE70F4291FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
@@ -2474,6 +2486,7 @@
 				CE433D241FBD1AF600E530C0 /* BaseView.swift in Sources */,
 				CE433D251FBD1AF600E530C0 /* BetaProduct.swift in Sources */,
 				CE001EA41FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
+				CE42E8E11FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CE433D261FBD1AF600E530C0 /* LogInModuleProtocol.swift in Sources */,
 				CE433D271FBD1AF600E530C0 /* StoreProtocol.swift in Sources */,
 				CE70F42A1FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
@@ -2513,6 +2526,7 @@
 				CEB652D21FB57EEC00467D4E /* Button+Theme.swift in Sources */,
 				CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */,
 				CE5570701FB5977100A14F7A /* LogInInteractor.swift in Sources */,
+				CE42E8DE1FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */,
 				CEE8AC0F1FB1A59B0052DC3A /* HomeWireframe.swift in Sources */,
 				CE5570741FB597F600A14F7A /* LogInManager.swift in Sources */,
@@ -2611,6 +2625,7 @@
 				CED8A1F81FCD790400293AFF /* SettingsModuleProtocols.swift in Sources */,
 				CE00E3D01FC82A2E006C8ACE /* BaseView.swift in Sources */,
 				CED8A1F21FCD760300293AFF /* SettingsPresenterHome.swift in Sources */,
+				CE42E8E31FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CE00E3D11FC82A2E006C8ACE /* BaseViewProtocol.swift in Sources */,
 				CE00E3D21FC82A2E006C8ACE /* BaseMessageView.swift in Sources */,
 				CE70F4241FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
@@ -2687,6 +2702,7 @@
 				CE00E4061FC82A69006C8ACE /* StoreWebClientProtocol.swift in Sources */,
 				CE00E4071FC82A69006C8ACE /* WebServiceConverter.swift in Sources */,
 				CE00E4081FC82A69006C8ACE /* BetaProduct.swift in Sources */,
+				CE42E8E21FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CE00E4091FC82A69006C8ACE /* BetaProductTheme.swift in Sources */,
 				CE00E40A1FC82A69006C8ACE /* DatabaseTypes.swift in Sources */,
 				CE00E40B1FC82A69006C8ACE /* CompletionBlockTypes.swift in Sources */,
