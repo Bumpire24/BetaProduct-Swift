@@ -13,15 +13,20 @@ let settingsViewIdentifier = "SettingsView"
 class SettingsWireframe: BaseWireframe {
     var settingsView : SettingsView?
     var rootWireFrame : RootWireframe?
-    //var settingsPresenter : SettingsPresenter?
+    var profileSettingsWireframe : SettingsProfileWireframe?
     var homeWireFrame : HomeWireframe?
+    var settingsPresenter : SettingsPresenterHome?
     
     func presentSettingsViewFromViewController(_ viewController: UIViewController) {
         let newViewController = settingsViewController()
         settingsView = newViewController
-        //settingsView?.eventHandler = settingsPresenter
-        //settingsPresenter?.view = newViewController
+        settingsView?.eventHandler = settingsPresenter
+        settingsPresenter?.view = newViewController.description
         viewController.navigationController?.pushViewController(newViewController, animated: true)
+    }
+    
+    func presentProfileSettings() {
+        profileSettingsWireframe?.presentProfileSettingsViewFromViewController(settingsView!)
     }
     
     func settingsViewController() -> SettingsView {
