@@ -13,9 +13,9 @@ class SettingsPresenterEmail: NSObject, SettingsUpdateModuleProtocol, SettingsEm
     /// variable for interactor
     var interactor: SettingsInteractorInput?
     /// variable for wireframe
-    var wireframe: String?
+    var changeEmailSettingsWireframe : SettingsChangeEmailWireframe?
     /// variable for view
-    var view: String?
+    var changeEmailView : ChangeEmailView?
     
     // MARK: SettingsUpdateModuleProtocol
     /// implements protocol. see `SettingsModuleProtocols.swift`

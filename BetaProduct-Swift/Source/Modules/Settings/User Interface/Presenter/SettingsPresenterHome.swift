@@ -31,7 +31,7 @@ class SettingsPresenterHome: NSObject, SettingsHomeModuleProtocol, SettingsHomeI
     
     /// implements protocol. see `SettingsInteractorIO.swift`
     func proceedToEmailSettings() {
-        
+        wireframeSettings?.presentChangeEmailSettings()
     }
     
     /// implements protocol. see `SettingsInteractorIO.swift`
