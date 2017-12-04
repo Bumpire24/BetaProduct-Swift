@@ -2,4 +2,69 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift Unit Tests/Settings/SettingsInteractorTest.swift"
+            timestampString = "533820308.50404"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
+            landmarkName = "testProfileUpdateFailAndPhotoUploadFail()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BetaProduct_Swift_Unit_Tests.SettingsInteractorTest.testProfileUpdateFailAndPhotoUploadFail() -&gt; ()"
+                  moduleName = "BetaProduct-Swift Unit Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift%20Unit%20Tests/Settings/SettingsInteractorTest.swift"
+                  timestampString = "533820309.705175"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
+                  offsetFromSymbolStart = "1807">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Bool in BetaProduct_Swift_Unit_Tests.SettingsInteractorTest.testProfileUpdateFailAndPhotoUploadFail() -&gt; ()"
+                  moduleName = "BetaProduct-Swift Unit Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift%20Unit%20Tests/Settings/SettingsInteractorTest.swift"
+                  timestampString = "533820309.709535"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #4 : @autoclosure () -&gt; Swift.String in BetaProduct_Swift_Unit_Tests.SettingsInteractorTest.testProfileUpdateFailAndPhotoUploadFail() -&gt; ()"
+                  moduleName = "BetaProduct-Swift Unit Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift%20Unit%20Tests/Settings/SettingsInteractorTest.swift"
+                  timestampString = "533820309.713689"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "182"
+                  endingLineNumber = "182"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -53,6 +53,8 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
     // retrieve account with the given input
     // check email nil, email whitespace, valid email
     // check password nil, password whitespace
+    // check mobile nil, mobile whitespace, valid mobile
+    // check name nil, name whitespace
     // call WS
     // check account if valid for creation
     
