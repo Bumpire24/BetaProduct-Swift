@@ -66,28 +66,24 @@ class ChangeEmailView: BaseView {
         changeEmailOrLabel.isHidden = visibilityState
     }
     
-    func specifyFirstResponder(buttonControl : BetaProductRoundedContainerField) {
-        buttonControl.becomeFirstResponder()
-    }
-    
     //MARK: IBOutlet functions
     
     @IBAction func editOldEmail(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: oldEmailAddressField, withAssociatedEditButton: oldEmailAddressButton)
         defineButtonsVisibility(visibilityState: false)
-        specifyFirstResponder(buttonControl:  oldEmailAddressField)
+        super.specifyFirstResponder(buttonControl:  oldEmailAddressField)
     }
     
     @IBAction func editNewEmail(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: newEmailAddressField, withAssociatedEditButton: newEmailAddressButton)
         defineButtonsVisibility(visibilityState: false)
-        specifyFirstResponder(buttonControl:  newEmailAddressField)
+        super.specifyFirstResponder(buttonControl:  newEmailAddressField)
     }
     
     @IBAction func editConfirmEmail(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: confirmEmailAddressField, withAssociatedEditButton: confirmEmailAddressButton)
         defineButtonsVisibility(visibilityState: false)
-        specifyFirstResponder(buttonControl:  confirmEmailAddressField)
+        super.specifyFirstResponder(buttonControl:  confirmEmailAddressField)
     }
     
     @IBAction func saveEmailChanges(_ sender: Any) {
