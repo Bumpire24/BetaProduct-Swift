@@ -439,6 +439,13 @@
 		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
 		CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
 		CE7C25491FC2B9E30036E39B /* BetaProductTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */; };
+		CE9CF4621FD544B300526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
+		CE9CF4631FD54A3B00526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
+		CE9CF4641FD54A3C00526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
+		CE9CF4651FD54A3D00526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
+		CE9CF4661FD54A3E00526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
+		CE9CF4671FD54A3E00526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
+		CE9CF4681FD54A4000526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
 		CEA04A631FCBB15D00B82FA5 /* CreateAccountModuleTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A621FCBB15D00B82FA5 /* CreateAccountModuleTest.swift */; };
 		CEA04A661FCBDB4700B82FA5 /* WebServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A651FCBDB4700B82FA5 /* WebServiceTest.swift */; };
 		CEA04A721FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */; };
@@ -682,6 +689,7 @@
 		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
 		CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
 		CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProductTheme.swift; sourceTree = "<group>"; };
+		CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChangeEmailWireframe.swift; sourceTree = "<group>"; };
 		CEA04A621FCBB15D00B82FA5 /* CreateAccountModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountModuleTest.swift; sourceTree = "<group>"; };
 		CEA04A651FCBDB4700B82FA5 /* WebServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTest.swift; sourceTree = "<group>"; };
 		CEA04A711FCBED6400B82FA5 /* SettingsDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDisplayItem.swift; sourceTree = "<group>"; };
@@ -1126,6 +1134,7 @@
 			children = (
 				CE001E881FCCEB820051B11C /* SettingsWireframe.swift */,
 				CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */,
+				CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -2294,6 +2303,7 @@
 				CE001E871FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CED78F761FCE65BF00AE164D /* HomeModulePresenter.swift in Sources */,
 				CE3B61771FC6B23E00B24933 /* BaseEntity.swift in Sources */,
+				CE9CF4681FD54A4000526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CEF8198A1FC7E63D00B12AFB /* CreateAccountManager.swift in Sources */,
 				CE70F41D1FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
 				CE3B617A1FC6B23E00B24933 /* StoreProtocol.swift in Sources */,
@@ -2375,6 +2385,7 @@
 				CEED02CA1FC6BD3F002C7A5A /* CompletionBlockTypes.swift in Sources */,
 				CEED02CB1FC6BD3F002C7A5A /* RootWireframe.swift in Sources */,
 				CEED02CC1FC6BD3F002C7A5A /* BaseView.swift in Sources */,
+				CE9CF4631FD54A3B00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CEED02CD1FC6BD3F002C7A5A /* BaseViewProtocol.swift in Sources */,
 				CE001EA21FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CEED02CE1FC6BD3F002C7A5A /* BaseMessageView.swift in Sources */,
@@ -2461,6 +2472,7 @@
 				CE433CD61FBD1AF300E530C0 /* LogInManager.swift in Sources */,
 				CE433CD71FBD1AF300E530C0 /* LoginOptionsModuleInterface.swift in Sources */,
 				CE433CD81FBD1AF300E530C0 /* BaseWireframe.swift in Sources */,
+				CE9CF4641FD54A3C00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CE433CDA1FBD1AF300E530C0 /* RootWireframe.swift in Sources */,
 				CE70F4451FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CE433CDB1FBD1AF300E530C0 /* LogInInteractorIO.swift in Sources */,
@@ -2531,6 +2543,7 @@
 				CE433D131FBD1AF600E530C0 /* LogInManager.swift in Sources */,
 				CE433D141FBD1AF600E530C0 /* LoginOptionsModuleInterface.swift in Sources */,
 				CE433D151FBD1AF600E530C0 /* BaseWireframe.swift in Sources */,
+				CE9CF4651FD54A3D00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CE433D171FBD1AF600E530C0 /* RootWireframe.swift in Sources */,
 				CE70F4461FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CE433D181FBD1AF600E530C0 /* LogInInteractorIO.swift in Sources */,
@@ -2601,6 +2614,7 @@
 				CEF320E51FC52C0E004CA907 /* BaseDisplayItem.swift in Sources */,
 				CE001EA11FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE001E811FCCEB720051B11C /* SettingsView.swift in Sources */,
+				CE9CF4621FD544B300526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */,
 				CED78F701FCE5CED00AE164D /* HomeModulePresenter.swift in Sources */,
 				CEE8AC0D1FB1A51E0052DC3A /* BaseWireframe.swift in Sources */,
@@ -2681,6 +2695,7 @@
 				CE00E3C71FC82A2E006C8ACE /* SyncEngine.swift in Sources */,
 				CE00E3C81FC82A2E006C8ACE /* StoreWebClient.swift in Sources */,
 				CE00E3C91FC82A2E006C8ACE /* StoreWebClientProtocol.swift in Sources */,
+				CE9CF4671FD54A3E00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CE70F4481FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CE00E3CA1FC82A2E006C8ACE /* WebServiceConverter.swift in Sources */,
 				CE00E3CB1FC82A2E006C8ACE /* BetaProduct.swift in Sources */,
@@ -2806,6 +2821,7 @@
 				CE00E41F1FC82A69006C8ACE /* CreateAccountViewProtocol.swift in Sources */,
 				CE00E4201FC82A69006C8ACE /* CreateAccountView.swift in Sources */,
 				CE00E4211FC82A69006C8ACE /* LogInModuleProtocol.swift in Sources */,
+				CE9CF4661FD54A3E00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CE00E4221FC82A69006C8ACE /* LogInInteractorIO.swift in Sources */,
 				CE00E4231FC82A69006C8ACE /* LogInInteractor.swift in Sources */,
 				CE00E4241FC82A69006C8ACE /* LogInManager.swift in Sources */,

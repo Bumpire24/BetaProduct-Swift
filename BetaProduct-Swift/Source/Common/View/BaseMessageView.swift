@@ -124,11 +124,6 @@ class BaseMessageView: UIViewController {
     func applyMessageViewTheme() {
         messageView.layer.cornerRadius = 15.0
         titleAndMessageView.layer.cornerRadius = 15.0
-//        messageView.layer.borderColor = BetaProductStyle.iDoohMessageViewBorderColor.cgColor
-//        messageView.layer.shadowColor = BetaProductStyle.iDoohMessageViewShadowColor.cgColor
-//        messageView.layer.shadowOpacity = 1.0
-//        messageView.layer.shadowRadius = 3.0
-//        messageView.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
     
     func applyImageWatermark() {
