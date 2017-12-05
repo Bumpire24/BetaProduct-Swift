@@ -285,7 +285,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4E-L5-ovL">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="displayUserProfile:" destination="Xav-9c-s3O" eventType="touchUpInside" id="N3N-5Q-Wbu"/>
                                         </connections>
@@ -320,6 +320,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbQ-GB-anh" userLabel="Change Email View">
                                 <rect key="frame" x="0.0" y="267" width="375" height="64.5"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6x-4v-cHv">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
+                                        <connections>
+                                            <action selector="displayChangeEmailView:" destination="Xav-9c-s3O" eventType="touchUpInside" id="A6U-Di-ncA"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="JSS-oi-tK0">
                                         <rect key="frame" x="10" y="8" width="50" height="50"/>
                                     </imageView>
@@ -329,12 +335,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6x-4v-cHv">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
-                                        <connections>
-                                            <action selector="displayChangeEmailView:" destination="Xav-9c-s3O" eventType="touchUpInside" id="A6U-Di-ncA"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -354,6 +354,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYo-XZ-ofw" userLabel="Change Password View">
                                 <rect key="frame" x="0.0" y="352" width="375" height="66.5"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyq-hw-7eR">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                        <connections>
+                                            <action selector="displayChangePasswordView:" destination="Xav-9c-s3O" eventType="touchUpInside" id="VWH-SD-iXg"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="CwG-Mp-nmP">
                                         <rect key="frame" x="10" y="7.5" width="50" height="51.5"/>
                                     </imageView>
@@ -363,12 +369,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyq-hw-7eR">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
-                                        <connections>
-                                            <action selector="displayChangePasswordView:" destination="Xav-9c-s3O" eventType="touchUpInside" id="VWH-SD-iXg"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -388,6 +388,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44z-eS-y94" userLabel="Log Out View">
                                 <rect key="frame" x="0.0" y="439" width="375" height="66.5"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHg-pj-rVd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                                        <connections>
+                                            <action selector="logOutUser:" destination="Xav-9c-s3O" eventType="touchUpInside" id="0Bg-Uy-vgo"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoff" translatesAutoresizingMaskIntoConstraints="NO" id="Djz-cw-6EO">
                                         <rect key="frame" x="10" y="7.5" width="50" height="51.5"/>
                                     </imageView>
@@ -397,12 +403,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHg-pj-rVd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
-                                        <connections>
-                                            <action selector="logOutUser:" destination="Xav-9c-s3O" eventType="touchUpInside" id="0Bg-Uy-vgo"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -996,6 +996,48 @@
                                     <action selector="revertProfileChanges:" destination="kBY-Yf-35D" eventType="touchUpInside" id="Lc2-Q2-3EG"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LpO-QO-7zX" userLabel="Floating View">
+                                <rect key="frame" x="82.5" y="131" width="170" height="123.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZ4-H8-yAa">
+                                        <rect key="frame" x="10" y="46.5" width="40" height="30"/>
+                                        <state key="normal" image="camera"/>
+                                        <connections>
+                                            <action selector="displayCameraScreen:" destination="kBY-Yf-35D" eventType="touchUpInside" id="wO4-15-CJJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1w-gZ-Fz7">
+                                        <rect key="frame" x="65" y="46.5" width="40" height="30"/>
+                                        <state key="normal" image="photoAlbum"/>
+                                        <connections>
+                                            <action selector="displayPhotoLibrary:" destination="kBY-Yf-35D" eventType="touchUpInside" id="ctR-Oy-yRK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sa4-cJ-eQG">
+                                        <rect key="frame" x="120" y="46.5" width="40" height="30"/>
+                                        <state key="normal" image="cancel"/>
+                                        <connections>
+                                            <action selector="closeFloatingButtonView:" destination="kBY-Yf-35D" eventType="touchUpInside" id="RvA-yv-hgI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Sa4-cJ-eQG" firstAttribute="width" secondItem="LpO-QO-7zX" secondAttribute="width" multiplier="1:4.25" id="L2W-qm-hZH"/>
+                                    <constraint firstItem="T1w-gZ-Fz7" firstAttribute="centerX" secondItem="LpO-QO-7zX" secondAttribute="centerX" id="W81-e6-KpH"/>
+                                    <constraint firstItem="T1w-gZ-Fz7" firstAttribute="height" secondItem="LpO-QO-7zX" secondAttribute="height" multiplier="1:4.125" id="XJO-8e-zlt"/>
+                                    <constraint firstItem="T1w-gZ-Fz7" firstAttribute="leading" secondItem="AZ4-H8-yAa" secondAttribute="trailing" constant="15" id="ebj-JX-aeD"/>
+                                    <constraint firstItem="T1w-gZ-Fz7" firstAttribute="width" secondItem="LpO-QO-7zX" secondAttribute="width" multiplier="1:4.25" id="ga7-Kk-0Iy"/>
+                                    <constraint firstItem="AZ4-H8-yAa" firstAttribute="height" secondItem="LpO-QO-7zX" secondAttribute="height" multiplier="1:4.125" id="oCA-E8-oMN"/>
+                                    <constraint firstItem="Sa4-cJ-eQG" firstAttribute="height" secondItem="LpO-QO-7zX" secondAttribute="height" multiplier="1:4.125" id="s6H-mJ-12Y"/>
+                                    <constraint firstItem="T1w-gZ-Fz7" firstAttribute="centerY" secondItem="LpO-QO-7zX" secondAttribute="centerY" id="sIP-jt-COs"/>
+                                    <constraint firstItem="AZ4-H8-yAa" firstAttribute="width" secondItem="LpO-QO-7zX" secondAttribute="width" multiplier="1:4.25" id="x4n-4J-s2E"/>
+                                    <constraint firstItem="Sa4-cJ-eQG" firstAttribute="top" secondItem="T1w-gZ-Fz7" secondAttribute="top" id="y8d-VM-62k"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sa4-cJ-eQG" secondAttribute="trailing" constant="10" id="yCl-XC-bNd"/>
+                                    <constraint firstItem="AZ4-H8-yAa" firstAttribute="leading" secondItem="LpO-QO-7zX" secondAttribute="leading" constant="10" id="yff-ho-TXP"/>
+                                    <constraint firstItem="AZ4-H8-yAa" firstAttribute="top" secondItem="T1w-gZ-Fz7" secondAttribute="top" id="z1d-jS-fOy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1006,6 +1048,7 @@
                             <constraint firstItem="kQ9-Hx-jfv" firstAttribute="centerX" secondItem="X1d-XH-3cP" secondAttribute="centerX" id="Gc7-Tn-FPG"/>
                             <constraint firstItem="d2Q-Dp-NIt" firstAttribute="bottom" secondItem="fAw-Zf-TpU" secondAttribute="bottom" id="HW7-9T-RR3"/>
                             <constraint firstItem="kQ9-Hx-jfv" firstAttribute="width" secondItem="GVX-lR-ci4" secondAttribute="width" id="HkS-e9-SVY"/>
+                            <constraint firstItem="LpO-QO-7zX" firstAttribute="trailing" secondItem="d2Q-Dp-NIt" secondAttribute="trailing" id="IC4-3N-9AM"/>
                             <constraint firstItem="WkD-Ft-eiB" firstAttribute="top" secondItem="QH2-uh-hkT" secondAttribute="bottom" constant="10" id="JX6-m9-sQf"/>
                             <constraint firstItem="wyG-Hv-rXh" firstAttribute="centerX" secondItem="X1d-XH-3cP" secondAttribute="centerX" id="KM2-O9-loX"/>
                             <constraint firstItem="Jle-5c-VfM" firstAttribute="leading" secondItem="X1d-XH-3cP" secondAttribute="leading" id="NQD-6o-c9m"/>
@@ -1028,6 +1071,7 @@
                             <constraint firstItem="Jle-5c-VfM" firstAttribute="top" secondItem="SM2-lT-czb" secondAttribute="top" id="hLw-np-TID"/>
                             <constraint firstItem="QH2-uh-hkT" firstAttribute="height" secondItem="U8W-pM-1ay" secondAttribute="height" id="omb-10-YOm"/>
                             <constraint firstItem="Jle-5c-VfM" firstAttribute="bottom" secondItem="X1d-XH-3cP" secondAttribute="bottom" id="r9w-CU-khh"/>
+                            <constraint firstItem="LpO-QO-7zX" firstAttribute="centerY" secondItem="d2Q-Dp-NIt" secondAttribute="centerY" id="syd-8d-tSa"/>
                             <constraint firstItem="WkD-Ft-eiB" firstAttribute="height" secondItem="GVX-lR-ci4" secondAttribute="height" id="wbD-hE-Y56"/>
                             <constraint firstItem="d2Q-Dp-NIt" firstAttribute="trailing" secondItem="fAw-Zf-TpU" secondAttribute="trailing" id="yuY-WU-bSY"/>
                         </constraints>
@@ -1039,6 +1083,7 @@
                         <outlet property="billingAddressImage" destination="S0N-aL-NGH" id="x8e-GC-foP"/>
                         <outlet property="billingAddressView" destination="kQ9-Hx-jfv" id="C2L-Jf-CP7"/>
                         <outlet property="cancelProfileButton" destination="WkD-Ft-eiB" id="NJY-sb-CHH"/>
+                        <outlet property="floatingButtonsView" destination="LpO-QO-7zX" id="TVS-9z-LvJ"/>
                         <outlet property="fullNameButton" destination="7jW-NV-rQC" id="eVC-XK-SNF"/>
                         <outlet property="fullNameField" destination="ofp-Mo-kmk" id="5N3-zc-RHk"/>
                         <outlet property="fullNameImage" destination="gxp-PN-hx1" id="p3z-Mb-QsX"/>
@@ -1050,7 +1095,7 @@
                         <outlet property="orLabel" destination="QH2-uh-hkT" id="hZk-iw-nhE"/>
                         <outlet property="profileButton" destination="d2Q-Dp-NIt" id="V5w-Xe-TGA"/>
                         <outlet property="profileImage" destination="fAw-Zf-TpU" id="Gxx-sP-h53"/>
-                        <outlet property="profileVisualEffectView" destination="Jle-5c-VfM" id="eXb-9L-gq3"/>
+                        <outlet property="profileVisualEffectView" destination="Jle-5c-VfM" id="GgW-iz-sHM"/>
                         <outlet property="saveProfileButton" destination="U8W-pM-1ay" id="aYy-AK-woN"/>
                     </connections>
                 </viewController>
@@ -1058,10 +1103,25 @@
             </objects>
             <point key="canvasLocation" x="4277.6000000000004" y="-546.47676161919048"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="sxA-fY-cix">
+            <objects>
+                <viewController storyboardIdentifier="CameraPhotoLibraryView" id="v75-Js-hft" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zkY-It-Qkg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="R1n-aU-Fqe"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpt-jn-UU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5010" y="-546"/>
+        </scene>
         <!--Change Email View-->
         <scene sceneID="qO5-jT-DUV">
             <objects>
-                <viewController id="s5d-4R-jhF" customClass="ChangeEmailView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangeEmailSettingsView" id="s5d-4R-jhF" customClass="ChangeEmailView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ut4-n1-Rku">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1086,63 +1146,75 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a91-N7-lNm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a91-N7-lNm" customClass="BetaProductRoundedContainerView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                 <rect key="frame" x="16" y="243" width="343" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="zQS-fA-fph">
                                         <rect key="frame" x="8" y="10" width="30" height="30"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="old email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARB-Tx-zEf">
-                                        <rect key="frame" x="58" y="10" width="238.5" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="old email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ARB-Tx-zEf" customClass="BetaProductRoundedContainerField" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
+                                        <rect key="frame" x="43" y="10" width="238.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTx-A7-r5c">
-                                        <rect key="frame" x="306.5" y="10" width="31" height="30"/>
+                                        <rect key="frame" x="267" y="25" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="15" id="elo-PF-qnQ"/>
+                                            <constraint firstAttribute="height" constant="15" id="ewV-2P-eXf"/>
+                                        </constraints>
                                         <state key="normal" image="edit"/>
+                                        <connections>
+                                            <action selector="editOldEmail:" destination="s5d-4R-jhF" eventType="touchUpInside" id="sme-Pf-juZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ARB-Tx-zEf" firstAttribute="top" secondItem="zQS-fA-fph" secondAttribute="top" id="3ZK-9u-mkF"/>
                                     <constraint firstItem="ARB-Tx-zEf" firstAttribute="width" secondItem="a91-N7-lNm" secondAttribute="width" multiplier="1:1.43515" id="4eQ-ct-vdw"/>
-                                    <constraint firstItem="fTx-A7-r5c" firstAttribute="leading" secondItem="ARB-Tx-zEf" secondAttribute="trailing" constant="10" id="69v-0O-qym"/>
                                     <constraint firstItem="zQS-fA-fph" firstAttribute="leading" secondItem="a91-N7-lNm" secondAttribute="leading" constant="8" id="6sm-fl-13e"/>
-                                    <constraint firstItem="ARB-Tx-zEf" firstAttribute="leading" secondItem="zQS-fA-fph" secondAttribute="trailing" constant="20" id="LKG-kT-rYz"/>
+                                    <constraint firstItem="ARB-Tx-zEf" firstAttribute="leading" secondItem="zQS-fA-fph" secondAttribute="trailing" constant="5" id="LKG-kT-rYz"/>
                                     <constraint firstAttribute="height" constant="50" id="PqF-oD-GGg"/>
                                     <constraint firstItem="zQS-fA-fph" firstAttribute="centerY" secondItem="a91-N7-lNm" secondAttribute="centerY" id="TZe-2l-QHA"/>
-                                    <constraint firstItem="fTx-A7-r5c" firstAttribute="width" secondItem="a91-N7-lNm" secondAttribute="width" multiplier="1:11.4333" id="eZ7-qS-bb0"/>
                                     <constraint firstItem="fTx-A7-r5c" firstAttribute="bottom" secondItem="ARB-Tx-zEf" secondAttribute="bottom" id="mx2-UO-b8L"/>
                                     <constraint firstItem="zQS-fA-fph" firstAttribute="width" secondItem="a91-N7-lNm" secondAttribute="width" multiplier="1:11.4333" id="t8j-gM-8Sd"/>
+                                    <constraint firstItem="fTx-A7-r5c" firstAttribute="trailing" secondItem="ARB-Tx-zEf" secondAttribute="trailing" id="vgY-TQ-74p"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w13-VK-7mB">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w13-VK-7mB" customClass="BetaProductRoundedContainerView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                 <rect key="frame" x="16" y="323" width="343" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="4Sc-kO-WQq">
                                         <rect key="frame" x="8" y="10" width="30" height="30"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tB5-YI-9Qj">
-                                        <rect key="frame" x="58" y="10" width="238.5" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="new email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tB5-YI-9Qj" customClass="BetaProductRoundedContainerField" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
+                                        <rect key="frame" x="43" y="10" width="238.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxi-MR-O5K">
-                                        <rect key="frame" x="306.5" y="10" width="31" height="30"/>
+                                        <rect key="frame" x="267" y="25" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="Pgb-qs-817"/>
+                                            <constraint firstAttribute="width" constant="15" id="QmF-F0-0bb"/>
+                                        </constraints>
                                         <state key="normal" image="edit"/>
+                                        <connections>
+                                            <action selector="editNewEmail:" destination="s5d-4R-jhF" eventType="touchUpInside" id="2Sh-OF-8KO"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="tB5-YI-9Qj" firstAttribute="leading" secondItem="4Sc-kO-WQq" secondAttribute="trailing" constant="20" id="04h-2v-t1d"/>
+                                    <constraint firstItem="tB5-YI-9Qj" firstAttribute="leading" secondItem="4Sc-kO-WQq" secondAttribute="trailing" constant="5" id="04h-2v-t1d"/>
                                     <constraint firstItem="tB5-YI-9Qj" firstAttribute="top" secondItem="4Sc-kO-WQq" secondAttribute="top" id="6rb-oI-wci"/>
-                                    <constraint firstItem="Mxi-MR-O5K" firstAttribute="width" secondItem="w13-VK-7mB" secondAttribute="width" multiplier="1:11.4333" id="8lk-mB-pBe"/>
                                     <constraint firstItem="4Sc-kO-WQq" firstAttribute="centerY" secondItem="w13-VK-7mB" secondAttribute="centerY" id="9jF-as-KDX"/>
-                                    <constraint firstItem="Mxi-MR-O5K" firstAttribute="leading" secondItem="tB5-YI-9Qj" secondAttribute="trailing" constant="10" id="BYi-9W-zM0"/>
+                                    <constraint firstItem="Mxi-MR-O5K" firstAttribute="trailing" secondItem="tB5-YI-9Qj" secondAttribute="trailing" id="9mM-cm-f55"/>
                                     <constraint firstItem="tB5-YI-9Qj" firstAttribute="width" secondItem="w13-VK-7mB" secondAttribute="width" multiplier="1:1.43515" id="D27-K8-e7v"/>
                                     <constraint firstItem="Mxi-MR-O5K" firstAttribute="bottom" secondItem="tB5-YI-9Qj" secondAttribute="bottom" id="LgZ-3L-nAK"/>
                                     <constraint firstAttribute="height" constant="50" id="VOT-aa-mPa"/>
@@ -1150,22 +1222,29 @@
                                     <constraint firstItem="4Sc-kO-WQq" firstAttribute="leading" secondItem="w13-VK-7mB" secondAttribute="leading" constant="8" id="kJk-Tt-SaA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6h-VW-faK">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6h-VW-faK" customClass="BetaProductRoundedContainerView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                 <rect key="frame" x="16" y="403" width="343" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="atY-1V-ymW">
                                         <rect key="frame" x="8" y="10" width="30" height="30"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VE3-lf-MMm">
-                                        <rect key="frame" x="58" y="10" width="238.5" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm email address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VE3-lf-MMm" customClass="BetaProductRoundedContainerField" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
+                                        <rect key="frame" x="43" y="10" width="238.5" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7J-0N-rET">
-                                        <rect key="frame" x="306.5" y="10" width="31" height="30"/>
+                                        <rect key="frame" x="267" y="25" width="15" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="AF0-cA-I1m"/>
+                                            <constraint firstAttribute="width" constant="15" id="zVu-kL-iwK"/>
+                                        </constraints>
                                         <state key="normal" image="edit"/>
+                                        <connections>
+                                            <action selector="editConfirmEmail:" destination="s5d-4R-jhF" eventType="touchUpInside" id="elj-KR-bHQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1173,17 +1252,19 @@
                                     <constraint firstItem="atY-1V-ymW" firstAttribute="leading" secondItem="w6h-VW-faK" secondAttribute="leading" constant="8" id="63Z-YB-TXH"/>
                                     <constraint firstItem="VE3-lf-MMm" firstAttribute="top" secondItem="atY-1V-ymW" secondAttribute="top" id="7XB-Es-P3Y"/>
                                     <constraint firstItem="VE3-lf-MMm" firstAttribute="width" secondItem="w6h-VW-faK" secondAttribute="width" multiplier="1:1.43515" id="CGc-6S-vt9"/>
-                                    <constraint firstItem="E7J-0N-rET" firstAttribute="width" secondItem="w6h-VW-faK" secondAttribute="width" multiplier="1:11.4333" id="QeP-pK-gu3"/>
-                                    <constraint firstItem="VE3-lf-MMm" firstAttribute="leading" secondItem="atY-1V-ymW" secondAttribute="trailing" constant="20" id="YXq-vN-nJX"/>
+                                    <constraint firstItem="VE3-lf-MMm" firstAttribute="leading" secondItem="atY-1V-ymW" secondAttribute="trailing" constant="5" id="YXq-vN-nJX"/>
                                     <constraint firstItem="atY-1V-ymW" firstAttribute="width" secondItem="w6h-VW-faK" secondAttribute="width" multiplier="1:11.4333" id="b0z-hJ-RUR"/>
                                     <constraint firstItem="atY-1V-ymW" firstAttribute="centerY" secondItem="w6h-VW-faK" secondAttribute="centerY" id="fwV-cP-fe6"/>
-                                    <constraint firstItem="E7J-0N-rET" firstAttribute="leading" secondItem="VE3-lf-MMm" secondAttribute="trailing" constant="10" id="lha-YW-DP9"/>
                                     <constraint firstItem="E7J-0N-rET" firstAttribute="bottom" secondItem="VE3-lf-MMm" secondAttribute="bottom" id="u0k-G3-v4Q"/>
+                                    <constraint firstItem="E7J-0N-rET" firstAttribute="trailing" secondItem="VE3-lf-MMm" secondAttribute="trailing" id="zUj-ay-7Qv"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4A-cj-oJz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4A-cj-oJz" customClass="BetaProductPrimaryButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                 <rect key="frame" x="16" y="473" width="343" height="50"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveEmailChanges:" destination="s5d-4R-jhF" eventType="touchUpInside" id="jyK-fG-p78"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zj4-Vp-kQG">
                                 <rect key="frame" x="16" y="533" width="343" height="50"/>
@@ -1191,9 +1272,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPv-Ps-IBv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPv-Ps-IBv" customClass="BetaProductSecondaryButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                 <rect key="frame" x="16" y="593" width="343" height="50"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="revertProfileChanges:" destination="s5d-4R-jhF" eventType="touchUpInside" id="2TG-o4-VaQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1462,6 +1546,8 @@
     <resources>
         <image name="backArrow" width="21" height="21"/>
         <image name="billingAddress" width="30" height="30"/>
+        <image name="camera" width="30" height="30"/>
+        <image name="cancel" width="30" height="30"/>
         <image name="checkMarkAssocBackground" width="208" height="81"/>
         <image name="checkMarkBackground" width="72" height="81"/>
         <image name="edit" width="30" height="30"/>
@@ -1470,6 +1556,7 @@
         <image name="logoff" width="30" height="30"/>
         <image name="mobileNumber" width="30" height="30"/>
         <image name="password" width="30" height="30"/>
+        <image name="photoAlbum" width="30" height="30"/>
         <image name="profile" width="30" height="30"/>
     </resources>
 </document>

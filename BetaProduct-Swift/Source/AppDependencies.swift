@@ -48,6 +48,7 @@ class AppDependencies: NSObject {
         let homeWireframe = HomeWireframe()
         let settingsWireframe = SettingsWireframe()
         let settingsProfileWireframe = SettingsProfileWireframe()
+        let settingsChangeEmailWireframe = SettingsChangeEmailWireframe()
         
         //Login Module Classes
         let loginPresenter = LogInPresenter()
@@ -106,6 +107,7 @@ class AppDependencies: NSObject {
         //Settings Classes
         let settingsHomePresenter = SettingsPresenterHome()
         settingsWireframe.profileSettingsWireframe = settingsProfileWireframe
+        settingsWireframe.changeEmailSettingsWireframe = settingsChangeEmailWireframe
         settingsHomePresenter.wireframeSettings = settingsWireframe
         settingsWireframe.settingsPresenter = settingsHomePresenter
         
@@ -124,6 +126,11 @@ class AppDependencies: NSObject {
         profileSettingsPresenter.profileSettingsWireframe = settingsProfileWireframe
         settingsProfileWireframe.presenter = profileSettingsPresenter
         
+        //Change Email Settings Classes
+        let changeEmailSettingsPresenter = SettingsPresenterEmail()
+        changeEmailSettingsPresenter.interactor = settingsInteractor
+        changeEmailSettingsPresenter.changeEmailSettingsWireframe = settingsChangeEmailWireframe
+        settingsChangeEmailWireframe.presenter = changeEmailSettingsPresenter
     }
     
     func configureLibraries() {

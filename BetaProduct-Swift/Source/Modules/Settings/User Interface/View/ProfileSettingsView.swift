@@ -28,6 +28,7 @@ class ProfileSettingsView: BaseView {
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var cancelProfileButton: BetaProductSecondaryButton!
     @IBOutlet weak var profileVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var floatingButtonsView: UIView!
     var eventHandler : SettingsUpdateModuleProtocol?
     
     override func viewDidLoad() {
@@ -68,24 +69,31 @@ class ProfileSettingsView: BaseView {
         orLabel.isHidden = visibilityState
     }
     
+    func specifyFirstResponder(buttonControl : BetaProductRoundedContainerField) {
+        buttonControl.becomeFirstResponder()
+    }
+    
     //MARK: IBOutlet functions
     @IBAction func editProfileImage(_ sender: Any) {
-        
+        floatingButtonsView.isHidden = false
     }
     
     @IBAction func editFullName(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: fullNameField, withAssociatedEditButton: fullNameButton)
         defineButtonsVisibility(visibilityState: false)
+        specifyFirstResponder(buttonControl:  fullNameField)
     }
     
     @IBAction func editBillingAddress(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: billingAddressField, withAssociatedEditButton: billingAddressButton)
         defineButtonsVisibility(visibilityState: false)
+        specifyFirstResponder(buttonControl:  billingAddressField)
     }
     
     @IBAction func editMobileNumber(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: mobileNumberField, withAssociatedEditButton: mobileNumberButton)
         defineButtonsVisibility(visibilityState: false)
+        specifyFirstResponder(buttonControl:  mobileNumberField)
     }
     
     @IBAction func saveProfileChanges(_ sender: Any) {
@@ -101,6 +109,20 @@ class ProfileSettingsView: BaseView {
         defineUIControlDefaultState()
     }
     
+    @IBAction func displayCameraScreen(_ sender: Any) {
+        
+    }
+    
+    @IBAction func displayPhotoLibrary(_ sender: Any) {
+        
+    }
+    
+    @IBAction func closeFloatingButtonView(_ sender: Any) {
+        floatingButtonsView.isHidden = true
+    }
+    
+    
+    
     //MARK: Fetching functions
     
     func displayProfileInformation() {
@@ -109,6 +131,8 @@ class ProfileSettingsView: BaseView {
     
     func populateUserProfile(displayItems: SettingsProfileDisplayItem) {
         fullNameField.text = displayItems.name
+        billingAddressField.text = displayItems.addressShipping
+        mobileNumberField.text = displayItems.mobile
     }
 
 }
