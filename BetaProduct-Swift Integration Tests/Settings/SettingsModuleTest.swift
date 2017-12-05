@@ -10,7 +10,6 @@ import XCTest
 @testable import BetaProduct_Swift_DEV_Integration_Tests
 
 class SettingsModuleTest: XCTestCase {
-    
     override func setUp() {
         super.setUp()
         
@@ -19,9 +18,5 @@ class SettingsModuleTest: XCTestCase {
     override func tearDown() {
         
         super.tearDown()
-    }
-    
-    func testExample() {
-        
     }
 }

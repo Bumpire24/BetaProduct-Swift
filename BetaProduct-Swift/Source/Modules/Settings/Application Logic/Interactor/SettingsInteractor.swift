@@ -10,7 +10,7 @@ import UIKit
 import CocoaLumberjack
 
 /// interactor class for module `Settings`
-class SettingsInteractor: NSObject, SettingsInteractorInput{
+class SettingsInteractor: NSObject, SettingsInteractorInput {
     /// variable for output delegate
     var outputHome: SettingsHomeInteractorOuput?
     /// variable for output delegate
@@ -126,7 +126,6 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
 //                self.manager?.updateUser(user: user!, withCompletionBlock: { response in
 //                    switch response {
 //                    case .success(_):
-//                        // FIXME: ADD SESSION IN PHOTO AS WELL! and UPDATE CORE!
 //                        // Set new Session
 //                        if let list = value, let targetUser = list.first, let converted = targetUser as? [String:Any] {
 //                            let updatedUser = User.init(dictionary: converted)
@@ -223,7 +222,7 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
             return
         }
         
-        if passNew != passNew {
+        if passNew != passNewC {
             self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password and Confirm New Password does not match")
             return
         }
@@ -260,7 +259,7 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
             let processPhoto = item.profileImage.image != nil
             let processProfile = item.name != itemFromSession.name || item.addressShipping != itemFromSession.addressShipping || item.mobile != itemFromSession.mobile
             var processPhotoResult: String?
-            var processProfileResult: [Any?]?
+//            var processProfileResult: [String: Any]?
             var processPhotoMessage = ""
             var processProfileMessage = ""
             var processPhotoGood = false
@@ -291,8 +290,8 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
                 downloadGroup.enter()
                 self.webservice?.PUT(BetaProduct.kBPWSPutUserWithId("1"), parameters: user!.allProperties(), block: { response in
                     switch response {
-                    case .success(let value):
-                        processProfileResult = value
+                    case .success(_):
+//                        processProfileResult = value?.first as? [String: Any]
                         processProfileMessage = "Profile Update successful!"
                         processProfileGood = true
                     case .failure(let error):
@@ -309,21 +308,24 @@ class SettingsInteractor: NSObject, SettingsInteractorInput{
                     var itemUpdated = item
                     if processPhotoGood {
                         itemUpdated.profileImage.url = processPhotoResult
+                        user?.profileImageURL = processPhotoResult!
                     }
                     // call manager for saving
                     self.manager?.updateUser(user: user!, withCompletionBlock: { response in
                         switch response {
                         case .success(_):
-                            self.outputProfile?.settingsUpdationComplete(wasSuccessful: true, withMessage: processProfileMessage + " " + processPhotoMessage, withNewDisplayItem: itemUpdated)
                             // update session
-                            if let list = processProfileResult, let targetUser = list.first, let converted = targetUser as? [String:Any] {
-                                let updatedUser = User.init(dictionary: converted)
-                                self.session?.setUserSessionByUser(updatedUser)
-                            } else {
-                                // failed to convert User
-                                DDLogError("Error  description : User conversion failure. reason : Failed to convert Dictionary to Session. suggestion : Debug function \(#function)")
-                                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Profile Update Failed", withNewDisplayItem: item)
-                            }
+                            self.session?.setUserSessionByUser(user!)
+                            self.outputProfile?.settingsUpdationComplete(wasSuccessful: true, withMessage: processProfileMessage + " " + processPhotoMessage, withNewDisplayItem: itemUpdated)
+//                            if let dataDict = processProfileResult {
+//                                let updatedUser = User.init(dictionary: dataDict)
+//                                self.session?.setUserSessionByUser(updatedUser)
+//                                self.outputProfile?.settingsUpdationComplete(wasSuccessful: true, withMessage: processProfileMessage + " " + processPhotoMessage, withNewDisplayItem: itemUpdated)
+//                            } else {
+//                                // failed to convert User
+//                                DDLogError("Error  description : User conversion failure. reason : Failed to convert Dictionary to Session. suggestion : Debug function \(#function)")
+//                                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Profile Update Failed", withNewDisplayItem: item)
+//                            }
                         case .failure(_):
                             self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Profile Update Failed", withNewDisplayItem: item)
                         }

@@ -12,9 +12,7 @@
 		32887CBDFC905668D49FA8D1 /* Pods_BetaProduct_Swift_UI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B6CC25A62B6A91E084C121 /* Pods_BetaProduct_Swift_UI_Tests.framework */; };
 		504DB5E087371337806923EB /* Pods_BetaProduct_Swift_Integration_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7070BAFCDF6E4521569E7638 /* Pods_BetaProduct_Swift_Integration_Tests.framework */; };
 		6E162123F77A147F7BC8D700 /* Pods_BetaProduct_Swift_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBDEB755945290F6507D24F /* Pods_BetaProduct_Swift_DEV.framework */; };
-		8BEE97E7347D38B976572A6F /* Pods_BetaProduct_Swift_DEV__Integration_Tests_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8537C10F4EA592C4AF24E0C9 /* Pods_BetaProduct_Swift_DEV__Integration_Tests_.framework */; };
 		8CFC093008841887F416B850 /* Pods_BetaProduct_Swift_Unit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D909DEFE8C3D811ECF9CC4E1 /* Pods_BetaProduct_Swift_Unit_Tests.framework */; };
-		C26CA66A04FACD38778A0947 /* Pods_BetaProduct_Swift_DEV_Integration_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF30871EA13629F97F84E18 /* Pods_BetaProduct_Swift_DEV_Integration_Tests.framework */; };
 		CE001E811FCCEB720051B11C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE001E801FCCEB720051B11C /* SettingsView.swift */; };
 		CE001E821FCCEB720051B11C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE001E801FCCEB720051B11C /* SettingsView.swift */; };
 		CE001E831FCCEB720051B11C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE001E801FCCEB720051B11C /* SettingsView.swift */; };
@@ -254,13 +252,11 @@
 		CE3B61F21FC6B36C00B24933 /* GOGOIA-Deco.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341E1FB57AB900CB5905 /* GOGOIA-Deco.otf */; };
 		CE3B61F31FC6B36C00B24933 /* GOGOIA-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CE4B341F1FB57ABA00CB5905 /* GOGOIA-Regular.otf */; };
 		CE3B61F41FC6B36C00B24933 /* Blogger-Sans-Light-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF441FBD22DA00512E07 /* Blogger-Sans-Light-Italic.ttf */; };
-		CE3B61F51FC6B36C00B24933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBF1FB181110052DC3A /* LaunchScreen.storyboard */; };
 		CE3B61F61FC6B36C00B24933 /* Blogger-Sans-Medium-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF401FBD22D900512E07 /* Blogger-Sans-Medium-Italic.ttf */; };
 		CE3B61F71FC6B36C00B24933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBD1FB181110052DC3A /* Assets.xcassets */; };
 		CE3B61F81FC6B36C00B24933 /* Blogger-Sans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF451FBD22DA00512E07 /* Blogger-Sans.ttf */; };
 		CE3B61F91FC6B36C00B24933 /* Blogger-Sans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF461FBD22DA00512E07 /* Blogger-Sans-Italic.ttf */; };
 		CE3B61FA1FC6B36C00B24933 /* Blogger-Sans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF411FBD22D900512E07 /* Blogger-Sans-Light.ttf */; };
-		CE3B61FB1FC6B36C00B24933 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABB71FB181110052DC3A /* Main.storyboard */; };
 		CE3B61FC1FC6B36C00B24933 /* Blogger-Sans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF421FBD22DA00512E07 /* Blogger-Sans-Medium.ttf */; };
 		CE3B61FD1FC6B36C00B24933 /* Blogger-Sans-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF431FBD22DA00512E07 /* Blogger-Sans-Bold-Italic.ttf */; };
 		CE3B62081FC6B61F00B24933 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE3B62071FC6B61F00B24933 /* Info.plist */; };
@@ -567,6 +563,8 @@
 		CEED03001FC6DD68002C7A5A /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
 		CEED03011FC6DD69002C7A5A /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
 		CEED03021FC6DD8C002C7A5A /* ManagedProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */; };
+		CEF2B5AF1FD557C100619D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABB71FB181110052DC3A /* Main.storyboard */; };
+		CEF2B5B01FD557C100619D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEE8ABBF1FB181110052DC3A /* LaunchScreen.storyboard */; };
 		CEF320E01FC52826004CA907 /* PropertyLooperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320DF1FC52826004CA907 /* PropertyLooperProtocol.swift */; };
 		CEF320E21FC528AA004CA907 /* PropertLooper+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320E11FC528AA004CA907 /* PropertLooper+Default.swift */; };
 		CEF320E51FC52C0E004CA907 /* BaseDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF320E41FC52C0E004CA907 /* BaseDisplayItem.swift */; };
@@ -761,8 +759,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BEE97E7347D38B976572A6F /* Pods_BetaProduct_Swift_DEV__Integration_Tests_.framework in Frameworks */,
-				C26CA66A04FACD38778A0947 /* Pods_BetaProduct_Swift_DEV_Integration_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1414,12 +1410,13 @@
 		CEE8ABEA1FB184360052DC3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CEF2B5B21FD55F0800619D3E /* QRCode */,
 				CEA04A671FCBEBC200B82FA5 /* Settings */,
 				CE07A4851FBD2A5D009185F3 /* Create Account */,
 				CEC203921FB46C160022C7C2 /* Login */,
 				CEC203881FB46C160022C7C2 /* LoginOptions */,
 				CEE8ABFF1FB1A43C0052DC3A /* Home */,
-				CEE8ABFC1FB1A2400052DC3A /* ProductList */,
+				CEE8ABFC1FB1A2400052DC3A /* Product */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1479,12 +1476,12 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		CEE8ABFC1FB1A2400052DC3A /* ProductList */ = {
+		CEE8ABFC1FB1A2400052DC3A /* Product */ = {
 			isa = PBXGroup;
 			children = (
 				CEF83FB91FB41B2F00FF19B4 /* Application Logic */,
 			);
-			path = ProductList;
+			path = Product;
 			sourceTree = "<group>";
 		};
 		CEE8ABFF1FB1A43C0052DC3A /* Home */ = {
@@ -1554,6 +1551,77 @@
 				CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */,
 			);
 			path = BetaProduct;
+			sourceTree = "<group>";
+		};
+		CEF2B5B21FD55F0800619D3E /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2B5B31FD55F0800619D3E /* Module Interface */,
+				CEF2B5B41FD55F0800619D3E /* Application Logic */,
+				CEF2B5B71FD55F0800619D3E /* User Interface */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
+		CEF2B5B31FD55F0800619D3E /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		CEF2B5B41FD55F0800619D3E /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2B5B51FD55F0800619D3E /* Manager */,
+				CEF2B5B61FD55F0800619D3E /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		CEF2B5B51FD55F0800619D3E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		CEF2B5B61FD55F0800619D3E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CEF2B5B71FD55F0800619D3E /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CEF2B5B81FD55F0800619D3E /* Presenter */,
+				CEF2B5B91FD55F0800619D3E /* Wireframe */,
+				CEF2B5BA1FD55F0800619D3E /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		CEF2B5B81FD55F0800619D3E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CEF2B5B91FD55F0800619D3E /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		CEF2B5BA1FD55F0800619D3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		CEF320DE1FC52801004CA907 /* Protocols */ = {
@@ -1833,17 +1901,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF2B5AF1FD557C100619D3E /* Main.storyboard in Resources */,
+				CEF2B5B01FD557C100619D3E /* LaunchScreen.storyboard in Resources */,
 				CE3B61F11FC6B36C00B24933 /* Blogger-Sans-Bold.ttf in Resources */,
 				CE3B61F21FC6B36C00B24933 /* GOGOIA-Deco.otf in Resources */,
 				CE3B61F31FC6B36C00B24933 /* GOGOIA-Regular.otf in Resources */,
 				CE3B61F41FC6B36C00B24933 /* Blogger-Sans-Light-Italic.ttf in Resources */,
-				CE3B61F51FC6B36C00B24933 /* LaunchScreen.storyboard in Resources */,
 				CE3B61F61FC6B36C00B24933 /* Blogger-Sans-Medium-Italic.ttf in Resources */,
 				CE3B61F71FC6B36C00B24933 /* Assets.xcassets in Resources */,
 				CE3B61F81FC6B36C00B24933 /* Blogger-Sans.ttf in Resources */,
 				CE3B61F91FC6B36C00B24933 /* Blogger-Sans-Italic.ttf in Resources */,
 				CE3B61FA1FC6B36C00B24933 /* Blogger-Sans-Light.ttf in Resources */,
-				CE3B61FB1FC6B36C00B24933 /* Main.storyboard in Resources */,
 				CE3B61FC1FC6B36C00B24933 /* Blogger-Sans-Medium.ttf in Resources */,
 				CE3B61FD1FC6B36C00B24933 /* Blogger-Sans-Bold-Italic.ttf in Resources */,
 			);
@@ -2854,10 +2922,7 @@
 				);
 				INFOPLIST_FILE = "BetaProduct-Swift/Support Files/Info-DEV.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Sample",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEV\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.outsourced.BetaProduct-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2880,10 +2945,7 @@
 				);
 				INFOPLIST_FILE = "BetaProduct-Swift/Support Files/Info-DEV.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Sample",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEV\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.outsourced.BetaProduct-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
