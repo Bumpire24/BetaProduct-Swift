@@ -74,10 +74,12 @@ class LoginModuleTest: XCTestCase, LogInInteractorOutput {
     
     /// tests behavor if login was successful
     func testSuccessLogin() {
-        self.expectation = expectation(description: "testSuccessLogin")
-        let item = UserDisplayItem(email: "sample@gmail.com", password: "sample")
-        view?.eventHandler?.validateUser(item)
-        self.waitForExpectations(timeout: 10) { _ in
+        measure {
+            self.expectation = expectation(description: "testSuccessLogin")
+            let item = UserDisplayItem(email: "sample@gmail.com", password: "sample")
+            view?.eventHandler?.validateUser(item)
+            self.waitForExpectations(timeout: 10) { _ in
+            }
         }
     }
     
