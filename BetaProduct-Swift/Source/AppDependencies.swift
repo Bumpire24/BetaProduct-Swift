@@ -128,9 +128,48 @@ class AppDependencies: NSObject {
         
         //Change Email Settings Classes
         let changeEmailSettingsPresenter = SettingsPresenterEmail()
+        settingsInteractor.outputEmail = changeEmailSettingsPresenter
         changeEmailSettingsPresenter.interactor = settingsInteractor
         changeEmailSettingsPresenter.changeEmailSettingsWireframe = settingsChangeEmailWireframe
         settingsChangeEmailWireframe.presenter = changeEmailSettingsPresenter
+        
+        let managerProduct = ProductManager()
+        managerProduct.store = store
+        managerProduct.retrieveProducts(withCompletionBlock: { response in })
+        
+//        managerProduct.createProduct(withProduct: Product.init(productName: "Name",
+//                                                               productDescription: "Name",
+//                                                               productId: 1,
+//                                                               productPrice: "Name",
+//                                                               productPriceDescription: "Name",
+//                                                               productWeblink: "Name",
+//                                                               productImageURL: "Name",
+//                                                               productImageThumbURL: "Name",
+//                                                               productImageCompanyURL: "Name"),
+//                                     withCompletionBlock: { response in })
+//
+//        managerProduct.createProduct(withProduct: Product.init(productName: "Name",
+//                                                               productDescription: "Name",
+//                                                               productId: 1,
+//                                                               productPrice: "Name",
+//                                                               productPriceDescription: "Name",
+//                                                               productWeblink: "Name",
+//                                                               productImageURL: "Name",
+//                                                               productImageThumbURL: "Name",
+//                                                               productImageCompanyURL: "Name"),
+//                                     withCompletionBlock: { response in })
+//
+//        managerProduct.createProduct(withProduct: Product.init(productName: "Name",
+//                                                               productDescription: "Name",
+//                                                               productId: 1,
+//                                                               productPrice: "Name",
+//                                                               productPriceDescription: "Name",
+//                                                               productWeblink: "Name",
+//                                                               productImageURL: "Name",
+//                                                               productImageThumbURL: "Name",
+//                                                               productImageCompanyURL: "Name"),
+//                                     withCompletionBlock: { response in })
+        
     }
     
     func configureLibraries() {

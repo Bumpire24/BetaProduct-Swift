@@ -9,13 +9,13 @@
 import UIKit
 
 /// presenter class for module `Settings`
-class SettingsPresenterProfile: NSObject, SettingsUpdateModuleProtocol, SettingsProfileInteractorOutput {
+class SettingsPresenterProfile: NSObject, SettingsProfileModuleProtocol, SettingsProfileInteractorOutput, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     /// variable for interactor
     var interactor: SettingsInteractorInput?
     /// variable for wireframe
     var profileSettingsWireframe : SettingsProfileWireframe?
     /// variable for view
-    var profileSettingsView: ProfileSettingsView?
+    var profileSettingsView: SettingsProfileViewProtocol?
     
     // MARK: SettingsProfileInteractorOutput
     /// implements protocol. see `SettingsInteractorIO.swift`
@@ -29,7 +29,7 @@ class SettingsPresenterProfile: NSObject, SettingsUpdateModuleProtocol, Settings
     func settingsUpdationComplete(wasSuccessful isSuccess: Bool,
                                   withMessage message: String,
                                   withNewDisplayItem displayItem: SettingsProfileDisplayItem) {
-        
+        profileSettingsView?.displayMessage(message, isSuccessful: isSuccess)
     }
     
     // MARK: SettingsUpdateModuleProtocol
@@ -40,11 +40,41 @@ class SettingsPresenterProfile: NSObject, SettingsUpdateModuleProtocol, Settings
     
     /// implements protocol. see `SettingsModuleProtocols.swift`
     func cancelUpdates() {
-        
+        self.interactor?.getDisplayItemForProfile()
     }
     
     /// implements protocol. see `SettingsModuleProtocols.swift`
     func updateView() {
         self.interactor?.getDisplayItemForProfile()
+    }
+    
+    /// implements protocol. see `SettingsModuleProtocols.swift`
+    func proceedToCamera() {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            profileSettingsWireframe?.presentCamera()
+        } else {
+            profileSettingsView?.displayMessage("Camera Access is needed for Photo Upload", isSuccessful: false)
+        }
+    }
+    
+    /// implements protocol. see `SettingsModuleProtocols.swift`
+    func proceedToPhotoLibrary() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            profileSettingsWireframe?.presentPhotoLibrary()
+        } else {
+            profileSettingsView?.displayMessage("Photo Library Access is needed for Photo Upload", isSuccessful: false)
+        }
+    }
+    
+    // MARK: UIImagePickerControllerDelegate
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        profileSettingsWireframe?.dismissPhotoUploadPicker()
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // call wireframe to go back to profile and load image selected
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        profileSettingsView?.updateViewWithNewProfileImage(image: image)
+        profileSettingsWireframe?.dismissPhotoUploadPicker()
     }
 }

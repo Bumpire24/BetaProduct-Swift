@@ -16,4 +16,5 @@ class ManagedProduct: BaseEntity {
     @NSManaged var imageThumbUrl :      String
     @NSManaged var imageCompanyUrl :    String
     @NSManaged var productId :          Int16
+    @NSManaged var users: Set<ManagedUser>
 }

@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ChangeEmailView: BaseView {
-
+class ChangeEmailView: BaseView, SettingsViewProtocol {
     @IBOutlet weak var changeEmailHeaderLabel: BetaProductHeaderLabel!
     @IBOutlet weak var changeEmailInstructionLabel: BetaProductInstructionLabel!
     @IBOutlet weak var oldEmailAddressView: BetaProductRoundedContainerView!
@@ -101,5 +100,11 @@ class ChangeEmailView: BaseView {
     
     @IBAction func revertProfileChanges(_ sender: Any) {
         defineUIControlDefaultState()
+    }
+    
+    // MARK: SettingsViewProtocol
+    func displayMessage(_ message: String, isSuccessful: Bool) {
+        let baseMessageView = BaseMessageView()
+        baseMessageView.displayMessage(withTitle: "", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self, messageStatus: isSuccessful)
     }
 }

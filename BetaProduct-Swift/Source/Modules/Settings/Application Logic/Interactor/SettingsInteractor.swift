@@ -195,6 +195,11 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
             return
         }
         
+        if emailOld == emailNew {
+            self.outputEmail?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Email and New Email are the same")
+            return
+        }
+        
         user?.email = item.emailAddNew!
         self.callWSAndUpdateUser(user!, updateDisplayItem: item)
     }
@@ -225,6 +230,10 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
         if passNew != passNewC {
             self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password and Confirm New Password does not match")
             return
+        }
+        
+        if passOld == passNew {
+            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password and New Password are the same")
         }
         
         user?.password = item.passwordNew!

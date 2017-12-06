@@ -15,7 +15,7 @@ class SettingsPresenterEmail: NSObject, SettingsUpdateModuleProtocol, SettingsEm
     /// variable for wireframe
     var changeEmailSettingsWireframe : SettingsChangeEmailWireframe?
     /// variable for view
-    var changeEmailView : ChangeEmailView?
+    var changeEmailView : SettingsViewProtocol?
     
     // MARK: SettingsUpdateModuleProtocol
     /// implements protocol. see `SettingsModuleProtocols.swift`
@@ -28,14 +28,9 @@ class SettingsPresenterEmail: NSObject, SettingsUpdateModuleProtocol, SettingsEm
         
     }
     
-    /// implements protocol. see `SettingsModuleProtocols.swift`
-    func updateView() {
-        
-    }
-    
     // MARK: SettingsEmailInteractorOutput
     /// implements protocol. see `SettingsInteractorIO.swift`
     func settingsUpdationComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
-        
+        changeEmailView?.displayMessage(message, isSuccessful: isSuccess)
     }
 }
