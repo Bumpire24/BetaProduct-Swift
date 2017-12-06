@@ -9,6 +9,7 @@
 import UIKit
 
 let createAccountViewIdentifier = "CreateAccountView"
+let transition = BetaProductTransitionAnimator()
 
 class CreateAccountWireframe: BaseWireframe {
     var createAccountView : CreateAccountView?
@@ -26,6 +27,9 @@ class CreateAccountWireframe: BaseWireframe {
         createAccountView = newViewController
         createAccountView?.eventHandler = presenter
         presenter?.view = newViewController
+        newViewController.transitioningDelegate = self
+        viewController.navigationController?.view.layer.add(fetchTransition(), forKey: nil)
+        
         viewController.navigationController?.pushViewController(newViewController, animated: true)
     }
     
@@ -36,5 +40,18 @@ class CreateAccountWireframe: BaseWireframe {
     private func createAccountViewController() -> CreateAccountView {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: createAccountViewIdentifier) as! CreateAccountView
         return viewcontroller
+    }
+}
+
+extension CreateAccountWireframe: UIViewControllerTransitioningDelegate {
+    func animationControllerForPresentedController(presented: UIViewController,
+                                                   presentingController presenting: UIViewController,
+                                                   sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return transition
+        
+    }
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return transition
     }
 }

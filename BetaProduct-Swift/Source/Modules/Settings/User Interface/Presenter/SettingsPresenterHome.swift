@@ -13,7 +13,6 @@ class SettingsPresenterHome: NSObject, SettingsHomeModuleProtocol, SettingsHomeI
     /// variable for interactor
     var interactor: SettingsInteractorInput?
     /// variable for wireframe
-    var wireframe: String?
     var wireframeSettings : SettingsWireframe?
     /// variablw for view
     var view: String?
@@ -42,7 +41,7 @@ class SettingsPresenterHome: NSObject, SettingsHomeModuleProtocol, SettingsHomeI
     // MARK: SettingsHomeInteractorOuput
     /// implements protocol. see `SettingsModuleProtocols.swift`
     func logOutReady() {
-        
+        wireframeSettings?.logOutUser()
     }
     
     /// implements protocol. see `SettingsModuleProtocols.swift`
