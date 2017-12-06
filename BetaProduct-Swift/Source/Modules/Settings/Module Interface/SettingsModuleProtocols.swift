@@ -26,14 +26,14 @@ protocol SettingsUpdateModuleProtocol {
     func saveUpdates<T: SettingsDisplayItemProtocol>(withItem item: T)
     /// cancel pending updates
     func cancelUpdates()
-    /// fetches view model
-    func updateView()
 }
 
 /// module interface for module `Settings`
-protocol SettingsPhotoUploadModuleProtocol{
+protocol SettingsProfileModuleProtocol: SettingsUpdateModuleProtocol{
     /// opens Camera
     func proceedToCamera()
     /// opens Photo Library
     func proceedToPhotoLibrary()
+    /// fetches view model
+    func updateView()
 }

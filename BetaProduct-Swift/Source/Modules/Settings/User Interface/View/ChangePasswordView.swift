@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ChangePasswordView: BaseView {
-    
+class ChangePasswordView: BaseView, SettingsViewProtocol {
     @IBOutlet weak var changePasswordHeaderLabel: BetaProductHeaderLabel!
     @IBOutlet weak var changePasswordInstructionLabel: BetaProductInstructionLabel!
     @IBOutlet weak var oldPasswordView: BetaProductRoundedContainerView!
@@ -97,5 +96,9 @@ class ChangePasswordView: BaseView {
     @IBAction func revertPasswordChanges(_ sender: Any) {
         defineUIControlDefaultState()
     }
-
+    
+    func displayMessage(_ message: String, isSuccessful: Bool) {
+        let baseMessageView = BaseMessageView()
+        baseMessageView.displayMessage(title: "", message: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", viewController: self, messageStatus: isSuccessful)
+    }
 }

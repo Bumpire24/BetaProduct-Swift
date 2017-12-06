@@ -21,4 +21,5 @@ class ManagedUser: BaseEntity {
     @NSManaged var profileImageURL: String
     /// variable for Full Name
     @NSManaged var addressShipping: String
+    @NSManaged var products: Set<ManagedProduct>
 }

@@ -44,9 +44,5 @@ enum Response<T> {
     }
 }
 
-typealias CompletionBlock<T> = (_ block : Response<T>) -> Void
-//typealias CompletionBlock2<[T]> = (_ block : Response<[T]>) -> Void
-//typealias CompletionBlock = (_ isSuccesful: Bool, _ error: NSError?) -> Void
-//typealias CompletionBlockWithResults = (_ isSuccesful: Bool, _ error: NSError?, _ results : [Any]?) -> Void
-//typealias CompletionBlockWithResult<T> = (_ isSuccesful : Bool, _ error: NSError?, _ result :T) -> Void
+typealias CompletionBlock<T> = (Response<T>) -> (Void)
 

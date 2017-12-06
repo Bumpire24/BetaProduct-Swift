@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileSettingsView: BaseView {
+class ProfileSettingsView: BaseView, SettingsProfileViewProtocol {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileButton: UIButton!
@@ -29,7 +29,9 @@ class ProfileSettingsView: BaseView {
     @IBOutlet weak var cancelProfileButton: BetaProductSecondaryButton!
     @IBOutlet weak var profileVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var floatingButtonsView: UIView!
-    var eventHandler : SettingsUpdateModuleProtocol?
+    var eventHandler : SettingsProfileModuleProtocol?
+    var displayItem = SettingsProfileDisplayItem()
+    var newDisplayImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,11 +95,13 @@ class ProfileSettingsView: BaseView {
     }
     
     @IBAction func saveProfileChanges(_ sender: Any) {
-        var displayItems = SettingsProfileDisplayItem()
-        displayItems.name = fullNameField.text
-        displayItems.addressShipping = billingAddressField.text
-        displayItems.mobile = mobileNumberField.text
-        eventHandler?.saveUpdates(withItem: displayItems)
+        displayItem.name = fullNameField.text
+        displayItem.addressShipping = billingAddressField.text
+        displayItem.mobile = mobileNumberField.text
+        if let imageToUpdate = newDisplayImage {
+            displayItem.profileImage.image = imageToUpdate
+        }
+        eventHandler?.saveUpdates(withItem: displayItem)
         defineUIControlDefaultState()
     }
     
@@ -106,18 +110,16 @@ class ProfileSettingsView: BaseView {
     }
     
     @IBAction func displayCameraScreen(_ sender: Any) {
-        
+        eventHandler?.proceedToCamera()
     }
     
     @IBAction func displayPhotoLibrary(_ sender: Any) {
-        
+        eventHandler?.proceedToPhotoLibrary()
     }
     
     @IBAction func closeFloatingButtonView(_ sender: Any) {
         floatingButtonsView.isHidden = true
     }
-    
-    
     
     //MARK: Fetching functions
     
@@ -126,9 +128,19 @@ class ProfileSettingsView: BaseView {
     }
     
     func populateUserProfile(displayItems: SettingsProfileDisplayItem) {
+        displayItem = displayItems
         fullNameField.text = displayItems.name
         billingAddressField.text = displayItems.addressShipping
         mobileNumberField.text = displayItems.mobile
     }
+    
+    func displayMessage(_ message : String, isSuccessful : Bool) {
+        let baseMessageView = BaseMessageView()
+        baseMessageView.displayMessage(title: "", message: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", viewController: self, messageStatus: isSuccessful)
+    }
 
+    func updateViewWithNewProfileImage(image: UIImage) {
+        profileImage.image = image
+        newDisplayImage = image
+    }
 }

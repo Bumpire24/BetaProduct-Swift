@@ -23,4 +23,8 @@ enum Status : Int {
     case Active = 1,
     Inactive,
     Deleted
+    
+    func toInt16() -> Int16 {
+        return Int16(self.rawValue)
+    }
 }
