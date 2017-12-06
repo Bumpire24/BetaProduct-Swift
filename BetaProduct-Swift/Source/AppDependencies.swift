@@ -137,9 +137,16 @@ class AppDependencies: NSObject {
         changeEmailSettingsPresenter.changeEmailSettingsWireframe = settingsChangeEmailWireframe
         settingsChangeEmailWireframe.presenter = changeEmailSettingsPresenter
         
-        let managerProduct = ProductManager()
-        managerProduct.store = store
-        managerProduct.retrieveProducts(withCompletionBlock: { response in })
+        //Change Password Settings Classes
+        let changePasswordSettingsPresenter = SettingsPresenterPassword()
+        settingsInteractor.outputPassword = changePasswordSettingsPresenter
+        changePasswordSettingsPresenter.interactor = settingsInteractor
+        changePasswordSettingsPresenter.changePasswordSettingsWireframe = settingsChangePasswordWireframe
+        settingsChangePasswordWireframe.presenter = changePasswordSettingsPresenter
+        
+//        let managerProduct = ProductManager()
+//        managerProduct.store = store
+//        managerProduct.retrieveProducts(withCompletionBlock: { response in })
         
 //        managerProduct.createProduct(withProduct: Product.init(productName: "Name",
 //                                                               productDescription: "Name",

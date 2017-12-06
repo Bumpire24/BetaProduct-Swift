@@ -15,7 +15,7 @@ class SettingsPresenterPassword: NSObject, SettingsUpdateModuleProtocol, Setting
     /// variable for wireframe
     var changePasswordSettingsWireframe : SettingsChangePasswordWireframe?
     /// variable for view
-    var changePasswordView: ChangePasswordView?
+    var changePasswordView: SettingsViewProtocol?
     
     // MARK: SettingsUpdateModuleProtocol
     /// implements protocol. see `SettingsModuleProtocols.swift`
@@ -28,14 +28,7 @@ class SettingsPresenterPassword: NSObject, SettingsUpdateModuleProtocol, Setting
         
     }
     
-    /// implements protocol. see `SettingsModuleProtocols.swift`
-    func updateView() {
-        
-    }
-    
-    // MARK: SettingsPasswordInteractorOutput
-    /// implements protocol. see `SettingsInteractorIO.swift`
     func settingsUpdationComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
-        
+        changePasswordView?.displayMessage(message, isSuccessful: isSuccess)
     }
 }

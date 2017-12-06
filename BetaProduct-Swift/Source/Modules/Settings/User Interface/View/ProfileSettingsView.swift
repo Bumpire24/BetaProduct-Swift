@@ -136,7 +136,7 @@ class ProfileSettingsView: BaseView, SettingsProfileViewProtocol {
     
     func displayMessage(_ message : String, isSuccessful : Bool) {
         let baseMessageView = BaseMessageView()
-        baseMessageView.displayMessage(withTitle: "", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self, messageStatus: isSuccessful)
+        baseMessageView.displayMessage(title: "", message: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", viewController: self, messageStatus: isSuccessful)
     }
 
     func updateViewWithNewProfileImage(image: UIImage) {

@@ -68,8 +68,8 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     // MARK: Privates
     private func constructOutput(displayItemType displayItem: SettingsDisplayItemProtocol, wasSuccessful: Bool, withMessage: String) {
         switch displayItem {
-        case is SettingsPresenterEmail: self.outputEmail?.settingsUpdationComplete(wasSuccessful: wasSuccessful, withMessage: withMessage)
-        case is SettingsPresenterPassword: self.outputPassword?.settingsUpdationComplete(wasSuccessful: wasSuccessful, withMessage: withMessage)
+        case is SettingsEmailDisplayItem: self.outputEmail?.settingsUpdationComplete(wasSuccessful: wasSuccessful, withMessage: withMessage)
+        case is SettingsPasswordDisplayItem: self.outputPassword?.settingsUpdationComplete(wasSuccessful: wasSuccessful, withMessage: withMessage)
         default: break
         }
     }
