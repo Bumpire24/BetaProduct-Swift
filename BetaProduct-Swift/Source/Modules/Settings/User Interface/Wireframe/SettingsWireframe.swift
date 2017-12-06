@@ -15,6 +15,7 @@ class SettingsWireframe: BaseWireframe {
     var rootWireFrame : RootWireframe?
     var profileSettingsWireframe : SettingsProfileWireframe?
     var changeEmailSettingsWireframe : SettingsChangeEmailWireframe?
+    var changePasswordSettingsWireframe : SettingsChangePasswordWireframe?
     var homeWireFrame : HomeWireframe?
     var settingsPresenter : SettingsPresenterHome?
     
@@ -35,7 +36,7 @@ class SettingsWireframe: BaseWireframe {
     }
     
     func presentChangePasswordSettings() {
-        
+        changePasswordSettingsWireframe?.presentChangePasswordSettingsViewFromViewController(settingsView!)
     }
     
     func settingsViewController() -> SettingsView {

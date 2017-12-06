@@ -71,10 +71,6 @@ class ProfileSettingsView: BaseView, SettingsProfileViewProtocol {
         orLabel.isHidden = visibilityState
     }
     
-    func specifyFirstResponder(buttonControl : BetaProductRoundedContainerField) {
-        buttonControl.becomeFirstResponder()
-    }
-    
     //MARK: IBOutlet functions
     @IBAction func editProfileImage(_ sender: Any) {
         floatingButtonsView.isHidden = false
@@ -83,19 +79,19 @@ class ProfileSettingsView: BaseView, SettingsProfileViewProtocol {
     @IBAction func editFullName(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: fullNameField, withAssociatedEditButton: fullNameButton)
         defineButtonsVisibility(visibilityState: false)
-        specifyFirstResponder(buttonControl:  fullNameField)
+        super.specifyFirstResponder(buttonControl:  fullNameField)
     }
     
     @IBAction func editBillingAddress(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: billingAddressField, withAssociatedEditButton: billingAddressButton)
         defineButtonsVisibility(visibilityState: false)
-        specifyFirstResponder(buttonControl:  billingAddressField)
+        super.specifyFirstResponder(buttonControl:  billingAddressField)
     }
     
     @IBAction func editMobileNumber(_ sender: Any) {
         defineUIControlState(shouldEnable: true, forField: mobileNumberField, withAssociatedEditButton: mobileNumberButton)
         defineButtonsVisibility(visibilityState: false)
-        specifyFirstResponder(buttonControl:  mobileNumberField)
+        super.specifyFirstResponder(buttonControl:  mobileNumberField)
     }
     
     @IBAction func saveProfileChanges(_ sender: Any) {

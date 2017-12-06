@@ -13,9 +13,9 @@ class SettingsPresenterPassword: NSObject, SettingsUpdateModuleProtocol, Setting
     /// variable for interactor
     var interactor: SettingsInteractorInput?
     /// variable for wireframe
-    var wireframe: String?
+    var changePasswordSettingsWireframe : SettingsChangePasswordWireframe?
     /// variable for view
-    var view: String?
+    var changePasswordView: ChangePasswordView?
     
     // MARK: SettingsUpdateModuleProtocol
     /// implements protocol. see `SettingsModuleProtocols.swift`

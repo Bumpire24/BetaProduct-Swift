@@ -26,7 +26,7 @@ class SettingsPresenterHome: NSObject, SettingsHomeModuleProtocol, SettingsHomeI
     
     /// implements protocol. see `SettingsInteractorIO.swift`
     func proceedToPaswordSettings() {
-        
+        wireframeSettings?.presentChangePasswordSettings()
     }
     
     /// implements protocol. see `SettingsInteractorIO.swift`

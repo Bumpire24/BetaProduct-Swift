@@ -8,7 +8,7 @@
 
 import UIKit
 
-let changePasswordSettingsViewIdentifier = "ChangeEmailSettingsView"
+let changeEmailSettingsViewIdentifier = "ChangeEmailSettingsView"
 
 class SettingsChangeEmailWireframe: BaseWireframe {
     var changeEmailSettingsView : ChangeEmailView?
@@ -23,7 +23,7 @@ class SettingsChangeEmailWireframe: BaseWireframe {
     }
     
     private func changeEmailSettingsViewController() -> ChangeEmailView {
-        let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: changePasswordSettingsViewIdentifier) as! ChangeEmailView
+        let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: changeEmailSettingsViewIdentifier) as! ChangeEmailView
         return viewcontroller
     }
 }
