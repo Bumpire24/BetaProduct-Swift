@@ -27,10 +27,12 @@ class HomeWireframe: BaseWireframe {
     }
     
     func presentHomeViewFromViewController(_ viewController: UIViewController) {
+//        let window = viewController.view.window
         let newViewController = homeViewController()
         homeView = newViewController
         newViewController.eventHandler = presenter
         assembleViewControllersForHomeView()
+        //detachHomeViewFromPreviousViews()
         viewController.navigationController?.pushViewController(newViewController, animated: true)
     }
     
@@ -43,20 +45,26 @@ class HomeWireframe: BaseWireframe {
         let qrView = createQRView()
         let productListView = UIViewController.init()
         let shopCartView = UIViewController.init()
-        let settingsView = UIViewController.init()
+        //let settingsView = UIViewController.init()
         
         qrView.view.backgroundColor = UIColor.red;
         productListView.view.backgroundColor = UIColor.yellow;
         shopCartView.view.backgroundColor = UIColor.blue;
-        settingsView.view.backgroundColor = UIColor.green;
+        //settingsView.view.backgroundColor = UIColor.green;
         
-        let tabViewControllers = [qrView, productListView, shopCartView, settingsView]
+        //let tabViewControllers = [qrView, productListView, shopCartView, settingsView]
+        let tabViewControllers = [qrView, productListView, shopCartView]
         homeView?.setViewControllers(tabViewControllers, animated: true)
         
         qrView.tabBarItem = UITabBarItem.init(title: "QR Code Scanner", image: UIImage.init(imageLiteralResourceName: "qr"), tag: 1)
         productListView.tabBarItem = UITabBarItem.init(title: "Products", image: UIImage.init(imageLiteralResourceName: "products"), tag: 1)
         shopCartView.tabBarItem = UITabBarItem.init(title: "Shop Cart", image: UIImage.init(imageLiteralResourceName: "shopcart"), tag: 1)
-        settingsView.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(imageLiteralResourceName: "settings"), tag: 1)
+        //settingsView.tabBarItem = UITabBarItem.init(title: "Settings", image: UIImage.init(imageLiteralResourceName: "settings"), tag: 1)
+    }
+    
+    func detachHomeViewFromPreviousViews(viewControllerToBecomeRoot: UIViewController) {
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //appDelegate.window?.rootViewController = viewControllerToBecomeRoot
     }
     
     func createQRView() -> QRView {

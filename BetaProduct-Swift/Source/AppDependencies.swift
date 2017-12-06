@@ -49,6 +49,7 @@ class AppDependencies: NSObject {
         let settingsWireframe = SettingsWireframe()
         let settingsProfileWireframe = SettingsProfileWireframe()
         let settingsChangeEmailWireframe = SettingsChangeEmailWireframe()
+        let settingsChangePasswordWireframe = SettingsChangePasswordWireframe()
         
         //Login Module Classes
         let loginPresenter = LogInPresenter()
@@ -108,6 +109,7 @@ class AppDependencies: NSObject {
         let settingsHomePresenter = SettingsPresenterHome()
         settingsWireframe.profileSettingsWireframe = settingsProfileWireframe
         settingsWireframe.changeEmailSettingsWireframe = settingsChangeEmailWireframe
+        settingsWireframe.changePasswordSettingsWireframe = settingsChangePasswordWireframe
         settingsHomePresenter.wireframeSettings = settingsWireframe
         settingsWireframe.settingsPresenter = settingsHomePresenter
         
@@ -122,6 +124,8 @@ class AppDependencies: NSObject {
         settingsInteractor.session = session
         settingsInteractor.outputProfile = profileSettingsPresenter
         
+        settingsHomePresenter.interactor = settingsInteractor
+        
         profileSettingsPresenter.interactor = settingsInteractor
         profileSettingsPresenter.profileSettingsWireframe = settingsProfileWireframe
         settingsProfileWireframe.presenter = profileSettingsPresenter
@@ -131,6 +135,12 @@ class AppDependencies: NSObject {
         changeEmailSettingsPresenter.interactor = settingsInteractor
         changeEmailSettingsPresenter.changeEmailSettingsWireframe = settingsChangeEmailWireframe
         settingsChangeEmailWireframe.presenter = changeEmailSettingsPresenter
+        
+        //Change Password Settings Classes
+        let changePasswordSettingsPresenter = SettingsPresenterPassword()
+        changePasswordSettingsPresenter.interactor = settingsInteractor
+        changePasswordSettingsPresenter.changePasswordSettingsWireframe = settingsChangePasswordWireframe
+        settingsChangePasswordWireframe.presenter = changePasswordSettingsPresenter
     }
     
     func configureLibraries() {

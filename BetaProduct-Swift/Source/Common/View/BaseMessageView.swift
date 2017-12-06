@@ -69,16 +69,16 @@ class BaseMessageView: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func displayMessage (withTitle : String? = "",
-                         messageContent : String? = "",
+    func displayMessage (title : String? = "",
+                         message : String? = "",
                          negativeButtonCaption : String? = "",
-                         affirmativeButtonCaption : String? = "", currentViewController : UIViewController, messageStatus : Bool? = nil) {
-        let messageProperties : Dictionary<String, String> = ["title": withTitle!,
-                                                              "message": messageContent!,
+                         affirmativeButtonCaption : String? = "", viewController : UIViewController, messageStatus : Bool? = nil) {
+        let messageProperties : Dictionary<String, String> = ["title": title!,
+                                                              "message": message!,
                                                               "negativeButtonLabel": negativeButtonCaption!,
                                                               "affirmativeButtonLabel": affirmativeButtonCaption!]
-        let messageViewController = currentViewController.storyboard?.instantiateViewController(withIdentifier: baseMessageViewIdentifier) as! BaseMessageView
-        currentView = currentViewController
+        let messageViewController = viewController.storyboard?.instantiateViewController(withIdentifier: baseMessageViewIdentifier) as! BaseMessageView
+        currentView = viewController
         currentView?.addChildViewController(messageViewController)
         currentView?.view.addSubview(messageViewController.view)
         populateMessageBox(messageView: messageViewController, messageProperties: messageProperties)

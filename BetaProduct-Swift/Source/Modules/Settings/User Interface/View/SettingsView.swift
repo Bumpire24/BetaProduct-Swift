@@ -52,6 +52,6 @@ class SettingsView: BaseView {
     }
     
     @IBAction func logOutUser(_ sender: Any) {
-        
+        eventHandler?.logout()
     }
 }

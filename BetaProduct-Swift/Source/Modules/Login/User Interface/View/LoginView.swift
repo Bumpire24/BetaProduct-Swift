@@ -45,8 +45,9 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
     
     // MARK: LoginViewProtocol
     func displayMessage(_ message: String, isSuccessful: Bool) {
-        let baseMessageView = BaseMessageView()
-        baseMessageView.displayMessage(withTitle: "Login", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self, messageStatus: isSuccessful)
+//        let baseMessageView = BaseMessageView()
+//        baseMessageView.displayMessage(withTitle: "Login", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self, messageStatus: isSuccessful)
+        super.displayDialogMessage(withTitle: "Login", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self, messageStatus: isSuccessful)
         
         guard isSuccessful else {
             return

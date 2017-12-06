@@ -9,10 +9,12 @@
 import UIKit
 
 class BaseView: UIViewController {
+    var baseMessageView : BaseMessageView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        baseMessageView = BaseMessageView()
         applyImageWatermark()
     }
 
@@ -37,5 +39,18 @@ class BaseView: UIViewController {
         backgroundImage.image = UIImage(named: "launchImage.png")
         backgroundImage.contentMode = .scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
+    }
+    
+    func displayDialogMessage(withTitle: String,
+                              messageContent: String,
+                              negativeButtonCaption: String,
+                              affirmativeButtonCaption: String,
+                              currentViewController: UIViewController,
+                              messageStatus: Bool) {
+        baseMessageView?.displayMessage(title: withTitle, message: messageContent, negativeButtonCaption: negativeButtonCaption, affirmativeButtonCaption: affirmativeButtonCaption, viewController: currentViewController, messageStatus: messageStatus)
+    }
+    
+    func specifyFirstResponder(buttonControl : BetaProductRoundedContainerField) {
+        buttonControl.becomeFirstResponder()
     }
 }
