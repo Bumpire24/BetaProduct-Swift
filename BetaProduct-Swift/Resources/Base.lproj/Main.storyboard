@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOk-Q5-RWI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOk-Q5-RWI">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -611,7 +610,7 @@
         <!--Login View-->
         <scene sceneID="qBN-O3-sb3">
             <objects>
-                <viewController storyboardIdentifier="LoginView" modalTransitionStyle="crossDissolve" id="Cww-ig-X2j" customClass="LoginView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="Cww-ig-X2j" customClass="LoginView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IGt-FF-uCG" userLabel="Login View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -625,6 +624,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="647" id="SsW-YJ-aEq"/>
+                                        </constraints>
                                         <blurEffect style="dark"/>
                                     </visualEffectView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r2l-Nc-Gy1" userLabel="Content View">
@@ -681,8 +683,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY6-Sb-ka8" userLabel="Create Account Button" customClass="BetaProductLinkButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
-                                                <rect key="frame" x="18" y="419" width="152" height="59"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="frame" x="19" y="419" width="152" height="59"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="59" id="lwD-Du-l5j"/>
                                                 </constraints>
@@ -696,17 +698,16 @@
                                             </button>
                                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkl-qW-yD7" userLabel="Separator Button" customClass="BetaProductLinkButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                                 <rect key="frame" x="178" y="419" width="20" height="59"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="59" id="9Xj-wq-fBi"/>
-                                                    <constraint firstAttribute="width" constant="20" id="CC6-NQ-kDf"/>
                                                 </constraints>
                                                 <state key="normal" title="|">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MU-cI-uWq" userLabel="Forgot Password Button" customClass="BetaProductLinkButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
-                                                <rect key="frame" x="204" y="419" width="152" height="59"/>
+                                                <rect key="frame" x="205" y="419" width="152" height="59"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="59" id="yEY-CF-ks8"/>
@@ -719,10 +720,10 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="height" constant="667" id="0ex-pZ-jpb"/>
                                             <constraint firstItem="l1l-cq-GXg" firstAttribute="top" secondItem="Cvi-Qr-lKN" secondAttribute="bottom" constant="40" id="85J-9X-ehZ"/>
                                             <constraint firstItem="VOW-UM-din" firstAttribute="centerX" secondItem="r2l-Nc-Gy1" secondAttribute="centerX" id="9UD-9r-xUx"/>
                                             <constraint firstItem="ZkQ-zI-h0X" firstAttribute="centerX" secondItem="r2l-Nc-Gy1" secondAttribute="centerX" id="EVz-2z-fXQ"/>
-                                            <constraint firstItem="7MU-cI-uWq" firstAttribute="trailing" secondItem="l1l-cq-GXg" secondAttribute="trailing" id="Etw-9t-DbG"/>
                                             <constraint firstItem="VOW-UM-din" firstAttribute="width" secondItem="r2l-Nc-Gy1" secondAttribute="width" multiplier="1:1.1094" id="GSf-Wq-nOw"/>
                                             <constraint firstItem="l1l-cq-GXg" firstAttribute="centerX" secondItem="r2l-Nc-Gy1" secondAttribute="centerX" id="HrI-pV-GKQ"/>
                                             <constraint firstItem="7MU-cI-uWq" firstAttribute="top" secondItem="qkl-qW-yD7" secondAttribute="top" id="IY2-Oj-SCQ"/>
@@ -731,9 +732,11 @@
                                             <constraint firstItem="l1l-cq-GXg" firstAttribute="width" secondItem="r2l-Nc-Gy1" secondAttribute="width" multiplier="1:1.1094" id="VA0-mc-I4w"/>
                                             <constraint firstItem="Cvi-Qr-lKN" firstAttribute="centerX" secondItem="r2l-Nc-Gy1" secondAttribute="centerX" id="WVz-T2-rEd"/>
                                             <constraint firstItem="ozr-uT-X6k" firstAttribute="centerX" secondItem="r2l-Nc-Gy1" secondAttribute="centerX" id="Wfk-pc-UwA"/>
+                                            <constraint firstItem="qkl-qW-yD7" firstAttribute="width" secondItem="r2l-Nc-Gy1" secondAttribute="width" multiplier="1:18.75" id="YDq-7v-hWa"/>
                                             <constraint firstItem="BY6-Sb-ka8" firstAttribute="width" secondItem="r2l-Nc-Gy1" secondAttribute="width" multiplier="1:2.4671" id="YLS-FY-Ubc"/>
+                                            <constraint firstItem="qkl-qW-yD7" firstAttribute="leading" secondItem="BY6-Sb-ka8" secondAttribute="trailing" constant="7" id="ZTP-Yg-4rm"/>
+                                            <constraint firstItem="7MU-cI-uWq" firstAttribute="leading" secondItem="qkl-qW-yD7" secondAttribute="trailing" constant="7" id="Zyy-1K-YUP"/>
                                             <constraint firstItem="qkl-qW-yD7" firstAttribute="top" secondItem="l1l-cq-GXg" secondAttribute="bottom" constant="40" id="bRW-vB-8AW"/>
-                                            <constraint firstItem="BY6-Sb-ka8" firstAttribute="leading" secondItem="l1l-cq-GXg" secondAttribute="leading" id="dZ6-lz-cI1"/>
                                             <constraint firstItem="VOW-UM-din" firstAttribute="top" secondItem="ozr-uT-X6k" secondAttribute="bottom" constant="10" id="iKC-zz-Eh2"/>
                                             <constraint firstItem="Cvi-Qr-lKN" firstAttribute="width" secondItem="r2l-Nc-Gy1" secondAttribute="width" multiplier="1:1.1094" id="jy6-nn-ghs"/>
                                             <constraint firstItem="Cvi-Qr-lKN" firstAttribute="top" secondItem="ZkQ-zI-h0X" secondAttribute="bottom" constant="40" id="lat-mI-JwY"/>
@@ -746,12 +749,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="r2l-Nc-Gy1" firstAttribute="width" secondItem="GiT-QQ-ITy" secondAttribute="width" id="3XR-2H-bju"/>
                                     <constraint firstItem="r2l-Nc-Gy1" firstAttribute="top" secondItem="GiT-QQ-ITy" secondAttribute="top" constant="20" symbolic="YES" id="CQl-HC-km4"/>
                                     <constraint firstItem="r2l-Nc-Gy1" firstAttribute="leading" secondItem="GiT-QQ-ITy" secondAttribute="leading" id="MLJ-ro-9QL"/>
                                     <constraint firstItem="r2l-Nc-Gy1" firstAttribute="centerX" secondItem="GiT-QQ-ITy" secondAttribute="centerX" id="X8x-WM-Iyc"/>
                                     <constraint firstAttribute="bottom" secondItem="r2l-Nc-Gy1" secondAttribute="bottom" constant="20" symbolic="YES" id="bTI-MY-Mh8"/>
-                                    <constraint firstItem="r2l-Nc-Gy1" firstAttribute="height" secondItem="GiT-QQ-ITy" secondAttribute="height" id="keX-3O-cjB"/>
                                     <constraint firstAttribute="trailing" secondItem="r2l-Nc-Gy1" secondAttribute="trailing" id="tkQ-As-7t4"/>
                                 </constraints>
                             </scrollView>
@@ -771,6 +772,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ilY-fd-Jhw"/>
                     </view>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="createAccountButton" destination="BY6-Sb-ka8" id="QDb-MF-rB7"/>
                         <outlet property="emailField" destination="ZkQ-zI-h0X" id="GPU-j8-axO"/>
@@ -1569,11 +1571,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvk-RN-Vf9">
-                                        <rect key="frame" x="0.0" y="20" width="375" height="880"/>
+                                        <rect key="frame" x="0.0" y="20" width="375" height="900"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WdP-p4-DVe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="880"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="900" id="Y7m-8x-Vjw"/>
+                                        </constraints>
                                         <blurEffect style="dark"/>
                                     </visualEffectView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7z-aZ-3Vf" userLabel="Content View">
@@ -1663,7 +1668,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYE-fI-nAe" userLabel="Create Account Button" customClass="BetaProductPrimaryButton" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                                 <rect key="frame" x="18" y="804" width="338" height="59"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="59" id="Js3-5W-QkK"/>
                                                 </constraints>
@@ -1692,6 +1697,7 @@
                                             <constraint firstItem="jkV-5z-QQE" firstAttribute="centerX" secondItem="m7z-aZ-3Vf" secondAttribute="centerX" id="YRa-a8-o9W"/>
                                             <constraint firstItem="tph-lM-QDI" firstAttribute="width" secondItem="m7z-aZ-3Vf" secondAttribute="width" multiplier="1:1.1094" id="Zlg-DN-nDO"/>
                                             <constraint firstItem="qCl-9D-bI3" firstAttribute="width" secondItem="m7z-aZ-3Vf" secondAttribute="width" multiplier="1:1.1094" id="aki-yD-rc8"/>
+                                            <constraint firstAttribute="height" constant="900" id="bC0-12-NjP"/>
                                             <constraint firstItem="XtI-rs-HXH" firstAttribute="top" secondItem="tph-lM-QDI" secondAttribute="bottom" constant="40" id="bn0-LQ-a8A"/>
                                             <constraint firstItem="jkV-5z-QQE" firstAttribute="width" secondItem="m7z-aZ-3Vf" secondAttribute="width" multiplier="1:1.1094" id="dhP-sa-yfx"/>
                                             <constraint firstItem="GhK-3t-W0C" firstAttribute="top" secondItem="lsi-Q7-u7C" secondAttribute="bottom" constant="50" id="fgR-HB-I4f"/>
@@ -1714,10 +1720,9 @@
                                     <constraint firstItem="m7z-aZ-3Vf" firstAttribute="top" secondItem="2hc-SB-7uC" secondAttribute="top" constant="20" symbolic="YES" id="6Si-Tw-g0A"/>
                                     <constraint firstItem="m7z-aZ-3Vf" firstAttribute="width" secondItem="2hc-SB-7uC" secondAttribute="width" id="MOF-2H-8to"/>
                                     <constraint firstItem="fah-rD-AY4" firstAttribute="centerX" secondItem="2hc-SB-7uC" secondAttribute="centerX" id="SZA-3I-hZg"/>
-                                    <constraint firstAttribute="bottom" secondItem="m7z-aZ-3Vf" secondAttribute="bottom" constant="20" symbolic="YES" id="cCa-sb-pQv"/>
+                                    <constraint firstAttribute="bottom" secondItem="m7z-aZ-3Vf" secondAttribute="bottom" id="Sk3-2W-2VW"/>
                                     <constraint firstItem="m7z-aZ-3Vf" firstAttribute="centerX" secondItem="2hc-SB-7uC" secondAttribute="centerX" id="mjH-v1-tSM"/>
                                     <constraint firstItem="m7z-aZ-3Vf" firstAttribute="leading" secondItem="2hc-SB-7uC" secondAttribute="leading" id="oFV-MU-7yw"/>
-                                    <constraint firstItem="m7z-aZ-3Vf" firstAttribute="height" secondItem="2hc-SB-7uC" secondAttribute="height" id="sPm-fH-xwn"/>
                                     <constraint firstAttribute="trailing" secondItem="m7z-aZ-3Vf" secondAttribute="trailing" id="uYf-95-Kr7"/>
                                 </constraints>
                             </scrollView>
@@ -1732,7 +1737,6 @@
                             <constraint firstItem="Bvk-RN-Vf9" firstAttribute="leading" secondItem="UWe-45-KWm" secondAttribute="leading" id="PtY-35-QUs"/>
                             <constraint firstItem="Bvk-RN-Vf9" firstAttribute="width" secondItem="vvF-Pz-8i3" secondAttribute="width" id="Quj-bV-2R1"/>
                             <constraint firstItem="2hc-SB-7uC" firstAttribute="leading" secondItem="UWe-45-KWm" secondAttribute="leading" id="ccT-Io-pYg"/>
-                            <constraint firstItem="Bvk-RN-Vf9" firstAttribute="bottom" secondItem="UWe-45-KWm" secondAttribute="bottom" id="gov-cl-iiQ"/>
                             <constraint firstItem="Bvk-RN-Vf9" firstAttribute="top" secondItem="UWe-45-KWm" secondAttribute="top" id="mDt-BT-yjQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UWe-45-KWm"/>
