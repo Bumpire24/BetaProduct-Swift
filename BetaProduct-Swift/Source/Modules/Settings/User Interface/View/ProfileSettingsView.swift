@@ -38,6 +38,8 @@ class ProfileSettingsView: BaseView, SettingsProfileViewProtocol {
 
         displayProfileInformation()
         defineUIControlDefaultState()
+        populateButtons()
+        enableTapGesture()
     }
     
     override func didReceiveMemoryWarning() {
@@ -132,6 +134,12 @@ class ProfileSettingsView: BaseView, SettingsProfileViewProtocol {
         fullNameField.text = displayItems.name
         billingAddressField.text = displayItems.addressShipping
         mobileNumberField.text = displayItems.mobile
+    }
+    
+    func populateButtons() {
+        self.saveProfileButton.setTitle("Save", for: .normal)
+        self.saveProfileButton.titleLabel?.textColor = BetaProductStyle.iDoohButtonFontColor
+        self.cancelProfileButton.setTitle("Cancel", for: .normal)
     }
     
     func displayMessage(_ message : String, isSuccessful : Bool) {

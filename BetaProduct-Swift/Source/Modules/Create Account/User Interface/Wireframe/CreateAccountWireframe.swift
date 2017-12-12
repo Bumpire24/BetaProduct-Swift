@@ -28,7 +28,7 @@ class CreateAccountWireframe: BaseWireframe {
         createAccountView?.eventHandler = presenter
         presenter?.view = newViewController
         newViewController.transitioningDelegate = self
-        viewController.navigationController?.view.layer.add(fetchTransition(), forKey: nil)
+//        viewController.navigationController?.view.layer.add(fetchTransition(), forKey: nil)
         
         viewController.navigationController?.pushViewController(newViewController, animated: true)
     }

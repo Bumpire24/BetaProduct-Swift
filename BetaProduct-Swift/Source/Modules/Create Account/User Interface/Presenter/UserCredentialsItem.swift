@@ -11,11 +11,15 @@ import Foundation
 /// User view model for module `Create Account`
 struct UserCredentialsItem : BaseDisplayItem {
     /// variable for fullname
-    let fullName     : String?
+    let lastName : String?
+    let firstName : String?
+    let middleName : String?
+    /// variable for shipping address
+    let shippingAddress : String?
     /// variable for mobile number
     let mobileNumber : String?
     /// variable for email
-    let email        : String?
+    let email : String?
     /// variable for password
-    let password     : String?
+    let password : String?
 }

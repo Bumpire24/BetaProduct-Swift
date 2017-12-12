@@ -9,11 +9,14 @@
 import UIKit
 
 class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
-    @IBOutlet weak var fullNameField: UITextField!
-    @IBOutlet weak var mobileNumberField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var createAccountButton: UIButton!
+    @IBOutlet weak var firstNameField: BetaProductEntryField!
+    @IBOutlet weak var middleNameField: BetaProductEntryField!
+    @IBOutlet weak var lastNameField: BetaProductEntryField!
+    @IBOutlet weak var shippingAddressField: BetaProductTextView!
+    @IBOutlet weak var mobileNumberField: BetaProductEntryField!
+    @IBOutlet weak var emailField: BetaProductEntryField!
+    @IBOutlet weak var passwordField: BetaProductEntryField!
+    @IBOutlet weak var createAccountButton: BetaProductPrimaryButton!
     @IBOutlet weak var createAccountHeader: BetaProductHeaderLabel!
     @IBOutlet weak var createAccountInstructions: BetaProductInstructionLabel!
     
@@ -33,30 +36,35 @@ class CreateAccountView: BaseView, BaseViewProtocol, CreateAccountViewProtocol {
     }
     
     func setupTheme() {
-        //self.createAccountButton.applyPrimaryButtonTheme()
+        BetaProductTheme.current.apply()
     }
     
     func populateControls() {
-        self.fullNameField.placeholder = "full name"
+        self.firstNameField.placeholder = "first name"
+        self.middleNameField.placeholder = "middle name"
+        self.lastNameField.placeholder = "last name"
+        self.shippingAddressField.specifyPlaceHolderText(placeHolder: "shipping address")
         self.mobileNumberField.placeholder = "mobile number"
         self.emailField.placeholder = "email"
         self.passwordField.placeholder = "password"
         self.createAccountButton.setTitle("Create Account", for: .normal)
+        self.firstNameField.text = ""
+        self.middleNameField.text = ""
+        self.lastNameField.text = ""
+        self.shippingAddressField.text = ""
+        self.mobileNumberField.text = ""
         self.emailField.text = ""
         self.passwordField.text = ""
     }
     
-    func enableTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        self.view.addGestureRecognizer(tapGesture)
-    }
-
-    @objc func dismissKeyboard() {
-        self.view.endEditing(true)
-    }
-    
     @IBAction func createAccount(_ sender: Any) {
-        let userCredentials = UserCredentialsItem.init(fullName: fullNameField.text, mobileNumber: mobileNumberField.text, email: emailField.text, password: passwordField.text)
+        let userCredentials = UserCredentialsItem.init(lastName: lastNameField.text,
+                                                       firstName: firstNameField.text,
+                                                       middleName: middleNameField.text,
+                                                       shippingAddress: shippingAddressField.text,
+                                                       mobileNumber: mobileNumberField.text,
+                                                       email: emailField.text,
+                                                       password: passwordField.text)
         eventHandler?.validateUserCredentials(userCredentials)
     }
     
