@@ -9,10 +9,13 @@
 import Foundation
 
 class ProductListPresenter: NSObject, ProductListInteractorOutput {
-    var interactor : ProductListInteractorInput?
+    var interactor : ProductInteractorInput?
     
-    // TODO:
-    func gotProducts(_ products: [Product]) {
+    func gotProducts(_ products: [ProductListItem]) {
+        
+    }
+    
+    func productListDeleteComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
         
     }
 }

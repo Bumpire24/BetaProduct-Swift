@@ -12,6 +12,7 @@ import Foundation
 class Session: NSObject {
     /// variable for shared Session. Singleton Pattern
     static let sharedSession = Session()
+    private var hasSynced: Bool = false
     
     /// struct declaration for UserSession. Will be the data object class for session User
     struct UserSession {
@@ -56,5 +57,13 @@ class Session: NSObject {
                          mobileNumber: user?.mobile ?? "",
                          addressShipping: user?.addShipping ?? "",
                          imageURLProfile: user?.imageURLProfile ?? "")
+    }
+    
+    func hasAlreadySynced() -> Bool {
+        return hasSynced
+    }
+    
+    func markSyncCompleted() {
+        hasSynced = true
     }
 }

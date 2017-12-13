@@ -81,6 +81,8 @@ struct BetaProduct {
     /// const for Webservice call : Make User.
     static let kBPWSPostUser : String = kBPWS + "posts"
     
+    static let kBPWSGetUserProduct : String = kBPWS + "photos"
+    
     /// const for Webservice call : Upload Image for User.
     static let kBPWSPostUserImage : String = kBPWS + "posts"
     
@@ -93,4 +95,6 @@ struct BetaProduct {
     static func kBPWSDeleteUserWithId(_ id : String) -> String {
         return kBPWS + "posts/" + id
     }
+    
+    static let kSyncComplete: String = "SyncComplete"
 }
