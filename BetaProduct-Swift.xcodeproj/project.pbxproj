@@ -411,6 +411,7 @@
 		CE63A5ED1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5E81FE1055200E69ED1 /* StoreWebClientFake.swift */; };
 		CE63A5EE1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5E81FE1055200E69ED1 /* StoreWebClientFake.swift */; };
 		CE63A5EF1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5E81FE1055200E69ED1 /* StoreWebClientFake.swift */; };
+		CE63A5F11FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */; };
 		CE6B5EBA1FB5A0B300356EC9 /* LogInModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */; };
 		CE6B5EBC1FB5A0DB00356EC9 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */; };
 		CE6B5EBF1FB5A18100356EC9 /* LogInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6B5EBE1FB5A18100356EC9 /* LogInViewProtocol.swift */; };
@@ -718,6 +719,7 @@
 		CE5570731FB597F600A14F7A /* LogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInManager.swift; sourceTree = "<group>"; };
 		CE61DEC11FB56C120028A59B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CE63A5E81FE1055200E69ED1 /* StoreWebClientFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientFake.swift; sourceTree = "<group>"; };
+		CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetaProductTransitionAnimator.swift; sourceTree = "<group>"; };
 		CE697BCA1FB3FE44001F02E9 /* LoginOptionsModuleInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOptionsModuleInterface.swift; sourceTree = "<group>"; };
 		CE6B5EB91FB5A0B300356EC9 /* LogInModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInModuleProtocol.swift; sourceTree = "<group>"; };
 		CE6B5EBB1FB5A0DB00356EC9 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
@@ -1652,6 +1654,7 @@
 		CEE8AC121FB1BC8A0052DC3A /* BetaProduct */ = {
 			isa = PBXGroup;
 			children = (
+				CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */,
 				CEE8AC131FB1BCA10052DC3A /* BetaProduct.swift */,
 				CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */,
 			);
@@ -2786,6 +2789,7 @@
 				CE001E991FCD47870051B11C /* ChangeEmailView.swift in Sources */,
 				CEE8AC091FB1A4E20052DC3A /* HomeView.swift in Sources */,
 				CE07A48F1FBD3262009185F3 /* BaseViewProtocol.swift in Sources */,
+				CE63A5F11FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift in Sources */,
 				CE6B5EBC1FB5A0DB00356EC9 /* LogInPresenter.swift in Sources */,
 				CE70F4431FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CEE8ABFE1FB1A2F50052DC3A /* AppDependencies.swift in Sources */,
