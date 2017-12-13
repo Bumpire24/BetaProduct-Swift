@@ -5,7 +5,8 @@
 //  Created by User on 11/21/17.
 //  Copyright © 2017 User. All rights reserved.
 //
-
+import Foundation
+import CoreData
 
 /// Core Data class Model for User
 class ManagedUser: BaseEntity {
@@ -21,5 +22,17 @@ class ManagedUser: BaseEntity {
     @NSManaged var profileImageURL: String
     /// variable for Full Name
     @NSManaged var addressShipping: String
-    @NSManaged var products: Set<ManagedProduct>
+    @NSManaged var products: NSSet
+}
+
+extension ManagedUser {
+    func addProduct(product: NSManagedObject) {
+        let currentProducts = mutableSetValue(forKey: "products")
+        currentProducts.add(product)
+    }
+    
+    func removeProduct(product: NSManagedObject) {
+        let currentProducts = mutableSetValue(forKey: "products")
+        currentProducts.remove(product)
+    }
 }

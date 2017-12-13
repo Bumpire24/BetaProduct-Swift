@@ -47,4 +47,17 @@ extension Product {
         self.imageThumbUrl = productImageThumbURL
         self.imageCompanyUrl = productImageCompanyURL
     }
+    
+    init(dictionary dataDict: [String: Any]) {
+        let wsConverter = WebServiceConverter.init(dataDict)
+        self.name = wsConverter.stringWithKey("name")
+        self.productDescription = wsConverter.stringWithKey("description")
+        self.productId = wsConverter.int16WithKey("id")
+        self.price = String.init(format: "%@ %.2f", wsConverter.stringWithKey("currency"), wsConverter.floatWithKey("price"))
+        self.priceDescription = String.init(format: "%@ %.2f", wsConverter.stringWithKey("currency"), wsConverter.floatWithKey("price"))
+        self.weblink = wsConverter.stringWithKey("url")
+        self.imageUrl = wsConverter.stringWithKey("image_high_res_url")
+        self.imageThumbUrl = wsConverter.stringWithKey("image_thumbnail_url")
+        self.imageCompanyUrl = wsConverter.stringWithKey("image_thumbnail_url")
+    }
 }

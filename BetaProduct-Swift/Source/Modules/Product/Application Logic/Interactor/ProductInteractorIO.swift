@@ -9,9 +9,11 @@
 import Foundation
 
 /// Protocol implementation for Product List Interactor (Input)
-protocol ProductListInteractorInput {
+protocol ProductInteractorInput {
     /// Retrieves Products from a given data source
     func getProducts()
+    func deleteProductByIndex(_ index: Int)
+    func getProductDetailByIndex(_ index: Int)
 }
 
 /// Protocol implementation for Product List Interactor (Output). Delegation
@@ -21,5 +23,10 @@ protocol ProductListInteractorOutput {
      - Parameters:
         - products: passes products retrieved from data source
      */
-    func gotProducts(_ products: [Product])
+    func gotProducts(_ products: [ProductListItem])
+    func productListDeleteComplete(wasSuccessful isSuccess: Bool, withMessage message: String)
+}
+
+protocol ProductDetailInteractorOutput {
+    func gotProduct(_ product: ProductDetailItem?)
 }

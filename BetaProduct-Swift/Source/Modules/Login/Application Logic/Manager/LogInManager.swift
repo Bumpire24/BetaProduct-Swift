@@ -23,7 +23,7 @@ class LogInManager: NSObject {
     func retrieveUser(withEmail email : String, withCompletionBlock block : @escaping CompletionBlock<User>) {
         let predicate = NSPredicate.init(format: "status != %d AND email == %@", Status.Deleted.rawValue, email)
         store?.fetchEntries(withEntityName: "User", withPredicate: predicate, withSortDescriptors: nil, withCompletionBlock: { response in
-            switch response{
+            switch response {
             case .success(let result):
                 let user = result?.first as! ManagedUser
                 block(Response.success(User.init(emailAddress: user.email,

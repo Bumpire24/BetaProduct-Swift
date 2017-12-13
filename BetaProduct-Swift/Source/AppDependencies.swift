@@ -14,12 +14,18 @@ import CocoaLumberjack
 class AppDependencies: NSObject {
 //    var mainWireFrame : HomeWireframe?
 //    var mainWireFrame : LoginOptionsWireframe?
-    var mainWireFrame : LoginWireframe?
+    private var mainWireFrame : LoginWireframe?
+    private var presenterHome: SettingsHomeModuleProtocol?
     
     override init() {
         super.init()
         configureLibraries()
         configureDependencies()
+    }
+    
+    func showLoginViewAndClearSession(InWindow window: UIWindow) {
+        presenterHome?.logout()
+        mainWireFrame?.presentLoginViewInterfaceFromWindow(Window: window)
     }
     
     func installRootViewController(InWindow window : UIWindow) {
@@ -32,7 +38,8 @@ class AppDependencies: NSObject {
         // Root Level Classes
         let root = RootWireframe()
         let store = StoreCoreData()
-        let webservice = StoreWebClient()
+        let webservice = StoreWebClientFake()
+//        let webservice = StoreWebClient()
         let session = Session.sharedSession
         
         // Home Module Classes
@@ -181,7 +188,16 @@ class AppDependencies: NSObject {
 //                                                               productImageThumbURL: "Name",
 //                                                               productImageCompanyURL: "Name"),
 //                                     withCompletionBlock: { response in })
+        presenterHome = settingsHomePresenter
         
+        // Products Module
+        let productManager = ProductManager()
+        let productInteractor = ProductInteractor()
+        
+        productManager.store = store
+        productInteractor.session = session
+        productInteractor.manager = productManager
+        productInteractor.webservice = webservice
     }
     
     func configureLibraries() {

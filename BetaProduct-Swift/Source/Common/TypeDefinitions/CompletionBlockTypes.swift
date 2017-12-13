@@ -44,5 +44,5 @@ enum Response<T> {
     }
 }
 
-typealias CompletionBlock<T> = (Response<T>) -> (Void)
+typealias CompletionBlock<T> = (Response<T>) -> Void
 

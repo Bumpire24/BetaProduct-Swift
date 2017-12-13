@@ -6,6 +6,9 @@
 //  Copyright © 2017 User. All rights reserved.
 //
 
+import Foundation
+import CoreData
+
 class ManagedProduct: BaseEntity {
     @NSManaged var name :               String
     @NSManaged var weblink :            String
@@ -16,5 +19,17 @@ class ManagedProduct: BaseEntity {
     @NSManaged var imageThumbUrl :      String
     @NSManaged var imageCompanyUrl :    String
     @NSManaged var productId :          Int16
-    @NSManaged var users: Set<ManagedUser>
+    @NSManaged var users: NSSet
+}
+
+extension ManagedProduct {
+    func addUser(user: NSManagedObject) {
+        let currentUsers = mutableSetValue(forKey: "users")
+        currentUsers.add(user)
+    }
+    
+    func removeUser(user: NSManagedObject) {
+        let currentUsers = mutableSetValue(forKey: "users")
+        currentUsers.remove(user)
+    }
 }

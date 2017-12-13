@@ -68,4 +68,32 @@ class WebServiceConverter {
         }
         return value
     }
+    
+    func decimalWithKey(_ key: String) -> Decimal {
+        var value : Decimal = 0.00
+        if dataDict[key] != nil {
+            if let x = dataDict[key] as! Decimal? {
+                value = x
+            } else {
+                logErrorKeyIsNotTheExpectedType(key, value: value)
+            }
+        } else {
+            logErrorKeyNotFound(key)
+        }
+        return value
+    }
+    
+    func floatWithKey(_ key: String) -> Float {
+        var value : Float = 0.00
+        if dataDict[key] != nil {
+            if let x = dataDict[key] as! Float? {
+                value = x
+            } else {
+                logErrorKeyIsNotTheExpectedType(key, value: value)
+            }
+        } else {
+            logErrorKeyNotFound(key)
+        }
+        return value
+    }
 }
