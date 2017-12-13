@@ -17,6 +17,7 @@ class LoginWireframe: BaseWireframe {
     var homeWireFrame : HomeWireframe?
     var createAccountWireframe : CreateAccountWireframe?
     var window: UIWindow?
+    let transition = BetaProductTransitionAnimator()
     
 //    func presentLoginViewInterfaceFromWindow(Window window : UIWindow) {
 //        let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: loginViewIdentifier) as! LoginView
@@ -28,6 +29,7 @@ class LoginWireframe: BaseWireframe {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: loginViewIdentifier) as! LoginView
         viewcontroller.eventHandler = loginPresenter
         loginView = viewcontroller
+        loginView?.transitioningDelegate = self
         loginPresenter?.view = viewcontroller
         rootWireFrame?.showRootViewController(rootViewController: viewcontroller, inWindow: window)
     }
@@ -51,5 +53,19 @@ class LoginWireframe: BaseWireframe {
     func loginViewController() -> LoginView {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: loginViewIdentifier) as! LoginView
         return viewcontroller
+    }
+}
+
+extension LoginWireframe: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.originFrame = (loginView?.view.frame)!
+        
+        transition.presenting = true
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.presenting = false
+        return transition
     }
 }

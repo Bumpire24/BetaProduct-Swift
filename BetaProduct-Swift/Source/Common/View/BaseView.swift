@@ -53,4 +53,13 @@ class BaseView: UIViewController {
     func specifyFirstResponder(buttonControl : BetaProductRoundedContainerField) {
         buttonControl.becomeFirstResponder()
     }
+    
+    func enableTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
 }

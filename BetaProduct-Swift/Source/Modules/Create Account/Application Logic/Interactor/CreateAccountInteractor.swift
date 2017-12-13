@@ -34,9 +34,14 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
         return isInputValid(input: mobile) && mobile.isValidPhone()
     }
     
-    /// validate mobile. calls isInputValid for generic input validation
-    private func isFullNameValid(name: String) -> Bool {
+    /// validate name. calls isInputValid for generic input validation
+    private func isNameValid(name: String) -> Bool {
         return isInputValid(input: name)
+    }
+    
+    /// validate address. calls isInputValid for generic input validation
+    private func isAddressValid(address: String) -> Bool {
+        return isInputValid(input: address)
     }
     
     // validate inputs. Generic handle for input validations
@@ -61,13 +66,23 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
     /// implements protocol. see `CreateAccountInteractorIO.swift`
     func validateAccountCredentials(_ loginDisplay: UserCredentialsItem) {
         // validate inputs
-        guard let username = loginDisplay.email?.trimmingCharacters(in: .whitespacesAndNewlines), isEmailValid(email: username) else {
-            output?.createAccountSuccessful(false, message: "Username incorrect!")
+        guard let lastName = loginDisplay.lastName?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: lastName) else {
+            output?.createAccountSuccessful(false, message: "Last Name incorrect!")
             return
         }
         
-        guard let password = loginDisplay.password?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: password) else {
-            output?.createAccountSuccessful(false, message: "Password incorrect!")
+        guard let firstName = loginDisplay.firstName?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: firstName) else {
+            output?.createAccountSuccessful(false, message: "First Name incorrect!")
+            return
+        }
+        
+        guard let middleName = loginDisplay.middleName?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: middleName) else {
+            output?.createAccountSuccessful(false, message: "Middle Name incorrect!")
+            return
+        }
+        
+        guard let shippingAddress = loginDisplay.shippingAddress?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: shippingAddress) else {
+            output?.createAccountSuccessful(false, message: "Shipping Address incorrect!")
             return
         }
         
@@ -76,8 +91,13 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
             return
         }
         
-        guard let fullName = loginDisplay.fullName?.trimmingCharacters(in: .whitespacesAndNewlines), isFullNameValid(name: fullName) else {
-            output?.createAccountSuccessful(false, message: "Full Name incorrect!")
+        guard let username = loginDisplay.email?.trimmingCharacters(in: .whitespacesAndNewlines), isEmailValid(email: username) else {
+            output?.createAccountSuccessful(false, message: "Username incorrect!")
+            return
+        }
+        
+        guard let password = loginDisplay.password?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: password) else {
+            output?.createAccountSuccessful(false, message: "Password incorrect!")
             return
         }
         

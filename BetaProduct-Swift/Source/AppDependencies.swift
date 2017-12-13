@@ -131,6 +131,7 @@ class AppDependencies: NSObject {
         settingsInteractor.session = session
         settingsInteractor.outputProfile = profileSettingsPresenter
         
+        settingsInteractor.outputHome = settingsHomePresenter
         settingsHomePresenter.interactor = settingsInteractor
         
         profileSettingsPresenter.interactor = settingsInteractor

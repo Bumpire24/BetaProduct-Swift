@@ -308,6 +308,35 @@ class BetaProductRoundedContainerView : UIView {
     }
 }
 
+class BetaProductTextView : UITextView {
+    var placeHolder : UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        specifyBorderProperty()
+        specifyPlaceHolder()
+
+    }
+    
+    func specifyBorderProperty () {
+        self.layer.borderColor = BetaProductStyle.iDoohTextFieldBorderColor.cgColor
+        self.layer.borderWidth = 1.0
+        self.layer.backgroundColor = BetaProductStyle.iDoohClearBackground.cgColor
+        self.layer.cornerRadius = 50.0
+    }
+    
+    func specifyPlaceHolder() {
+        placeHolder = UILabel(frame: CGRect(x: 80, y: 10, width: 200, height: 21))
+        placeHolder.textColor = BetaProductStyle.iDoohTextFieldFontColor
+        placeHolder.font = BetaProductStyle.Fonts.iDoohTextfieldFont
+        placeHolder.textAlignment = .center
+        self.addSubview(placeHolder)
+    }
+    
+    func specifyPlaceHolderText(placeHolder: String) {
+        self.placeHolder.text = placeHolder
+    }
+}
+
 fileprivate func specifyDialogButtonShadow(buttonControl: UIButton) {
     buttonControl.layer.borderColor = BetaProductStyle.iDoohClearBackground.cgColor
     buttonControl.layer.shadowColor = BetaProductStyle.iDoohMessageViewShadowColor.cgColor

@@ -14,4 +14,14 @@ class BaseWireframe: NSObject {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         return storyBoard
     }
+    
+    func fetchTransition() -> CATransition {
+        let newTransition = CATransition()
+        newTransition.duration = 0.5
+        newTransition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        newTransition.type = kCATransitionPush
+        //newTransition.subtype = kCATransitionPush
+        
+        return newTransition
+    }
 }
