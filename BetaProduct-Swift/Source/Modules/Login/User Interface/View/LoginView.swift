@@ -34,19 +34,8 @@ class LoginView: BaseView, BaseViewProtocol, LoginViewProtocol {
         // Dispose of any resources that can be recreated.
     }
     
-    func enableTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        self.view.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc func dismissKeyboard() {
-        self.view.endEditing(true)
-    }
-    
     // MARK: LoginViewProtocol
     func displayMessage(_ message: String, isSuccessful: Bool) {
-//        let baseMessageView = BaseMessageView()
-//        baseMessageView.displayMessage(withTitle: "Login", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self, messageStatus: isSuccessful)
         super.displayDialogMessage(withTitle: "Login", messageContent: message, negativeButtonCaption: "Cancel", affirmativeButtonCaption: "OK", currentViewController: self, messageStatus: isSuccessful)
         
         guard isSuccessful else {

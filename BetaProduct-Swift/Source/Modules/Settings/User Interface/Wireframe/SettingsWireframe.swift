@@ -39,6 +39,12 @@ class SettingsWireframe: BaseWireframe {
         changePasswordSettingsWireframe?.presentChangePasswordSettingsViewFromViewController(settingsView!)
     }
     
+    func logOutUser() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let appDependencies = AppDependencies()
+        appDependencies.installRootViewController(InWindow: appDelegate.window!)
+    }
+    
     func settingsViewController() -> SettingsView {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: settingsViewIdentifier) as! SettingsView
         return viewcontroller
