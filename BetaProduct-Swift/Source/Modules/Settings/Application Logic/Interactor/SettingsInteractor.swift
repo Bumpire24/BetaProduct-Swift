@@ -275,7 +275,6 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
             var processProfileGood = false
             
             var user = session?.getUserSessionAsUser()
-            user?.fullname = item.name!
             user?.mobile = item.mobile!
             user?.addressShipping = item.addressShipping!
             

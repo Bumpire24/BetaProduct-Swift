@@ -68,6 +68,15 @@ class LogInInteractor: NSObject, LogInInteractorInput {
             return
         }
         
+        webService?.POST(BetaProduct.kBPWSSessions(withEmail: username,
+                                                   andWithPassword: password,
+                                                   andWithDeviceID: UIDevice.current.identifierForVendor!.uuidString), parameters: nil, block: { response in
+            switch response {
+            case .success(let sample): break
+            case .failure(let errors): break
+            }
+        })
+        
         // call WS and authenticate account
         webService?.POST(BetaProduct.kBPWSPostUser, parameters: user.allProperties(), block: { response in
             switch response {

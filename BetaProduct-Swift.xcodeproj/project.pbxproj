@@ -212,6 +212,13 @@
 		CE35180E1FD673BA00FEAD25 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3517F41FD673B900FEAD25 /* ProductListPresenter.swift */; };
 		CE35180F1FD673BA00FEAD25 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3517F41FD673B900FEAD25 /* ProductListPresenter.swift */; };
 		CE3518101FD673BA00FEAD25 /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3517F41FD673B900FEAD25 /* ProductListPresenter.swift */; };
+		CE3615B91FE25D6E008915E7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3615B81FE25D6E008915E7 /* Token.swift */; };
+		CE3615BA1FE25D6E008915E7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3615B81FE25D6E008915E7 /* Token.swift */; };
+		CE3615BB1FE25D6E008915E7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3615B81FE25D6E008915E7 /* Token.swift */; };
+		CE3615BC1FE25D6E008915E7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3615B81FE25D6E008915E7 /* Token.swift */; };
+		CE3615BD1FE25D6E008915E7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3615B81FE25D6E008915E7 /* Token.swift */; };
+		CE3615BE1FE25D6E008915E7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3615B81FE25D6E008915E7 /* Token.swift */; };
+		CE3615BF1FE25D6E008915E7 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3615B81FE25D6E008915E7 /* Token.swift */; };
 		CE3AFF471FBD22DA00512E07 /* Blogger-Sans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF3F1FBD22D900512E07 /* Blogger-Sans-Bold.ttf */; };
 		CE3AFF481FBD22DA00512E07 /* Blogger-Sans-Medium-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF401FBD22D900512E07 /* Blogger-Sans-Medium-Italic.ttf */; };
 		CE3AFF491FBD22DA00512E07 /* Blogger-Sans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF411FBD22D900512E07 /* Blogger-Sans-Light.ttf */; };
@@ -689,6 +696,7 @@
 		CE3517F01FD673B900FEAD25 /* ProductInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInteractor.swift; sourceTree = "<group>"; };
 		CE3517F11FD673B900FEAD25 /* ProductInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductInteractorIO.swift; sourceTree = "<group>"; };
 		CE3517F41FD673B900FEAD25 /* ProductListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
+		CE3615B81FE25D6E008915E7 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		CE3AFF3F1FBD22D900512E07 /* Blogger-Sans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blogger-Sans-Bold.ttf"; sourceTree = "<group>"; };
 		CE3AFF401FBD22D900512E07 /* Blogger-Sans-Medium-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blogger-Sans-Medium-Italic.ttf"; sourceTree = "<group>"; };
 		CE3AFF411FBD22D900512E07 /* Blogger-Sans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blogger-Sans-Light.ttf"; sourceTree = "<group>"; };
@@ -1507,6 +1515,7 @@
 				CEF83FB61FB4168000FF19B4 /* Base */,
 				CEF83FB41FB4166800FF19B4 /* Product.swift */,
 				CE5570711FB597BF00A14F7A /* User.swift */,
+				CE3615B81FE25D6E008915E7 /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2452,6 +2461,7 @@
 				CEF819801FC7DED700B12AFB /* ManagedUser.swift in Sources */,
 				CE001E9F1FCD47870051B11C /* ChangeEmailView.swift in Sources */,
 				CE3B619A1FC6B23E00B24933 /* BetaProductError.swift in Sources */,
+				CE3615BF1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE70F4511FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
 				CE3B619B1FC6B23E00B24933 /* PropertyLooperProtocol.swift in Sources */,
 				CE3B619C1FC6B23E00B24933 /* String+Utility.swift in Sources */,
@@ -2527,6 +2537,7 @@
 				CEED02E21FC6BD3F002C7A5A /* LogInInteractor.swift in Sources */,
 				CEED02E31FC6BD3F002C7A5A /* LogInManager.swift in Sources */,
 				CEED02E41FC6BD3F002C7A5A /* LogInPresenter.swift in Sources */,
+				CE3615BA1FE25D6E008915E7 /* Token.swift in Sources */,
 				CEED02E51FC6BD3F002C7A5A /* UserDisplayItem.swift in Sources */,
 				CE35180B1FD673B900FEAD25 /* ProductListPresenter.swift in Sources */,
 				CEED02E61FC6BD3F002C7A5A /* LoginWireframe.swift in Sources */,
@@ -2593,6 +2604,7 @@
 				CE433CDB1FBD1AF300E530C0 /* LogInInteractorIO.swift in Sources */,
 				CE433CDD1FBD1AF300E530C0 /* DatabaseTypes.swift in Sources */,
 				CE433CDE1FBD1AF300E530C0 /* AppDelegate.swift in Sources */,
+				CE3615BB1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE35180C1FD673BA00FEAD25 /* ProductListPresenter.swift in Sources */,
 				CE70F4191FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
 				CE433CDF1FBD1AF300E530C0 /* StoreWebClient.swift in Sources */,
@@ -2670,6 +2682,7 @@
 				CE433D181FBD1AF600E530C0 /* LogInInteractorIO.swift in Sources */,
 				CE433D1A1FBD1AF600E530C0 /* DatabaseTypes.swift in Sources */,
 				CE433D1B1FBD1AF600E530C0 /* AppDelegate.swift in Sources */,
+				CE3615BC1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE35180D1FD673BA00FEAD25 /* ProductListPresenter.swift in Sources */,
 				CE70F41A1FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
 				CE433D1C1FBD1AF600E530C0 /* StoreWebClient.swift in Sources */,
@@ -2799,6 +2812,7 @@
 				CEC2039A1FB46C160022C7C2 /* LoginOptionsWireframe.swift in Sources */,
 				CE70F4411FCD757000AD67A1 /* SettingsPresenterHome.swift in Sources */,
 				CE4520181FD9385E00DD5EAA /* ProductListItem.swift in Sources */,
+				CE3615B91FE25D6E008915E7 /* Token.swift in Sources */,
 				CED47D901FBE894B00285F70 /* BaseMessageView.swift in Sources */,
 				CEF819841FC7E4B800B12AFB /* CreateAccountManager.swift in Sources */,
 				CE70F42F1FCD528F00AD67A1 /* SettingsPresenterProfile.swift in Sources */,
@@ -2859,6 +2873,7 @@
 				CED78F751FCE65BE00AE164D /* HomeModulePresenter.swift in Sources */,
 				CE00E3D91FC82A2E006C8ACE /* StoreProtocol.swift in Sources */,
 				CE00E3DA1FC82A2E006C8ACE /* StoreCoreData.swift in Sources */,
+				CE3615BE1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE00E3DB1FC82A2E006C8ACE /* CreateAccountModuleProtocol.swift in Sources */,
 				CE00E3DC1FC82A2E006C8ACE /* CreateAccountManager.swift in Sources */,
 				CE00E3DD1FC82A2E006C8ACE /* CreateAccountInteractorIO.swift in Sources */,
@@ -2992,6 +3007,7 @@
 				CE00E4361FC82A69006C8ACE /* PropertyLooperProtocol.swift in Sources */,
 				CE00E4371FC82A69006C8ACE /* String+Utility.swift in Sources */,
 				CEA04A761FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
+				CE3615BD1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE00E4381FC82A69006C8ACE /* Button+Theme.swift in Sources */,
 				CE00E4391FC82A69006C8ACE /* PropertLooper+Default.swift in Sources */,
 				CE00E43A1FC82A69006C8ACE /* Utility.swift in Sources */,

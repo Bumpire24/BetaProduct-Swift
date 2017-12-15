@@ -38,9 +38,11 @@ class AppDependencies: NSObject {
         // Root Level Classes
         let root = RootWireframe()
         let store = StoreCoreData()
-        let webservice = StoreWebClientFake()
+        let webservice = StoreWebClient()
 //        let webservice = StoreWebClient()
         let session = Session.sharedSession
+        
+        webservice.session = session
         
         // Home Module Classes
 //        let homeWireframe = HomeWireframe()

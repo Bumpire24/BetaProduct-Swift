@@ -10,6 +10,10 @@ import Foundation
 
 /// model struct for Module `Login`
 struct User : ModelProtocol {
+    var id: Int16 = -1
+    var firstName: String = ""
+    var middleName: String = ""
+    var lastName: String = ""
     /// variable for status. see Status Enum
     var status: Int16 = Int16(Status.Active.rawValue)
     /// variable for sync status. see SyncStatus Enum
@@ -26,10 +30,6 @@ struct User : ModelProtocol {
     var col3: String = ""
     /// variable for email
     var email: String = ""
-    /// variable for email
-    var password: String = ""
-    /// variable for password
-    var fullname: String = ""
     /// variable for mobile/phone
     var mobile: String = ""
     /// variable for shipping address
@@ -40,17 +40,9 @@ struct User : ModelProtocol {
 
 /// extension for model User
 extension User {
-    /**
-     initializes Usser with the given inputs
-     - Parameters:
-        - email: email input
-        - pass: password input
-     */
-    init(emailAddress email: String, password pass: String) {
-        self.email = email
-        self.password = pass
-    }
-    
+    var fullname: String { get {
+        return firstName + " " + middleName + " " + lastName
+        }}
     /**
      initializes Usser with the given inputs
      - Parameters:
@@ -59,12 +51,13 @@ extension User {
         - name: Full Name input
         - mobile: mobile/phone input
      */
-    init(emailAddress email: String, password pass: String, fullName name: String, mobileNumber mobile: String, addressShipping addShip: String, imageURLProfile: String) {
-        self.init(emailAddress: email, password: pass)
-        self.fullname = name
-        self.mobile = mobile
+    init(withUserID userID: Int16, withEmailAddress email: String, withLastName lname: String, withFirstName fName: String, withMiddleName mName: String, withAddressShipping addShip: String) {
+        self.id = userID
+        self.email = email
+        self.lastName = lname
+        self.firstName = fName
+        self.middleName = mName
         self.addressShipping = addShip
-        self.profileImageURL = imageURLProfile
     }
     
     /**
@@ -75,10 +68,6 @@ extension User {
     init(dictionary dataDict: [String: Any]) {
         let wsConverter = WebServiceConverter.init(dataDict)
         self.email = wsConverter.stringWithKey("email")
-        self.password = wsConverter.stringWithKey("password")
-        self.fullname = wsConverter.stringWithKey("fullname")
-        self.mobile = wsConverter.stringWithKey("mobile")
         self.addressShipping = wsConverter.stringWithKey("addressShipping")
-        self.profileImageURL = wsConverter.stringWithKey("profileImageURL")
     }
 }
