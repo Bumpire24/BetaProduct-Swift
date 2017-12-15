@@ -13,7 +13,7 @@ class ProductsListView: BaseView {
     @IBOutlet weak var deleteProductButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    var eventHandler : ProductInteractorInput?
+    var eventHandler : ProductsModuleProtocol?
     
     let cellScaling: CGFloat = 0.6
     
@@ -31,6 +31,10 @@ class ProductsListView: BaseView {
         productsListCollectionView?.contentInset = UIEdgeInsets(top: insetY, left: insetX, bottom: insetY, right: insetX)
         productsListCollectionView?.dataSource = self
         productsListCollectionView?.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.getAllProducts()
     }
@@ -44,7 +48,7 @@ class ProductsListView: BaseView {
     }
     
     func getAllProducts() {
-        eventHandler?.getProducts()
+        eventHandler?.getAllProducts()
     }
 }
 

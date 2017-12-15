@@ -32,6 +32,10 @@ class ProductManager: NSObject {
                                         newProduct?.imageUrl = product.imageUrl
                                         newProduct?.imageThumbUrl = product.imageThumbUrl
                                         newProduct?.imageCompanyUrl = product.imageCompanyUrl
+                                        newProduct?.createdAt = product.createdAt
+                                        newProduct?.modifiedAt = product.modifiedAt
+                                        newProduct?.status = product.status
+                                        newProduct?.syncStatus = product.syncStatus
                                         newProduct?.addUser(user: managedUser)
                                     }
                                     
@@ -67,6 +71,10 @@ class ProductManager: NSObject {
         newProduct?.imageUrl = product.imageUrl
         newProduct?.imageThumbUrl = product.imageThumbUrl
         newProduct?.imageCompanyUrl = product.imageCompanyUrl
+        newProduct?.createdAt = product.createdAt
+        newProduct?.modifiedAt = product.modifiedAt
+        newProduct?.status = product.status
+        newProduct?.syncStatus = product.syncStatus
         
         if let targetUser = user {
             let predicate = NSPredicate.init(format: "status != %d AND email == %@", Status.Deleted.rawValue, targetUser.email)

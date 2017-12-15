@@ -119,7 +119,10 @@ class AppDependencies: NSObject {
         productsManager.store = store
         productsInteractor.manager = productsManager
         productsInteractor.webservice = webservice
+        productsInteractor.session = session
         productsInteractor.outputList = productsPresenter
+        homeWireframe.productsPresenter = productsPresenter
+        productsPresenter.interactor = productsInteractor
         
         //Settings Classes
         let settingsHomePresenter = SettingsPresenterHome()
