@@ -51,6 +51,7 @@ class HomeWireframe: BaseWireframe {
         shopCartView.view.backgroundColor = UIColor.blue;
         
         productListView.eventHandler = productsPresenter
+        productsPresenter?.productsListView = productListView
 
         let tabViewControllers = [qrView, productListView, shopCartView]
         homeView?.setViewControllers(tabViewControllers, animated: true)
