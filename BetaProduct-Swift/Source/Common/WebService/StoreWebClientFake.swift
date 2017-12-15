@@ -14,14 +14,6 @@ class StoreWebClientFake: StoreWebClientProtocol {
     }
     
     func GET(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
-        
-    }
-    
-    func PUT(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
-        
-    }
-    
-    func POST(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
         if url == BetaProduct.kBPWSGetUserProduct {
             block(.success([["id": 1,
                              "name": "Ordinary Bag",
@@ -44,10 +36,16 @@ class StoreWebClientFake: StoreWebClientProtocol {
                              "currency": "$",
                              "image_thumbnail_url": "https://www.strandbags.com.au/stores/PRODUCTS/160060/ATTRFILE_LRG1/colorado_3d_weave_tote_3169951.jpg",
                              "image_high_res_url": "https://www.strandbags.com.au/stores/PRODUCTS/160060/ATTRFILE_LRG1/colorado_3d_weave_tote_3169951.jpg"]]))
-        } else {
+        }
+    }
+    
+    func PUT(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
+        
+    }
+    
+    func POST(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
             block(.success([["email": "er_test1@gmail.com",
                              "password": "123456"]]))
-        }
     }
     
     func DELETE(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {

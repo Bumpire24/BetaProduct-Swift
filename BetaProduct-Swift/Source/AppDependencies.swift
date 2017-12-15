@@ -114,6 +114,18 @@ class AppDependencies: NSObject {
         homePresenter.homeWireframe = homeWireframe
         homeWireframe.presenter = homePresenter
         
+        //Products Classes
+        let productsManager = ProductManager()
+        let productsInteractor = ProductInteractor()
+        let productsPresenter = ProductListPresenter()
+        productsManager.store = store
+        productsInteractor.manager = productsManager
+        productsInteractor.webservice = webservice
+        productsInteractor.session = session
+        productsInteractor.outputList = productsPresenter
+        homeWireframe.productsPresenter = productsPresenter
+        productsPresenter.interactor = productsInteractor
+        
         //Settings Classes
         let settingsHomePresenter = SettingsPresenterHome()
         settingsWireframe.profileSettingsWireframe = settingsProfileWireframe

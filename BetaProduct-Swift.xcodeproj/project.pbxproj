@@ -294,6 +294,12 @@
 		CE3B61FD1FC6B36C00B24933 /* Blogger-Sans-Bold-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3AFF431FBD22DA00512E07 /* Blogger-Sans-Bold-Italic.ttf */; };
 		CE3B62081FC6B61F00B24933 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE3B62071FC6B61F00B24933 /* Info.plist */; };
 		CE3F37CA1FCE9E98006AA8A3 /* SettingsInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F37C91FCE9E98006AA8A3 /* SettingsInteractorTest.swift */; };
+		CE42ABFB1FE1289B005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */; };
+		CE42ABFC1FE1289C005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */; };
+		CE42ABFD1FE1289D005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */; };
+		CE42ABFE1FE1289E005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */; };
+		CE42ABFF1FE1289F005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */; };
+		CE42AC001FE1289F005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */; };
 		CE42E8DE1FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
 		CE42E8DF1FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
 		CE42E8E01FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE42E8DD1FD1215300D4FA81 /* SettingsProfileWireframe.swift */; };
@@ -471,6 +477,27 @@
 		CE7472FA1FB2CD730015C0B3 /* StoreWebClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */; };
 		CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */; };
 		CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */; };
+		CE76C50E1FE248A400041F14 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C50D1FE248A400041F14 /* ProductsListView.swift */; };
+		CE76C50F1FE248A900041F14 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C50D1FE248A400041F14 /* ProductsListView.swift */; };
+		CE76C5101FE248AB00041F14 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C50D1FE248A400041F14 /* ProductsListView.swift */; };
+		CE76C5111FE248AC00041F14 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C50D1FE248A400041F14 /* ProductsListView.swift */; };
+		CE76C5121FE248AE00041F14 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C50D1FE248A400041F14 /* ProductsListView.swift */; };
+		CE76C5131FE248AF00041F14 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C50D1FE248A400041F14 /* ProductsListView.swift */; };
+		CE76C5141FE248B000041F14 /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C50D1FE248A400041F14 /* ProductsListView.swift */; };
+		CE76C5161FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */; };
+		CE76C5171FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */; };
+		CE76C5181FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */; };
+		CE76C5191FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */; };
+		CE76C51A1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */; };
+		CE76C51B1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */; };
+		CE76C51C1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */; };
+		CE76C51F1FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */; };
+		CE76C5201FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */; };
+		CE76C5211FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */; };
+		CE76C5221FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */; };
+		CE76C5231FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */; };
+		CE76C5241FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */; };
+		CE76C5251FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */; };
 		CE7C25491FC2B9E30036E39B /* BetaProductTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */; };
 		CE9CF4621FD544B300526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
 		CE9CF4631FD54A3B00526292 /* SettingsChangeEmailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */; };
@@ -745,6 +772,9 @@
 		CE7472F91FB2CD730015C0B3 /* StoreWebClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClient.swift; sourceTree = "<group>"; };
 		CE7472FB1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientProtocol.swift; sourceTree = "<group>"; };
 		CE7472FD1FB2DA240015C0B3 /* SyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncEngine.swift; sourceTree = "<group>"; };
+		CE76C50D1FE248A400041F14 /* ProductsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListView.swift; sourceTree = "<group>"; };
+		CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModuleProtocol.swift; sourceTree = "<group>"; };
 		CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaProductTheme.swift; sourceTree = "<group>"; };
 		CE9CF4611FD544B300526292 /* SettingsChangeEmailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsChangeEmailWireframe.swift; sourceTree = "<group>"; };
 		CEA04A621FCBB15D00B82FA5 /* CreateAccountModuleTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountModuleTest.swift; sourceTree = "<group>"; };
@@ -991,19 +1021,12 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		CE3518111FD68E2A00FEAD25 /* Module Interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Module Interface";
-			sourceTree = "<group>";
-		};
 		CE3518121FD68E2A00FEAD25 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
+				CE76C50C1FE2487C00041F14 /* View */,
+				CE76C50B1FE2487400041F14 /* Wireframe */,
 				CE3518131FD68E2A00FEAD25 /* Presenter */,
-				CE3518141FD68E2A00FEAD25 /* Wireframe */,
-				CE3518151FD68E2A00FEAD25 /* View */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
@@ -1016,20 +1039,6 @@
 				CECBE5D71FDA93D8006EDF48 /* ProductDetailItem.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		CE3518141FD68E2A00FEAD25 /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wireframe;
-			sourceTree = "<group>";
-		};
-		CE3518151FD68E2A00FEAD25 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		CE3B62051FC6B61F00B24933 /* BetaProduct-Swift Integration Tests */ = {
@@ -1172,6 +1181,30 @@
 				CEF320E11FC528AA004CA907 /* PropertLooper+Default.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CE76C50B1FE2487400041F14 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		CE76C50C1FE2487C00041F14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE76C50D1FE248A400041F14 /* ProductsListView.swift */,
+				CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE76C51D1FE2650A00041F14 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */,
+			);
+			path = "Module Interface";
 			sourceTree = "<group>";
 		};
 		CEA04A611FCBB13F00B82FA5 /* Create Account */ = {
@@ -1593,7 +1626,7 @@
 			isa = PBXGroup;
 			children = (
 				CEF83FB91FB41B2F00FF19B4 /* Application Logic */,
-				CE3518111FD68E2A00FEAD25 /* Module Interface */,
+				CE76C51D1FE2650A00041F14 /* Module Interface */,
 				CE3518121FD68E2A00FEAD25 /* User Interface */,
 			);
 			path = Product;
@@ -2384,6 +2417,7 @@
 				CE3B61621FC6B23E00B24933 /* AppDelegate.swift in Sources */,
 				CE3B61631FC6B23E00B24933 /* AppDependencies.swift in Sources */,
 				CE3B61641FC6B23E00B24933 /* ViewController.swift in Sources */,
+				CE76C5251FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CE3B61651FC6B23E00B24933 /* BaseWireframe.swift in Sources */,
 				CE3B61661FC6B23E00B24933 /* BaseDisplayItem.swift in Sources */,
 				CE001E971FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
@@ -2400,6 +2434,7 @@
 				CE3B616E1FC6B23E00B24933 /* DatabaseTypes.swift in Sources */,
 				CE3B616F1FC6B23E00B24933 /* CompletionBlockTypes.swift in Sources */,
 				CE3B61701FC6B23E00B24933 /* RootWireframe.swift in Sources */,
+				CE76C5141FE248B000041F14 /* ProductsListView.swift in Sources */,
 				CE70F4381FCD53E900AD67A1 /* SettingsModuleTest.swift in Sources */,
 				CE3B61711FC6B23E00B24933 /* BaseView.swift in Sources */,
 				CE3B61721FC6B23E00B24933 /* BaseViewProtocol.swift in Sources */,
@@ -2422,6 +2457,7 @@
 				CE3B617E1FC6B23E00B24933 /* CreateAccountInteractor.swift in Sources */,
 				CE3B61801FC6B23E00B24933 /* UserCredentialsItem.swift in Sources */,
 				CE3B61811FC6B23E00B24933 /* CreateAccountPresenter.swift in Sources */,
+				CE42AC001FE1289F005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */,
 				CE63A5EF1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */,
 				CE3B61821FC6B23E00B24933 /* CreateAccountWireframe.swift in Sources */,
 				CE3B61831FC6B23E00B24933 /* CreateAccountViewProtocol.swift in Sources */,
@@ -2433,6 +2469,7 @@
 				CE3B61891FC6B23E00B24933 /* LogInPresenter.swift in Sources */,
 				CE3B618A1FC6B23E00B24933 /* UserDisplayItem.swift in Sources */,
 				CE3B618B1FC6B23E00B24933 /* LoginWireframe.swift in Sources */,
+				CE76C51C1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CE3B618C1FC6B23E00B24933 /* LoginView.swift in Sources */,
 				CED8A1F31FCD760400293AFF /* SettingsPresenterHome.swift in Sources */,
 				CE3B618E1FC6B23E00B24933 /* LogInViewProtocol.swift in Sources */,
@@ -2522,11 +2559,14 @@
 				CE001E8A1FCCEB820051B11C /* SettingsWireframe.swift in Sources */,
 				CEED02D81FC6BD3F002C7A5A /* CreateAccountInteractorIO.swift in Sources */,
 				CE70F4281FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
+				CE76C50F1FE248A900041F14 /* ProductsListView.swift in Sources */,
 				CEED02D91FC6BD3F002C7A5A /* CreateAccountInteractor.swift in Sources */,
+				CE76C5171FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CEED02DB1FC6BD3F002C7A5A /* UserCredentialsItem.swift in Sources */,
 				CEED02DC1FC6BD3F002C7A5A /* CreateAccountPresenter.swift in Sources */,
 				CED78F711FCE65BA00AE164D /* HomeModulePresenter.swift in Sources */,
 				CEED02DD1FC6BD3F002C7A5A /* CreateAccountWireframe.swift in Sources */,
+				CE76C5201FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CEED02DE1FC6BD3F002C7A5A /* CreateAccountViewProtocol.swift in Sources */,
 				CEED02DF1FC6BD3F002C7A5A /* CreateAccountView.swift in Sources */,
 				CEED02E01FC6BD3F002C7A5A /* LogInModuleProtocol.swift in Sources */,
@@ -2553,6 +2593,7 @@
 				CEED02EE1FC6BD3F002C7A5A /* HomeView.swift in Sources */,
 				CEED02EF1FC6BD3F002C7A5A /* QRView.swift in Sources */,
 				CEBE0E0F1FD64B7900B0C0F7 /* FloatingSettingsView.swift in Sources */,
+				CE42ABFB1FE1289B005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */,
 				CEED02F01FC6BD3F002C7A5A /* HomeWireframe.swift in Sources */,
 				CE001E9A1FCD47870051B11C /* ChangeEmailView.swift in Sources */,
 				CEED02F41FC6BD3F002C7A5A /* BetaProductError.swift in Sources */,
@@ -2589,14 +2630,18 @@
 				CE433CD11FBD1AF300E530C0 /* Button+Theme.swift in Sources */,
 				CE433CD21FBD1AF300E530C0 /* Product.swift in Sources */,
 				CED78F721FCE65BB00AE164D /* HomeModulePresenter.swift in Sources */,
+				CE76C5211FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CED8A1EF1FCD760200293AFF /* SettingsPresenterHome.swift in Sources */,
 				CE433CD31FBD1AF300E530C0 /* LogInInteractor.swift in Sources */,
 				CE70F44D1FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
+				CE76C5101FE248AB00041F14 /* ProductsListView.swift in Sources */,
 				CE63A5EB1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */,
 				CE433CD41FBD1AF300E530C0 /* CompletionBlockTypes.swift in Sources */,
+				CE42ABFC1FE1289C005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */,
 				CE433CD51FBD1AF300E530C0 /* HomeWireframe.swift in Sources */,
 				CE433CD61FBD1AF300E530C0 /* LogInManager.swift in Sources */,
 				CE433CD71FBD1AF300E530C0 /* LoginOptionsModuleInterface.swift in Sources */,
+				CE76C5181FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CE433CD81FBD1AF300E530C0 /* BaseWireframe.swift in Sources */,
 				CE9CF4641FD54A3C00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CE433CDA1FBD1AF300E530C0 /* RootWireframe.swift in Sources */,
@@ -2667,14 +2712,18 @@
 				CE433D0E1FBD1AF600E530C0 /* Button+Theme.swift in Sources */,
 				CE433D0F1FBD1AF600E530C0 /* Product.swift in Sources */,
 				CED78F731FCE65BC00AE164D /* HomeModulePresenter.swift in Sources */,
+				CE76C5221FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CED8A1F01FCD760300293AFF /* SettingsPresenterHome.swift in Sources */,
 				CE433D101FBD1AF600E530C0 /* LogInInteractor.swift in Sources */,
 				CE70F44E1FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
+				CE76C5111FE248AC00041F14 /* ProductsListView.swift in Sources */,
 				CE63A5EC1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */,
 				CE433D111FBD1AF600E530C0 /* CompletionBlockTypes.swift in Sources */,
+				CE42ABFD1FE1289D005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */,
 				CE433D121FBD1AF600E530C0 /* HomeWireframe.swift in Sources */,
 				CE433D131FBD1AF600E530C0 /* LogInManager.swift in Sources */,
 				CE433D141FBD1AF600E530C0 /* LoginOptionsModuleInterface.swift in Sources */,
+				CE76C5191FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CE433D151FBD1AF600E530C0 /* BaseWireframe.swift in Sources */,
 				CE9CF4651FD54A3D00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CE433D171FBD1AF600E530C0 /* RootWireframe.swift in Sources */,
@@ -2772,11 +2821,14 @@
 				CEA6A61A1FC4199D0025E2D3 /* QRView.swift in Sources */,
 				CE07A48B1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift in Sources */,
 				CE6B5EC11FB5A26100356EC9 /* UserDisplayItem.swift in Sources */,
+				CE76C50E1FE248A400041F14 /* ProductsListView.swift in Sources */,
 				CEF320E01FC52826004CA907 /* PropertyLooperProtocol.swift in Sources */,
+				CE76C5161FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */,
 				CEF71F401FC42FA2000CBEAA /* Session.swift in Sources */,
 				CE5570721FB597BF00A14F7A /* User.swift in Sources */,
 				CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */,
+				CE76C51F1FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */,
 				CE07A4951FBD3771009185F3 /* UserCredentialsItem.swift in Sources */,
 				CEE8AC141FB1BCA10052DC3A /* BetaProduct.swift in Sources */,
@@ -2826,9 +2878,11 @@
 				CE00E43F1FC82BA6006C8ACE /* LoginPresenterTest.swift in Sources */,
 				CE3517FA1FD673B900FEAD25 /* ProductManager.swift in Sources */,
 				CE00E3C11FC82A2E006C8ACE /* AppDelegate.swift in Sources */,
+				CE76C5241FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CE00E3C21FC82A2E006C8ACE /* AppDependencies.swift in Sources */,
 				CE00E3C31FC82A2E006C8ACE /* ViewController.swift in Sources */,
 				CE3F37CA1FCE9E98006AA8A3 /* SettingsInteractorTest.swift in Sources */,
+				CE76C5131FE248AF00041F14 /* ProductsListView.swift in Sources */,
 				CE00E4401FC82BAD006C8ACE /* LoginInteractorTest.swift in Sources */,
 				CE00E3C41FC82A2E006C8ACE /* BaseWireframe.swift in Sources */,
 				CE00E3C51FC82A2E006C8ACE /* BaseDisplayItem.swift in Sources */,
@@ -2883,9 +2937,11 @@
 				CE00E3E01FC82A2E006C8ACE /* CreateAccountPresenter.swift in Sources */,
 				CE00E3E11FC82A2E006C8ACE /* CreateAccountWireframe.swift in Sources */,
 				CE00E3E21FC82A2E006C8ACE /* CreateAccountViewProtocol.swift in Sources */,
+				CE76C51B1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CE00E3E31FC82A2E006C8ACE /* CreateAccountView.swift in Sources */,
 				CE00E3E41FC82A2E006C8ACE /* LogInModuleProtocol.swift in Sources */,
 				CE00E3E51FC82A2E006C8ACE /* LogInInteractorIO.swift in Sources */,
+				CE42ABFF1FE1289F005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */,
 				CE00E3E61FC82A2E006C8ACE /* LogInInteractor.swift in Sources */,
 				CE00E3E71FC82A2E006C8ACE /* LogInManager.swift in Sources */,
 				CE00E3E81FC82A2E006C8ACE /* LogInPresenter.swift in Sources */,
@@ -2948,6 +3004,7 @@
 				CE001EA51FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE00E40F1FC82A69006C8ACE /* BaseMessageView.swift in Sources */,
 				CE00E4101FC82A69006C8ACE /* ModelProtocol.swift in Sources */,
+				CE42ABFE1FE1289E005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */,
 				CE45201C1FD9385E00DD5EAA /* ProductListItem.swift in Sources */,
 				CE70F41B1FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
 				CE00E4111FC82A69006C8ACE /* Product.swift in Sources */,
@@ -2983,6 +3040,7 @@
 				CE00E4241FC82A69006C8ACE /* LogInManager.swift in Sources */,
 				CECBE5DC1FDA93D9006EDF48 /* ProductDetailItem.swift in Sources */,
 				CE00E4251FC82A69006C8ACE /* LogInPresenter.swift in Sources */,
+				CE76C5231FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CE00E4261FC82A69006C8ACE /* UserDisplayItem.swift in Sources */,
 				CE70F42B1FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
 				CE70F4331FCD528F00AD67A1 /* SettingsPresenterProfile.swift in Sources */,
@@ -2991,6 +3049,7 @@
 				CE00E4281FC82A69006C8ACE /* LoginView.swift in Sources */,
 				CE00E4291FC82A69006C8ACE /* LogInViewProtocol.swift in Sources */,
 				CE00E42A1FC82A69006C8ACE /* LoginOptionsModuleInterface.swift in Sources */,
+				CE76C5121FE248AE00041F14 /* ProductsListView.swift in Sources */,
 				CE00E42B1FC82A69006C8ACE /* LoginOptionsPresenter.swift in Sources */,
 				CE00E42C1FC82A69006C8ACE /* LoginOptionsWireframe.swift in Sources */,
 				CE00E42D1FC82A69006C8ACE /* LoginOptionsView.swift in Sources */,
@@ -3001,6 +3060,7 @@
 				CE00E4311FC82A69006C8ACE /* HomeWireframe.swift in Sources */,
 				CE001E9D1FCD47870051B11C /* ChangeEmailView.swift in Sources */,
 				CE70F4471FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
+				CE76C51A1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CE00E4351FC82A69006C8ACE /* BetaProductError.swift in Sources */,
 				CE3518001FD673B900FEAD25 /* ProductInteractor.swift in Sources */,
 				CEB135001FD68E700076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
