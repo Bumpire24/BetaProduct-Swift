@@ -11,6 +11,7 @@ import UIKit
 
 let homeViewIdentifier = "HomeView"
 let qrViewIdentifier = "QRView"
+let productsListViewIdentifier = "ProductsListView"
 
 class HomeWireframe: BaseWireframe {
     var homeView : HomeView?
@@ -43,7 +44,7 @@ class HomeWireframe: BaseWireframe {
     
     func assembleViewControllersForHomeView() {
         let qrView = createQRView()
-        let productListView = UIViewController.init()
+        let productListView = createProductsListViewView()
         let shopCartView = UIViewController.init()
         //let settingsView = UIViewController.init()
         
@@ -69,6 +70,11 @@ class HomeWireframe: BaseWireframe {
     
     func createQRView() -> QRView {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: qrViewIdentifier) as! QRView
+        return viewcontroller
+    }
+    
+    func createProductsListViewView() -> ProductsListView {
+        let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: productsListViewIdentifier ) as! ProductsListView
         return viewcontroller
     }
     
