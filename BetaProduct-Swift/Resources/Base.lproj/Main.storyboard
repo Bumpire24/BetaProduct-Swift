@@ -1080,32 +1080,40 @@
             </objects>
             <point key="canvasLocation" x="4277.6000000000004" y="-546.47676161919048"/>
         </scene>
-        <!--View Controller-->
+        <!--Products List View-->
         <scene sceneID="sxA-fY-cix">
             <objects>
-                <viewController storyboardIdentifier="CameraPhotoLibraryView" id="v75-Js-hft" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductsListView" id="v75-Js-hft" customClass="ProductsListView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zkY-It-Qkg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKA-mA-LVI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5ag-GR-ul9">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vrV-J2-8aE">
                                 <rect key="frame" x="0.0" y="40" width="375" height="514"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gxN-u7-gK9">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gxN-u7-gK9">
                                     <size key="itemSize" width="374" height="532"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Iqz-XA-hQh">
-                                        <rect key="frame" x="0.5" y="0.0" width="374" height="532"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductsListCollectionCell" id="Iqz-XA-hQh" customClass="ProductsListCollectionViewCell" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-9" width="374" height="532"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="532"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vjp-xR-6rs">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleProd01" translatesAutoresizingMaskIntoConstraints="NO" id="Vjp-xR-6rs">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="374.5"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7U-LW-Hdz">
@@ -1136,23 +1144,69 @@
                                             <constraint firstItem="X7U-LW-Hdz" firstAttribute="centerX" secondItem="Vjp-xR-6rs" secondAttribute="centerX" id="sD5-0u-WKE"/>
                                             <constraint firstItem="Vjp-xR-6rs" firstAttribute="top" secondItem="Iqz-XA-hQh" secondAttribute="top" id="vKE-0K-nQE"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="productDescription" destination="c5Q-ik-MBH" id="lDy-2K-H4a"/>
+                                            <outlet property="productImageView" destination="Vjp-xR-6rs" id="T2n-PC-c0l"/>
+                                            <outlet property="productName" destination="X7U-LW-Hdz" id="hWn-BW-mNo"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QN-oo-pGu" userLabel="Delete Button">
+                                <rect key="frame" x="0.0" y="584" width="60" height="60"/>
+                                <state key="normal" image="delete"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-uw-KGa" userLabel="Favorite Button">
+                                <rect key="frame" x="90" y="584" width="60" height="60"/>
+                                <state key="normal" image="heart"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vrV-J2-8aE" firstAttribute="leading" secondItem="R1n-aU-Fqe" secondAttribute="leading" id="1GR-pm-MrJ"/>
                             <constraint firstItem="vrV-J2-8aE" firstAttribute="top" secondItem="R1n-aU-Fqe" secondAttribute="top" constant="20" id="1jd-ca-RkT"/>
+                            <constraint firstItem="0QN-oo-pGu" firstAttribute="leading" secondItem="vrV-J2-8aE" secondAttribute="leading" id="3B9-ou-P6I"/>
+                            <constraint firstItem="qc1-uw-KGa" firstAttribute="top" secondItem="0QN-oo-pGu" secondAttribute="top" id="6PS-6u-4tS"/>
+                            <constraint firstItem="0QN-oo-pGu" firstAttribute="top" secondItem="vrV-J2-8aE" secondAttribute="bottom" constant="30" id="9NO-3n-PKj"/>
+                            <constraint firstItem="OKA-mA-LVI" firstAttribute="trailing" secondItem="R1n-aU-Fqe" secondAttribute="trailing" id="AE7-hJ-bfj"/>
                             <constraint firstItem="vrV-J2-8aE" firstAttribute="height" secondItem="R1n-aU-Fqe" secondAttribute="height" multiplier="1:1.2585" id="Bil-8h-fby"/>
+                            <constraint firstItem="0QN-oo-pGu" firstAttribute="width" secondItem="zkY-It-Qkg" secondAttribute="width" multiplier="1:6.25" id="GMr-0C-8Dm"/>
+                            <constraint firstItem="qc1-uw-KGa" firstAttribute="top" secondItem="vrV-J2-8aE" secondAttribute="bottom" constant="30" id="IE8-BM-RaN"/>
                             <constraint firstItem="vrV-J2-8aE" firstAttribute="trailing" secondItem="R1n-aU-Fqe" secondAttribute="trailing" id="IdD-Zg-Xfy"/>
+                            <constraint firstItem="OKA-mA-LVI" firstAttribute="leading" secondItem="R1n-aU-Fqe" secondAttribute="leading" id="QER-q3-zkI"/>
+                            <constraint firstItem="qc1-uw-KGa" firstAttribute="height" secondItem="zkY-It-Qkg" secondAttribute="height" multiplier="1:11.1167" id="X0F-1q-jrz"/>
+                            <constraint firstItem="qc1-uw-KGa" firstAttribute="width" secondItem="zkY-It-Qkg" secondAttribute="width" multiplier="1:6.25" id="fNQ-K9-GM7"/>
+                            <constraint firstItem="OKA-mA-LVI" firstAttribute="top" secondItem="R1n-aU-Fqe" secondAttribute="top" id="p1A-Ic-4hf"/>
+                            <constraint firstItem="OKA-mA-LVI" firstAttribute="bottom" secondItem="R1n-aU-Fqe" secondAttribute="bottom" id="tlk-n2-a0P"/>
+                            <constraint firstItem="0QN-oo-pGu" firstAttribute="height" secondItem="zkY-It-Qkg" secondAttribute="height" multiplier="1:11.1167" id="tr0-A9-ezU"/>
+                            <constraint firstItem="qc1-uw-KGa" firstAttribute="leading" secondItem="0QN-oo-pGu" secondAttribute="trailing" constant="30" id="xdR-7l-ceO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R1n-aU-Fqe"/>
                     </view>
+                    <connections>
+                        <outlet property="deleteProductButton" destination="0QN-oo-pGu" id="zFU-z5-0qL"/>
+                        <outlet property="favoriteButton" destination="qc1-uw-KGa" id="Ixs-nl-92I"/>
+                        <outlet property="productsListCollectionView" destination="vrV-J2-8aE" id="QUG-Nw-O0c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpt-jn-UU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5008.8000000000002" y="-546.47676161919048"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YET-fH-YdP">
+            <objects>
+                <viewController id="42x-et-oUD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qal-39-EZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rw8-WG-mmO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xoG-OG-RVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5009" y="149"/>
         </scene>
         <!--Change Email View-->
         <scene sceneID="qO5-jT-DUV">
@@ -1605,7 +1659,7 @@
         <!--Product List View-->
         <scene sceneID="QHR-j5-Ril">
             <objects>
-                <viewController storyboardIdentifier="ProductListView" id="Y93-Al-nf0" userLabel="Product List View" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraPhotoLibraryView" id="Y93-Al-nf0" userLabel="Product List View" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ANn-mu-NHD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1828,14 +1882,17 @@
         <image name="cancel" width="30" height="30"/>
         <image name="checkMarkAssocBackground" width="208" height="81"/>
         <image name="checkMarkBackground" width="72" height="81"/>
+        <image name="delete" width="30" height="30"/>
         <image name="edit" width="30" height="30"/>
         <image name="email" width="30" height="30"/>
         <image name="fullName" width="30" height="30"/>
+        <image name="heart" width="30" height="30"/>
         <image name="logoff" width="30" height="30"/>
         <image name="mobileNumber" width="30" height="30"/>
         <image name="password" width="30" height="30"/>
         <image name="photoAlbum" width="30" height="30"/>
         <image name="profile" width="30" height="30"/>
+        <image name="sampleProd01" width="123" height="160"/>
         <image name="settings" width="30" height="30"/>
     </resources>
 </document>

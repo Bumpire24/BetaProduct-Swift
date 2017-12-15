@@ -37,8 +37,12 @@ class WebServiceConverter {
     
     func stringWithKey(_ key : String) -> String {
         var value = ""
-        if dataDict[key] != nil {
-            value = dataDict[key] as! String
+        if let nonNilData = dataDict[key] {
+            if let x = nonNilData as? String {
+                value = x
+            } else {
+                logErrorKeyIsNotTheExpectedType(key, value: value)
+            }
         } else {
             logErrorKeyNotFound(key)
         }
@@ -47,8 +51,12 @@ class WebServiceConverter {
     
     func dateWithKey(_ key : String) -> Date {
         var value : Date = Date()
-        if dataDict[key] != nil {
-            value = dataDict[key] as! Date
+        if let nonNilData = dataDict[key] {
+            if let x = nonNilData as? Date {
+                value = x
+            } else {
+                logErrorKeyIsNotTheExpectedType(key, value: value)
+            }
         } else {
             logErrorKeyNotFound(key)
         }
@@ -57,8 +65,8 @@ class WebServiceConverter {
     
     func int16WithKey(_ key : String) -> Int16 {
         var value : Int16 = -1
-        if dataDict[key] != nil {
-            if let x = dataDict[key] as! Int16? {
+        if let nonNilData = dataDict[key] {
+            if let x = nonNilData as? Int16 {
                 value = x
             } else {
                 logErrorKeyIsNotTheExpectedType(key, value: value)
@@ -85,8 +93,8 @@ class WebServiceConverter {
     
     func floatWithKey(_ key: String) -> Float {
         var value : Float = 0.00
-        if dataDict[key] != nil {
-            if let x = dataDict[key] as! Float? {
+        if let nonNilData = dataDict[key] {
+            if let x = nonNilData as? Float {
                 value = x
             } else {
                 logErrorKeyIsNotTheExpectedType(key, value: value)

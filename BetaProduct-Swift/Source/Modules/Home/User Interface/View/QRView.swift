@@ -16,10 +16,6 @@ class QRView: BaseView {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        applyGradientBackground()
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
