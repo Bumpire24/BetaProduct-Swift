@@ -8,12 +8,13 @@
 
 import UIKit
 
-class ProductsListView: BaseView {
+class ProductsListView: BaseView, ProductsListViewProtocol {
     @IBOutlet weak var productsListCollectionView: UICollectionView!
     @IBOutlet weak var deleteProductButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
     
     var eventHandler : ProductsModuleProtocol?
+    var products : [ProductListItem]?
     
     let cellScaling: CGFloat = 0.6
     
@@ -50,6 +51,11 @@ class ProductsListView: BaseView {
     func getAllProducts() {
         eventHandler?.getAllProducts()
     }
+    
+    func displayProducts(_ products: [ProductListItem]) {
+        self.products = products
+        productsListCollectionView.reloadData()
+    }
 }
 
 extension ProductsListView : UICollectionViewDataSource
@@ -59,14 +65,32 @@ extension ProductsListView : UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return interests.count
-        return 0
+        let productCount = self.products?.count != nil ? self.products!.count : 0
+        return productCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductsListCollectionCell", for: indexPath) as! ProductsListCollectionViewCell
+        //cell.productImageView.image =
+        let imageUrlString = products![indexPath.item].imageURL
+        let imageUrl:URL = URL(string: imageUrlString!)!
         
+        DispatchQueue.global(qos: .userInitiated).async {
+            let imageData:NSData = NSData(contentsOf: imageUrl)!
+//            let imageView = UIImageView(frame: CGRect(x:0, y:0, width:200, height:200))
+//            imageView.center = self.view.center
+            
+            // When from background thread, UI needs to be updated on main_queue
+            DispatchQueue.main.async {
+                let image = UIImage(data: imageData as Data)
+                cell.productImageView.image = image
+                cell.productImageView.contentMode = UIViewContentMode.scaleAspectFit
+                cell.productName.text = self.products![indexPath.item].name
+                cell.productDescription.text = self.products![indexPath.item].description
+
+            }
+        }
 //        cell.interest = interests[indexPath.item]
         
         return cell
