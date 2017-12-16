@@ -76,15 +76,12 @@ class StoreWebClient: StoreWebClientProtocol {
             headers = ["Authorization" : "Bearer " + nonNilToken]
         }
         print("CALL URL: \(url) with parameters: \(String(describing: parameters))")
-        Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { response in
-            // print data
-            if let rawdata = response.data, let processeddata = String(data: rawdata, encoding: .utf8) {
-                print(processeddata)
-            }
-            
+        Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers)
+            .validate(statusCode: 200 ..< 300)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
             // Check if there is a token and has expired
             if response.response?.statusCode == 401 && token != nil {
-                print("retry")
                 self.requestForNewTokenAndRetry(url, method: method, parameters: parameters, token: token, headers: headers)
             } else {
                 self.handleResponse(response)
@@ -93,7 +90,10 @@ class StoreWebClient: StoreWebClientProtocol {
     }
     
     private func requestForNewTokenAndRetry(_ url: String, method: HTTPMethod, parameters: [String : Any]?, token: String?, headers: HTTPHeaders?) {
-        Alamofire.request(BetaProduct.kBPWSSessions(), method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { response in
+        Alamofire.request(BetaProduct.kBPWSSessions(), method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers)
+            .validate(statusCode: 200 ..< 300)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
             switch response.result {
             case .success(let value):
                 var data: [String: Any]? = nil
@@ -109,7 +109,10 @@ class StoreWebClient: StoreWebClientProtocol {
                     let token = Token.init(dictionary: nonNilData)
                     self.session?.setToken(token)
                     let newHeaders: HTTPHeaders = ["Authorization" : "Bearer " + token.accessToken]
-                    Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: newHeaders).responseJSON { response in
+                    Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: newHeaders)
+                        .validate(statusCode: 200 ..< 300)
+                        .validate(contentType: ["application/json"])
+                        .responseJSON { response in
                         self.handleResponse(response)
                     }
                 } else {
@@ -124,8 +127,8 @@ class StoreWebClient: StoreWebClientProtocol {
             case .failure(let error):
                 let caughtError = BPError.init(domain: BetaProduct.kBPErrorDomain,
                                                code: .WebService,
-                                               description: BetaProduct.kBPGenericError,
-                                               reason: error.localizedDescription,
+                                               description: error.localizedDescription,
+                                               reason: BetaProduct.kBPGenericError,
                                                suggestion: "Debug function \(#function)")
                 caughtError.innerError = error
                 DDLogError("Error  description : \(caughtError.localizedDescription) reason : \(caughtError.localizedFailureReason ?? "Unknown Reason") suggestion : \(caughtError.localizedRecoverySuggestion ?? "Unknown Suggestion")")
@@ -155,19 +158,6 @@ class StoreWebClient: StoreWebClientProtocol {
                                      reason: "Was Unable to parse data. Invalid Format",
                                      suggestion: "Debug function \(#function)")
             }
-            
-            // Check if return had error
-            if let nonNilData = data {
-                let dataDict = nonNilData.first as! [String: Any]
-                if let errorObject = dataDict["err"] {
-                    error = BPError.init(domain: BetaProduct.kBPErrorDomain,
-                                         code: .WebService,
-                                         description: errorObject as! String,
-                                         reason: errorObject as! String,
-                                         suggestion: "Debug function \(#function)")
-                }
-            }
-            
             if let nonNilError = error {
                 completionBlock?(.failure(nonNilError))
             } else {
@@ -176,8 +166,8 @@ class StoreWebClient: StoreWebClientProtocol {
         case .failure(let error):
             let caughtError = BPError.init(domain: BetaProduct.kBPErrorDomain,
                                            code: .WebService,
-                                           description: BetaProduct.kBPGenericError,
-                                           reason: error.localizedDescription,
+                                           description: error.localizedDescription,
+                                           reason: BetaProduct.kBPGenericError,
                                            suggestion: "Debug function \(#function)")
             caughtError.innerError = error
             DDLogError("Error  description : \(caughtError.localizedDescription) reason : \(caughtError.localizedFailureReason ?? "Unknown Reason") suggestion : \(caughtError.localizedRecoverySuggestion ?? "Unknown Suggestion")")

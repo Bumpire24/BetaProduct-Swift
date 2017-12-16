@@ -39,6 +39,7 @@ class AppDependencies: NSObject {
         let root = RootWireframe()
         let store = StoreCoreData()
         let webservice = StoreWebClient()
+        let webserviceFake = StoreWebClientFake()
 //        let webservice = StoreWebClient()
         let session = Session.sharedSession
         
@@ -120,7 +121,7 @@ class AppDependencies: NSObject {
         let productsPresenter = ProductListPresenter()
         productsManager.store = store
         productsInteractor.manager = productsManager
-        productsInteractor.webservice = webservice
+        productsInteractor.webservice = webserviceFake
         productsInteractor.session = session
         productsInteractor.outputList = productsPresenter
         homeWireframe.productsPresenter = productsPresenter

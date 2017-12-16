@@ -97,7 +97,7 @@ class ProfileSettingsView: BaseView, SettingsProfileViewProtocol {
     }
     
     @IBAction func saveProfileChanges(_ sender: Any) {
-        displayItem.name = fullNameField.text
+        displayItem.firstName = fullNameField.text
         displayItem.addressShipping = billingAddressField.text
         displayItem.mobile = mobileNumberField.text
         if let imageToUpdate = newDisplayImage {
@@ -131,7 +131,7 @@ class ProfileSettingsView: BaseView, SettingsProfileViewProtocol {
     
     func populateUserProfile(displayItems: SettingsProfileDisplayItem) {
         displayItem = displayItems
-        fullNameField.text = displayItems.name
+        fullNameField.text = displayItems.firstName
         billingAddressField.text = displayItems.addressShipping
         mobileNumberField.text = displayItems.mobile
     }

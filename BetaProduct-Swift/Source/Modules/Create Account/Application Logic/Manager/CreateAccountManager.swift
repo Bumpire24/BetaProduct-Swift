@@ -22,7 +22,10 @@ class CreateAccountManager : NSObject {
     func createAccount(withUser user : User, withCompletionBlock block : @escaping CompletionBlock<Bool>) {
         let newUser = store?.newUser()
         newUser?.email = user.email
-        newUser?.mobile = user.mobile
+        newUser?.firstName = user.firstName
+        newUser?.lastName = user.lastName
+        newUser?.middleName = user.middleName
+        newUser?.addressShipping = user.addressShipping
         newUser?.syncStatus = Int16(SyncStatus.Created.rawValue)
         store?.saveWithCompletionBlock(block: { response in
             switch response {

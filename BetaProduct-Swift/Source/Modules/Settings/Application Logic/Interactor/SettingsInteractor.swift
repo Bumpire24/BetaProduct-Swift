@@ -76,7 +76,7 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     
     // calls Webservice and updates local data
     private func callWSAndUpdateUser(_ user: User, updateDisplayItem item: SettingsDisplayItemProtocol) {
-        self.webservice?.PUT(BetaProduct.kBPWSPutUserWithId("1"), parameters: user.allProperties(), block: { response in
+        self.webservice?.PUT(BetaProduct.kBPWSUsers(withID: String(user.id)), parameters: user.allProperties(), block: { response in
             switch response {
             case .success(let value):
                 self.manager?.updateUser(user: user, withCompletionBlock: { response in
@@ -92,11 +92,11 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
                         }
                         self.constructOutput(displayItemType: item, wasSuccessful: true, withMessage: "Update was successful!")
                     case .failure(let error):
-                        self.constructOutput(displayItemType: item, wasSuccessful: false, withMessage: (error?.localizedDescription)!)
+                        self.constructOutput(displayItemType: item, wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
                     }
                 })
             case .failure(let error):
-                self.constructOutput(displayItemType: item, wasSuccessful: false, withMessage: (error?.localizedDescription)!)
+                self.constructOutput(displayItemType: item, wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
             }
         })
     }
@@ -160,8 +160,11 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     /// creates a SettingsProfileDisplayItem from User Session
     private func makeSettingsProfileDisplayItemFromSession() ->  SettingsProfileDisplayItem{
         let user = session?.getUserSessionAsUser()
-        return SettingsProfileDisplayItem(name: user?.fullname,
-                                          mobile: user?.mobile,
+        return SettingsProfileDisplayItem(name: "",
+                                          firstName: user?.firstName,
+                                          lastName: user?.lastName,
+                                          middleName: user?.middleName,
+                                          mobile: "",
                                           addressShipping: user?.addressShipping,
                                           profileImage: (url: user?.profileImageURL, image: nil))
     }

@@ -15,6 +15,9 @@ protocol SettingsDisplayItemProtocol: BaseDisplayItem {
 struct SettingsProfileDisplayItem : SettingsDisplayItemProtocol, Equatable {
     /// variable for name
     var name : String?
+    var firstName: String?
+    var lastName: String?
+    var middleName: String?
     /// variable for mobile
     var mobile : String?
     /// variable for shipping address
@@ -23,7 +26,7 @@ struct SettingsProfileDisplayItem : SettingsDisplayItemProtocol, Equatable {
     var profileImage : (url: String?, image: UIImage?)
     
     static func ==(lhs: SettingsProfileDisplayItem, rhs: SettingsProfileDisplayItem) -> Bool {
-        return lhs.name == rhs.name && lhs.mobile == rhs.mobile && lhs.addressShipping == rhs.addressShipping && lhs.profileImage.url == rhs.profileImage.url && lhs.profileImage.image == rhs.profileImage.image
+        return lhs.firstName == rhs.firstName && lhs.middleName == rhs.middleName && lhs.lastName == rhs.lastName && lhs.addressShipping == rhs.addressShipping
     }
 }
 

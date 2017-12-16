@@ -36,8 +36,8 @@ class LogInManager: NSObject {
             case .failure(let caughtError):
                 let error = BPError.init(domain: BetaProduct.kBPErrorDomain,
                                          code: .Business,
-                                         description: "No Record Found!",
-                                         reason: (caughtError?.localizedDescription)!,
+                                         description: (caughtError?.localizedDescription)!,
+                                         reason: "No Record Found!",
                                          suggestion: (caughtError?.localizedRecoverySuggestion)!)
                 error.innerBPError = caughtError
                 block(Response.failure(error))

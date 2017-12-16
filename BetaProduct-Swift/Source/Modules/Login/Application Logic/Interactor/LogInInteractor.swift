@@ -97,12 +97,12 @@ class LogInInteractor: NSObject, LogInInteractorInput {
                         })
                         
                     case .failure(let error):
-                        self.output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedDescription)!)
+                        self.output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
                     }
                 })
                 
             case .failure(let error):
-                self.output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedDescription)!)
+                self.output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
             }
         })
     }
