@@ -36,6 +36,7 @@ struct User : ModelProtocol {
     var addressShipping : String = ""
     /// variable for profile image url
     var profileImageURL : String = ""
+    var password: String = ""
 }
 
 /// extension for model User
@@ -60,6 +61,11 @@ extension User {
         self.addressShipping = addShip
     }
     
+    init(withUserID userID: Int16, withEmailAddress email: String, withPassword password: String, withLastName lname: String, withFirstName fName: String, withMiddleName mName: String, withAddressShipping addShip: String) {
+        self.init(withUserID: userID, withEmailAddress: email, withLastName: lname, withFirstName: fName, withMiddleName: mName, withAddressShipping: addShip)
+        self.password = password
+    }
+    
     /**
      Initializes User with the given inputs
      - Parameters:
@@ -68,6 +74,10 @@ extension User {
     init(dictionary dataDict: [String: Any]) {
         let wsConverter = WebServiceConverter.init(dataDict)
         self.email = wsConverter.stringWithKey("email")
-        self.addressShipping = wsConverter.stringWithKey("addressShipping")
+        self.lastName = wsConverter.stringWithKey("last_name")
+        self.middleName = wsConverter.stringWithKey("middle_name")
+        self.firstName = wsConverter.stringWithKey("first_name")
+        self.id = wsConverter.int16WithKey("id")
+        self.addressShipping = wsConverter.stringWithKey("shipping_address_1")
     }
 }

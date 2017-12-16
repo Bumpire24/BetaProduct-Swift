@@ -100,8 +100,8 @@ struct BetaProduct {
         return kBPWS +  "sessions/"
     }
     
-    static func kBPWSSessions(withEmail email: String?, andWithPassword: String?, andWithDeviceID: String?) -> String {
-        return kBPWS +  "sessions/?grant_type=password"
+    static func kBPWSSessions(withEmail email: String, andWithPassword password: String, andWithDeviceID deviceID: String) -> String {
+        return String.init(format: "%@sessions/?grant_type=password&email=%@&password=%@&device_id=%@", kBPWS, email, password, deviceID)
     }
     
     static func kBPWSUsers() -> String {

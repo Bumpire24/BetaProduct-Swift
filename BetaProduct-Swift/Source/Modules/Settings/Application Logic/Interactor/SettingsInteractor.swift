@@ -206,38 +206,38 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     
     /// validates Password Update
     private func validateAndUpdatePassword(_ item: SettingsPasswordDisplayItem) {
-        guard let passOld = item.passwordOld?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passOld) else {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Old Password Incorrect!")
-            return
-        }
-        
-        guard let passNew = item.passwordNew?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passNew) else {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password Incorrect!")
-            return
-        }
-        
-        guard let passNewC = item.passwordNewConfirm?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passNewC) else {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Confirm New Password Incorrect!")
-            return
-        }
-        
-        var user = session?.getUserSessionAsUser()
-        if passOld != user?.password {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password does not match your Current Password")
-            return
-        }
-        
-        if passNew != passNewC {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password and Confirm New Password does not match")
-            return
-        }
-        
-        if passOld == passNew {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password and New Password are the same")
-        }
-        
-        user?.password = item.passwordNew!
-        self.callWSAndUpdateUser(user!, updateDisplayItem: item)
+//        guard let passOld = item.passwordOld?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passOld) else {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Old Password Incorrect!")
+//            return
+//        }
+//        
+//        guard let passNew = item.passwordNew?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passNew) else {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password Incorrect!")
+//            return
+//        }
+//        
+//        guard let passNewC = item.passwordNewConfirm?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passNewC) else {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Confirm New Password Incorrect!")
+//            return
+//        }
+//        
+//        var user = session?.getUserSessionAsUser()
+//        if passOld != user?.password {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password does not match your Current Password")
+//            return
+//        }
+//        
+//        if passNew != passNewC {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password and Confirm New Password does not match")
+//            return
+//        }
+//        
+//        if passOld == passNew {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password and New Password are the same")
+//        }
+//        
+//        user?.password = item.passwordNew!
+//        self.callWSAndUpdateUser(user!, updateDisplayItem: item)
     }
     
     /// validates Profile Update

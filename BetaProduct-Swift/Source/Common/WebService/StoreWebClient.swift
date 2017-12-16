@@ -83,16 +83,55 @@ class StoreWebClient: StoreWebClientProtocol {
             }
             
             // Check if there is a token and has expired
-            if response.response?.statusCode == 401 && token != nil{
-                self.requestForNewTokenOnce()
+            if response.response?.statusCode == 401 && token != nil {
+                print("retry")
+                self.requestForNewTokenAndRetry(url, method: method, parameters: parameters, token: token, headers: headers)
             } else {
                 self.handleResponse(response)
             }
         }
     }
     
-    private func requestForNewTokenOnce() {
-        
+    private func requestForNewTokenAndRetry(_ url: String, method: HTTPMethod, parameters: [String : Any]?, token: String?, headers: HTTPHeaders?) {
+        Alamofire.request(BetaProduct.kBPWSSessions(), method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                var data: [String: Any]? = nil
+                if let array = value as? [Any] {
+                    if let dictionary = array.first as? [String: Any] {
+                        data = dictionary
+                    }
+                } else if let dictionary = value as? [String: Any] {
+                    data = dictionary
+                }
+                
+                if let nonNilData = data {
+                    let token = Token.init(dictionary: nonNilData)
+                    self.session?.setToken(token)
+                    let newHeaders: HTTPHeaders = ["Authorization" : "Bearer " + token.accessToken]
+                    Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: newHeaders).responseJSON { response in
+                        self.handleResponse(response)
+                    }
+                } else {
+                    let error = BPError.init(domain: BetaProduct.kBPErrorDomain,
+                                             code: .WebService,
+                                             description: "Unable to retrieve tokens",
+                                             reason: BetaProduct.kBPGenericError,
+                                             suggestion: "Debug function \(#function)")
+                    self.completionBlock?(.failure(error))
+                }
+                
+            case .failure(let error):
+                let caughtError = BPError.init(domain: BetaProduct.kBPErrorDomain,
+                                               code: .WebService,
+                                               description: BetaProduct.kBPGenericError,
+                                               reason: error.localizedDescription,
+                                               suggestion: "Debug function \(#function)")
+                caughtError.innerError = error
+                DDLogError("Error  description : \(caughtError.localizedDescription) reason : \(caughtError.localizedFailureReason ?? "Unknown Reason") suggestion : \(caughtError.localizedRecoverySuggestion ?? "Unknown Suggestion")")
+                self.completionBlock?(.failure(caughtError))
+            }
+        }
     }
     
     /**
@@ -123,7 +162,7 @@ class StoreWebClient: StoreWebClientProtocol {
                 if let errorObject = dataDict["err"] {
                     error = BPError.init(domain: BetaProduct.kBPErrorDomain,
                                          code: .WebService,
-                                         description: BetaProduct.kBPGenericError,
+                                         description: errorObject as! String,
                                          reason: errorObject as! String,
                                          suggestion: "Debug function \(#function)")
                 }

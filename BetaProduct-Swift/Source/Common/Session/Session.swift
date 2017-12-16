@@ -27,6 +27,7 @@ class Session: NSObject {
         /// variable for Profile Image
         var imageURLProfile: String?
         var token: String?
+        var tokenType: String?
         var tokenExpiry: Int16?
         var firstName: String?
         var middleName: String?
@@ -44,7 +45,9 @@ class Session: NSObject {
     
     /// sets UserSession by Model User
     func setUserSessionByUser(_ user: User) {
-        self.user = UserSession()
+        if self.user == nil {
+            self.user = UserSession()
+        }
         self.user?.id = user.id
         self.user?.email = user.email
         self.user?.firstName = user.firstName
@@ -70,8 +73,13 @@ class Session: NSObject {
         return user?.token
     }
     
-    func setToken(_ token: String?) {
-        self.user?.token = token
+    func setToken(_ token: Token?) {
+        if self.user == nil {
+            self.user = UserSession()
+        }
+        self.user?.token = token?.accessToken
+        self.user?.tokenExpiry = token?.expiresIn
+        self.user?.tokenType = token?.tokenType
     }
     
     func hasAlreadySynced() -> Bool {

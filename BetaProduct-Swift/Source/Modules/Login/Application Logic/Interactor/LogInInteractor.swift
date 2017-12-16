@@ -68,44 +68,41 @@ class LogInInteractor: NSObject, LogInInteractorInput {
             return
         }
         
+        //UIDevice.current.identifierForVendor?.uuidString
+        let deviceID = UUID.init(uuidString: "BF73F5D0-FD46-4478-B575-DBA6CD8A5367")
         webService?.POST(BetaProduct.kBPWSSessions(withEmail: username,
                                                    andWithPassword: password,
-                                                   andWithDeviceID: UIDevice.current.identifierForVendor!.uuidString), parameters: nil, block: { response in
-            switch response {
-            case .success(let sample): break
-            case .failure(let errors): break
-            }
-        })
-        
-        // call WS and authenticate account
-        webService?.POST(BetaProduct.kBPWSPostUser, parameters: user.allProperties(), block: { response in
+                                                   andWithDeviceID: (deviceID?.uuidString)!), parameters: nil, block: { response in
             switch response {
             case .success(let value):
-                // check if account already exists in db
-                self.managerLogin?.retrieveUser(withEmail: username, withCompletionBlock: { response in
-                    if response.isSuccess {
-                        // update account in db
-                        // TODO: account updation
-                        self.session?.setUserSessionByUser(response.value!)
-                        self.output?.userLoginValidationComplete(wasSuccessful: true, withMessage: "Log in success!")
-                    } else {
-                        // else add account in db
-                        if let list = value, let targetUser = list.first, let converted = targetUser as? [String:Any] {
-                            let newUser = User.init(dictionary: converted)
-                            self.managerCreate?.createAccount(withUser: newUser, withCompletionBlock: { response in
-                                self.session?.setUserSessionByUser(newUser)
+                let token = Token.init(dictionary: value?.first as! [String: Any])
+                self.session?.setToken(token)
+                
+                self.webService?.GET(BetaProduct.kBPWSUsers(withID: String(token.userId)), parameters: nil, block: { response in
+                    switch response {
+                    case .success(let value):
+                        
+                        self.managerLogin?.retrieveUser(withEmail: username, withCompletionBlock: { response in
+                            switch response {
+                            case .success(_):
+                                self.session?.setUserSessionByUser(response.value!)
                                 self.output?.userLoginValidationComplete(wasSuccessful: true, withMessage: "Log in success!")
-                            })
-                        } else {
-                            // failed to convert User
-                            print("Failed to Convert User")
-                            self.session?.setUserSessionByUser(User.init(emailAddress: username, password: password))
-                            self.output?.userLoginValidationComplete(wasSuccessful: true, withMessage: "Log in success!")
-                        }
+                            case .failure(_):
+                                let user = User.init(dictionary: value!.first as! [String: Any])
+                                self.managerCreate?.createAccount(withUser: user, withCompletionBlock: { response in
+                                    self.session?.setUserSessionByUser(user)
+                                    self.output?.userLoginValidationComplete(wasSuccessful: true, withMessage: "Log in success!")
+                                })
+                            }
+                        })
+                        
+                    case .failure(let error):
+                        self.output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedDescription)!)
                     }
                 })
+                
             case .failure(let error):
-                self.output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
+                self.output?.userLoginValidationComplete(wasSuccessful: false, withMessage: (error?.localizedDescription)!)
             }
         })
     }
