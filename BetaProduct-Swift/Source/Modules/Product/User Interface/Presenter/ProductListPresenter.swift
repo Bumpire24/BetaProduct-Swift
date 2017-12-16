@@ -10,9 +10,10 @@ import Foundation
 
 class ProductListPresenter: NSObject, ProductsModuleProtocol, ProductListInteractorOutput {
     var interactor : ProductInteractorInput?
+    var productsListView : ProductsListViewProtocol?
     
     func gotProducts(_ products: [ProductListItem]) {
-        print(products)
+        productsListView?.displayProducts(products)
     }
     
     func productListDeleteComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
