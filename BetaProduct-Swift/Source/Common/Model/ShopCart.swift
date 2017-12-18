@@ -19,6 +19,7 @@ struct ShopCart: ModelProtocol {
     var quantity: Int16 = 1
     var productId: Int16 = -1
     var userId: Int16 = -1
+    var product: Product = Product()
 }
 
 extension ShopCart {
@@ -26,5 +27,10 @@ extension ShopCart {
         self.productId = productId
         self.quantity = quantity
         self.userId = userId
+    }
+    
+    init(productId: Int16, quantity: Int16, userId: Int16, product: Product) {
+        self.init(productId: productId, quantity: quantity, userId: userId)
+        self.product = product
     }
 }

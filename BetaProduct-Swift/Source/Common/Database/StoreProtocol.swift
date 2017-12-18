@@ -47,6 +47,7 @@ protocol StoreProtocol {
      */
     func deleteProduct(product : ManagedProduct)
     
+    func deleteShopCart(cart : ManagedShopCart)
     
     /// Save transactions from stack.
     func save()

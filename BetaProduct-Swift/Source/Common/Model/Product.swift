@@ -19,19 +19,20 @@ struct Product : ModelProtocol {
     var name: String = ""
     var weblink: String = ""
     var productDescription: String = ""
-    var price: String = ""
+    var price: Decimal = 0.00
     var priceDescription: String = ""
     var imageUrl: String = ""
     var imageThumbUrl: String = ""
     var imageCompanyUrl: String = ""
     var productId: Int16 = -1
+    var productAddedInCart: Bool = false
 }
 
 extension Product {
     init(productName: String,
          productDescription: String,
          productId: Int16,
-         productPrice: String,
+         productPrice: Decimal,
          productPriceDescription: String,
          productWeblink: String,
          productImageURL: String,
@@ -53,8 +54,8 @@ extension Product {
         self.name = wsConverter.stringWithKey("name")
         self.productDescription = wsConverter.stringWithKey("description")
         self.productId = wsConverter.int16WithKey("id")
-        self.price = String.init(format: "%@ %.2f", wsConverter.stringWithKey("currency"), wsConverter.floatWithKey("price"))
-        self.priceDescription = String.init(format: "%@ %.2f", wsConverter.stringWithKey("currency"), wsConverter.floatWithKey("price"))
+        self.price = wsConverter.decimalWithKey("price")
+        self.priceDescription = wsConverter.stringWithKey("currency")
         self.weblink = wsConverter.stringWithKey("url")
         self.imageUrl = wsConverter.stringWithKey("image_high_res_url")
         self.imageThumbUrl = wsConverter.stringWithKey("image_thumbnail_url")

@@ -80,13 +80,13 @@ class ProductInteractor: NSObject, ProductInteractorInput {
             outputDetail?.gotProduct(ProductDetailItem(id: productToBeDisplayed.productId,
                                                        name: productToBeDisplayed.name,
                                                        description: productToBeDisplayed.productDescription,
-                                                       price: productToBeDisplayed.price,
+                                                       price: productToBeDisplayed.priceDescription + " " + String(describing: productToBeDisplayed.price),
                                                        priceDescription: productToBeDisplayed.priceDescription,
                                                        imageURL: productToBeDisplayed.imageUrl,
                                                        imageThumbURL: productToBeDisplayed.imageThumbUrl,
                                                        imageCompanyURL: productToBeDisplayed.imageCompanyUrl,
                                                        companyWeblink: productToBeDisplayed.weblink,
-                                                       isAddedToShopCart: false))
+                                                       isAddedToShopCart: productToBeDisplayed.productAddedInCart))
         } else {
             outputDetail?.gotProduct(nil)
         }

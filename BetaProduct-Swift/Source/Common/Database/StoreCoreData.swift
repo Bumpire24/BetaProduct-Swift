@@ -111,6 +111,10 @@ class StoreCoreData: NSObject, StoreProtocol{
         managedObjectContext.delete(product)
     }
     
+    func deleteShopCart(cart: ManagedShopCart) {
+        managedObjectContext.delete(cart)
+    }
+    
     /// Protocol implementation. see `StoreProtocol.swift`
     func save() {
         do {

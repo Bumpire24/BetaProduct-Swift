@@ -186,7 +186,8 @@ class ProductManager: NSObject {
                            imageUrl : managedProduct.imageUrl,
                            imageThumbUrl : managedProduct.imageThumbUrl,
                            imageCompanyUrl : managedProduct.imageCompanyUrl,
-                           productId : managedProduct.productId)
+                           productId : managedProduct.productId,
+                           productAddedInCart : managedProduct.shopcart.count > 0)
         }
         return items
     }
