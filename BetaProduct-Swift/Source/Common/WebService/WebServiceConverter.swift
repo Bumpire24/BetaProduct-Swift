@@ -79,8 +79,8 @@ class WebServiceConverter {
     
     func decimalWithKey(_ key: String) -> Decimal {
         var value : Decimal = 0.00
-        if dataDict[key] != nil {
-            if let x = dataDict[key] as! Decimal? {
+        if let nonNilData = dataDict[key] {
+            if let x = nonNilData as? Decimal {
                 value = x
             } else {
                 logErrorKeyIsNotTheExpectedType(key, value: value)

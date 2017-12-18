@@ -31,7 +31,7 @@ class ProductInteractor: NSObject, ProductInteractorInput {
             if (nonNilSession.hasAlreadySynced()) {
                 getProductToPersistAndToShowAsOutput()
             } else {
-                webservice?.GET(BetaProduct.kBPWSGetUserProduct, parameters: ["user_id" : nonNilSession.user!.email as Any], block: { response in
+                webservice?.GET(BetaProduct.kBPWSProducts(), parameters: nil, block: { response in
                     switch response {
                     case .success(let value):
                         let products = value?.map({Product.init(dictionary: $0 as! [String: Any])})
@@ -80,13 +80,13 @@ class ProductInteractor: NSObject, ProductInteractorInput {
             outputDetail?.gotProduct(ProductDetailItem(id: productToBeDisplayed.productId,
                                                        name: productToBeDisplayed.name,
                                                        description: productToBeDisplayed.productDescription,
-                                                       price: productToBeDisplayed.price,
+                                                       price: productToBeDisplayed.priceDescription + " " + String(describing: productToBeDisplayed.price),
                                                        priceDescription: productToBeDisplayed.priceDescription,
                                                        imageURL: productToBeDisplayed.imageUrl,
                                                        imageThumbURL: productToBeDisplayed.imageThumbUrl,
                                                        imageCompanyURL: productToBeDisplayed.imageCompanyUrl,
                                                        companyWeblink: productToBeDisplayed.weblink,
-                                                       isAddedToShopCart: false))
+                                                       isAddedToShopCart: productToBeDisplayed.productAddedInCart))
         } else {
             outputDetail?.gotProduct(nil)
         }

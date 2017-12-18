@@ -168,6 +168,27 @@
 		CE00E4401FC82BAD006C8ACE /* LoginInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED6666E1FBE86C800B2245D /* LoginInteractorTest.swift */; };
 		CE00E4411FC82BB5006C8ACE /* CreateAccountInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE00E3BF1FC82386006C8ACE /* CreateAccountInteractorTest.swift */; };
 		CE00E4421FC82BBB006C8ACE /* BetaProduct_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABD61FB181110052DC3A /* BetaProduct_SwiftUITests.swift */; };
+		CE028BD71FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */; };
+		CE028BD81FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */; };
+		CE028BD91FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */; };
+		CE028BDA1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */; };
+		CE028BDB1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */; };
+		CE028BDC1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */; };
+		CE028BDD1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */; };
+		CE028BEF1FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */; };
+		CE028BF01FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */; };
+		CE028BF11FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */; };
+		CE028BF21FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */; };
+		CE028BF31FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */; };
+		CE028BF41FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */; };
+		CE028BF51FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */; };
+		CE028BF71FE7B678001AD022 /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BF61FE7B678001AD022 /* ShopCart.swift */; };
+		CE028BF81FE7B678001AD022 /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BF61FE7B678001AD022 /* ShopCart.swift */; };
+		CE028BF91FE7B678001AD022 /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BF61FE7B678001AD022 /* ShopCart.swift */; };
+		CE028BFA1FE7B678001AD022 /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BF61FE7B678001AD022 /* ShopCart.swift */; };
+		CE028BFB1FE7B678001AD022 /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BF61FE7B678001AD022 /* ShopCart.swift */; };
+		CE028BFC1FE7B678001AD022 /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BF61FE7B678001AD022 /* ShopCart.swift */; };
+		CE028BFD1FE7B678001AD022 /* ShopCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE028BF61FE7B678001AD022 /* ShopCart.swift */; };
 		CE07A48B1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48A1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift */; };
 		CE07A48D1FBD2B69009185F3 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48C1FBD2B69009185F3 /* CreateAccountView.swift */; };
 		CE07A48F1FBD3262009185F3 /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07A48E1FBD3262009185F3 /* BaseViewProtocol.swift */; };
@@ -416,6 +437,13 @@
 		CE5570721FB597BF00A14F7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570711FB597BF00A14F7A /* User.swift */; };
 		CE5570741FB597F600A14F7A /* LogInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570731FB597F600A14F7A /* LogInManager.swift */; };
 		CE5A5E601FC3B1EE0075B8AD /* BetaProductError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5570681FB57C1800A14F7A /* BetaProductError.swift */; };
+		CE5A5FBF1FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */; };
+		CE5A5FC01FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */; };
+		CE5A5FC11FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */; };
+		CE5A5FC21FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */; };
+		CE5A5FC31FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */; };
+		CE5A5FC41FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */; };
+		CE5A5FC51FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */; };
 		CE61DEC21FB56C120028A59B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE61DEC11FB56C120028A59B /* BaseView.swift */; };
 		CE63A5E91FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5E81FE1055200E69ED1 /* StoreWebClientFake.swift */; };
 		CE63A5EA1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE63A5E81FE1055200E69ED1 /* StoreWebClientFake.swift */; };
@@ -545,6 +573,27 @@
 		CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */; };
 		CEC2039C1FB46C160022C7C2 /* LoginWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203951FB46C160022C7C2 /* LoginWireframe.swift */; };
 		CEC2039D1FB46C160022C7C2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC203971FB46C160022C7C2 /* LoginView.swift */; };
+		CEC377091FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */; };
+		CEC3770D1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */; };
+		CEC3770E1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */; };
+		CEC3770F1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */; };
+		CEC377101FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */; };
+		CEC377111FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */; };
+		CEC377121FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */; };
+		CEC377131FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */; };
+		CEC377151FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */; };
+		CEC377161FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */; };
+		CEC377171FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */; };
+		CEC377181FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */; };
+		CEC377191FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */; };
+		CEC3771A1FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */; };
+		CEC3771B1FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */; };
+		CEC3771C1FE7F30900AD6BA5 /* ShopCartInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */; };
+		CEC3771D1FE7F30900AD6BA5 /* ShopCartInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */; };
+		CEC3771E1FE7F30A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */; };
+		CEC3771F1FE7F30A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */; };
+		CEC377201FE7F30A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */; };
+		CEC377211FE7F30B00AD6BA5 /* ShopCartInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */; };
 		CECA7B921FCBA9ED00489C78 /* CreateAccountPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECA7B911FCBA9ED00489C78 /* CreateAccountPresenterTest.swift */; };
 		CECBE5D81FDA93D8006EDF48 /* ProductDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE5D71FDA93D8006EDF48 /* ProductDetailItem.swift */; };
 		CECBE5D91FDA93D8006EDF48 /* ProductDetailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECBE5D71FDA93D8006EDF48 /* ProductDetailItem.swift */; };
@@ -730,6 +779,9 @@
 		CE001E981FCD47870051B11C /* ChangeEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailView.swift; sourceTree = "<group>"; };
 		CE001EA01FCD59F60051B11C /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
 		CE00E3BF1FC82386006C8ACE /* CreateAccountInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountInteractorTest.swift; sourceTree = "<group>"; };
+		CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartModuleProtocol.swift; sourceTree = "<group>"; };
+		CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedShopCart.swift; sourceTree = "<group>"; };
+		CE028BF61FE7B678001AD022 /* ShopCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCart.swift; sourceTree = "<group>"; };
 		CE038E111FCC011000E54B4F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CE07A48A1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewProtocol.swift; sourceTree = "<group>"; };
 		CE07A48C1FBD2B69009185F3 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
@@ -774,6 +826,7 @@
 		CE55706F1FB5977100A14F7A /* LogInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInInteractor.swift; sourceTree = "<group>"; };
 		CE5570711FB597BF00A14F7A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE5570731FB597F600A14F7A /* LogInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInManager.swift; sourceTree = "<group>"; };
+		CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartManager.swift; sourceTree = "<group>"; };
 		CE61DEC11FB56C120028A59B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		CE63A5E81FE1055200E69ED1 /* StoreWebClientFake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreWebClientFake.swift; sourceTree = "<group>"; };
 		CE63A5F01FE1219B00E69ED1 /* BetaProductTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BetaProductTransitionAnimator.swift; sourceTree = "<group>"; };
@@ -815,6 +868,9 @@
 		CEC203911FB46C160022C7C2 /* LoginOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
 		CEC203951FB46C160022C7C2 /* LoginWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWireframe.swift; sourceTree = "<group>"; };
 		CEC203971FB46C160022C7C2 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartInteractorIO.swift; sourceTree = "<group>"; };
+		CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartDisplayItem.swift; sourceTree = "<group>"; };
+		CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartInteractor.swift; sourceTree = "<group>"; };
 		CECA7B911FCBA9ED00489C78 /* CreateAccountPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountPresenterTest.swift; sourceTree = "<group>"; };
 		CECBE5D71FDA93D8006EDF48 /* ProductDetailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailItem.swift; sourceTree = "<group>"; };
 		CED47D8F1FBE894B00285F70 /* BaseMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessageView.swift; sourceTree = "<group>"; };
@@ -973,6 +1029,24 @@
 				CECA7B911FCBA9ED00489C78 /* CreateAccountPresenterTest.swift */,
 			);
 			path = "Create Account";
+			sourceTree = "<group>";
+		};
+		CE028BD41FE7A335001AD022 /* ShopCart */ = {
+			isa = PBXGroup;
+			children = (
+				CEC3770A1FE7F0CC00AD6BA5 /* User Interface */,
+				CE5A5FBD1FE7BAD2006E1D10 /* Application Logic */,
+				CE028BD51FE7AEB9001AD022 /* Module Interface */,
+			);
+			path = ShopCart;
+			sourceTree = "<group>";
+		};
+		CE028BD51FE7AEB9001AD022 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CE028BD61FE7AF10001AD022 /* ShopCartModuleProtocol.swift */,
+			);
+			path = "Module Interface";
 			sourceTree = "<group>";
 		};
 		CE07A4851FBD2A5D009185F3 /* Create Account */ = {
@@ -1143,6 +1217,23 @@
 				CE55706F1FB5977100A14F7A /* LogInInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CE5A5FBD1FE7BAD2006E1D10 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				CEC377071FE7EF5800AD6BA5 /* Interactor */,
+				CE5A5FC61FE7BAFA006E1D10 /* Manager */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		CE5A5FC61FE7BAFA006E1D10 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A5FBE1FE7BAE7006E1D10 /* ShopCartManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		CE6B5EB71FB5A08500356EC9 /* Presenter */ = {
@@ -1442,6 +1533,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CEC377071FE7EF5800AD6BA5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CEC377081FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift */,
+				CEC377141FE7F28700AD6BA5 /* ShopCartInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CEC3770A1FE7F0CC00AD6BA5 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				CEC3770B1FE7F0D800AD6BA5 /* Presenter */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		CEC3770B1FE7F0D800AD6BA5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CEC3770C1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		CECF7BA21FBD97D000B779AE /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -1579,6 +1695,7 @@
 				CEF83FB41FB4166800FF19B4 /* Product.swift */,
 				CE5570711FB597BF00A14F7A /* User.swift */,
 				CE3615B81FE25D6E008915E7 /* Token.swift */,
+				CE028BF61FE7B678001AD022 /* ShopCart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1586,6 +1703,7 @@
 		CEE8ABEA1FB184360052DC3A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CE028BD41FE7A335001AD022 /* ShopCart */,
 				CEE8ABFC1FB1A2400052DC3A /* Product */,
 				CEF2B5B21FD55F0800619D3E /* QRCode */,
 				CEA04A671FCBEBC200B82FA5 /* Settings */,
@@ -1614,6 +1732,7 @@
 				CEE8ABED1FB184620052DC3A /* Base */,
 				CEE8ABF51FB18AA20052DC3A /* ManagedProduct.swift */,
 				CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */,
+				CE028BEE1FE7B5B4001AD022 /* ManagedShopCart.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -2451,6 +2570,7 @@
 				CE3B61651FC6B23E00B24933 /* BaseWireframe.swift in Sources */,
 				CE3B61661FC6B23E00B24933 /* BaseDisplayItem.swift in Sources */,
 				CE001E971FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
+				CE028BFD1FE7B678001AD022 /* ShopCart.swift in Sources */,
 				CE3B61671FC6B23E00B24933 /* Session.swift in Sources */,
 				CE42E8E41FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CE3B61681FC6B23E00B24933 /* SyncEngine.swift in Sources */,
@@ -2489,6 +2609,7 @@
 				CE3B61801FC6B23E00B24933 /* UserCredentialsItem.swift in Sources */,
 				CE3B61811FC6B23E00B24933 /* CreateAccountPresenter.swift in Sources */,
 				CE42AC001FE1289F005CF6B0 /* BetaProductTransitionAnimator.swift in Sources */,
+				CE028BF51FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */,
 				CE63A5EF1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */,
 				CE3B61821FC6B23E00B24933 /* CreateAccountWireframe.swift in Sources */,
 				CE3B61831FC6B23E00B24933 /* CreateAccountViewProtocol.swift in Sources */,
@@ -2496,11 +2617,13 @@
 				CE3B61851FC6B23E00B24933 /* LogInModuleProtocol.swift in Sources */,
 				CE3B61861FC6B23E00B24933 /* LogInInteractorIO.swift in Sources */,
 				CE3B61871FC6B23E00B24933 /* LogInInteractor.swift in Sources */,
+				CE028BDD1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				CE3B61881FC6B23E00B24933 /* LogInManager.swift in Sources */,
 				CE3B61891FC6B23E00B24933 /* LogInPresenter.swift in Sources */,
 				CE3B618A1FC6B23E00B24933 /* UserDisplayItem.swift in Sources */,
 				CE3B618B1FC6B23E00B24933 /* LoginWireframe.swift in Sources */,
 				CE76C51C1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
+				CE5A5FC51FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */,
 				CE3B618C1FC6B23E00B24933 /* LoginView.swift in Sources */,
 				CED8A1F31FCD760400293AFF /* SettingsPresenterHome.swift in Sources */,
 				CE3B618E1FC6B23E00B24933 /* LogInViewProtocol.swift in Sources */,
@@ -2510,6 +2633,7 @@
 				CEA622481FE3A70900B65A07 /* ProductsListViewProtocol.swift in Sources */,
 				CE3B61911FC6B23E00B24933 /* LoginOptionsWireframe.swift in Sources */,
 				CE70F4251FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
+				CEC3771B1FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */,
 				CEDC71DB1FE7B40F00BFE684 /* ProductDetailView.swift in Sources */,
 				CEB135021FD68E710076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
 				CE70F4491FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
@@ -2523,6 +2647,7 @@
 				CE3B61941FC6B23E00B24933 /* HomeView.swift in Sources */,
 				CE3B61951FC6B23E00B24933 /* QRView.swift in Sources */,
 				CE3B61961FC6B23E00B24933 /* HomeWireframe.swift in Sources */,
+				CEC377131FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CE3518021FD673B900FEAD25 /* ProductInteractor.swift in Sources */,
 				CEBE0E141FD64B7E00B0C0F7 /* FloatingSettingsView.swift in Sources */,
 				CE001EA71FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
@@ -2530,6 +2655,7 @@
 				CEF8197E1FC7DD2200B12AFB /* StoreCoreData.swift in Sources */,
 				CEF819801FC7DED700B12AFB /* ManagedUser.swift in Sources */,
 				CE001E9F1FCD47870051B11C /* ChangeEmailView.swift in Sources */,
+				CEC377211FE7F30B00AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CE3B619A1FC6B23E00B24933 /* BetaProductError.swift in Sources */,
 				CE3615BF1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE70F4511FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
@@ -2551,6 +2677,7 @@
 				CE70F4181FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
 				CE70F4441FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CEED02BD1FC6BD3F002C7A5A /* AppDelegate.swift in Sources */,
+				CE028BD81FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				CEED02BE1FC6BD3F002C7A5A /* AppDependencies.swift in Sources */,
 				CEED02BF1FC6BD3F002C7A5A /* ViewController.swift in Sources */,
 				CE70F4201FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
@@ -2562,6 +2689,7 @@
 				CEED02C31FC6BD3F002C7A5A /* SyncEngine.swift in Sources */,
 				CEED02C41FC6BD3F002C7A5A /* StoreWebClient.swift in Sources */,
 				CEED02C51FC6BD3F002C7A5A /* StoreWebClientProtocol.swift in Sources */,
+				CE028BF81FE7B678001AD022 /* ShopCart.swift in Sources */,
 				CEED02C61FC6BD3F002C7A5A /* WebServiceConverter.swift in Sources */,
 				CE42E8DF1FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CEED02C71FC6BD3F002C7A5A /* BetaProduct.swift in Sources */,
@@ -2587,6 +2715,7 @@
 				CE001E821FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CE70F44C1FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
 				CEED02D51FC6BD3F002C7A5A /* StoreProtocol.swift in Sources */,
+				CEC3770E1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CEED02D61FC6BD3F002C7A5A /* StoreCoreData.swift in Sources */,
 				CEED02D71FC6BD3F002C7A5A /* CreateAccountModuleProtocol.swift in Sources */,
 				CED8A1EE1FCD760100293AFF /* SettingsPresenterHome.swift in Sources */,
@@ -2594,6 +2723,7 @@
 				CEED02D81FC6BD3F002C7A5A /* CreateAccountInteractorIO.swift in Sources */,
 				CE70F4281FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
 				CE76C50F1FE248A900041F14 /* ProductsListView.swift in Sources */,
+				CE5A5FC01FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */,
 				CEED02D91FC6BD3F002C7A5A /* CreateAccountInteractor.swift in Sources */,
 				CE76C5171FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CEED02DB1FC6BD3F002C7A5A /* UserCredentialsItem.swift in Sources */,
@@ -2602,6 +2732,7 @@
 				CEED02DD1FC6BD3F002C7A5A /* CreateAccountWireframe.swift in Sources */,
 				CE76C5201FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CEED02DE1FC6BD3F002C7A5A /* CreateAccountViewProtocol.swift in Sources */,
+				CEC3771C1FE7F30900AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CEED02DF1FC6BD3F002C7A5A /* CreateAccountView.swift in Sources */,
 				CEED02E01FC6BD3F002C7A5A /* LogInModuleProtocol.swift in Sources */,
 				CEED02E11FC6BD3F002C7A5A /* LogInInteractorIO.swift in Sources */,
@@ -2624,6 +2755,7 @@
 				CEED02EB1FC6BD3F002C7A5A /* LoginOptionsWireframe.swift in Sources */,
 				CE70F4301FCD528F00AD67A1 /* SettingsPresenterProfile.swift in Sources */,
 				CEED02EC1FC6BD3F002C7A5A /* LoginOptionsView.swift in Sources */,
+				CE028BF01FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */,
 				CEED02ED1FC6BD3F002C7A5A /* HomeModuleProtocol.swift in Sources */,
 				CEED02EE1FC6BD3F002C7A5A /* HomeView.swift in Sources */,
 				CEED02EF1FC6BD3F002C7A5A /* QRView.swift in Sources */,
@@ -2641,6 +2773,7 @@
 				CE4520191FD9385E00DD5EAA /* ProductListItem.swift in Sources */,
 				CEED02F81FC6BD3F002C7A5A /* PropertLooper+Default.swift in Sources */,
 				CEED02F91FC6BD3F002C7A5A /* Utility.swift in Sources */,
+				CEC377161FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */,
 				CEF819851FC7E63A00B12AFB /* CreateAccountManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2664,12 +2797,14 @@
 				CE433CCF1FBD1AF300E530C0 /* WebServiceConverter.swift in Sources */,
 				CE433CD01FBD1AF300E530C0 /* LoginOptionsPresenter.swift in Sources */,
 				CE3517F71FD673B900FEAD25 /* ProductManager.swift in Sources */,
+				CE5A5FC11FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */,
 				CE433CD11FBD1AF300E530C0 /* Button+Theme.swift in Sources */,
 				CE433CD21FBD1AF300E530C0 /* Product.swift in Sources */,
 				CED78F721FCE65BB00AE164D /* HomeModulePresenter.swift in Sources */,
 				CE76C5211FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CED8A1EF1FCD760200293AFF /* SettingsPresenterHome.swift in Sources */,
 				CE433CD31FBD1AF300E530C0 /* LogInInteractor.swift in Sources */,
+				CEC377171FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */,
 				CE70F44D1FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
 				CE76C5101FE248AB00041F14 /* ProductsListView.swift in Sources */,
 				CE63A5EB1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */,
@@ -2678,11 +2813,13 @@
 				CE433CD51FBD1AF300E530C0 /* HomeWireframe.swift in Sources */,
 				CE433CD61FBD1AF300E530C0 /* LogInManager.swift in Sources */,
 				CE433CD71FBD1AF300E530C0 /* LoginOptionsModuleInterface.swift in Sources */,
+				CE028BF91FE7B678001AD022 /* ShopCart.swift in Sources */,
 				CE76C5181FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CE433CD81FBD1AF300E530C0 /* BaseWireframe.swift in Sources */,
 				CE9CF4641FD54A3C00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CE433CDA1FBD1AF300E530C0 /* RootWireframe.swift in Sources */,
 				CE70F4451FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
+				CEC3771D1FE7F30900AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CE433CDB1FBD1AF300E530C0 /* LogInInteractorIO.swift in Sources */,
 				CE433CDD1FBD1AF300E530C0 /* DatabaseTypes.swift in Sources */,
 				CE433CDE1FBD1AF300E530C0 /* AppDelegate.swift in Sources */,
@@ -2706,7 +2843,9 @@
 				CE433CE61FBD1AF300E530C0 /* LoginOptionsView.swift in Sources */,
 				CEED03011FC6DD69002C7A5A /* ManagedUser.swift in Sources */,
 				CE433CE71FBD1AF300E530C0 /* BaseView.swift in Sources */,
+				CEC3770F1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CE433CE81FBD1AF300E530C0 /* BetaProduct.swift in Sources */,
+				CE028BD91FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				CEDC71D71FE7B40B00BFE684 /* ProductDetailView.swift in Sources */,
 				CE001EA31FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE42E8E01FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
@@ -2717,6 +2856,7 @@
 				CE70F4311FCD528F00AD67A1 /* SettingsPresenterProfile.swift in Sources */,
 				CE50D3731FD13A2300181C5D /* CreateAccountInteractor.swift in Sources */,
 				CE433CEC1FBD1AF300E530C0 /* BaseEntity.swift in Sources */,
+				CE028BF11FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */,
 				CE001E931FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
 				CEB134FE1FD68E6F0076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
 				CE433CEE1FBD1AF300E530C0 /* ModelProtocol.swift in Sources */,
@@ -2749,12 +2889,14 @@
 				CE433D0C1FBD1AF600E530C0 /* WebServiceConverter.swift in Sources */,
 				CE433D0D1FBD1AF600E530C0 /* LoginOptionsPresenter.swift in Sources */,
 				CE3517F81FD673B900FEAD25 /* ProductManager.swift in Sources */,
+				CE5A5FC21FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */,
 				CE433D0E1FBD1AF600E530C0 /* Button+Theme.swift in Sources */,
 				CE433D0F1FBD1AF600E530C0 /* Product.swift in Sources */,
 				CED78F731FCE65BC00AE164D /* HomeModulePresenter.swift in Sources */,
 				CE76C5221FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CED8A1F01FCD760300293AFF /* SettingsPresenterHome.swift in Sources */,
 				CE433D101FBD1AF600E530C0 /* LogInInteractor.swift in Sources */,
+				CEC377181FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */,
 				CE70F44E1FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
 				CE76C5111FE248AC00041F14 /* ProductsListView.swift in Sources */,
 				CE63A5EC1FE1055200E69ED1 /* StoreWebClientFake.swift in Sources */,
@@ -2763,11 +2905,13 @@
 				CE433D121FBD1AF600E530C0 /* HomeWireframe.swift in Sources */,
 				CE433D131FBD1AF600E530C0 /* LogInManager.swift in Sources */,
 				CE433D141FBD1AF600E530C0 /* LoginOptionsModuleInterface.swift in Sources */,
+				CE028BFA1FE7B678001AD022 /* ShopCart.swift in Sources */,
 				CE76C5191FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CE433D151FBD1AF600E530C0 /* BaseWireframe.swift in Sources */,
 				CE9CF4651FD54A3D00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CE433D171FBD1AF600E530C0 /* RootWireframe.swift in Sources */,
 				CE70F4461FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
+				CEC3771E1FE7F30A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CE433D181FBD1AF600E530C0 /* LogInInteractorIO.swift in Sources */,
 				CE433D1A1FBD1AF600E530C0 /* DatabaseTypes.swift in Sources */,
 				CE433D1B1FBD1AF600E530C0 /* AppDelegate.swift in Sources */,
@@ -2791,7 +2935,9 @@
 				CE433D231FBD1AF600E530C0 /* LoginOptionsView.swift in Sources */,
 				CEED03001FC6DD68002C7A5A /* ManagedUser.swift in Sources */,
 				CE433D241FBD1AF600E530C0 /* BaseView.swift in Sources */,
+				CEC377101FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CE433D251FBD1AF600E530C0 /* BetaProduct.swift in Sources */,
+				CE028BDA1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				CEDC71D81FE7B40C00BFE684 /* ProductDetailView.swift in Sources */,
 				CE001EA41FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE42E8E11FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
@@ -2802,6 +2948,7 @@
 				CE70F4321FCD528F00AD67A1 /* SettingsPresenterProfile.swift in Sources */,
 				CE50D3741FD13A2400181C5D /* CreateAccountInteractor.swift in Sources */,
 				CE433D291FBD1AF600E530C0 /* BaseEntity.swift in Sources */,
+				CE028BF21FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */,
 				CE001E941FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
 				CEB134FF1FD68E6F0076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
 				CE433D2B1FBD1AF600E530C0 /* ModelProtocol.swift in Sources */,
@@ -2822,6 +2969,7 @@
 				CE7472FC1FB2CDAD0015C0B3 /* StoreWebClientProtocol.swift in Sources */,
 				CE7C25491FC2B9E30036E39B /* BetaProductTheme.swift in Sources */,
 				CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */,
+				CE028BD71FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				CE7472FE1FB2DA240015C0B3 /* SyncEngine.swift in Sources */,
 				CE001E911FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
 				CEC2039C1FB46C160022C7C2 /* LoginWireframe.swift in Sources */,
@@ -2833,6 +2981,7 @@
 				CEF320E21FC528AA004CA907 /* PropertLooper+Default.swift in Sources */,
 				CEB652D21FB57EEC00467D4E /* Button+Theme.swift in Sources */,
 				CEF83FB51FB4166800FF19B4 /* Product.swift in Sources */,
+				CE028BF71FE7B678001AD022 /* ShopCart.swift in Sources */,
 				CE5570701FB5977100A14F7A /* LogInInteractor.swift in Sources */,
 				CE42E8DE1FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CEE8ABF41FB187610052DC3A /* CompletionBlockTypes.swift in Sources */,
@@ -2864,10 +3013,12 @@
 				CE07A48B1FBD2B0D009185F3 /* CreateAccountViewProtocol.swift in Sources */,
 				CE6B5EC11FB5A26100356EC9 /* UserDisplayItem.swift in Sources */,
 				CE76C50E1FE248A400041F14 /* ProductsListView.swift in Sources */,
+				CE5A5FBF1FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */,
 				CEF320E01FC52826004CA907 /* PropertyLooperProtocol.swift in Sources */,
 				CE76C5161FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */,
 				CEDC71DD1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift in Sources */,
+				CEC377091FE7EF7A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CEF71F401FC42FA2000CBEAA /* Session.swift in Sources */,
 				CE5570721FB597BF00A14F7A /* User.swift in Sources */,
 				CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */,
@@ -2886,6 +3037,7 @@
 				CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */,
 				CE07A49B1FBD3948009185F3 /* CreateAccountPresenter.swift in Sources */,
 				CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */,
+				CEC3770D1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CEB134FC1FD68E480076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
 				CEDC71D31FE7AFA000BFE684 /* ProductDetailWireframe.swift in Sources */,
 				CE08CB9D1FBEF2DB00B8C58A /* String+Utility.swift in Sources */,
@@ -2895,6 +3047,7 @@
 				CEDCD4CA1FC3ED2800103B60 /* ManagedUser.swift in Sources */,
 				CE07A48D1FBD2B69009185F3 /* CreateAccountView.swift in Sources */,
 				CEBE0E0E1FD64B7300B0C0F7 /* FloatingSettingsView.swift in Sources */,
+				CE028BEF1FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */,
 				CE001E991FCD47870051B11C /* ChangeEmailView.swift in Sources */,
 				CEE8AC091FB1A4E20052DC3A /* HomeView.swift in Sources */,
 				CE07A48F1FBD3262009185F3 /* BaseViewProtocol.swift in Sources */,
@@ -2907,6 +3060,7 @@
 				CEA04A721FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
 				CEDC71D51FE7B0ED00BFE684 /* ProductDetailView.swift in Sources */,
 				CEC2039A1FB46C160022C7C2 /* LoginOptionsWireframe.swift in Sources */,
+				CEC377151FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */,
 				CEA622401FE3A54C00B65A07 /* ProductsListViewProtocol.swift in Sources */,
 				CE70F4411FCD757000AD67A1 /* SettingsPresenterHome.swift in Sources */,
 				CE4520181FD9385E00DD5EAA /* ProductListItem.swift in Sources */,
@@ -2933,6 +3087,7 @@
 				CE00E4401FC82BAD006C8ACE /* LoginInteractorTest.swift in Sources */,
 				CE00E3C41FC82A2E006C8ACE /* BaseWireframe.swift in Sources */,
 				CE00E3C51FC82A2E006C8ACE /* BaseDisplayItem.swift in Sources */,
+				CEC3771A1FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */,
 				CE001EA61FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE35180F1FD673BA00FEAD25 /* ProductListPresenter.swift in Sources */,
 				CE00E3C61FC82A2E006C8ACE /* Session.swift in Sources */,
@@ -2946,6 +3101,7 @@
 				CE70F4481FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CE00E3CA1FC82A2E006C8ACE /* WebServiceConverter.swift in Sources */,
 				CECBE5DD1FDA93D9006EDF48 /* ProductDetailItem.swift in Sources */,
+				CE028BDC1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				CEA622471FE3A70800B65A07 /* ProductsListViewProtocol.swift in Sources */,
 				CE00E3CB1FC82A2E006C8ACE /* BetaProduct.swift in Sources */,
 				CE00E3CC1FC82A2E006C8ACE /* BetaProductTheme.swift in Sources */,
@@ -2987,6 +3143,8 @@
 				CE00E3E11FC82A2E006C8ACE /* CreateAccountWireframe.swift in Sources */,
 				CE00E3E21FC82A2E006C8ACE /* CreateAccountViewProtocol.swift in Sources */,
 				CE76C51B1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
+				CE5A5FC41FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */,
+				CE028BF41FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */,
 				CE00E3E31FC82A2E006C8ACE /* CreateAccountView.swift in Sources */,
 				CE00E3E41FC82A2E006C8ACE /* LogInModuleProtocol.swift in Sources */,
 				CE00E3E51FC82A2E006C8ACE /* LogInInteractorIO.swift in Sources */,
@@ -2997,9 +3155,12 @@
 				CE00E3E91FC82A2E006C8ACE /* UserDisplayItem.swift in Sources */,
 				CE00E3EA1FC82A2E006C8ACE /* LoginWireframe.swift in Sources */,
 				CE00E3EB1FC82A2E006C8ACE /* LoginView.swift in Sources */,
+				CEC377201FE7F30A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CE00E3EC1FC82A2E006C8ACE /* LogInViewProtocol.swift in Sources */,
 				CE00E3ED1FC82A2E006C8ACE /* LoginOptionsModuleInterface.swift in Sources */,
+				CE028BFC1FE7B678001AD022 /* ShopCart.swift in Sources */,
 				CE529BF21FCCF11100E6C134 /* BetaProduct_Swift.xcdatamodeld in Sources */,
+				CEC377121FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CE00E3EE1FC82A2E006C8ACE /* LoginOptionsPresenter.swift in Sources */,
 				CE70F4341FCD528F00AD67A1 /* SettingsPresenterProfile.swift in Sources */,
 				CE00E3EF1FC82A2E006C8ACE /* LoginOptionsWireframe.swift in Sources */,
@@ -3041,6 +3202,8 @@
 				CE00E4051FC82A69006C8ACE /* StoreWebClient.swift in Sources */,
 				CE00E4061FC82A69006C8ACE /* StoreWebClientProtocol.swift in Sources */,
 				CE00E4071FC82A69006C8ACE /* WebServiceConverter.swift in Sources */,
+				CE028BFB1FE7B678001AD022 /* ShopCart.swift in Sources */,
+				CEC377191FE7F28700AD6BA5 /* ShopCartInteractor.swift in Sources */,
 				CE00E4081FC82A69006C8ACE /* BetaProduct.swift in Sources */,
 				CE42E8E21FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CE00E4091FC82A69006C8ACE /* BetaProductTheme.swift in Sources */,
@@ -3080,16 +3243,19 @@
 				CE00E41D1FC82A69006C8ACE /* CreateAccountPresenter.swift in Sources */,
 				CE00E41E1FC82A69006C8ACE /* CreateAccountWireframe.swift in Sources */,
 				CED8A1F71FCD790400293AFF /* SettingsModuleProtocols.swift in Sources */,
+				CEC377111FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CE00E41F1FC82A69006C8ACE /* CreateAccountViewProtocol.swift in Sources */,
 				CE00E4201FC82A69006C8ACE /* CreateAccountView.swift in Sources */,
 				CE00E4211FC82A69006C8ACE /* LogInModuleProtocol.swift in Sources */,
 				CE9CF4661FD54A3E00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
+				CE028BF31FE7B5B4001AD022 /* ManagedShopCart.swift in Sources */,
 				CE00E4221FC82A69006C8ACE /* LogInInteractorIO.swift in Sources */,
 				CE00E4231FC82A69006C8ACE /* LogInInteractor.swift in Sources */,
 				CE3518071FD673B900FEAD25 /* ProductInteractorIO.swift in Sources */,
 				CE00E4241FC82A69006C8ACE /* LogInManager.swift in Sources */,
 				CECBE5DC1FDA93D9006EDF48 /* ProductDetailItem.swift in Sources */,
 				CE00E4251FC82A69006C8ACE /* LogInPresenter.swift in Sources */,
+				CE5A5FC31FE7BAE7006E1D10 /* ShopCartManager.swift in Sources */,
 				CE76C5231FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CE00E4261FC82A69006C8ACE /* UserDisplayItem.swift in Sources */,
 				CE70F42B1FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
@@ -3100,6 +3266,7 @@
 				CE00E4291FC82A69006C8ACE /* LogInViewProtocol.swift in Sources */,
 				CE00E42A1FC82A69006C8ACE /* LoginOptionsModuleInterface.swift in Sources */,
 				CE76C5121FE248AE00041F14 /* ProductsListView.swift in Sources */,
+				CE028BDB1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				CE00E42B1FC82A69006C8ACE /* LoginOptionsPresenter.swift in Sources */,
 				CE00E42C1FC82A69006C8ACE /* LoginOptionsWireframe.swift in Sources */,
 				CE00E42D1FC82A69006C8ACE /* LoginOptionsView.swift in Sources */,
@@ -3110,6 +3277,7 @@
 				CE00E4311FC82A69006C8ACE /* HomeWireframe.swift in Sources */,
 				CE001E9D1FCD47870051B11C /* ChangeEmailView.swift in Sources */,
 				CE70F4471FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
+				CEC3771F1FE7F30A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CE76C51A1FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CE00E4351FC82A69006C8ACE /* BetaProductError.swift in Sources */,
 				CE3518001FD673B900FEAD25 /* ProductInteractor.swift in Sources */,

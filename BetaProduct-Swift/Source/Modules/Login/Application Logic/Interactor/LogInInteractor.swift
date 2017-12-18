@@ -57,6 +57,8 @@ class LogInInteractor: NSObject, LogInInteractorInput {
     
     /// implements protocol. see 'LogInInteractorIO.swift'
     func validateUserLogin(userDisplayItem user: UserDisplayItem) {
+        // TODO: ADD Updated date check
+        
         // validate inputs
         guard let username = user.email?.trimmingCharacters(in: .whitespacesAndNewlines), isUsernameValid(username: username) else {
             output?.userLoginValidationComplete(wasSuccessful: false, withMessage: "Username incorrect!")

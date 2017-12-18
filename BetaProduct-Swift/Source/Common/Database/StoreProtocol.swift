@@ -35,6 +35,8 @@ protocol StoreProtocol {
     /// Insert to Table Product
     func newProduct() -> ManagedProduct
     
+    func newShopCart() -> ManagedShopCart
+    
     /// Insert to Table User
     func newUser() -> ManagedUser
     
@@ -45,6 +47,7 @@ protocol StoreProtocol {
      */
     func deleteProduct(product : ManagedProduct)
     
+    func deleteShopCart(cart : ManagedShopCart)
     
     /// Save transactions from stack.
     func save()

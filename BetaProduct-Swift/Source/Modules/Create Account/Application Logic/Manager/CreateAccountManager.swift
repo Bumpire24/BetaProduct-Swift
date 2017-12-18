@@ -26,6 +26,7 @@ class CreateAccountManager : NSObject {
         newUser?.lastName = user.lastName
         newUser?.middleName = user.middleName
         newUser?.addressShipping = user.addressShipping
+        newUser?.id = user.id
         newUser?.syncStatus = Int16(SyncStatus.Created.rawValue)
         store?.saveWithCompletionBlock(block: { response in
             switch response {
