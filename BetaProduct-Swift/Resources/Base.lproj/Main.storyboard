@@ -1116,13 +1116,13 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleProd01" translatesAutoresizingMaskIntoConstraints="NO" id="Vjp-xR-6rs">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="374.5"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7U-LW-Hdz">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7U-LW-Hdz" customClass="BetaProductProductNameLabel" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                                     <rect key="frame" x="37.5" y="364.5" width="299" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5Q-ik-MBH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5Q-ik-MBH" customClass="BetaProductProductDescriptionLabel" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
                                                     <rect key="frame" x="37.5" y="415" width="299" height="104.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1145,9 +1145,9 @@
                                             <constraint firstItem="Vjp-xR-6rs" firstAttribute="top" secondItem="Iqz-XA-hQh" secondAttribute="top" id="vKE-0K-nQE"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="productDescription" destination="c5Q-ik-MBH" id="lDy-2K-H4a"/>
+                                            <outlet property="productDescription" destination="c5Q-ik-MBH" id="72T-Bf-AFe"/>
                                             <outlet property="productImageView" destination="Vjp-xR-6rs" id="T2n-PC-c0l"/>
-                                            <outlet property="productName" destination="X7U-LW-Hdz" id="hWn-BW-mNo"/>
+                                            <outlet property="productName" destination="X7U-LW-Hdz" id="6AQ-UV-SLk"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1155,10 +1155,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QN-oo-pGu" userLabel="Delete Button">
                                 <rect key="frame" x="0.0" y="584" width="60" height="60"/>
                                 <state key="normal" image="delete"/>
+                                <connections>
+                                    <action selector="removeProductItemFromList:" destination="v75-Js-hft" eventType="touchUpInside" id="sVo-UD-V1v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-uw-KGa" userLabel="Favorite Button">
                                 <rect key="frame" x="90" y="584" width="60" height="60"/>
                                 <state key="normal" image="heart"/>
+                                <connections>
+                                    <action selector="markProductItemAsFavorite:" destination="v75-Js-hft" eventType="touchUpInside" id="0M9-7t-u1n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1192,6 +1198,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zpt-jn-UU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5008.8000000000002" y="-546.47676161919048"/>
+        </scene>
+        <!--Product Detail View-->
+        <scene sceneID="E77-Ya-STi">
+            <objects>
+                <viewController storyboardIdentifier="ProductDetailView" id="0Bb-ah-O36" customClass="ProductDetailView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0Y-fy-zJ6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZfU-nB-Gui" userLabel="Content View">
+                                <rect key="frame" x="20" y="20" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleProd01" translatesAutoresizingMaskIntoConstraints="NO" id="O76-T5-iPr">
+                                        <rect key="frame" x="37.5" y="25" width="300" height="300"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jh-bO-Mim" customClass="BetaProductProductNameLabel" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
+                                        <rect key="frame" x="37.5" y="309.5" width="300" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5m5-FX-a4e"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aic-ZZ-WkE" customClass="BetaProductProductDescriptionLabel" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
+                                        <rect key="frame" x="37.5" y="370" width="300" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="105" id="IJS-az-KH3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zK-Ex-1d5" customClass="BetaProductProductDescriptionLabel" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
+                                        <rect key="frame" x="38" y="485" width="75" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="I0Y-oH-RA3"/>
+                                            <constraint firstAttribute="width" constant="75" id="Z8C-zr-Z30"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3u-kR-F78" customClass="BetaProductProductDescriptionLabel" customModule="BetaProduct_Swift_DEV" customModuleProvider="target">
+                                        <rect key="frame" x="133" y="485" width="130" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="ugJ-Cu-itJ"/>
+                                            <constraint firstAttribute="height" constant="30" id="zhu-6e-HI7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.75374119718309862" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="O76-T5-iPr" firstAttribute="centerX" secondItem="ZfU-nB-Gui" secondAttribute="centerX" id="CZw-tl-vKb"/>
+                                    <constraint firstItem="w3u-kR-F78" firstAttribute="leading" secondItem="7zK-Ex-1d5" secondAttribute="trailing" constant="20" id="KrR-we-ibU"/>
+                                    <constraint firstItem="O76-T5-iPr" firstAttribute="width" secondItem="ZfU-nB-Gui" secondAttribute="width" multiplier="1:1.25" id="PE2-P1-jhe"/>
+                                    <constraint firstItem="O76-T5-iPr" firstAttribute="height" secondItem="ZfU-nB-Gui" secondAttribute="height" multiplier="1:2.2233" id="aqO-4t-FY9"/>
+                                    <constraint firstItem="8jh-bO-Mim" firstAttribute="width" secondItem="ZfU-nB-Gui" secondAttribute="width" multiplier="1:1.25" id="baq-Gu-ToJ"/>
+                                    <constraint firstItem="O76-T5-iPr" firstAttribute="top" secondItem="ZfU-nB-Gui" secondAttribute="top" constant="25" id="ckz-wh-Dh9"/>
+                                    <constraint firstItem="8jh-bO-Mim" firstAttribute="centerY" secondItem="O76-T5-iPr" secondAttribute="bottom" id="fsA-y1-hVh"/>
+                                    <constraint firstItem="7zK-Ex-1d5" firstAttribute="top" secondItem="aic-ZZ-WkE" secondAttribute="bottom" constant="10" id="hB1-FU-M97"/>
+                                    <constraint firstItem="8jh-bO-Mim" firstAttribute="centerX" secondItem="O76-T5-iPr" secondAttribute="centerX" id="iWn-rn-40c"/>
+                                    <constraint firstItem="aic-ZZ-WkE" firstAttribute="leading" secondItem="O76-T5-iPr" secondAttribute="leading" id="nmH-2L-TX3"/>
+                                    <constraint firstItem="w3u-kR-F78" firstAttribute="top" secondItem="aic-ZZ-WkE" secondAttribute="bottom" constant="10" id="rHn-pd-Mum"/>
+                                    <constraint firstItem="7zK-Ex-1d5" firstAttribute="leading" secondItem="aic-ZZ-WkE" secondAttribute="leading" id="un5-gc-1aS"/>
+                                    <constraint firstItem="aic-ZZ-WkE" firstAttribute="width" secondItem="ZfU-nB-Gui" secondAttribute="width" multiplier="1:1.25" id="vWE-Fz-bQI"/>
+                                    <constraint firstItem="aic-ZZ-WkE" firstAttribute="top" secondItem="8jh-bO-Mim" secondAttribute="bottom" constant="30" id="yyT-Kx-igN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.20320752640845072" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZfU-nB-Gui" firstAttribute="bottom" secondItem="Eyx-f7-T5I" secondAttribute="bottom" constant="20" id="553-H3-lzg"/>
+                            <constraint firstItem="ZfU-nB-Gui" firstAttribute="top" secondItem="U0Y-fy-zJ6" secondAttribute="top" constant="20" id="II5-xW-t3B"/>
+                            <constraint firstItem="ZfU-nB-Gui" firstAttribute="leading" secondItem="Eyx-f7-T5I" secondAttribute="leading" constant="20" id="RhW-7q-InM"/>
+                            <constraint firstItem="ZfU-nB-Gui" firstAttribute="trailing" secondItem="Eyx-f7-T5I" secondAttribute="trailing" constant="20" id="ddD-91-XV9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Eyx-f7-T5I"/>
+                    </view>
+                    <connections>
+                        <outlet property="productCurrency" destination="7zK-Ex-1d5" id="uAH-9I-zIr"/>
+                        <outlet property="productDescription" destination="aic-ZZ-WkE" id="bOO-f8-4sj"/>
+                        <outlet property="productImage" destination="O76-T5-iPr" id="I0h-Q9-GEE"/>
+                        <outlet property="productName" destination="8jh-bO-Mim" id="7fv-Rv-hem"/>
+                        <outlet property="productPrice" destination="w3u-kR-F78" id="SGL-Za-gWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZaJ-UG-pWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5688.8000000000002" y="-546.47676161919048"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YET-fH-YdP">
