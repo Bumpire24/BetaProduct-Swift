@@ -150,6 +150,34 @@ class BetaProductSettingsLabel: UILabel {
     }
 }
 
+class BetaProductProductNameLabel: UILabel {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        changeFontName()
+    }
+    
+    func changeFontName()
+    {
+        self.font = BetaProductStyle.Fonts.iDoohProductNameLabelFont
+        self.textColor = BetaProductStyle.iDoohProductNameFontColor
+    }
+}
+
+class BetaProductProductDescriptionLabel: UILabel {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        changeFontName()
+    }
+    
+    func changeFontName()
+    {
+        self.font = BetaProductStyle.Fonts.iDoohProductDescriptionLabelFont
+        self.textColor = BetaProductStyle.iDoohProductDescriptionFontColor
+    }
+}
+
 class BetaProductEntryField : UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()

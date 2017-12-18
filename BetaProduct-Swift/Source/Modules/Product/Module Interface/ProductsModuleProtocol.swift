@@ -11,5 +11,7 @@ import Foundation
 protocol ProductsModuleProtocol {
     ///get products
     func getAllProducts()
+    func removeProductItem(withIndex index: Int)
+    func getProductItem(atIndex index: Int)
 
 }

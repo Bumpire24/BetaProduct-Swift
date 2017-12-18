@@ -77,14 +77,16 @@ class ProductInteractor: NSObject, ProductInteractorInput {
     func getProductDetailByIndex(_ index: Int) {
         if let nonNilPersistedProducts = persistedProducts, nonNilPersistedProducts.count > 0 {
             let productToBeDisplayed = nonNilPersistedProducts[index]
-            outputDetail?.gotProduct(ProductDetailItem(name: productToBeDisplayed.name,
+            outputDetail?.gotProduct(ProductDetailItem(id: productToBeDisplayed.productId,
+                                                       name: productToBeDisplayed.name,
                                                        description: productToBeDisplayed.productDescription,
                                                        price: productToBeDisplayed.price,
                                                        priceDescription: productToBeDisplayed.priceDescription,
                                                        imageURL: productToBeDisplayed.imageUrl,
                                                        imageThumbURL: productToBeDisplayed.imageThumbUrl,
                                                        imageCompanyURL: productToBeDisplayed.imageCompanyUrl,
-                                                       companyWeblink: productToBeDisplayed.weblink))
+                                                       companyWeblink: productToBeDisplayed.weblink,
+                                                       isAddedToShopCart: false))
         } else {
             outputDetail?.gotProduct(nil)
         }

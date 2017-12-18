@@ -602,6 +602,21 @@
 		CED8A1F71FCD790400293AFF /* SettingsModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F4391FCD71FA00AD67A1 /* SettingsModuleProtocols.swift */; };
 		CED8A1F81FCD790400293AFF /* SettingsModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F4391FCD71FA00AD67A1 /* SettingsModuleProtocols.swift */; };
 		CED8A1F91FCD790500293AFF /* SettingsModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE70F4391FCD71FA00AD67A1 /* SettingsModuleProtocols.swift */; };
+		CEDC71D31FE7AFA000BFE684 /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
+		CEDC71D51FE7B0ED00BFE684 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */; };
+		CEDC71D61FE7B40A00BFE684 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */; };
+		CEDC71D71FE7B40B00BFE684 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */; };
+		CEDC71D81FE7B40C00BFE684 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */; };
+		CEDC71D91FE7B40D00BFE684 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */; };
+		CEDC71DA1FE7B40E00BFE684 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */; };
+		CEDC71DB1FE7B40F00BFE684 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */; };
+		CEDC71DD1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */; };
+		CEDC71DE1FE7B93F00BFE684 /* ProductDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */; };
+		CEDC71DF1FE7B94000BFE684 /* ProductDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */; };
+		CEDC71E01FE7B94100BFE684 /* ProductDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */; };
+		CEDC71E11FE7B94100BFE684 /* ProductDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */; };
+		CEDC71E21FE7B94200BFE684 /* ProductDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */; };
+		CEDC71E31FE7B94400BFE684 /* ProductDetailViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */; };
 		CEDCD4CA1FC3ED2800103B60 /* ManagedUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */; };
 		CEE8ABB41FB181110052DC3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB31FB181110052DC3A /* AppDelegate.swift */; };
 		CEE8ABB61FB181110052DC3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE8ABB51FB181110052DC3A /* ViewController.swift */; };
@@ -841,6 +856,9 @@
 		CED666821FBE88D100B2245D /* Pods_BetaProduct_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_BetaProduct_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED666AA1FBECBA300B2245D /* CreateAccountInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountInteractor.swift; sourceTree = "<group>"; };
 		CED78F6F1FCE5CED00AE164D /* HomeModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModulePresenter.swift; sourceTree = "<group>"; };
+		CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailWireframe.swift; sourceTree = "<group>"; };
+		CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewProtocol.swift; sourceTree = "<group>"; };
 		CEDCD4C91FC3ED2800103B60 /* ManagedUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedUser.swift; sourceTree = "<group>"; };
 		CEE8ABB01FB181110052DC3A /* BetaProduct-Swift DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BetaProduct-Swift DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE8ABB31FB181110052DC3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1259,6 +1277,7 @@
 		CE76C50B1FE2487400041F14 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
+				CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -1269,6 +1288,8 @@
 				CE76C50D1FE248A400041F14 /* ProductsListView.swift */,
 				CE76C5151FE2490200041F14 /* ProductsListCollectionViewCell.swift */,
 				CEA6223F1FE3A54C00B65A07 /* ProductsListViewProtocol.swift */,
+				CEDC71D41FE7B0ED00BFE684 /* ProductDetailView.swift */,
+				CEDC71DC1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2522,6 +2543,7 @@
 				CED8A1F91FCD790500293AFF /* SettingsModuleProtocols.swift in Sources */,
 				CE3B61741FC6B23E00B24933 /* ModelProtocol.swift in Sources */,
 				CE3B61751FC6B23E00B24933 /* Product.swift in Sources */,
+				CEDC71E31FE7B94400BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CE3B61761FC6B23E00B24933 /* User.swift in Sources */,
 				CE001E871FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CED78F761FCE65BF00AE164D /* HomeModulePresenter.swift in Sources */,
@@ -2560,6 +2582,7 @@
 				CEA622481FE3A70900B65A07 /* ProductsListViewProtocol.swift in Sources */,
 				CE3B61911FC6B23E00B24933 /* LoginOptionsWireframe.swift in Sources */,
 				CE70F4251FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
+				CEDC71DB1FE7B40F00BFE684 /* ProductDetailView.swift in Sources */,
 				CEB135021FD68E710076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
 				CE70F4491FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CEED03021FC6DD8C002C7A5A /* ManagedProduct.swift in Sources */,
@@ -2622,6 +2645,7 @@
 				CEED02CA1FC6BD3F002C7A5A /* CompletionBlockTypes.swift in Sources */,
 				CEED02CB1FC6BD3F002C7A5A /* RootWireframe.swift in Sources */,
 				CEED02CC1FC6BD3F002C7A5A /* BaseView.swift in Sources */,
+				CEDC71DE1FE7B93F00BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CE3518041FD673B900FEAD25 /* ProductInteractorIO.swift in Sources */,
 				CE9CF4631FD54A3B00526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CEED02CD1FC6BD3F002C7A5A /* BaseViewProtocol.swift in Sources */,
@@ -2662,6 +2686,7 @@
 				CEED02E21FC6BD3F002C7A5A /* LogInInteractor.swift in Sources */,
 				CEED02E31FC6BD3F002C7A5A /* LogInManager.swift in Sources */,
 				CEED02E41FC6BD3F002C7A5A /* LogInPresenter.swift in Sources */,
+				CEDC71D61FE7B40A00BFE684 /* ProductDetailView.swift in Sources */,
 				CE3615BA1FE25D6E008915E7 /* Token.swift in Sources */,
 				CEED02E51FC6BD3F002C7A5A /* UserDisplayItem.swift in Sources */,
 				CE35180B1FD673B900FEAD25 /* ProductListPresenter.swift in Sources */,
@@ -2739,6 +2764,7 @@
 				CE433CDB1FBD1AF300E530C0 /* LogInInteractorIO.swift in Sources */,
 				CE433CDD1FBD1AF300E530C0 /* DatabaseTypes.swift in Sources */,
 				CE433CDE1FBD1AF300E530C0 /* AppDelegate.swift in Sources */,
+				CEDC71DF1FE7B94000BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CE3615BB1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE35180C1FD673BA00FEAD25 /* ProductListPresenter.swift in Sources */,
 				CE70F4191FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
@@ -2826,6 +2852,7 @@
 				CE433D181FBD1AF600E530C0 /* LogInInteractorIO.swift in Sources */,
 				CE433D1A1FBD1AF600E530C0 /* DatabaseTypes.swift in Sources */,
 				CE433D1B1FBD1AF600E530C0 /* AppDelegate.swift in Sources */,
+				CEDC71E01FE7B94100BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CE3615BC1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE35180D1FD673BA00FEAD25 /* ProductListPresenter.swift in Sources */,
 				CE70F41A1FCCFACF00AD67A1 /* SettingsManager.swift in Sources */,
@@ -2925,6 +2952,7 @@
 				CEF320E01FC52826004CA907 /* PropertyLooperProtocol.swift in Sources */,
 				CE76C5161FE2490200041F14 /* ProductsListCollectionViewCell.swift in Sources */,
 				CED666AB1FBECBA300B2245D /* CreateAccountInteractor.swift in Sources */,
+				CEDC71DD1FE7B83B00BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CEF71F401FC42FA2000CBEAA /* Session.swift in Sources */,
 				CE5570721FB597BF00A14F7A /* User.swift in Sources */,
 				CEC2039B1FB46C160022C7C2 /* LoginOptionsView.swift in Sources */,
@@ -2944,6 +2972,7 @@
 				CE07A49B1FBD3948009185F3 /* CreateAccountPresenter.swift in Sources */,
 				CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */,
 				CEB134FC1FD68E480076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
+				CEDC71D31FE7AFA000BFE684 /* ProductDetailWireframe.swift in Sources */,
 				CE08CB9D1FBEF2DB00B8C58A /* String+Utility.swift in Sources */,
 				CE70F4271FCD084700AD67A1 /* SettingsInteractorIO.swift in Sources */,
 				CEA730BA1FBD3BC300ABAA60 /* Utility.swift in Sources */,
@@ -2962,6 +2991,7 @@
 				CE07A49D1FBD3CB2009185F3 /* CreateAccountWireframe.swift in Sources */,
 				CEE8ABF61FB18AA20052DC3A /* ManagedProduct.swift in Sources */,
 				CEA04A721FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
+				CEDC71D51FE7B0ED00BFE684 /* ProductDetailView.swift in Sources */,
 				CEC2039A1FB46C160022C7C2 /* LoginOptionsWireframe.swift in Sources */,
 				CEA622401FE3A54C00B65A07 /* ProductsListViewProtocol.swift in Sources */,
 				CE70F4411FCD757000AD67A1 /* SettingsPresenterHome.swift in Sources */,
@@ -2980,6 +3010,7 @@
 				CE00E43F1FC82BA6006C8ACE /* LoginPresenterTest.swift in Sources */,
 				CE3517FA1FD673B900FEAD25 /* ProductManager.swift in Sources */,
 				CE00E3C11FC82A2E006C8ACE /* AppDelegate.swift in Sources */,
+				CEDC71E21FE7B94200BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CE76C5241FE2657800041F14 /* ProductsModuleProtocol.swift in Sources */,
 				CE00E3C21FC82A2E006C8ACE /* AppDependencies.swift in Sources */,
 				CE00E3C31FC82A2E006C8ACE /* ViewController.swift in Sources */,
@@ -3013,6 +3044,7 @@
 				CED8A1F81FCD790400293AFF /* SettingsModuleProtocols.swift in Sources */,
 				CE00E3D01FC82A2E006C8ACE /* BaseView.swift in Sources */,
 				CED8A1F21FCD760300293AFF /* SettingsPresenterHome.swift in Sources */,
+				CEDC71DA1FE7B40E00BFE684 /* ProductDetailView.swift in Sources */,
 				CE42E8E31FD1215400D4FA81 /* SettingsProfileWireframe.swift in Sources */,
 				CE00E3D11FC82A2E006C8ACE /* BaseViewProtocol.swift in Sources */,
 				CE00E3D21FC82A2E006C8ACE /* BaseMessageView.swift in Sources */,
@@ -3135,6 +3167,7 @@
 				CE00E41C1FC82A69006C8ACE /* UserCredentialsItem.swift in Sources */,
 				CED78F741FCE65BD00AE164D /* HomeModulePresenter.swift in Sources */,
 				CE00E4421FC82BBB006C8ACE /* BetaProduct_SwiftUITests.swift in Sources */,
+				CEDC71E11FE7B94100BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CE00E41D1FC82A69006C8ACE /* CreateAccountPresenter.swift in Sources */,
 				CE00E41E1FC82A69006C8ACE /* CreateAccountWireframe.swift in Sources */,
 				CED8A1F71FCD790400293AFF /* SettingsModuleProtocols.swift in Sources */,
@@ -3175,6 +3208,7 @@
 				CE00E4351FC82A69006C8ACE /* BetaProductError.swift in Sources */,
 				CE3518001FD673B900FEAD25 /* ProductInteractor.swift in Sources */,
 				CEB135001FD68E700076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
+				CEDC71D91FE7B40D00BFE684 /* ProductDetailView.swift in Sources */,
 				CE00E4361FC82A69006C8ACE /* PropertyLooperProtocol.swift in Sources */,
 				CEA622461FE3A70700B65A07 /* ProductsListViewProtocol.swift in Sources */,
 				CE00E4371FC82A69006C8ACE /* String+Utility.swift in Sources */,
