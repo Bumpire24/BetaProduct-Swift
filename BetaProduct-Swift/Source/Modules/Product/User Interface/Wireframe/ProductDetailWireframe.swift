@@ -12,13 +12,13 @@ let productDetailViewIdentifier = "ProductDetailView"
 
 class ProductDetailWireframe: BaseWireframe {
     var productDetailView : ProductDetailView?
-    var presenter : ProductListPresenter?
+    var productDetailPresenter : ProductDetailPresenter?
     
     func presentProductDetailViewFromViewController(_ viewController: UIViewController, productIndex: Int) {
         let newViewController = productDetailViewController()
         productDetailView = newViewController
-        productDetailView?.eventHandler = presenter
-        presenter?.productDetailView = newViewController
+        productDetailView?.eventHandler = productDetailPresenter
+        productDetailPresenter?.productDetailView = newViewController
         viewController.navigationController?.present(newViewController, animated: true, completion: nil)
         newViewController.fetchProductDetail(ofItemIndexAt: productIndex)
     }

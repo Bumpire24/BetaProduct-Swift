@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BA412F81FE7F7690052350F /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */; };
+		1BA412F91FE7F76A0052350F /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */; };
+		1BA412FA1FE7F76B0052350F /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */; };
+		1BA412FB1FE7F76C0052350F /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */; };
+		1BA412FC1FE7F76D0052350F /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */; };
+		1BA412FD1FE7F76D0052350F /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */; };
+		1BA412FE1FE80E480052350F /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
+		1BA412FF1FE80E490052350F /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
+		1BA413001FE80E490052350F /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
+		1BA413011FE80E4A0052350F /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
+		1BA413021FE80E4B0052350F /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
+		1BA413031FE80E4C0052350F /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
+		1BCA8E021FE7EF7C00A5FBFF /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */; };
+		1BCA8E041FE7F38100A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
+		1BCA8E051FE7F3D100A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
+		1BCA8E061FE7F3D200A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
+		1BCA8E071FE7F3D300A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
+		1BCA8E081FE7F3D400A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
+		1BCA8E091FE7F3D500A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
+		1BCA8E0A1FE7F3D500A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
 		1D5B9B473A20C8ABD31DC928 /* Pods_BetaProduct_Swift_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED666811FBE88D100B2245D /* Pods_BetaProduct_Swift_DEV.framework */; };
 		24AB4CCF5173BD8372F34FED /* Pods_BetaProduct_Swift_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED666811FBE88D100B2245D /* Pods_BetaProduct_Swift_DEV.framework */; };
 		32887CBDFC905668D49FA8D1 /* Pods_BetaProduct_Swift_UI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B6CC25A62B6A91E084C121 /* Pods_BetaProduct_Swift_UI_Tests.framework */; };
@@ -758,6 +778,8 @@
 
 /* Begin PBXFileReference section */
 		17F001A7B7C036FB143A45EC /* Pods-BetaProduct-Swift Unit Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift Unit Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift Unit Tests/Pods-BetaProduct-Swift Unit Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
+		1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModuleProtocol.swift; sourceTree = "<group>"; };
 		27AAA76793D1627EECB3F182 /* Pods-BetaProduct-Swift DEV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift DEV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift DEV/Pods-BetaProduct-Swift DEV.debug.xcconfig"; sourceTree = "<group>"; };
 		2F1E77C2936192A0DB09858A /* Pods-BetaProduct-Swift DEV (Integration Tests).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift DEV (Integration Tests).debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift DEV (Integration Tests)/Pods-BetaProduct-Swift DEV (Integration Tests).debug.xcconfig"; sourceTree = "<group>"; };
 		3BA7A0C19AFF027AD68ED5C6 /* Pods-BetaProduct-Swift UI Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift UI Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift UI Tests/Pods-BetaProduct-Swift UI Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1137,6 +1159,7 @@
 				CE3517F41FD673B900FEAD25 /* ProductListPresenter.swift */,
 				CE4520171FD9385E00DD5EAA /* ProductListItem.swift */,
 				CECBE5D71FDA93D8006EDF48 /* ProductDetailItem.swift */,
+				1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1324,6 +1347,7 @@
 			isa = PBXGroup;
 			children = (
 				CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */,
+				1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */,
 			);
 			path = "Module Interface";
 			sourceTree = "<group>";
@@ -2585,6 +2609,7 @@
 				CE3B616F1FC6B23E00B24933 /* CompletionBlockTypes.swift in Sources */,
 				CE3B61701FC6B23E00B24933 /* RootWireframe.swift in Sources */,
 				CE76C5141FE248B000041F14 /* ProductsListView.swift in Sources */,
+				1BA413031FE80E4C0052350F /* ProductDetailWireframe.swift in Sources */,
 				CE70F4381FCD53E900AD67A1 /* SettingsModuleTest.swift in Sources */,
 				CE3B61711FC6B23E00B24933 /* BaseView.swift in Sources */,
 				CE3B61721FC6B23E00B24933 /* BaseViewProtocol.swift in Sources */,
@@ -2619,6 +2644,7 @@
 				CE3B61871FC6B23E00B24933 /* LogInInteractor.swift in Sources */,
 				CE028BDD1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				CE3B61881FC6B23E00B24933 /* LogInManager.swift in Sources */,
+				1BCA8E0A1FE7F3D500A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CE3B61891FC6B23E00B24933 /* LogInPresenter.swift in Sources */,
 				CE3B618A1FC6B23E00B24933 /* UserDisplayItem.swift in Sources */,
 				CE3B618B1FC6B23E00B24933 /* LoginWireframe.swift in Sources */,
@@ -2650,6 +2676,7 @@
 				CEC377131FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CE3518021FD673B900FEAD25 /* ProductInteractor.swift in Sources */,
 				CEBE0E141FD64B7E00B0C0F7 /* FloatingSettingsView.swift in Sources */,
+				1BA412FD1FE7F76D0052350F /* ProductDetailPresenter.swift in Sources */,
 				CE001EA71FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE3517E91FD6397B00FEAD25 /* SettingsViewProtocols.swift in Sources */,
 				CEF8197E1FC7DD2200B12AFB /* StoreCoreData.swift in Sources */,
@@ -2711,6 +2738,7 @@
 				CEED02D21FC6BD3F002C7A5A /* BaseEntity.swift in Sources */,
 				CEED02D31FC6BD3F002C7A5A /* ManagedProduct.swift in Sources */,
 				CE3517F61FD673B900FEAD25 /* ProductManager.swift in Sources */,
+				1BA412FE1FE80E480052350F /* ProductDetailWireframe.swift in Sources */,
 				CEED02D41FC6BD3F002C7A5A /* ManagedUser.swift in Sources */,
 				CE001E821FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CE70F44C1FCD75A200AD67A1 /* SettingsPresenterPassword.swift in Sources */,
@@ -2746,8 +2774,10 @@
 				CE3615BA1FE25D6E008915E7 /* Token.swift in Sources */,
 				CEED02E51FC6BD3F002C7A5A /* UserDisplayItem.swift in Sources */,
 				CE35180B1FD673B900FEAD25 /* ProductListPresenter.swift in Sources */,
+				1BA412F81FE7F7690052350F /* ProductDetailPresenter.swift in Sources */,
 				CEED02E61FC6BD3F002C7A5A /* LoginWireframe.swift in Sources */,
 				CEED02E71FC6BD3F002C7A5A /* LoginView.swift in Sources */,
+				1BCA8E051FE7F3D100A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CEED02E81FC6BD3F002C7A5A /* LogInViewProtocol.swift in Sources */,
 				CEB134FD1FD68E6E0076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
 				CEED02E91FC6BD3F002C7A5A /* LoginOptionsModuleInterface.swift in Sources */,
@@ -2792,6 +2822,7 @@
 				CE001E8B1FCCEB820051B11C /* SettingsWireframe.swift in Sources */,
 				CE433CCE1FBD1AF300E530C0 /* HomeModuleProtocol.swift in Sources */,
 				CEA04A741FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
+				1BA412FF1FE80E490052350F /* ProductDetailWireframe.swift in Sources */,
 				CE45201A1FD9385E00DD5EAA /* ProductListItem.swift in Sources */,
 				CEF819861FC7E63B00B12AFB /* CreateAccountManager.swift in Sources */,
 				CE433CCF1FBD1AF300E530C0 /* WebServiceConverter.swift in Sources */,
@@ -2821,6 +2852,7 @@
 				CE70F4451FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CEC3771D1FE7F30900AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CE433CDB1FBD1AF300E530C0 /* LogInInteractorIO.swift in Sources */,
+				1BA412F91FE7F76A0052350F /* ProductDetailPresenter.swift in Sources */,
 				CE433CDD1FBD1AF300E530C0 /* DatabaseTypes.swift in Sources */,
 				CE433CDE1FBD1AF300E530C0 /* AppDelegate.swift in Sources */,
 				CEDC71DF1FE7B94000BFE684 /* ProductDetailViewProtocol.swift in Sources */,
@@ -2867,6 +2899,7 @@
 				CE433CF41FBD1AF300E530C0 /* LoginOptionsWireframe.swift in Sources */,
 				CEBE0E101FD64B7A00B0C0F7 /* FloatingSettingsView.swift in Sources */,
 				CE70F4211FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
+				1BCA8E061FE7F3D200A5FBFF /* ProductModuleProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2884,6 +2917,7 @@
 				CE001E8C1FCCEB820051B11C /* SettingsWireframe.swift in Sources */,
 				CE433D0B1FBD1AF600E530C0 /* HomeModuleProtocol.swift in Sources */,
 				CEA04A751FCBED6400B82FA5 /* SettingsDisplayItem.swift in Sources */,
+				1BA413001FE80E490052350F /* ProductDetailWireframe.swift in Sources */,
 				CE45201B1FD9385E00DD5EAA /* ProductListItem.swift in Sources */,
 				CEF819871FC7E63B00B12AFB /* CreateAccountManager.swift in Sources */,
 				CE433D0C1FBD1AF600E530C0 /* WebServiceConverter.swift in Sources */,
@@ -2913,6 +2947,7 @@
 				CE70F4461FCD758F00AD67A1 /* SettingsPresenterEmail.swift in Sources */,
 				CEC3771E1FE7F30A00AD6BA5 /* ShopCartInteractorIO.swift in Sources */,
 				CE433D181FBD1AF600E530C0 /* LogInInteractorIO.swift in Sources */,
+				1BA412FA1FE7F76B0052350F /* ProductDetailPresenter.swift in Sources */,
 				CE433D1A1FBD1AF600E530C0 /* DatabaseTypes.swift in Sources */,
 				CE433D1B1FBD1AF600E530C0 /* AppDelegate.swift in Sources */,
 				CEDC71E01FE7B94100BFE684 /* ProductDetailViewProtocol.swift in Sources */,
@@ -2959,6 +2994,7 @@
 				CE433D311FBD1AF600E530C0 /* LoginOptionsWireframe.swift in Sources */,
 				CEBE0E111FD64B7B00B0C0F7 /* FloatingSettingsView.swift in Sources */,
 				CE70F4221FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
+				1BCA8E071FE7F3D300A5FBFF /* ProductModuleProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2991,6 +3027,7 @@
 				CEF320E51FC52C0E004CA907 /* BaseDisplayItem.swift in Sources */,
 				CE001EA11FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE001E811FCCEB720051B11C /* SettingsView.swift in Sources */,
+				1BCA8E041FE7F38100A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CE3518031FD673B900FEAD25 /* ProductInteractorIO.swift in Sources */,
 				CE9CF4621FD544B300526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */,
@@ -3037,6 +3074,7 @@
 				CEE8ABFA1FB18C880052DC3A /* StoreCoreData.swift in Sources */,
 				CE07A49B1FBD3948009185F3 /* CreateAccountPresenter.swift in Sources */,
 				CEE8ABEF1FB184870052DC3A /* BaseEntity.swift in Sources */,
+				1BCA8E021FE7EF7C00A5FBFF /* ProductDetailPresenter.swift in Sources */,
 				CEC3770D1FE7F10200AD6BA5 /* ShopCartDisplayItem.swift in Sources */,
 				CEB134FC1FD68E480076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
 				CEDC71D31FE7AFA000BFE684 /* ProductDetailWireframe.swift in Sources */,
@@ -3108,6 +3146,7 @@
 				CE00E3CD1FC82A2E006C8ACE /* DatabaseTypes.swift in Sources */,
 				CECA7B921FCBA9ED00489C78 /* CreateAccountPresenterTest.swift in Sources */,
 				CE00E3CE1FC82A2E006C8ACE /* CompletionBlockTypes.swift in Sources */,
+				1BA412FC1FE7F76D0052350F /* ProductDetailPresenter.swift in Sources */,
 				CE001E961FCD13680051B11C /* ProfileSettingsView.swift in Sources */,
 				CE00E3CF1FC82A2E006C8ACE /* RootWireframe.swift in Sources */,
 				CED8A1F81FCD790400293AFF /* SettingsModuleProtocols.swift in Sources */,
@@ -3118,10 +3157,12 @@
 				CE00E3D11FC82A2E006C8ACE /* BaseViewProtocol.swift in Sources */,
 				CE00E3D21FC82A2E006C8ACE /* BaseMessageView.swift in Sources */,
 				CE70F4241FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
+				1BA413021FE80E4B0052350F /* ProductDetailWireframe.swift in Sources */,
 				CE00E3D31FC82A2E006C8ACE /* ModelProtocol.swift in Sources */,
 				CE001E9E1FCD47870051B11C /* ChangeEmailView.swift in Sources */,
 				CE001E861FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CE00E3D41FC82A2E006C8ACE /* Product.swift in Sources */,
+				1BCA8E091FE7F3D500A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CE00E3D51FC82A2E006C8ACE /* User.swift in Sources */,
 				CE3518011FD673B900FEAD25 /* ProductInteractor.swift in Sources */,
 				CE00E3D61FC82A2E006C8ACE /* BaseEntity.swift in Sources */,
@@ -3238,6 +3279,7 @@
 				CE00E41B1FC82A69006C8ACE /* CreateAccountInteractor.swift in Sources */,
 				CE00E41C1FC82A69006C8ACE /* UserCredentialsItem.swift in Sources */,
 				CED78F741FCE65BD00AE164D /* HomeModulePresenter.swift in Sources */,
+				1BCA8E081FE7F3D400A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CE00E4421FC82BBB006C8ACE /* BetaProduct_SwiftUITests.swift in Sources */,
 				CEDC71E11FE7B94100BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CE00E41D1FC82A69006C8ACE /* CreateAccountPresenter.swift in Sources */,
@@ -3290,6 +3332,8 @@
 				CE3615BD1FE25D6E008915E7 /* Token.swift in Sources */,
 				CE00E4381FC82A69006C8ACE /* Button+Theme.swift in Sources */,
 				CE00E4391FC82A69006C8ACE /* PropertLooper+Default.swift in Sources */,
+				1BA413011FE80E4A0052350F /* ProductDetailWireframe.swift in Sources */,
+				1BA412FB1FE7F76C0052350F /* ProductDetailPresenter.swift in Sources */,
 				CE00E43A1FC82A69006C8ACE /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
