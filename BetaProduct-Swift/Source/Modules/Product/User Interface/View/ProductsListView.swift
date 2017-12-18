@@ -15,12 +15,14 @@ class ProductsListView: BaseView, ProductsListViewProtocol {
     
     var eventHandler : ProductsModuleProtocol?
     var products : [ProductListItem]?
+    var currentSelectedImageIndexPath : IndexPath?
     
     let cellScaling: CGFloat = 0.6
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTheme()
+        enableTapGesture()
         
         let screenSize = UIScreen.main.bounds.size
         let cellWidth = floor(screenSize.width * cellScaling)
@@ -56,6 +58,32 @@ class ProductsListView: BaseView, ProductsListViewProtocol {
         self.products = products
         productsListCollectionView.reloadData()
     }
+    
+    func popProductItem() {
+        
+    }
+    
+    func deleteProductItemFromCollection() {
+        getAllProducts()
+    }
+    
+    // MARK: UI Actions
+    override func enableTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.productItemTapped))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func productItemTapped() {
+        eventHandler?.getProductItem(atIndex: currentSelectedImageIndexPath!.item)
+    }
+    
+    @IBAction func removeProductItemFromList(_ sender: Any) {
+        eventHandler?.removeProductItem(withIndex: currentSelectedImageIndexPath!.item)
+    }
+    
+    @IBAction func markProductItemAsFavorite(_ sender: Any) {
+        
+    }
 }
 
 extension ProductsListView : UICollectionViewDataSource
@@ -72,14 +100,20 @@ extension ProductsListView : UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductsListCollectionCell", for: indexPath) as! ProductsListCollectionViewCell
-        //cell.productImageView.image =
-        let imageUrlString = products![indexPath.item].imageURL
-        let imageUrl:URL = URL(string: imageUrlString!)!
+        
+        return populateProductCell(withImageURL: products![indexPath.item].imageURL, forCell: cell, atIndex: indexPath)
+    }
+    
+    func populateProductCell(withImageURL imageURLString: String? = nil, forCell cell: ProductsListCollectionViewCell, atIndex indexPath: IndexPath) -> ProductsListCollectionViewCell {
+        guard imageURLString != nil else {
+            return populateProductWithNoImageForCell(cell: cell, atIndex: indexPath)
+        }
+        
+        let imageUrlString = imageURLString
+        let imageUrl = URL(string: imageUrlString!)
         
         DispatchQueue.global(qos: .userInitiated).async {
-            let imageData:NSData = NSData(contentsOf: imageUrl)!
-//            let imageView = UIImageView(frame: CGRect(x:0, y:0, width:200, height:200))
-//            imageView.center = self.view.center
+            let imageData:NSData = NSData(contentsOf: imageUrl!)!
             
             // When from background thread, UI needs to be updated on main_queue
             DispatchQueue.main.async {
@@ -88,10 +122,19 @@ extension ProductsListView : UICollectionViewDataSource
                 cell.productImageView.contentMode = UIViewContentMode.scaleAspectFit
                 cell.productName.text = self.products![indexPath.item].name
                 cell.productDescription.text = self.products![indexPath.item].description
-
+                
             }
         }
-//        cell.interest = interests[indexPath.item]
+        
+        return cell
+    }
+    
+    func populateProductWithNoImageForCell(cell: ProductsListCollectionViewCell, atIndex indexPath: IndexPath) -> ProductsListCollectionViewCell {
+        DispatchQueue.main.async {
+            cell.productImageView.image = nil
+            cell.productName.text = self.products![indexPath.item].name
+            cell.productDescription.text = self.products![indexPath.item].description
+        }
         
         return cell
     }
@@ -110,5 +153,14 @@ extension ProductsListView : UIScrollViewDelegate, UICollectionViewDelegate
         
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.pointee = offset
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var visibleRect = CGRect()
+        visibleRect.origin = productsListCollectionView.contentOffset
+        visibleRect.size = productsListCollectionView.bounds.size
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath: IndexPath = productsListCollectionView.indexPathForItem(at: visiblePoint)!
+        currentSelectedImageIndexPath = visibleIndexPath
     }
 }

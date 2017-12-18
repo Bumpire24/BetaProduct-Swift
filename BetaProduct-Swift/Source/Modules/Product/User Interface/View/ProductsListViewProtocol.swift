@@ -10,4 +10,5 @@ import UIKit
 
 protocol ProductsListViewProtocol {
     func displayProducts(_ products: [ProductListItem])
+    func deleteProductItemFromCollection()
 }

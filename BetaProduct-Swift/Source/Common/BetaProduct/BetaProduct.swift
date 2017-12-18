@@ -27,6 +27,8 @@ struct BetaProductStyle {
         static var iDoohHeaderLabelFont = UIFont(name: "BloggerSans-Bold", size: 30)
         static var iDoohInstructionLabelFont = UIFont(name: "BloggerSans-LightItalic", size: 20)
         static var iDoohSettingsLabelFont = UIFont(name: "BloggerSans-Light", size: 20)
+        static var iDoohProductNameLabelFont = UIFont(name: "BloggerSans-Bold", size: 30)
+        static var iDoohProductDescriptionLabelFont = UIFont(name: "BloggerSans-BoldItalic", size: 20)
     }
     
     static var iDoohLinkColor = BetaProductStyle.Colors.iDoohLinkBlue
@@ -48,6 +50,8 @@ struct BetaProductStyle {
     static var iDoohTertiaryButtonBackgroundColor = BetaProductStyle.Colors.iDoohLightGrey
     static var iDoohTertiaryButtonBorderColor = BetaProductStyle.Colors.iDoohWhite
     static var iDoohLinkButtonFontColor = BetaProductStyle.Colors.iDoohPurple
+    static var iDoohProductNameFontColor = BetaProductStyle.Colors.iDoohPink
+    static var iDoohProductDescriptionFontColor = BetaProductStyle.Colors.iDoohPurple
 }
 
 /// Struct for Constants and Configs of Project Beta

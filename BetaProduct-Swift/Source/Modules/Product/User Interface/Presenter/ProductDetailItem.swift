@@ -9,6 +9,7 @@
 import Foundation
 
 struct ProductDetailItem: BaseDisplayItem {
+    let id: Int16?
     let name: String?
     let description: String?
     let price: String?
@@ -17,4 +18,5 @@ struct ProductDetailItem: BaseDisplayItem {
     let imageThumbURL: String?
     let imageCompanyURL: String?
     let companyWeblink: String?
+    let isAddedToShopCart: Bool?
 }

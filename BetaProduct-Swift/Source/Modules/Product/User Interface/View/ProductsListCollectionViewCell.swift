@@ -10,8 +10,9 @@ import UIKit
 
 class ProductsListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productImageView: UIImageView!
-    @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var productDescription: UILabel!
+    @IBOutlet weak var productName: BetaProductProductNameLabel!
+    @IBOutlet weak var productDescription: BetaProductProductDescriptionLabel!
+    @IBOutlet weak var productButton: UIButton!
     
     var product: ProductListItem? {
         didSet {
@@ -44,6 +45,10 @@ class ProductsListCollectionViewCell: UICollectionViewCell {
         layer.shadowOffset = CGSize(width: 5, height: 10)
         
         self.clipsToBounds = false
+    }
+    
+    @IBAction func displayProductDetail(_ sender: Any) {
+        
     }
     
 }
