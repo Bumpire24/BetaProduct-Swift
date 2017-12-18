@@ -35,6 +35,8 @@ protocol StoreProtocol {
     /// Insert to Table Product
     func newProduct() -> ManagedProduct
     
+    func newShopCart() -> ManagedShopCart
+    
     /// Insert to Table User
     func newUser() -> ManagedUser
     

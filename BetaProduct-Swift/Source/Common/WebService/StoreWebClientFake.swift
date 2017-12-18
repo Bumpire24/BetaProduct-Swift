@@ -14,7 +14,7 @@ class StoreWebClientFake: StoreWebClientProtocol {
     }
     
     func GET(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
-        if url == BetaProduct.kBPWSGetUserProduct {
+        if url == BetaProduct.kBPWSProducts() {
             block(.success([["id": 1,
                              "name": "Ordinary Bag",
                              "description": "Ordinary Bag. What more do you want?",

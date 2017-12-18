@@ -76,7 +76,7 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     
     // calls Webservice and updates local data
     private func callWSAndUpdateUser(_ user: User, updateDisplayItem item: SettingsDisplayItemProtocol) {
-        self.webservice?.PUT(BetaProduct.kBPWSUsers(withID: String(user.id)), parameters: user.allProperties(), block: { response in
+        self.webservice?.PATCH(BetaProduct.kBPWSUsers(withID: String(user.id)), parameters: ["email" : user.email], block: { response in
             switch response {
             case .success(let value):
                 self.manager?.updateUser(user: user, withCompletionBlock: { response in
@@ -250,16 +250,30 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
         if item == itemFromSession {
             self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "No changes found for Profile!", withNewDisplayItem: item)
         } else {
-            // check if values are nil, empty strings or valid
-            guard let name = item.name?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: name) else {
-                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Name Incorrect!", withNewDisplayItem: item)
+            guard let fName = item.firstName?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: fName) else {
+                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "First Name Incorrect!", withNewDisplayItem: item)
                 return
             }
             
-            guard let mobile = item.mobile?.trimmingCharacters(in: .whitespacesAndNewlines), isMobileValid(mobile: mobile) else {
-                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Mobile Incorrect!", withNewDisplayItem: item)
+            guard let mName = item.middleName?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: mName) else {
+                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Middle Name Incorrect!", withNewDisplayItem: item)
                 return
             }
+            
+            guard let lName = item.lastName?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: lName) else {
+                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Last Name Incorrect!", withNewDisplayItem: item)
+                return
+            }
+            // check if values are nil, empty strings or valid
+//            guard let name = item.name?.trimmingCharacters(in: .whitespacesAndNewlines), isNameValid(name: name) else {
+//                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Name Incorrect!", withNewDisplayItem: item)
+//                return
+//            }
+            
+//            guard let mobile = item.mobile?.trimmingCharacters(in: .whitespacesAndNewlines), isMobileValid(mobile: mobile) else {
+//                self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Mobile Incorrect!", withNewDisplayItem: item)
+//                return
+//            }
             
             guard let address = item.addressShipping?.trimmingCharacters(in: .whitespacesAndNewlines), isAddressValid(address: address) else {
                 self.outputProfile?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Address Incorrect!", withNewDisplayItem: item)
@@ -268,7 +282,8 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
             
             // start transactions here
             let downloadGroup = DispatchGroup()
-            let processPhoto = item.profileImage.image != nil
+//            let processPhoto = item.profileImage.image != nil
+            let processPhoto = false
             let processProfile = item.name != itemFromSession.name || item.addressShipping != itemFromSession.addressShipping || item.mobile != itemFromSession.mobile
             var processPhotoResult: String?
 //            var processProfileResult: [String: Any]?
@@ -278,8 +293,11 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
             var processProfileGood = false
             
             var user = session?.getUserSessionAsUser()
-            user?.mobile = item.mobile!
+//            user?.mobile = item.mobile!
             user?.addressShipping = item.addressShipping!
+            user?.firstName = item.firstName!
+            user?.middleName = item.middleName!
+            user?.lastName = item.lastName!
             
             if processPhoto {
                 downloadGroup.enter()
@@ -299,7 +317,8 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
             
             if processProfile {
                 downloadGroup.enter()
-                self.webservice?.PUT(BetaProduct.kBPWSPutUserWithId("1"), parameters: user!.allProperties(), block: { response in
+                let userID = Int(user!.id)
+                self.webservice?.PATCH(BetaProduct.kBPWSUsers(withID: String(userID)), parameters: makeJSONDictionaryFromModel(model: user!), block: { response in
                     switch response {
                     case .success(_):
 //                        processProfileResult = value?.first as? [String: Any]
@@ -346,6 +365,15 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
                 }
             })
         }
+    }
+    
+    private func makeJSONDictionaryFromModel(model: User) -> [String: Any] {
+        var dataDict = [String: Any]()
+        dataDict["first_name"] = model.firstName
+        dataDict["middle_name "] = model.middleName
+        dataDict["last_name"] = model.lastName
+        dataDict["shipping_address_1"] = model.addressShipping
+        return dataDict
     }
     
     /// validate Email. calls isInputValid for generic input validation

@@ -31,7 +31,7 @@ class ProductInteractor: NSObject, ProductInteractorInput {
             if (nonNilSession.hasAlreadySynced()) {
                 getProductToPersistAndToShowAsOutput()
             } else {
-                webservice?.GET(BetaProduct.kBPWSGetUserProduct, parameters: ["user_id" : nonNilSession.user!.email as Any], block: { response in
+                webservice?.GET(BetaProduct.kBPWSProducts(), parameters: nil, block: { response in
                     switch response {
                     case .success(let value):
                         let products = value?.map({Product.init(dictionary: $0 as! [String: Any])})

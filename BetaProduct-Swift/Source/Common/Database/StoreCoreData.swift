@@ -100,6 +100,12 @@ class StoreCoreData: NSObject, StoreProtocol{
         return newEntry
     }
     
+    func newShopCart() -> ManagedShopCart {
+        let entityDescription = NSEntityDescription.entity(forEntityName: "ShopCart", in: managedObjectContext)
+        let newEntry = NSManagedObject.init(entity: entityDescription!, insertInto: managedObjectContext) as! ManagedShopCart
+        return newEntry
+    }
+    
     /// Protocol implementation. see `StoreProtocol.swift`
     func deleteProduct(product: ManagedProduct) {
         managedObjectContext.delete(product)

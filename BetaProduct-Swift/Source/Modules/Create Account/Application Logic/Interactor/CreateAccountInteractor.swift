@@ -92,7 +92,7 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
 //        }
         
         guard let username = loginDisplay.email?.trimmingCharacters(in: .whitespacesAndNewlines), isEmailValid(email: username) else {
-            output?.createAccountSuccessful(false, message: "Username incorrect!")
+            output?.createAccountSuccessful(false, message: "Email incorrect!")
             return
         }
         
@@ -102,7 +102,7 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
         }
         
         // call WS and validate account
-        webService?.POST(BetaProduct.kBPWSUsers(), parameters: loginDisplay.allProperties(), block: { response in
+        webService?.POST(BetaProduct.kBPWSUsers(), parameters: makeJSONDictionaryFromViewModel(model: loginDisplay), block: { response in
             switch response {
             case .success(_):
                 self.output?.createAccountSuccessful(true, message: "Account creation Successful!")
@@ -110,5 +110,16 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
                 self.output?.createAccountSuccessful(false, message: (error?.localizedFailureReason)!)
             }
         })
+    }
+    
+    private func makeJSONDictionaryFromViewModel(model: UserCredentialsItem) -> [String: Any] {
+        var dataDict = [String: Any]()
+        dataDict["first_name"] = model.firstName
+        dataDict["middle_name"] = model.middleName
+        dataDict["last_name"] = model.lastName
+        dataDict["email"] = model.email
+        dataDict["shipping_address_1"] = model.shippingAddress
+        dataDict["password"] = model.password
+        return dataDict
     }
 }

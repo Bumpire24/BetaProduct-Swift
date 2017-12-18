@@ -23,6 +23,7 @@ class ManagedUser: BaseEntity {
     /// variable for Full Name
     @NSManaged var addressShipping: String
     @NSManaged var products: NSSet
+    @NSManaged var shopcart: NSSet
 }
 
 extension ManagedUser {
@@ -34,5 +35,15 @@ extension ManagedUser {
     func removeProduct(product: NSManagedObject) {
         let currentProducts = mutableSetValue(forKey: "products")
         currentProducts.remove(product)
+    }
+    
+    func addCart(cart: NSManagedObject) {
+        let currentCart = mutableSetValue(forKey: "shopcart")
+        currentCart.add(cart)
+    }
+    
+    func removeCart(cart: NSManagedObject) {
+        let currentCart = mutableSetValue(forKey: "shopcart")
+        currentCart.remove(cart)
     }
 }
