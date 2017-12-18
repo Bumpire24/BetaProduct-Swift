@@ -9,6 +9,10 @@
 import UIKit
 
 class StoreWebClientFake: StoreWebClientProtocol {
+    func PATCH(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
+        
+    }
+    
     func GET(_ url: String, parameters: [String : Any]?, block: @escaping (Response<[Any]>) -> Void) {
         if url == BetaProduct.kBPWSGetUserProduct {
             block(.success([["id": 1,

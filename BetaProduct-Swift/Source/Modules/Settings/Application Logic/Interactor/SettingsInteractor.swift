@@ -76,7 +76,7 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     
     // calls Webservice and updates local data
     private func callWSAndUpdateUser(_ user: User, updateDisplayItem item: SettingsDisplayItemProtocol) {
-        self.webservice?.PUT(BetaProduct.kBPWSPutUserWithId("1"), parameters: user.allProperties(), block: { response in
+        self.webservice?.PUT(BetaProduct.kBPWSUsers(withID: String(user.id)), parameters: user.allProperties(), block: { response in
             switch response {
             case .success(let value):
                 self.manager?.updateUser(user: user, withCompletionBlock: { response in
@@ -92,11 +92,11 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
                         }
                         self.constructOutput(displayItemType: item, wasSuccessful: true, withMessage: "Update was successful!")
                     case .failure(let error):
-                        self.constructOutput(displayItemType: item, wasSuccessful: false, withMessage: (error?.localizedDescription)!)
+                        self.constructOutput(displayItemType: item, wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
                     }
                 })
             case .failure(let error):
-                self.constructOutput(displayItemType: item, wasSuccessful: false, withMessage: (error?.localizedDescription)!)
+                self.constructOutput(displayItemType: item, wasSuccessful: false, withMessage: (error?.localizedFailureReason)!)
             }
         })
     }
@@ -160,8 +160,11 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     /// creates a SettingsProfileDisplayItem from User Session
     private func makeSettingsProfileDisplayItemFromSession() ->  SettingsProfileDisplayItem{
         let user = session?.getUserSessionAsUser()
-        return SettingsProfileDisplayItem(name: user?.fullname,
-                                          mobile: user?.mobile,
+        return SettingsProfileDisplayItem(name: "",
+                                          firstName: user?.firstName,
+                                          lastName: user?.lastName,
+                                          middleName: user?.middleName,
+                                          mobile: "",
                                           addressShipping: user?.addressShipping,
                                           profileImage: (url: user?.profileImageURL, image: nil))
     }
@@ -206,38 +209,38 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
     
     /// validates Password Update
     private func validateAndUpdatePassword(_ item: SettingsPasswordDisplayItem) {
-        guard let passOld = item.passwordOld?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passOld) else {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Old Password Incorrect!")
-            return
-        }
-        
-        guard let passNew = item.passwordNew?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passNew) else {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password Incorrect!")
-            return
-        }
-        
-        guard let passNewC = item.passwordNewConfirm?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passNewC) else {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Confirm New Password Incorrect!")
-            return
-        }
-        
-        var user = session?.getUserSessionAsUser()
-        if passOld != user?.password {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password does not match your Current Password")
-            return
-        }
-        
-        if passNew != passNewC {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password and Confirm New Password does not match")
-            return
-        }
-        
-        if passOld == passNew {
-            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password and New Password are the same")
-        }
-        
-        user?.password = item.passwordNew!
-        self.callWSAndUpdateUser(user!, updateDisplayItem: item)
+//        guard let passOld = item.passwordOld?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passOld) else {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Old Password Incorrect!")
+//            return
+//        }
+//        
+//        guard let passNew = item.passwordNew?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passNew) else {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password Incorrect!")
+//            return
+//        }
+//        
+//        guard let passNewC = item.passwordNewConfirm?.trimmingCharacters(in: .whitespacesAndNewlines), isPasswordValid(password: passNewC) else {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Confirm New Password Incorrect!")
+//            return
+//        }
+//        
+//        var user = session?.getUserSessionAsUser()
+//        if passOld != user?.password {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password does not match your Current Password")
+//            return
+//        }
+//        
+//        if passNew != passNewC {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "New Password and Confirm New Password does not match")
+//            return
+//        }
+//        
+//        if passOld == passNew {
+//            self.outputPassword?.settingsUpdationComplete(wasSuccessful: false, withMessage: "Your Old Password and New Password are the same")
+//        }
+//        
+//        user?.password = item.passwordNew!
+//        self.callWSAndUpdateUser(user!, updateDisplayItem: item)
     }
     
     /// validates Profile Update
@@ -275,7 +278,6 @@ class SettingsInteractor: NSObject, SettingsInteractorInput {
             var processProfileGood = false
             
             var user = session?.getUserSessionAsUser()
-            user?.fullname = item.name!
             user?.mobile = item.mobile!
             user?.addressShipping = item.addressShipping!
             

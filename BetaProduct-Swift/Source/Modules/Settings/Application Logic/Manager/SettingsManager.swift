@@ -27,12 +27,12 @@ class SettingsManager: NSObject {
             case .success(let value):
                 // value found and requires updation
                 let targetUser = value?.first as! ManagedUser
-                targetUser.fullname = user.fullname
+                targetUser.id = user.id
+                targetUser.firstName = user.firstName
+                targetUser.lastName = user.lastName
+                targetUser.middleName = user.middleName
                 targetUser.email = user.email
-                targetUser.mobile = user.mobile
-                targetUser.password = user.password
                 targetUser.addressShipping = user.addressShipping
-                targetUser.profileImageURL = user.profileImageURL
                 targetUser.modifiedAt = Date()
                 targetUser.syncStatus = SyncStatus.Updated.toInt16()
                 // save and handle

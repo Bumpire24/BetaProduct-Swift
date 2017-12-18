@@ -86,10 +86,10 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
             return
         }
         
-        guard let mobileNumber = loginDisplay.mobileNumber?.trimmingCharacters(in: .whitespacesAndNewlines), isMobileValid(mobile: mobileNumber) else {
-            output?.createAccountSuccessful(false, message: "Mobile Number incorrect!")
-            return
-        }
+//        guard let mobileNumber = loginDisplay.mobileNumber?.trimmingCharacters(in: .whitespacesAndNewlines), isMobileValid(mobile: mobileNumber) else {
+//            output?.createAccountSuccessful(false, message: "Mobile Number incorrect!")
+//            return
+//        }
         
         guard let username = loginDisplay.email?.trimmingCharacters(in: .whitespacesAndNewlines), isEmailValid(email: username) else {
             output?.createAccountSuccessful(false, message: "Username incorrect!")
@@ -102,7 +102,7 @@ class CreateAccountInteractor : NSObject, CreateAccountInteractorInput {
         }
         
         // call WS and validate account
-        webService?.POST(BetaProduct.kBPWSPostUser, parameters: loginDisplay.allProperties(), block: { response in
+        webService?.POST(BetaProduct.kBPWSUsers(), parameters: loginDisplay.allProperties(), block: { response in
             switch response {
             case .success(_):
                 self.output?.createAccountSuccessful(true, message: "Account creation Successful!")

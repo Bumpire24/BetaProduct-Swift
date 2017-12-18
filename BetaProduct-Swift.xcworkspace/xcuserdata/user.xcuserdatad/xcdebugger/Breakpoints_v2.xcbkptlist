@@ -2,4 +2,230 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift/Source/Modules/Login/Application Logic/Interactor/LogInInteractor.swift"
+            timestampString = "535114943.880206"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "validateUserLogin(userDisplayItem:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift/Source/Modules/Login/Application Logic/Interactor/LogInInteractor.swift"
+            timestampString = "535114943.881289"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "validateUserLogin(userDisplayItem:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift/Source/Modules/Login/Application Logic/Interactor/LogInInteractor.swift"
+            timestampString = "535114943.881799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "validateUserLogin(userDisplayItem:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV.UserDisplayItem) -&gt; ()"
+                  moduleName = "BetaProduct-Swift DEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
+                  timestampString = "535113160.344141"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV.UserDisplayItem) -&gt; ()"
+                  moduleName = "BetaProduct-Swift DEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
+                  timestampString = "535113160.347836"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "2524">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift/Source/Modules/Login/Application Logic/Interactor/LogInInteractor.swift"
+            timestampString = "535114943.88223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "validateUserLogin(userDisplayItem:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV.UserDisplayItem) -&gt; ()"
+                  moduleName = "BetaProduct-Swift DEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
+                  timestampString = "535113163.579696"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "505">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV.UserDisplayItem) -&gt; ()"
+                  moduleName = "BetaProduct-Swift DEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
+                  timestampString = "535113163.583237"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "1251">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift/Source/Modules/Login/Application Logic/Interactor/LogInInteractor.swift"
+            timestampString = "535114943.882637"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "validateUserLogin(userDisplayItem:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV.UserDisplayItem) -&gt; ()"
+                  moduleName = "BetaProduct-Swift DEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
+                  timestampString = "535113165.109625"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "1752">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV.UserDisplayItem) -&gt; ()"
+                  moduleName = "BetaProduct-Swift DEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
+                  timestampString = "535113165.113042"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "2532">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BetaProduct-Swift/Source/Modules/Login/Application Logic/Interactor/LogInInteractor.swift"
+            timestampString = "535114943.883037"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "validateUserLogin(userDisplayItem:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV.UserDisplayItem) -&gt; ()"
+                  moduleName = "BetaProduct-Swift DEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
+                  timestampString = "535113285.273046"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "162">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (BetaProduct_Swift_DEV.Response&lt;BetaProduct_Swift_DEV.User&gt;) -&gt; () in closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in closure #1 (BetaProduct_Swift_DEV.Response&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in BetaProduct_Swift_DEV.LogInInteractor.validateUserLogin(userDisplayItem: BetaProduct_Swift_DEV.UserDisplayItem) -&gt; ()"
+                  moduleName = "BetaProduct-Swift DEV"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Desktop/Workspace/Migs/Xcode%20Projects/Beta%20Product%20Swift/BetaProduct-Swift/BetaProduct-Swift/Source/Modules/Login/Application%20Logic/Interactor/LogInInteractor.swift"
+                  timestampString = "535113285.276907"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "887">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

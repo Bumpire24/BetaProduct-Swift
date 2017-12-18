@@ -46,6 +46,8 @@ protocol StoreWebClientProtocol {
      */
     func DELETE(_ url : String, parameters : [String : Any]?, block : @escaping CompletionBlock<[Any]>)
     
+    func PATCH(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>)
+    
     /**
      function for uploading image file
      - Parameters:

@@ -12,12 +12,12 @@ import CoreData
 class ManagedUser: BaseEntity {
     /// variable for email
     @NSManaged var email: String
-    /// variable for password
-    @NSManaged var password: String
     /// variable for mobile/phone
     @NSManaged var mobile: String
-    /// variable for Full Name
-    @NSManaged var fullname: String
+    @NSManaged var firstName: String
+    @NSManaged var middleName: String
+    @NSManaged var lastName: String
+    @NSManaged var id: Int16
     /// variable for mobile/phone
     @NSManaged var profileImageURL: String
     /// variable for Full Name

@@ -26,18 +26,18 @@ class LogInManager: NSObject {
             switch response {
             case .success(let result):
                 let user = result?.first as! ManagedUser
-                block(Response.success(User.init(emailAddress: user.email,
-                                                 password: user.password,
-                                                 fullName: user.fullname,
-                                                 mobileNumber: user.mobile,
-                                                 addressShipping: user.addressShipping,
-                                                 imageURLProfile: user.profileImageURL)))
+                block(Response.success(User.init(withUserID: user.id,
+                                                 withEmailAddress: user.email,
+                                                 withLastName: user.lastName,
+                                                 withFirstName: user.firstName,
+                                                 withMiddleName: user.middleName,
+                                                 withAddressShipping: user.addressShipping)))
                 break
             case .failure(let caughtError):
                 let error = BPError.init(domain: BetaProduct.kBPErrorDomain,
                                          code: .Business,
-                                         description: "No Record Found!",
-                                         reason: (caughtError?.localizedDescription)!,
+                                         description: (caughtError?.localizedDescription)!,
+                                         reason: "No Record Found!",
                                          suggestion: (caughtError?.localizedRecoverySuggestion)!)
                 error.innerBPError = caughtError
                 block(Response.failure(error))

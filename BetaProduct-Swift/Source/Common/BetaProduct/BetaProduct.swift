@@ -67,7 +67,7 @@ struct BetaProduct {
             if let configFile = Bundle.main.infoDictionary, let url = configFile["BP_CONFIG_WS_URL"] {
                 return url as! String
             } else {
-                return "http://jsonplaceholder.typicode.com/"
+                return "https://test-srv.idooh.com/passenger-api/"
             }
         }
     }
@@ -94,6 +94,42 @@ struct BetaProduct {
     /// const for Webservice call : Delete User.
     static func kBPWSDeleteUserWithId(_ id : String) -> String {
         return kBPWS + "posts/" + id
+    }
+    
+    static func kBPWSSessions() -> String {
+        return kBPWS +  "sessions/"
+    }
+    
+    static func kBPWSSessions(withEmail email: String, andWithPassword password: String, andWithDeviceID deviceID: String) -> String {
+        return String.init(format: "%@sessions/?grant_type=password&email=%@&password=%@&device_id=%@", kBPWS, email, password, deviceID)
+    }
+    
+    static func kBPWSUsers() -> String {
+        return kBPWS + "users/"
+    }
+    
+    static func kBPWSUsers(withID id: String) -> String {
+        return kBPWS + "users/" + id
+    }
+    
+    static func KBPWSUsersOrders(withID id: String, andWithOrderID orderid: String) -> String {
+        return kBPWS + "users/" + id + "/orders/" + orderid
+    }
+    
+    static func KBPWSUsersOrders(withID id: String) -> String {
+        return kBPWS + "users/" + id + "/orders/"
+    }
+    
+    static func kBPWSOrderItems(withID id: String) -> String {
+        return kBPWS + "orders/" + id + "/orderitems"
+    }
+    
+    static func kBPWSProducts() -> String {
+        return kBPWS + "products/"
+    }
+    
+    static func kBPWSProducts(withID id: String) -> String {
+        return kBPWS + "products/" + id
     }
     
     static let kSyncComplete: String = "SyncComplete"

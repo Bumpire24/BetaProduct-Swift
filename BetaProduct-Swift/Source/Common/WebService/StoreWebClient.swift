@@ -12,34 +12,40 @@ import CocoaLumberjack
 
 /// class implementation for StoreWebClientProtocol. see `StoreWebClientProtocol.swift`
 class StoreWebClient: StoreWebClientProtocol {
+    var session: Session?
     private var completionBlock: CompletionBlock<[Any]>?
     
     // MARK: StoreWebClientProtocol
     /// Protocol implementation. see `StoreWebClientProtocol.swift`
     func GET(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
         completionBlock = block
-        callWS(url, method: .get, parameters: parameters)
+        callWS(url, method: .get, parameters: parameters, token: session?.getToken())
     }
     
     // TODO: PUT
     /// Protocol implementation. see `StoreWebClientProtocol.swift`
     func PUT(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
         completionBlock = block
-        callWS(url, method: .put, parameters: parameters)
+        callWS(url, method: .put, parameters: parameters, token: session?.getToken())
     }
     
     // TODO: POST
     /// Protocol implementation. see `StoreWebClientProtocol.swift` 
     func POST(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
         completionBlock = block
-        callWS(url, method: .post, parameters: parameters)
+        callWS(url, method: .post, parameters: parameters, token: session?.getToken())
     }
     
     // TODO: DELETE
     /// Protocol implementation. see `StoreWebClientProtocol.swift`
     func DELETE(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
         completionBlock = block
-        callWS(url, method: .delete, parameters: parameters)
+        callWS(url, method: .delete, parameters: parameters, token: session?.getToken())
+    }
+    
+    func PATCH(_ url: String, parameters: [String : Any]?, block: @escaping CompletionBlock<[Any]>) {
+        completionBlock = block
+        callWS(url, method: .patch, parameters: parameters, token: session?.getToken())
     }
     
     /// Protocol implementation. see `StoreWebClientProtocol.swift`
@@ -64,13 +70,70 @@ class StoreWebClient: StoreWebClientProtocol {
          - parameters: Parameters attached, in Dictionary format [String: Any]
          - block: completion closure. Follows Response Class
      */
-    private func callWS(_ url: String, method: HTTPMethod, parameters: [String : Any]?) {
+    private func callWS(_ url: String, method: HTTPMethod, parameters: [String : Any]?, token: String?) {
+        var headers: HTTPHeaders? = nil
+        if let nonNilToken = token {
+            headers = ["Authorization" : "Bearer " + nonNilToken]
+        }
         print("CALL URL: \(url) with parameters: \(String(describing: parameters))")
-        Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseJSON { response in
-            if let rawdata = response.data, let processeddata = String(data: rawdata, encoding: .utf8) {
-                print(processeddata)
+        Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: headers)
+            .validate(statusCode: 200 ..< 300)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
+            // Check if there is a token and has expired
+            if response.response?.statusCode == 401 && token != nil {
+                self.requestForNewTokenAndRetry(url, method: method, parameters: parameters, token: token, headers: headers)
+            } else {
+                self.handleResponse(response)
             }
-            self.handleResponse(response)
+        }
+    }
+    
+    private func requestForNewTokenAndRetry(_ url: String, method: HTTPMethod, parameters: [String : Any]?, token: String?, headers: HTTPHeaders?) {
+        Alamofire.request(BetaProduct.kBPWSSessions(), method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers)
+            .validate(statusCode: 200 ..< 300)
+            .validate(contentType: ["application/json"])
+            .responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                var data: [String: Any]? = nil
+                if let array = value as? [Any] {
+                    if let dictionary = array.first as? [String: Any] {
+                        data = dictionary
+                    }
+                } else if let dictionary = value as? [String: Any] {
+                    data = dictionary
+                }
+                
+                if let nonNilData = data {
+                    let token = Token.init(dictionary: nonNilData)
+                    self.session?.setToken(token)
+                    let newHeaders: HTTPHeaders = ["Authorization" : "Bearer " + token.accessToken]
+                    Alamofire.request(url, method: method, parameters: parameters, encoding: URLEncoding.default, headers: newHeaders)
+                        .validate(statusCode: 200 ..< 300)
+                        .validate(contentType: ["application/json"])
+                        .responseJSON { response in
+                        self.handleResponse(response)
+                    }
+                } else {
+                    let error = BPError.init(domain: BetaProduct.kBPErrorDomain,
+                                             code: .WebService,
+                                             description: "Unable to retrieve tokens",
+                                             reason: BetaProduct.kBPGenericError,
+                                             suggestion: "Debug function \(#function)")
+                    self.completionBlock?(.failure(error))
+                }
+                
+            case .failure(let error):
+                let caughtError = BPError.init(domain: BetaProduct.kBPErrorDomain,
+                                               code: .WebService,
+                                               description: error.localizedDescription,
+                                               reason: BetaProduct.kBPGenericError,
+                                               suggestion: "Debug function \(#function)")
+                caughtError.innerError = error
+                DDLogError("Error  description : \(caughtError.localizedDescription) reason : \(caughtError.localizedFailureReason ?? "Unknown Reason") suggestion : \(caughtError.localizedRecoverySuggestion ?? "Unknown Suggestion")")
+                self.completionBlock?(.failure(caughtError))
+            }
         }
     }
     
@@ -82,18 +145,29 @@ class StoreWebClient: StoreWebClientProtocol {
     private func handleResponse(_ response: (DataResponse<Any>)) {
         switch response.result {
         case .success(let value):
+            var data: [Any]? = nil
+            var error: BPError? = nil
             if let result = value as? [Any] {
-                completionBlock?(.success(result))
+                data = result
             } else if let result = value as? [String: Any] {
-                completionBlock?(.success([result]))
+                data = [result]
             } else {
-                completionBlock?(.success(nil))
+                error = BPError.init(domain: BetaProduct.kBPErrorDomain,
+                                     code: .WebService,
+                                     description: BetaProduct.kBPGenericError,
+                                     reason: "Was Unable to parse data. Invalid Format",
+                                     suggestion: "Debug function \(#function)")
+            }
+            if let nonNilError = error {
+                completionBlock?(.failure(nonNilError))
+            } else {
+                completionBlock?(.success(data))
             }
         case .failure(let error):
             let caughtError = BPError.init(domain: BetaProduct.kBPErrorDomain,
                                            code: .WebService,
-                                           description: BetaProduct.kBPGenericError,
-                                           reason: error.localizedDescription,
+                                           description: error.localizedDescription,
+                                           reason: BetaProduct.kBPGenericError,
                                            suggestion: "Debug function \(#function)")
             caughtError.innerError = error
             DDLogError("Error  description : \(caughtError.localizedDescription) reason : \(caughtError.localizedFailureReason ?? "Unknown Reason") suggestion : \(caughtError.localizedRecoverySuggestion ?? "Unknown Suggestion")")
