@@ -10,5 +10,5 @@ import UIKit
 
 protocol ProductDetailViewProtocol {
     func fetchProductDetail(ofItemIndexAt itemIndex: Int)
-    func displayProductInformation(productItem: BaseDisplayItem)
+    func displayProductInformation(productItem: ProductDetailItem)
 }

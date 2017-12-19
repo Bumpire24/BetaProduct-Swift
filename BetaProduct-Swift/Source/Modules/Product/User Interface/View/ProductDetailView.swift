@@ -15,7 +15,7 @@ class ProductDetailView: BaseView, ProductDetailViewProtocol {
     @IBOutlet weak var productCurrency: BetaProductProductDescriptionLabel!
     @IBOutlet weak var productPrice: BetaProductProductDescriptionLabel!
     
-    var eventHandler : ProductsModuleProtocol?
+    var eventHandler : ProductModuleProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class ProductDetailView: BaseView, ProductDetailViewProtocol {
         eventHandler?.getProductItem(atIndex: itemIndex)
     }
     
-    func displayProductInformation(productItem: BaseDisplayItem) {
-        
+    func displayProductInformation(productItem: ProductDetailItem) {
+        print(productItem)
     }
 }

@@ -44,6 +44,7 @@ class HomeWireframe: BaseWireframe {
     func assembleViewControllersForHomeView() {
         let qrView = createQRView()
         let productListView = createProductsListViewView()
+        let productDetailWireframe = ProductDetailWireframe()
         let shopCartView = UIViewController.init()
         
         qrView.view.backgroundColor = UIColor.red;
@@ -51,6 +52,7 @@ class HomeWireframe: BaseWireframe {
         shopCartView.view.backgroundColor = UIColor.blue;
         
         productListView.eventHandler = productsPresenter
+        productListView.productDetailWireframe = productDetailWireframe
         productsPresenter?.productsListView = productListView
 
         let tabViewControllers = [qrView, productListView, shopCartView]
