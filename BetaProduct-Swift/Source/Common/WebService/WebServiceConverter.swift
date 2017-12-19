@@ -77,11 +77,25 @@ class WebServiceConverter {
         return value
     }
     
+    func doubleWithKey(_ key : String) -> Double {
+        var value : Double = 0.00
+        if let nonNilData = dataDict[key] {
+            if let x = nonNilData as? Double {
+                value = x
+            } else {
+                logErrorKeyIsNotTheExpectedType(key, value: value)
+            }
+        } else {
+            logErrorKeyNotFound(key)
+        }
+        return value
+    }
+    
     func decimalWithKey(_ key: String) -> Decimal {
         var value : Decimal = 0.00
         if let nonNilData = dataDict[key] {
-            if let x = nonNilData as? Decimal {
-                value = x
+            if let x = nonNilData as? Double {
+                value = Decimal.init(x)
             } else {
                 logErrorKeyIsNotTheExpectedType(key, value: value)
             }

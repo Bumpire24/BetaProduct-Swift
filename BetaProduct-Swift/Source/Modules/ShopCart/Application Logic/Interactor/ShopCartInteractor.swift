@@ -125,7 +125,7 @@ class ShopCartInteractor: NSObject, ShopCartInteractorInput {
     
     private func shopCartDisplayFromShopCart(_ cart: [ShopCart]) -> ShopCartListDisplayItem {
         var model = ShopCartListDisplayItem()
-        var totalPrice: Decimal = 0.00
+        var totalPrice: Double = 0.00
         var currency: String?
         for shopCart in cart {
             if currency == nil {
@@ -136,9 +136,9 @@ class ShopCartInteractor: NSObject, ShopCartInteractorInput {
             detailModel.productName = shopCart.product.name
             detailModel.productDescription = shopCart.product.productDescription
             detailModel.productQuantity = String(shopCart.quantity)
-            detailModel.productPrice = String(describing: Decimal(shopCart.quantity) * shopCart.product.price)
+            detailModel.productPrice = String(Double(shopCart.quantity) * shopCart.product.price)
             detailModel.productImageURL = shopCart.product.imageThumbUrl
-            totalPrice += Decimal(shopCart.quantity) * shopCart.product.price
+            totalPrice += Double(shopCart.quantity) * shopCart.product.price
             model.items?.append(detailModel)
         }
         model.totalPrice = currency ?? "" + " " + String(describing: totalPrice)
