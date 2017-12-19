@@ -13,7 +13,7 @@ class ManagedProduct: BaseEntity {
     @NSManaged var name :               String
     @NSManaged var weblink :            String
     @NSManaged var productDescription : String
-    @NSManaged var price :              Decimal
+    @NSManaged var price :              Double
     @NSManaged var priceDescription :   String
     @NSManaged var imageUrl :           String
     @NSManaged var imageThumbUrl :      String
