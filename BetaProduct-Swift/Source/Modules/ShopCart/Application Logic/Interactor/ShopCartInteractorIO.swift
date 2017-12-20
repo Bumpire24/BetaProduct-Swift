@@ -14,15 +14,9 @@ protocol ShopCartInteractorInput {
     func increaseQuantityOfProductByIndex(_ index: Int)
     func decreaseQuantityOfProductByIndex(_ index: Int)
     func deleteAllProductsInCart()
-    func addProductToCartByProductId(_ id: Int16)
-    func removeProductFromCartByProductId(_ id: Int16)
 }
 
 protocol ShopCartInteractorOuput {
     func gotCart(_ cart: ShopCartListDisplayItem?)
-    func cartUpdateComplete(wasSuccessful isSuccess: Bool, withMessage message: String)
-}
-
-protocol ShopCartProductInteractorOutput {
     func cartUpdateComplete(wasSuccessful isSuccess: Bool, withMessage message: String)
 }

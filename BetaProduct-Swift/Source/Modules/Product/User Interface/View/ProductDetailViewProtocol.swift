@@ -10,5 +10,7 @@ import UIKit
 
 protocol ProductDetailViewProtocol {
     func fetchProductDetail(ofItemIndexAt itemIndex: Int)
+    func fetchProductDetail(ofProductById id: Int16)
     func displayProductInformation(productItem: ProductDetailItem)
+    func displayMessage(_ message: String)
 }

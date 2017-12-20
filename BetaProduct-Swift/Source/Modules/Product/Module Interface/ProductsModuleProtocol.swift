@@ -8,10 +8,14 @@
 
 import Foundation
 
-protocol ProductsModuleProtocol {
-    ///get products
+protocol ProductListModuleProtocol {
     func getAllProducts()
     func removeProductItem(withIndex index: Int)
-    func getProductItem(atIndex index: Int)
+}
 
+protocol ProductDetailModuleProtocol {
+    func getProductItem(atIndex index: Int)
+    func getProductItem(byId id: Int16)
+    func addToCartById(_ id: Int16)
+    func removeFromCartById(_ id: Int16)
 }

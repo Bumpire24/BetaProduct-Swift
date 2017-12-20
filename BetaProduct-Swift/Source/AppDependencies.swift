@@ -12,8 +12,6 @@ import AlamofireNetworkActivityIndicator
 import CocoaLumberjack
 
 class AppDependencies: NSObject {
-//    var mainWireFrame : HomeWireframe?
-//    var mainWireFrame : LoginOptionsWireframe?
     private var mainWireFrame : LoginWireframe?
     private var presenterHome: SettingsHomeModuleProtocol?
 
@@ -29,8 +27,6 @@ class AppDependencies: NSObject {
     }
 
     func installRootViewController(InWindow window : UIWindow) {
-//        mainWireFrame?.presentHomeViewInterfaceFromWindow(Window: window)
-//        mainWireFrame?.presentLoginOptionsViewInterfaceFromWindow(Window: window)
         mainWireFrame?.presentLoginViewInterfaceFromWindow(Window: window)
     }
 
@@ -40,18 +36,9 @@ class AppDependencies: NSObject {
         let store = StoreCoreData()
         let webservice = StoreWebClient()
         let webserviceFake = StoreWebClientFake()
-//        let webservice = StoreWebClient()
         let session = Session.sharedSession
 
         webservice.session = session
-
-        // Home Module Classes
-//        let homeWireframe = HomeWireframe()
-//        homeWireframe.rootWireFrame = root
-//        mainWireFrame = homeWireframe
-
-        //Login Options Module Classes
-//        let loginOptionsWireframe = LoginOptionsWireframe()
 
         let loginWireframe = LoginWireframe()
         let createAccountWireframe = CreateAccountWireframe()
@@ -72,15 +59,6 @@ class AppDependencies: NSObject {
         loginWireframe.loginPresenter = loginPresenter
         loginWireframe.createAccountWireframe = createAccountWireframe
         mainWireFrame = loginWireframe
-
-//        let loginOptionsPresenter = LoginOptionsPresenter()
-//        loginOptionsWireframe.rootWireFrame = root
-//        loginOptionsPresenter.loginOptionsWireframe = loginOptionsWireframe
-//        loginOptionsPresenter.createAccountWireframe = createAccountWireframe
-//        loginOptionsWireframe.loginOptionsPresenter = loginOptionsPresenter
-//        loginOptionsWireframe.loginWireframe = loginWireframe
-//        loginOptionsWireframe.createAccountWireframe = createAccountWireframe
-//        mainWireFrame = loginOptionsWireframe
 
         //
         let loginManager = LogInManager()
@@ -179,15 +157,12 @@ class AppDependencies: NSObject {
         changePasswordSettingsPresenter.changePasswordSettingsWireframe = settingsChangePasswordWireframe
         settingsChangePasswordWireframe.presenter = changePasswordSettingsPresenter
         presenterHome = settingsHomePresenter
-
-        // Products Module
-//        let productManager = ProductManager()
-//        let productInteractor = ProductInteractor()
-//
-//        productManager.store = store
-//        productInteractor.session = session
-//        productInteractor.manager = productManager
-//        productInteractor.webservice = webservice
+        
+        //Shop Cart Classes
+        let shopCartManager = ShopCartManager()
+        let shopCartInteractor = ShopCartInteractor()
+        productsInteractor.managerShopCart = shopCartManager
+        shopCartInteractor.manager = shopCartManager
     }
 
     func configureLibraries() {

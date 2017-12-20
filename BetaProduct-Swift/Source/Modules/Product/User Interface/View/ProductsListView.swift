@@ -13,7 +13,7 @@ class ProductsListView: BaseView, ProductsListViewProtocol {
     @IBOutlet weak var deleteProductButton: UIButton!
     @IBOutlet weak var favoriteButton: UIButton!
     
-    var eventHandler : ProductsModuleProtocol?
+    var eventHandler : ProductListModuleProtocol?
     var productDetailWireframe : ProductDetailWireframe?
     var products : [ProductListItem]?
     var currentSelectedImageIndexPath : IndexPath?

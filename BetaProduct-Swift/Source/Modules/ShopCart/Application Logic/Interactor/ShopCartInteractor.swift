@@ -11,7 +11,6 @@ import Foundation
 class ShopCartInteractor: NSObject, ShopCartInteractorInput {
     var manager: ShopCartManager?
     var output: ShopCartInteractorOuput?
-    var outputProduct: ShopCartProductInteractorOutput?
     var session: Session?
     private var persistedCart: [ShopCart]?
     
@@ -88,38 +87,6 @@ class ShopCartInteractor: NSObject, ShopCartInteractorInput {
             })
         } else {
             self.output?.cartUpdateComplete(wasSuccessful: false, withMessage: "Deletion Failed!")
-        }
-    }
-    
-    func addProductToCartByProductId(_ id: Int16) {
-        if let user = session?.getUserSessionAsUser() {
-            var shopCart = ShopCart()
-            shopCart.userId = user.id
-            shopCart.productId = id
-            manager?.createShopCart(withCart: shopCart, withCompletionBlock: { response in
-                switch response {
-                case .success(_): self.outputProduct?.cartUpdateComplete(wasSuccessful: true, withMessage: "Product added")
-                case .failure(_): self.outputProduct?.cartUpdateComplete(wasSuccessful: false, withMessage: "Unable to add Product")
-                }
-            })
-        } else {
-            outputProduct?.cartUpdateComplete(wasSuccessful: false, withMessage: "Unable to add Product")
-        }
-    }
-    
-    func removeProductFromCartByProductId(_ id: Int16) {
-        if let user = session?.getUserSessionAsUser() {
-            var shopCart = ShopCart()
-            shopCart.userId = user.id
-            shopCart.productId = id
-            manager?.deleteShopCart(withCart: shopCart, withCompletionBlock: { response in
-                switch response {
-                case .success(_): self.outputProduct?.cartUpdateComplete(wasSuccessful: true, withMessage: "Product removed")
-                case .failure(_): self.outputProduct?.cartUpdateComplete(wasSuccessful: false, withMessage: "Unable to remove Product")
-                }
-            })
-        } else {
-            outputProduct?.cartUpdateComplete(wasSuccessful: false, withMessage: "Unable to remove Product")
         }
     }
     

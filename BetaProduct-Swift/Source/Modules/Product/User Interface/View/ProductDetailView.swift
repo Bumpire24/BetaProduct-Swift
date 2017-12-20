@@ -15,7 +15,7 @@ class ProductDetailView: BaseView, ProductDetailViewProtocol {
     @IBOutlet weak var productCurrency: BetaProductProductDescriptionLabel!
     @IBOutlet weak var productPrice: BetaProductProductDescriptionLabel!
     
-    var eventHandler : ProductModuleProtocol?
+    var eventHandler : ProductDetailModuleProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,20 @@ class ProductDetailView: BaseView, ProductDetailViewProtocol {
         eventHandler?.getProductItem(atIndex: itemIndex)
     }
     
+    func fetchProductDetail(ofProductById id: Int16) {
+        
+    }
+    
     func displayProductInformation(productItem: ProductDetailItem) {
         print(productItem)
+    }
+    
+    func displayMessage(_ message: String) {
+        displayDialogMessage(withTitle: "",
+                             messageContent: message,
+                             negativeButtonCaption: "Cancel",
+                             affirmativeButtonCaption: "OK",
+                             currentViewController: self,
+                             messageStatus: false)
     }
 }

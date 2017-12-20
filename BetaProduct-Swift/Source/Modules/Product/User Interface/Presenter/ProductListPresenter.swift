@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ProductListPresenter: NSObject, ProductsModuleProtocol, ProductListInteractorOutput {
+class ProductListPresenter: NSObject, ProductListModuleProtocol, ProductListInteractorOutput {
     var interactor : ProductInteractorInput?
     var productsListView : ProductsListViewProtocol?
     
@@ -18,10 +18,6 @@ class ProductListPresenter: NSObject, ProductsModuleProtocol, ProductListInterac
     
     func removeProductItem(withIndex index: Int) {
         interactor?.deleteProductByIndex(index)
-    }
-    
-    func getProductItem(atIndex index: Int) {
-        interactor?.getProductDetailByIndex(index)
     }
     
     func gotProducts(_ products: [ProductListItem]) {

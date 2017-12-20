@@ -62,13 +62,6 @@
 		1BA413021FE80E4B0052350F /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
 		1BA413031FE80E4C0052350F /* ProductDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDC71D21FE7AFA000BFE684 /* ProductDetailWireframe.swift */; };
 		1BCA8E021FE7EF7C00A5FBFF /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */; };
-		1BCA8E041FE7F38100A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
-		1BCA8E051FE7F3D100A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
-		1BCA8E061FE7F3D200A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
-		1BCA8E071FE7F3D300A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
-		1BCA8E081FE7F3D400A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
-		1BCA8E091FE7F3D500A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
-		1BCA8E0A1FE7F3D500A5FBFF /* ProductModuleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */; };
 		1D5B9B473A20C8ABD31DC928 /* Pods_BetaProduct_Swift_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED666811FBE88D100B2245D /* Pods_BetaProduct_Swift_DEV.framework */; };
 		24AB4CCF5173BD8372F34FED /* Pods_BetaProduct_Swift_DEV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED666811FBE88D100B2245D /* Pods_BetaProduct_Swift_DEV.framework */; };
 		32887CBDFC905668D49FA8D1 /* Pods_BetaProduct_Swift_UI_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B6CC25A62B6A91E084C121 /* Pods_BetaProduct_Swift_UI_Tests.framework */; };
@@ -827,7 +820,6 @@
 		1B3B920D1FEA31250089220D /* ShopCartWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartWireframe.swift; sourceTree = "<group>"; };
 		1B3B92151FEA31CF0089220D /* ShopCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCartView.swift; sourceTree = "<group>"; };
 		1BCA8E011FE7EF7C00A5FBFF /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
-		1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModuleProtocol.swift; sourceTree = "<group>"; };
 		27AAA76793D1627EECB3F182 /* Pods-BetaProduct-Swift DEV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift DEV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift DEV/Pods-BetaProduct-Swift DEV.debug.xcconfig"; sourceTree = "<group>"; };
 		2F1E77C2936192A0DB09858A /* Pods-BetaProduct-Swift DEV (Integration Tests).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift DEV (Integration Tests).debug.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift DEV (Integration Tests)/Pods-BetaProduct-Swift DEV (Integration Tests).debug.xcconfig"; sourceTree = "<group>"; };
 		3BA7A0C19AFF027AD68ED5C6 /* Pods-BetaProduct-Swift UI Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BetaProduct-Swift UI Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BetaProduct-Swift UI Tests/Pods-BetaProduct-Swift UI Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -1485,7 +1477,6 @@
 			isa = PBXGroup;
 			children = (
 				CE76C51E1FE2657800041F14 /* ProductsModuleProtocol.swift */,
-				1BCA8E031FE7F38100A5FBFF /* ProductModuleProtocol.swift */,
 			);
 			path = "Module Interface";
 			sourceTree = "<group>";
@@ -1949,7 +1940,6 @@
 			isa = PBXGroup;
 			children = (
 				CEE8AC021FB1A4500052DC3A /* Module Interface */,
-				CEE8AC011FB1A4490052DC3A /* Application Interface */,
 				CEE8AC001FB1A4420052DC3A /* User Interface */,
 			);
 			path = Home;
@@ -1963,13 +1953,6 @@
 				CED78F6E1FCE5CB600AE164D /* Presenter */,
 			);
 			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		CEE8AC011FB1A4490052DC3A /* Application Interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Application Interface";
 			sourceTree = "<group>";
 		};
 		CEE8AC021FB1A4500052DC3A /* Module Interface */ = {
@@ -2718,7 +2701,6 @@
 				CE028BDD1FE7AF10001AD022 /* ShopCartModuleProtocol.swift in Sources */,
 				1B3B921C1FEA31CF0089220D /* ShopCartView.swift in Sources */,
 				CE3B61881FC6B23E00B24933 /* LogInManager.swift in Sources */,
-				1BCA8E0A1FE7F3D500A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CE3B61891FC6B23E00B24933 /* LogInPresenter.swift in Sources */,
 				CE3B618A1FC6B23E00B24933 /* UserDisplayItem.swift in Sources */,
 				CE3B618B1FC6B23E00B24933 /* LoginWireframe.swift in Sources */,
@@ -2859,7 +2841,6 @@
 				1BA412F81FE7F7690052350F /* ProductDetailPresenter.swift in Sources */,
 				CEED02E61FC6BD3F002C7A5A /* LoginWireframe.swift in Sources */,
 				CEED02E71FC6BD3F002C7A5A /* LoginView.swift in Sources */,
-				1BCA8E051FE7F3D100A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CEED02E81FC6BD3F002C7A5A /* LogInViewProtocol.swift in Sources */,
 				CEB134FD1FD68E6E0076A851 /* SettingsChangePasswordWireframe.swift in Sources */,
 				CEED02E91FC6BD3F002C7A5A /* LoginOptionsModuleInterface.swift in Sources */,
@@ -2987,7 +2968,6 @@
 				CE433CF41FBD1AF300E530C0 /* LoginOptionsWireframe.swift in Sources */,
 				CEBE0E101FD64B7A00B0C0F7 /* FloatingSettingsView.swift in Sources */,
 				CE70F4211FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
-				1BCA8E061FE7F3D200A5FBFF /* ProductModuleProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3088,7 +3068,6 @@
 				CE433D311FBD1AF600E530C0 /* LoginOptionsWireframe.swift in Sources */,
 				CEBE0E111FD64B7B00B0C0F7 /* FloatingSettingsView.swift in Sources */,
 				CE70F4221FCD067000AD67A1 /* SettingsInteractor.swift in Sources */,
-				1BCA8E071FE7F3D300A5FBFF /* ProductModuleProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3123,7 +3102,6 @@
 				CEF320E51FC52C0E004CA907 /* BaseDisplayItem.swift in Sources */,
 				CE001EA11FCD59F60051B11C /* ChangePasswordView.swift in Sources */,
 				CE001E811FCCEB720051B11C /* SettingsView.swift in Sources */,
-				1BCA8E041FE7F38100A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CE3518031FD673B900FEAD25 /* ProductInteractorIO.swift in Sources */,
 				CE9CF4621FD544B300526292 /* SettingsChangeEmailWireframe.swift in Sources */,
 				CEC203981FB46C160022C7C2 /* LoginOptionsModuleInterface.swift in Sources */,
@@ -3265,7 +3243,6 @@
 				CE001E9E1FCD47870051B11C /* ChangeEmailView.swift in Sources */,
 				CE001E861FCCEB720051B11C /* SettingsView.swift in Sources */,
 				CE00E3D41FC82A2E006C8ACE /* Product.swift in Sources */,
-				1BCA8E091FE7F3D500A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CE00E3D51FC82A2E006C8ACE /* User.swift in Sources */,
 				1B1C4CF11FE8F96500D1E340 /* ProductListViewWireframe.swift in Sources */,
 				CE3518011FD673B900FEAD25 /* ProductInteractor.swift in Sources */,
@@ -3389,7 +3366,6 @@
 				CE00E41B1FC82A69006C8ACE /* CreateAccountInteractor.swift in Sources */,
 				CE00E41C1FC82A69006C8ACE /* UserCredentialsItem.swift in Sources */,
 				CED78F741FCE65BD00AE164D /* HomeModulePresenter.swift in Sources */,
-				1BCA8E081FE7F3D400A5FBFF /* ProductModuleProtocol.swift in Sources */,
 				CE00E4421FC82BBB006C8ACE /* BetaProduct_SwiftUITests.swift in Sources */,
 				CEDC71E11FE7B94100BFE684 /* ProductDetailViewProtocol.swift in Sources */,
 				CE00E41D1FC82A69006C8ACE /* CreateAccountPresenter.swift in Sources */,

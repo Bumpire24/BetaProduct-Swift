@@ -14,13 +14,5 @@ protocol ShopCartModuleProtocol {
     func addProductQuantity(byIndex index: Int)
     func subtractProductQuantity(byIndex index: Int)
     func clearAllProducts()
-}
-
-protocol ShopCartAddRemoveModuleProtocol {
-    func addProduct(byProductId id: Int)
-    func removeProduct(byProductId id: Int)
-}
-
-protocol ShopCartAddRemoveModuleDelegateProtocol {
-    func isAddRemoveSuccessful(isAddRemoveSuccessful: Bool)
+    func showProductDetail(withId id: Int16)
 }

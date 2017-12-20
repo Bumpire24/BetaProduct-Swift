@@ -13,6 +13,7 @@ class ProductInteractor: NSObject, ProductInteractorInput {
     var outputList: ProductListInteractorOutput?
     var outputDetail: ProductDetailInteractorOutput?
     var manager: ProductManager?
+    var managerShopCart: ShopCartManager?
     var session: Session?
     var webservice: StoreWebClientProtocol?
     private var persistedProducts: [Product]?
@@ -89,6 +90,58 @@ class ProductInteractor: NSObject, ProductInteractorInput {
                                                        isAddedToShopCart: productToBeDisplayed.productAddedInCart))
         } else {
             outputDetail?.gotProduct(nil)
+        }
+    }
+    
+    func getProductDetailById(_ id: Int16) {
+        manager?.retrieveProductById(id, withCompletionBlock: { response in
+            switch response {
+            case .success(let value):
+                let productToBeDisplayed = value!
+                self.outputDetail?.gotProduct(ProductDetailItem(id: productToBeDisplayed.productId,
+                                                                                      name: productToBeDisplayed.name,
+                                                                                      description: productToBeDisplayed.productDescription,
+                                                                                      price: productToBeDisplayed.priceDescription + " " + String(describing: productToBeDisplayed.price),
+                                                                                      priceDescription: productToBeDisplayed.priceDescription,
+                                                                                      imageURL: productToBeDisplayed.imageUrl,
+                                                                                      imageThumbURL: productToBeDisplayed.imageThumbUrl,
+                                                                                      imageCompanyURL: productToBeDisplayed.imageCompanyUrl,
+                                                                                      companyWeblink: productToBeDisplayed.weblink,
+                                                                                      isAddedToShopCart: productToBeDisplayed.productAddedInCart))
+            case .failure(_): self.outputDetail?.gotProduct(nil)
+            }
+        })
+    }
+    
+    func addProductToCartByProductId(_ id: Int16) {
+        if let user = session?.getUserSessionAsUser() {
+            var shopCart = ShopCart()
+            shopCart.userId = user.id
+            shopCart.productId = id
+            managerShopCart?.createShopCart(withCart: shopCart, withCompletionBlock: { response in
+                switch response {
+                case .success(_): self.outputDetail?.cartUpdateComplete(wasSuccessful: true, withMessage: "Product added")
+                case .failure(_): self.outputDetail?.cartUpdateComplete(wasSuccessful: false, withMessage: "Unable to add Product")
+                }
+            })
+        } else {
+            outputDetail?.cartUpdateComplete(wasSuccessful: false, withMessage: "Unable to add Product")
+        }
+    }
+    
+    func removeProductFromCartByProductId(_ id: Int16) {
+        if let user = session?.getUserSessionAsUser() {
+            var shopCart = ShopCart()
+            shopCart.userId = user.id
+            shopCart.productId = id
+            managerShopCart?.deleteShopCart(withCart: shopCart, withCompletionBlock: { response in
+                switch response {
+                case .success(_): self.outputDetail?.cartUpdateComplete(wasSuccessful: true, withMessage: "Product removed")
+                case .failure(_): self.outputDetail?.cartUpdateComplete(wasSuccessful: false, withMessage: "Unable to remove Product")
+                }
+            })
+        } else {
+            outputDetail?.cartUpdateComplete(wasSuccessful: false, withMessage: "Unable to remove Product")
         }
     }
     
