@@ -14,6 +14,9 @@ protocol ProductInteractorInput {
     func getProducts()
     func deleteProductByIndex(_ index: Int)
     func getProductDetailByIndex(_ index: Int)
+    func getProductDetailById(_ id: Int16)
+    func addProductToCartByProductId(_ id: Int16)
+    func removeProductFromCartByProductId(_ id: Int16)
 }
 
 /// Protocol implementation for Product List Interactor (Output). Delegation
@@ -28,5 +31,6 @@ protocol ProductListInteractorOutput {
 }
 
 protocol ProductDetailInteractorOutput {
+    func cartUpdateComplete(wasSuccessful isSuccess: Bool, withMessage message: String)
     func gotProduct(_ product: ProductDetailItem?)
 }

@@ -157,6 +157,12 @@ class AppDependencies: NSObject {
         changePasswordSettingsPresenter.changePasswordSettingsWireframe = settingsChangePasswordWireframe
         settingsChangePasswordWireframe.presenter = changePasswordSettingsPresenter
         presenterHome = settingsHomePresenter
+        
+        //Shop Cart Classes
+        let shopCartManager = ShopCartManager()
+        let shopCartInteractor = ShopCartInteractor()
+        productsInteractor.managerShopCart = shopCartManager
+        shopCartInteractor.manager = shopCartManager
     }
 
     func configureLibraries() {

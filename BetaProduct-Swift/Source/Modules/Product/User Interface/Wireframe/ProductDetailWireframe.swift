@@ -23,6 +23,15 @@ class ProductDetailWireframe: BaseWireframe {
         newViewController.fetchProductDetail(ofItemIndexAt: productIndex)
     }
     
+    func presentProductDetailViewFromVipresentProductDetailViewFromViewControllerewController(_ viewController: UIViewController, productId: Int16) {
+        let newViewController = productDetailViewController()
+        productDetailView = newViewController
+        productDetailView?.eventHandler = productDetailPresenter
+        productDetailPresenter?.productDetailView = newViewController
+        viewController.navigationController?.present(newViewController, animated: true, completion: nil)
+        newViewController.fetchProductDetail(ofProductById: productId)
+    }
+    
     private func productDetailViewController() -> ProductDetailView {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: productDetailViewIdentifier) as! ProductDetailView
         return viewcontroller

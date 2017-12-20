@@ -94,6 +94,26 @@ class ProductManager: NSObject {
         }
     }
     
+    func retrieveProductById(_ id: Int16, withCompletionBlock block: @escaping CompletionBlock<Product>) {
+        let predicate = NSPredicate.init(format: "productId == %@", id)
+        store?.fetchEntries(withEntityName: "Product", withPredicate: predicate, withSortDescriptors: nil, withCompletionBlock: { response in
+            switch response {
+            case .success(let value):
+                let managedProduct = value?.first as! ManagedProduct
+                let product = Product.init(productName: managedProduct.name,
+                                           productDescription: managedProduct.productDescription,
+                                           productId: managedProduct.productId,
+                                           productPrice: managedProduct.price,
+                                           productPriceDescription: managedProduct.productDescription,
+                                           productWeblink: managedProduct.weblink,
+                                           productImageURL: managedProduct.imageUrl,
+                                           productImageThumbURL: managedProduct.imageThumbUrl,
+                                           productImageCompanyURL: managedProduct.imageCompanyUrl)
+            case .failure(let error): block(.failure(error))
+            }
+        })
+    }
+    
     func retrieveProducts(withCompletionBlock block: @escaping CompletionBlock<[Product]>) {
         store?.fetchEntries(withEntityName: "Product", withCompletionBlock: { response in
             switch response {
