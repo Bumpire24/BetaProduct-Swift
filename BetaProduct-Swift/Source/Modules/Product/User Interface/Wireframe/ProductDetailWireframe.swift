@@ -18,9 +18,12 @@ class ProductDetailWireframe: BaseWireframe {
         let newViewController = productDetailViewController()
         productDetailView = newViewController
         productDetailView?.eventHandler = productDetailPresenter
+//        productDetailView?.index = productIndex
         productDetailPresenter?.productDetailView = newViewController
-        viewController.navigationController?.present(newViewController, animated: true, completion: nil)
-        newViewController.fetchProductDetail(ofItemIndexAt: productIndex)
+        viewController.navigationController?.present(newViewController, animated: true, completion: {
+            newViewController.fetchProductDetail(ofItemIndexAt: productIndex)
+        })
+//        newViewController.fetchProductDetail(ofItemIndexAt: productIndex)
     }
     
     func presentProductDetailViewFromVipresentProductDetailViewFromViewControllerewController(_ viewController: UIViewController, productId: Int16) {

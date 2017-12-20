@@ -114,8 +114,12 @@ class AppDependencies: NSObject {
         productsInteractor.outputDetail = productDetailPresenter
         homeWireframe.productsPresenter = productsPresenter
         productsPresenter.interactor = productsInteractor
+        productsPresenter.productListWireframe = productListWireframe
         productDetailPresenter.interactor = productsInteractor
         productDetailWireframe.productDetailPresenter = productDetailPresenter
+        productListWireframe.productsListPresenter = productsPresenter
+        productListWireframe.productsListInteractor = productsInteractor
+        productListWireframe.productDetailWireFrame = productDetailWireframe
 
         //Settings Classes
         let settingsHomePresenter = SettingsPresenterHome()

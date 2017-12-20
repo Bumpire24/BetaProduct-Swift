@@ -10,5 +10,5 @@ import UIKit
 import Foundation
 
 protocol HomeTabBarInterface {
-    func configuredViewController() -> UIViewController
+    func configuredViewController(_ viewController: HomeView) -> UIViewController
 }

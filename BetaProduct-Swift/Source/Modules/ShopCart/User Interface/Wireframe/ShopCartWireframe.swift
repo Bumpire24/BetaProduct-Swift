@@ -13,7 +13,7 @@ let shopCartViewIdentifier = "ShopCartView"
 class ShopCartWireframe: BaseWireframe, HomeTabBarInterface {
     var shopCartView : ShopCartView?
     
-    func configuredViewController() -> UIViewController {
+    func configuredViewController(_ viewController: HomeView) -> UIViewController {
         let shopCartViewControl = shopCartViewController()
         shopCartViewControl.tabBarItem = UITabBarItem.init(title: "Shop Cart", image: UIImage.init(imageLiteralResourceName: "shopcart"), tag: 1)
         return shopCartViewControl
