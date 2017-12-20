@@ -1729,7 +1729,6 @@
 			children = (
 				CE028BD41FE7A335001AD022 /* ShopCart */,
 				CEE8ABFC1FB1A2400052DC3A /* Product */,
-				CEF2B5B21FD55F0800619D3E /* QRCode */,
 				CEA04A671FCBEBC200B82FA5 /* Settings */,
 				CE07A4851FBD2A5D009185F3 /* Create Account */,
 				CEC203921FB46C160022C7C2 /* Login */,
@@ -1809,7 +1808,6 @@
 			isa = PBXGroup;
 			children = (
 				CEE8AC021FB1A4500052DC3A /* Module Interface */,
-				CEE8AC011FB1A4490052DC3A /* Application Interface */,
 				CEE8AC001FB1A4420052DC3A /* User Interface */,
 			);
 			path = Home;
@@ -1823,13 +1821,6 @@
 				CED78F6E1FCE5CB600AE164D /* Presenter */,
 			);
 			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		CEE8AC011FB1A4490052DC3A /* Application Interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Application Interface";
 			sourceTree = "<group>";
 		};
 		CEE8AC021FB1A4500052DC3A /* Module Interface */ = {
@@ -1874,77 +1865,6 @@
 				CE7C25481FC2B9E30036E39B /* BetaProductTheme.swift */,
 			);
 			path = BetaProduct;
-			sourceTree = "<group>";
-		};
-		CEF2B5B21FD55F0800619D3E /* QRCode */ = {
-			isa = PBXGroup;
-			children = (
-				CEF2B5B31FD55F0800619D3E /* Module Interface */,
-				CEF2B5B41FD55F0800619D3E /* Application Logic */,
-				CEF2B5B71FD55F0800619D3E /* User Interface */,
-			);
-			path = QRCode;
-			sourceTree = "<group>";
-		};
-		CEF2B5B31FD55F0800619D3E /* Module Interface */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Module Interface";
-			sourceTree = "<group>";
-		};
-		CEF2B5B41FD55F0800619D3E /* Application Logic */ = {
-			isa = PBXGroup;
-			children = (
-				CEF2B5B51FD55F0800619D3E /* Manager */,
-				CEF2B5B61FD55F0800619D3E /* Interactor */,
-			);
-			path = "Application Logic";
-			sourceTree = "<group>";
-		};
-		CEF2B5B51FD55F0800619D3E /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		CEF2B5B61FD55F0800619D3E /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		CEF2B5B71FD55F0800619D3E /* User Interface */ = {
-			isa = PBXGroup;
-			children = (
-				CEF2B5B81FD55F0800619D3E /* Presenter */,
-				CEF2B5B91FD55F0800619D3E /* Wireframe */,
-				CEF2B5BA1FD55F0800619D3E /* View */,
-			);
-			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		CEF2B5B81FD55F0800619D3E /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		CEF2B5B91FD55F0800619D3E /* Wireframe */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Wireframe;
-			sourceTree = "<group>";
-		};
-		CEF2B5BA1FD55F0800619D3E /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		CEF320DE1FC52801004CA907 /* Protocols */ = {
