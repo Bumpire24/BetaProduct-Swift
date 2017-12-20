@@ -15,19 +15,22 @@ class ProductListViewWireframe: BaseWireframe, HomeTabBarInterface {
     var productsListPresenter : ProductListPresenter?
     var productsListInteractor : ProductInteractor?
     var productsListView : ProductsListView?
+    var homeView : HomeView?
     
-    func configuredViewController() -> UIViewController {
+    func configuredViewController(_ viewController: HomeView) -> UIViewController {
+        self.homeView = viewController
         let productsListViewControl = productListViewController()
         productsListViewControl.tabBarItem = UITabBarItem.init(title: "Products", image: UIImage.init(imageLiteralResourceName: "products"), tag: 1)
+        productsListView = productsListViewControl
+        productsListView?.eventHandler = productsListPresenter
+        productsListView?.productListWireframe = self
+        productsListPresenter?.productsListView = productsListViewControl
+        viewController.navigationController?.pushViewController(productsListViewControl, animated: true)
         return productsListViewControl
     }
     
-    func presentProductsListViewFromViewController(_ viewController: UIViewController) {
-        let newViewController = productListViewController()
-        productsListView = newViewController
-        productsListView?.eventHandler = productsListPresenter
-        productsListPresenter?.productsListView = newViewController
-        viewController.navigationController?.pushViewController(newViewController, animated: true)
+    func displayProductDetail(withIndex productListIndex: Int) {
+        productDetailWireFrame?.presentProductDetailViewFromViewController(productsListView!, productIndex: productListIndex)
     }
     
     func productListViewController() -> ProductsListView {

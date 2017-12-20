@@ -37,7 +37,7 @@ class ProductDetailView: BaseView, ProductDetailViewProtocol {
     }
     
     func displayProductInformation(productItem: ProductDetailItem) {
-        print(productItem)
+        productName.text = productItem.name
     }
     
     func displayMessage(_ message: String) {

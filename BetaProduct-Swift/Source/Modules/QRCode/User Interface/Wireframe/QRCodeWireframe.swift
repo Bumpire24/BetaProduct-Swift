@@ -13,7 +13,7 @@ let qrViewIdentifier = "QRView"
 class QRCodeWireframe: BaseWireframe, HomeTabBarInterface {
     var qrCodeView : QRCodeView?
     
-    func configuredViewController() -> UIViewController {
+    func configuredViewController(_ viewController: HomeView) -> UIViewController {
         let qrCodeViewControl = qrCodeViewController()
         qrCodeViewControl.tabBarItem = UITabBarItem.init(title: "QR Code Scanner", image: UIImage.init(imageLiteralResourceName: "qr"), tag: 1)
         return qrCodeViewControl

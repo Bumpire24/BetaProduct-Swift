@@ -11,6 +11,7 @@ import Foundation
 class ProductListPresenter: NSObject, ProductListModuleProtocol, ProductListInteractorOutput {
     var interactor : ProductInteractorInput?
     var productsListView : ProductsListViewProtocol?
+    var productListWireframe : ProductListViewWireframe?
     
     func getAllProducts() {
         interactor?.getProducts()
@@ -27,4 +28,8 @@ class ProductListPresenter: NSObject, ProductListModuleProtocol, ProductListInte
     func productListDeleteComplete(wasSuccessful isSuccess: Bool, withMessage message: String) {
         productsListView?.deleteProductItemFromCollection()
     }
+    
+//    func getProductItem(atIndex index: Int) {
+//        interactor?.getProductDetailByIndex(index)
+//    }
 }

@@ -14,7 +14,7 @@ class ProductsListView: BaseView, ProductsListViewProtocol {
     @IBOutlet weak var favoriteButton: UIButton!
     
     var eventHandler : ProductListModuleProtocol?
-    var productDetailWireframe : ProductDetailWireframe?
+    var productListWireframe : ProductListViewWireframe?
     var products : [ProductListItem]?
     var currentSelectedImageIndexPath : IndexPath?
     
@@ -75,13 +75,13 @@ class ProductsListView: BaseView, ProductsListViewProtocol {
     }
     
     @objc func productItemTapped() {
-        let productDetailPresenter = ProductDetailPresenter()
-        let productInteractor = ProductInteractor()
-        productDetailWireframe?.productDetailPresenter = productDetailPresenter
-        productDetailPresenter.interactor = productInteractor
-        productInteractor.outputDetail = productDetailPresenter
-        productDetailWireframe?.presentProductDetailViewFromViewController(self, productIndex: currentSelectedImageIndexPath!.item)
-        //eventHandler?.getProductItem(atIndex: currentSelectedImageIndexPath!.item)
+//        let productDetailPresenter = ProductDetailPresenter()
+//        let productInteractor = ProductInteractor()
+//        productDetailWireframe?.productDetailPresenter = productDetailPresenter
+//        productDetailPresenter.interactor = productInteractor
+//        productInteractor.outputDetail = productDetailPresenter
+//        productDetailWireframe?.presentProductDetailViewFromViewController(self, productIndex: currentSelectedImageIndexPath!.item)
+        productListWireframe?.displayProductDetail(withIndex: currentSelectedImageIndexPath!.item)
     }
     
     @IBAction func removeProductItemFromList(_ sender: Any) {
