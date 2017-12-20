@@ -60,7 +60,10 @@ class AppDependencies: NSObject {
         let settingsProfileWireframe = SettingsProfileWireframe()
         let settingsChangeEmailWireframe = SettingsChangeEmailWireframe()
         let settingsChangePasswordWireframe = SettingsChangePasswordWireframe()
+        let qrCodeWireframe = QRCodeWireframe()
+        let productListWireframe = ProductListViewWireframe()
         let productDetailWireframe = ProductDetailWireframe()
+        let shopCartWireframe = ShopCartWireframe()
 
         //Login Module Classes
         let loginPresenter = LogInPresenter()
@@ -113,6 +116,9 @@ class AppDependencies: NSObject {
         //Home Classes
         let homePresenter = HomeModulePresenter()
         homeWireframe.settingsWireFrame = settingsWireframe
+        homeWireframe.qrCodeWireframe = qrCodeWireframe
+        homeWireframe.productListWireframe = productListWireframe
+        homeWireframe.shopCartWireframe = shopCartWireframe
         homePresenter.homeWireframe = homeWireframe
         homeWireframe.presenter = homePresenter
 

@@ -10,8 +10,7 @@ import Foundation
 import UIKit
 
 let homeViewIdentifier = "HomeView"
-let qrViewIdentifier = "QRView"
-let productsListViewIdentifier = "ProductsListView"
+//let productsListViewIdentifier = "ProductsListView"
 
 class HomeWireframe: BaseWireframe {
     var homeView : HomeView?
@@ -19,6 +18,19 @@ class HomeWireframe: BaseWireframe {
     var settingsWireFrame : SettingsWireframe?
     var presenter : HomeModulePresenter?
     var productsPresenter : ProductListPresenter?
+    var qrCodeWireframe : QRCodeWireframe?
+    var productListWireframe: ProductListViewWireframe?
+    var shopCartWireframe : ShopCartWireframe?
+    let wireFrames: [HomeTabBarInterface]
+    
+    init(_ wireFrames:HomeTabBarInterface...) {
+        self.wireFrames = wireFrames
+        super.init()
+    }
+    
+    private override init() {
+        self.wireFrames = [HomeTabBarInterface]()
+    }
     
     func presentHomeViewInterfaceFromWindow(Window window : UIWindow) {
         let viewcontroller = mainStoryBoard().instantiateViewController(withIdentifier: homeViewIdentifier) as! HomeView
@@ -42,25 +54,33 @@ class HomeWireframe: BaseWireframe {
     }
     
     func assembleViewControllersForHomeView() {
-        let qrView = createQRView()
-        let productListView = createProductsListViewView()
-        let productDetailWireframe = ProductDetailWireframe()
-        let shopCartView = UIViewController.init()
+//        let qrView = createQRView()
+//        let productListView = createProductsListViewView()
+//        let productDetailWireframe = ProductDetailWireframe()
+//        let shopCartView = UIViewController.init()
         
-        qrView.view.backgroundColor = UIColor.red;
-        productListView.view.backgroundColor = UIColor.yellow;
-        shopCartView.view.backgroundColor = UIColor.blue;
+//        qrView.view.backgroundColor = UIColor.red;
+//        productListView.view.backgroundColor = UIColor.yellow;
+//        shopCartView.view.backgroundColor = UIColor.blue;
+//
+//        productListView.eventHandler = productsPresenter
+//        productListView.productDetailWireframe = productDetailWireframe
+//        productsPresenter?.productsListView = productListView
+//
+//        let tabViewControllers = [qrView, productListView, shopCartView]
+//        homeView?.setViewControllers(tabViewControllers, animated: true)
+//
+//        qrView.tabBarItem = UITabBarItem.init(title: "QR Code Scanner", image: UIImage.init(imageLiteralResourceName: "qr"), tag: 1)
+//        productListView.tabBarItem = UITabBarItem.init(title: "Products", image: UIImage.init(imageLiteralResourceName: "products"), tag: 1)
+//        shopCartView.tabBarItem = UITabBarItem.init(title: "Shop Cart", image: UIImage.init(imageLiteralResourceName: "shopcart"), tag: 1)
         
-        productListView.eventHandler = productsPresenter
-        productListView.productDetailWireframe = productDetailWireframe
-        productsPresenter?.productsListView = productListView
-
-        let tabViewControllers = [qrView, productListView, shopCartView]
-        homeView?.setViewControllers(tabViewControllers, animated: true)
+        var homeTabViewControllers = [UIViewController]()
+        homeTabViewControllers.append(qrCodeWireframe!.configuredViewController())
+        homeTabViewControllers.append(productListWireframe!.configuredViewController())
+        homeTabViewControllers.append(shopCartWireframe!.configuredViewController())
         
-        qrView.tabBarItem = UITabBarItem.init(title: "QR Code Scanner", image: UIImage.init(imageLiteralResourceName: "qr"), tag: 1)
-        productListView.tabBarItem = UITabBarItem.init(title: "Products", image: UIImage.init(imageLiteralResourceName: "products"), tag: 1)
-        shopCartView.tabBarItem = UITabBarItem.init(title: "Shop Cart", image: UIImage.init(imageLiteralResourceName: "shopcart"), tag: 1)
+        homeView?.setViewControllers(homeTabViewControllers, animated: true)
+        homeView?.navigationItem.title = "iDooh"
     }
     
     func createQRView() -> QRView {
