@@ -248,7 +248,7 @@
         <!--QR View-->
         <scene sceneID="iMe-ox-OY7">
             <objects>
-                <viewController storyboardIdentifier="QRView" id="xsx-Pm-MxV" userLabel="QR View" customClass="QRView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRView" id="xsx-Pm-MxV" userLabel="QR View" customClass="QRCodeView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5pK-tc-rjh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,8 +305,8 @@
                     <navigationItem key="navigationItem" id="xZE-nP-Wi1"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="QRScannerInstructions" destination="0Nl-lC-het" id="X1O-P7-AvB"/>
-                        <outlet property="QRScannerView" destination="1XG-w9-A6G" id="G5J-1T-t9C"/>
+                        <outlet property="QRScannerInstructions" destination="0Nl-lC-het" id="dRZ-y4-A7N"/>
+                        <outlet property="QRScannerView" destination="1XG-w9-A6G" id="TxW-lW-u1w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBr-EN-uhS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -789,6 +789,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jic-Ef-stQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1414" y="823"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eKD-li-Cju">
+            <objects>
+                <viewController id="6Mo-fp-SaM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rnx-bp-D9L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="cKy-dr-mSs"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRD-oW-jS3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2127" y="823"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZPD-XO-9Da">
@@ -1292,10 +1307,10 @@
             </objects>
             <point key="canvasLocation" x="5688.8000000000002" y="-546.47676161919048"/>
         </scene>
-        <!--View Controller-->
+        <!--Shop Cart View-->
         <scene sceneID="YET-fH-YdP">
             <objects>
-                <viewController id="42x-et-oUD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ShopCartView" id="42x-et-oUD" customClass="ShopCartView" customModule="BetaProduct_Swift_DEV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qal-39-EZZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
